@@ -1,0 +1,118 @@
+{% set fields = [
+	{
+		label: 'Товары',
+		info: [
+			{
+				label: 'Товара:',
+				text: '3'
+			},
+			{
+				label: 'На сумму:',
+				text: '169 734 Р'
+			}
+		]
+	},
+	{
+		label: 'Доставка',
+		info: [
+			{
+				label: 'Доставка курьером'
+			},
+			{
+				label: 'Адрес:',
+				text: 'ул. Севанская д 10 кв 58'
+			},
+			{
+				label: 'Дата:',
+				text: 'Четверг, 09 июня 2016'
+			},
+			{
+				label: 'Время:',
+				text: 'В любое время (10:00-21:00)'
+			},
+			{
+				label: 'Стоимость:',
+				text: 'Бесплатно'
+			},
+			{
+				label: 'Доп. услуши:',
+				text: 'Сборка'
+			}
+		]
+	},
+	{
+		label: 'Персональные данные',
+		info: [
+			{
+				label: 'Имя:',
+				text: 'Телефон:'
+			},
+			{
+				label: 'Олег Топталов',
+				text: '+7 (123) 456-78-90'
+			},
+			{
+				label: 'Email:',
+				text: 'toptalov@mail.com'
+			},
+			{
+				label: 'Адрес:',
+				text: 'ул. Севанская д 10 кв 58'
+			}
+		]
+	},
+	{
+		label: 'Оплата',
+		info: [
+			{
+				label: 'Способ оплаты:',
+				text: 'Наличными курьеру'
+			}
+		]
+	},
+	{
+		label: 'Итоговая стоимость',
+		price: '177 471 Р'
+	}
+] %}
+
+<!-- begin basket tab6  -->
+<div class="tabs__content js-tab-content" data-tab="tab6">
+	<div class="form-basket js-form-container">
+		<div class="form-basket__container">
+			<form action="/" class="result">
+				<div class="result__body">
+					{% for field in fields %}
+					<div class="result__field">
+						<div class="result__label">
+							<div class="label label_form">{{field.label}}</div>
+						</div>
+						<div class="result__info">
+							{% if field.info %}
+							<ul>
+								{% for item in field.info %}
+								<li>
+									{% if item.label %}
+									<span>{{item.label}}</span>
+									{% endif %}
+									{% if item.text %}
+									<strong>{{item.text}}</strong>
+									{% endif %}
+								</li>
+								{% endfor %}
+							</ul>
+							{% elif field.price %}
+							<div class="result__price">{{field.price}}</div>
+							{% endif %}
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="result__btn">
+					<a href="#" class="btn btn_blue btn_big"><span>Оформить заказ</span></a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- end basket tab6 -->

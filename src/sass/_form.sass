@@ -1,0 +1,147 @@
+//feedback
+.feedback
+	&__title
+		font-size: 28px
+		line-height: 35px
+		letter-spacing: 0.24px
+		+as
+		color: $dark
+		padding: 20px 0 14px
+		border-bottom: 1px solid #d9dbe1
+		margin-bottom: 20px
+//form
+.form
+	+clr
+	&__heading
+		font-size: 18px
+		+as
+		color: $dark
+		line-height: 20px
+		list-style-type: square0.24px
+		margin-bottom: 40px
+		+r2
+			margin-bottom: 16px
+	&__description
+		width: 33%
+		float: right
+		padding: 59px 0 0 49px
+		+r1
+			padding: 59px 0 0 20px
+		+r2
+			float: none
+			width: 100%
+			padding: 0 0 16px 0
+		p
+			color: $gray
+			font-size: 13px
+			line-height: 20px
+			+hr
+			max-width: 280px
+	&__fields
+		width: 67%
+		float: left
+		+r2
+			width: 100%
+			float: none
+	&__field
+		+clr
+		padding-bottom: 20px
+		+r2
+			padding-bottom: 16px
+	&__label
+		float: left
+		width: 160px
+		padding: 9px 0 1px
+		+r2
+			float: none
+			width: 100%
+			padding: 0 0 16px
+	&__rating, &__input, &__time
+		padding-left: 160px
+		+r2
+			padding-left: 0
+	&__bottom
+		clear: both
+	&__list
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 4px 30px 6px 0
+	&__bottom
+		border-top: 1px solid #d9dbe1
+		padding: 20px 30px 0
+		+clr
+		position: relative
+		text-align: center
+		+r1
+			padding: 16px 16px 0
+		.btn
+			width: 160px
+	&__delivery
+		position: absolute
+		right: 30px
+		top: 26px
+		text-align: right
+		+r1
+			position: relative
+			top: auto
+			right: auto
+			text-align: center
+			margin-bottom: 16px
+
+.choice-rating
+	font-size: 0
+	padding: 10px 0
+	// +r2
+	// 	padding: 0
+	li
+		display: inline-block
+		vertical-align: top
+		padding-right: 2px
+	&__radio
+		&.is-active
+			span
+				&:after
+					opacity: 1
+				&:before
+					opacity: 0
+	label
+		display: block
+		position: relative
+		cursor: pointer
+		input
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			visibility: hidden
+	span
+		width: 17px
+		height: 15px
+		display: inline-block
+		vertical-align: top
+		position: relative
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			transition: opacity 0.25s ease-out
+			height: 100%
+			width: 100%
+			background-size: 96px 15px
+			background-position: left top
+			background-repeat: no-repeat
+		&:before
+			background-image: url(../img/stars.svg)
+		&:after
+			background-image: url(../img/stars-in.svg)
+			opacity: 0
+
+.add-item
+	svg
+		-webkit-backface-visibility: hidden
+		-moz-backface-visibility: hidden
+		backface-visibility: hidden

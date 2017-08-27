@@ -1,0 +1,58 @@
+<!-- begin main-slider  -->
+<div class="main-slider">
+	<div class="main-slider__dots js-slider-dots">
+		<div class="main-slider__number js-slider-number"></div>
+	</div>
+	<div class="main-slider__container">
+
+		{% set slider = [
+			{
+				title: 'Кресло-реклайнер Stressless City M',
+				img: 'Image_Slider_Free_Delivery.png',
+				alt: '/',
+				text: 'Только в мае вы получаете <strong>30% скидку</strong> на все кресла фирмы Stressless, Норвегия'
+			},
+			{
+				title: 'Кресло-реклайнер Stressless City M',
+				img: 'Image_Slider_Interior_Mirror.png',
+				alt: '/',
+				text: 'Только в мае вы получаете <strong>30% скидку</strong> на все кресла фирмы Stressless, Норвегия'
+			},
+			{
+				title: 'Кресло-реклайнер Stressless City M',
+				img: 'Image_Slider_Transforming_Tables.png',
+				alt: '/',
+				text: 'Только в мае вы получаете <strong>30% скидку</strong> на все кресла фирмы Stressless, Норвегия'
+			},
+			{
+				title: 'Кресло-реклайнер Stressless City M',
+				img: 'Image_Slider_Vista_Products.png',
+				alt: '/',
+				text: 'Только в мае вы получаете <strong>30% скидку</strong> на все кресла фирмы Stressless, Норвегия'
+			}
+		] %}
+
+		<div class="main-slider__inner js-main-slider">
+
+			{% for slide in slider %}
+			    <div class="slide js-slide">
+			    	<div class="slide__mobile-title">{{slide.title}}</div>
+			    	<a href="#" class="slide__img">
+			    		<div class="slide__number">0<span>{{loop.index}}</span></div>
+			    		<img src="img/main-slider/{{slide.img}}" alt="{{slide.alt}}">
+			    	</a>
+			    	<div class="slide__info">
+			    		<div class="slide__title">{{slide.title}}</div>
+			    		<div class="info-block">
+			    			<div class="info-block__inner">
+			    				<div class="info-block__text">{{slide.text | safe}}</div>
+			    				<a href="#" class="btn"><span>Подробнее</span></a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    </div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end main-slider -->

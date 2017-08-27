@@ -1,0 +1,71 @@
+<!-- begin confirmation 2.0 -->
+<div class="tabs__content js-tab-content" data-tab="tab3">
+	{% set confirm = [
+		{
+			label: 'Товары',
+			list: [
+				{ label: 'Товара:', value: '3' },
+				{ label: 'На сумму:', value: '169 734 Р' }
+			]
+		},
+		{
+			label: 'Персональные данные',
+			list: [
+				{ label: 'Имя:', value: 'Олег' },
+				{ label: 'Фамилия:', value: 'Топталов' },
+				{ label: 'Телефон:', value: '+ 7 (965) 123-45-67' }
+			]
+		},
+		{
+			label: 'Доставка',
+			list: [
+				{ label: 'Город:', value: 'Москва' },
+				{ label: 'Улица:', value: 'Суздальская' },
+				{ label: 'Дом, Кваритра:', value: '10/2, 15' }
+			]
+		},
+		{
+			label: 'Итоговая стоимость',
+			total: '177 471 Р'
+		}
+	] %}
+	<div class="new-confirm">
+		{% for item in confirm %}
+			<div class="new-confirm__box">
+				<div class="new-confirm__label">
+					<div class="label label_form">{{item.label}}</div>
+				</div>
+				<div class="new-confirm__value">
+					{% if item.list %}
+						<button class="btn-action btn-action_edit new-confirm__edit js-tooltip" title="Редактировать">
+							<span>
+								{{mixins.icon('edit')}}
+							</span>
+						</button>
+						<ul class="new-confirm__list">
+							{% for li in item.list %}
+								<li>
+									<span>{{li.label}}</span>
+									<em>{{li.value}}</em>
+								</li>
+							{% endfor %}
+						</ul>
+					{% elif item.total %}
+					    <div class="new-confirm__total">{{item.total}}</div>
+					{% endif %}
+				</div>
+			</div>
+		{% endfor %}
+		<div class="new-confirm__footer">
+			<div class="new-agreement">
+				<label class="checkbox new-agreement__checkbox">
+					<input type="checkbox" checked data-disable="make-order">
+					<span></span>
+				</label>
+				<p>Регистрируясь на сайте, вы даете согласие на хранение и обработку ваших персональных данных, а также соглашаетесь с <a href="#">правилами</a> нашей компании.</p>
+			</div>
+			<button class="btn btn_blue btn_big" data-target="make-order"><span>Оформить заказ</span></button>
+		</div>
+	</div>
+</div>
+<!-- end confirmation 2.0 -->

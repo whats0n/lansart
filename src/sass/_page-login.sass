@@ -1,0 +1,69 @@
+.page-login
+	padding: 0 20px 115px
+	+r2
+		padding: 0
+	&__container
+		padding: 40px 0 30px
+		margin-bottom: 20px
+		border-radius: 2px
+		background: #fff
+		+r2 
+			padding: 15px
+	&__row
+		margin: 0 -20px
+		+clr 
+		+r2 
+			margin: 0
+	&__col
+		position: relative
+		float: left
+		width: 50%
+		+r2
+			float: none
+			padding: 15px 0
+			width: 100%
+		&:nth-child(2)
+			&:before
+				content: ''
+				position: absolute
+				top: 50px
+				right: left
+				bottom: 10px
+				border-left: 1px solid #d9dbe1
+				+r1
+					bottom: 8px
+				+r2
+					display: none
+	&__inner
+		position: relative
+		margin: 0 auto
+		max-width: 260px
+		text-align: center
+	&__box
+		padding: 20px 20px 30px
+		border-radius: 2px
+		background: #fff
+		font-size: 0
+		text-align: center
+		+r2
+			padding: 20px 15px
+	&__agreement
+		max-width: 600px
+		margin: 15px auto 0
+		color: $gray
+		+hr
+		font-size: 14px
+		text-align: left
+		p 
+			overflow: hidden
+		a
+			color: $blue
+			+hover
+				text-decoration: underline
+	&__checkbox
+		float: left
+		margin-right: 5px
+	&__label
+		color: $blue
+		+as
+		font-size: 24px

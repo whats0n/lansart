@@ -1,0 +1,173 @@
+//account
+.account
+	+clr
+	padding: 0 0 60px
+	+r1
+		padding: 0 0 24px
+	+r2
+		padding: 0 0 40px
+	&__sidebar, &__content
+		padding: 0 10px
+		+r1
+			padding: 0 12px
+		+r2
+			padding: 0 8px
+	&__sidebar
+		width: 25%
+		float: left
+		+r1
+			width: 33%
+		+r2
+			width: 100%
+			float: none
+			margin-bottom: 16px
+		.datepicker
+			margin-bottom: 20px
+			+r1
+				margin-bottom: 16px
+		.filter
+			.radio, .checkbox
+				padding-left: 37px
+	&__content
+		width: 75%
+		float: right
+		+r1
+			width: 67%
+		+r2
+			width: 100%
+			float: none
+	&__title
+		margin: 0 30px 13px
+		+r1
+			display: none
+	&__items
+		margin: 0 -10px -20px
+		font-size: 0
+		+r1
+			margin: 0 -12px -24px
+		+r2
+			margin: 0 -8px -16px
+	&__col
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		&_sm
+			width: 33%
+			padding: 0 10px 20px
+			+r1
+				width: 50%
+				padding: 0 12px 24px
+			+r2
+				padding: 0 8px 16px
+
+.acc-nav, .acc-form
+	background-color: white
+	border-radius: 2px
+
+.acc-nav
+	padding: 20px
+	margin-bottom: 20px
+	&__item
+		&:first-child
+			.acc-nav__link
+				border-top: none
+				line-height: 30px
+	&__link
+		display: block
+		position: relative
+		font-size: 13px
+		line-height: 29px
+		letter-spacing: 0.19px
+		color: $gray
+		border-top: 1px solid #d9dbe1
+		transition: padding 0.25s ease-out, color 0.25s ease-out
+		.no-touch &
+			&:hover
+				color: $blue
+				// padding-left: 12px
+				&:before
+					// opacity: 1
+		&.is-active
+			color: $blue
+			padding-left: 12px
+			&:before
+				opacity: 1
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: -10px
+			width: 10px
+			height: 2px
+			border-radius: 1px
+			background: $blue
+			margin-top: -1px
+			opacity: 0
+			transition: opacity 0.25s ease-out
+
+.acc-form
+	padding: 10px 20px 20px
+	+r1
+		padding: 16px 24px 24px
+	+r2
+		padding: 8px 16px 24px
+	&__title
+		color: $dark
+		line-height: 30px
+		letter-spacing: 0.17px
+		font-size: 11px
+		text-transform: uppercase
+		+hm
+		border-bottom: 1px solid #d9dbe1
+		padding: 0 0 9px
+	&__section
+		padding: 14px 0 10px
+		border-bottom: 1px solid #d9dbe1
+	&__row, &__box
+		+clr
+		font-size: 0
+	&__left, &__label
+		width: 240px
+		float: left
+		+r1
+			float: none
+	&__left
+		padding-bottom: 6px
+		+r1
+			padding-bottom: 8px
+	&__right, &__field
+		padding-left: 240px
+		+r1
+			padding: 0
+		p
+			font-size: 13px
+			line-height: 20px
+			letter-spacing: 0.19px
+			color: $gray
+			+hr
+	&__field
+		max-width: 550px
+		+r1
+			max-width: 300px
+		+r3
+			max-width: 100%
+	&__label
+		padding: 6px 0 4px 30px
+		+r1
+			padding: 0 0 8px
+	&__box
+		padding-bottom: 20px
+		+r1
+			padding-bottom: 16px
+		&:last-child
+			padding-bottom: 0
+	&__list
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 6px 40px 4px 0
+	&__btn
+		text-align: center
+		padding: 20px 0 0
+	.address-fields
+		padding-bottom: 10px

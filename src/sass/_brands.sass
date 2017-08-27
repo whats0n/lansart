@@ -1,0 +1,83 @@
+.brands
+	padding: 0 0 28px
+	+r1
+		padding: 0 0 24px
+	+r2
+		padding: 0 0 14px
+	&__inner
+		@extend %inner
+	&__title
+		line-height: 1
+		margin: -25px 0 6px
+		width: 100%
+		float: left
+		padding: 0 20px
+		+r1
+			margin: -23px 0 0
+		+r2
+			margin: -20px 0 0
+			padding: 0 16px
+	&__slider
+		z-index: 5
+	&__row
+		position: relative
+		clear: both
+		+clr
+		font-size: 0
+		padding: 0 25px
+		+r1
+			padding: 0
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 40px
+			z-index: 10
+		&:before
+			left: 0
+			background-image: linear-gradient(to left, rgba(#fff, 0) 0%, #fff 100%)
+		&:after
+			right: 0
+			background-image: linear-gradient(to left,  #fff 0%, rgba(#fff, 0) 100%)
+	&__arrows
+		position: relative
+		+r1
+			display: none
+		&-in
+			position: absolute
+			right: 0
+			bottom: 50%
+			margin-bottom: -5px
+			font-size: 0
+			text-align: right
+			z-index: 11
+
+.brand
+	float: left
+	padding: 0 32px
+	+r1
+		padding: 0 22px
+	&__inner
+		display: block
+		height: 100px
+		+vertical
+		+gray
+		opacity: 0.3
+		transition: 0.25s ease-out
+		padding: 10px 0
+		.no-touch &
+			&:hover
+				+gray-zero
+				opacity: 1
+		+r1
+			height: 80px
+			opacity: 1
+			+gray-zero
+		+r2
+			height: 60px
+		img
+			display: inline-block
+			vertical-align: middle
+			max-height: 100%
+			max-width: 100%

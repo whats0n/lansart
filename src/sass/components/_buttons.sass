@@ -1,0 +1,191 @@
+//BUTTONS
+.btn-likes, .btn-comments, .btn-views
+	position: relative
+
+	display: inline-block
+	vertical-align: top
+
+	padding-left: 20px
+
+	color: $gray
+
+	+hr
+	font-size: 13px
+	line-height: 20px
+	letter-spacing: 0.22px
+
+	transition: color 0.25s ease-out
+	.no-touch &
+		&:hover, &:active
+			color: $dark
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
+	.is-active
+		&:before
+			opacity: 0
+		&:after
+			opacity: 1
+	&_big
+		+r1
+			font-size: 13px
+	span
+		display: inline-block
+		vertical-align: top
+	&:before, &:after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+
+		width: 16px
+		height: 14px
+
+		background-repeat: no-repeat
+		background-position: left center
+
+		transition: opacity 0.25s ease-in-out
+	&:after
+		opacity: 0
+		filter: drop-shadow(0 2px 4px rgba(65, 123, 231, 0.3))
+//likes
+.btn-likes
+	&:not(.btn-likes_big)
+		+r1
+			font-size: 11px
+			line-height: 16px
+			letter-spacing: 0.17px
+		&:before, &:after
+			+r1
+				top: 0
+	&:before, &:after
+		top: 2px
+		background-size: 16px 14px
+	&:before
+		background-image: url(../img/heart-empty.svg)
+	&:after
+		background-image: url(../img/heart-full.svg)
+//comments
+.btn-comments
+	&:not(.btn-comments_big)
+		+r1
+			font-size: 11px
+			line-height: 16px
+			letter-spacing: 0.17px
+		&:before, &:after
+			+r1
+				top: 1px
+	&:before, &:after
+		top: 3px
+		background-size: 15px 14px
+	&:before
+		background-image: url(../img/comment-empty.svg)
+	&:after
+		background-image: url(../img/comment-full.svg)
+//views
+.btn-views
+	&:not(.btn-views_big)
+		+r1
+			font-size: 11px
+			line-height: 16px
+			letter-spacing: 0.17px
+		&:before, &:after
+			+r1
+				top: 1px
+	&:before, &:after
+		top: 2px
+		background-size: 16px 10px
+	&:before
+		background-image: url(../img/view.svg)
+	&:after
+		background-image: url(../img/view-blue.svg)
+
+//plus
+.btn-plus
+	position: relative
+
+	display: inline-block
+	vertical-align: top
+	width: 40px
+	height: 40px
+	border-radius: 50%
+
+	background: none
+	transition: box-shadow 0.25s ease-out
+	.no-touch &
+		&:hover, &:active
+			box-shadow: 0 4px 8px rgba(65, 123, 231, 0.2)
+			span
+				border-color: $blue
+				background: $blue
+				&:before, &:after
+					background: #fff
+			&:before
+				top: 10px
+				opacity: 1
+		&:hover
+			&:before
+				box-shadow: 0 12px 24px rgba(65, 123, 231, 0.4)
+		&:active
+			&:before
+				top: 9px
+				box-shadow: 0 4px 8px rgba(65, 123, 231, 0.3)
+	&.is-active
+		box-shadow: 0 6px 8px rgba(65, 123, 231, 0.3)
+		span
+			border-color: $blue
+			background: $blue
+
+			transform: rotate(135deg)
+			&:before, &:after
+				background: #fff
+	&:before
+		content: ""
+
+		position: absolute
+		top: 5px
+		left: 5px
+		right: 5px
+		height: 30px
+
+		border-radius: 50%
+
+		opacity: 0
+		background: rgba(65, 123, 231, 0.3)
+		box-shadow: 0 12px 24px rgba(65, 123, 231, 0.3)
+
+		transition: 0.25s ease-out
+	span
+		position: relative
+
+		display: block
+		width: 100%
+		height: 100%
+
+		border: 2px solid #d9dbe1
+		border-radius: 50%
+
+		transition: background 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out
+		&:before, &:after
+			content: ""
+			position: absolute
+			border-radius: 1px
+			background: $blue
+			transition: background 0.25s ease-out
+		&:before
+			top: 50%
+			left: 11px
+			right: 11px
+
+			margin-top: -1px
+
+			height: 2px
+		&:after
+			top: 11px
+			bottom: 11px
+			left: 50%
+
+			margin-left: -1px
+
+			width: 2px

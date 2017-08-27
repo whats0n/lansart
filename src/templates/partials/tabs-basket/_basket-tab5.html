@@ -1,0 +1,70 @@
+{% set bonusForms = [
+	{
+		formId: 'form-bonus1',
+		code: true
+	},
+	{
+		formId: 'form-bonus2',
+		certificate: true
+	}
+] %}
+
+<!-- begin basket tab5  -->
+<div class="tabs__content js-tab-content" data-tab="tab5">
+	<div class="form-basket js-form-container">
+		<div class="form-basket__head">
+			<div class="form-basket__left">
+				<label class="radio radio_big">
+					<input type="radio" name="basket-bonus" checked value="{{bonusForms[0].formId}}" class="js-form-open">
+					<span>Промо код</span>
+				</label>
+			</div>
+			<div class="form-basket__right">
+				<label class="radio radio_big">
+					<input type="radio" name="basket-bonus" value="{{bonusForms[1].formId}}" class="js-form-open">
+					<span>Подарочный сертификат</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-basket__container">
+			{% for bonusForm in bonusForms %}
+			<form action="/" class="bonus form-basket__inner js-form-tab" data-id="{{bonusForm.formId}}">
+				<div class="bonus__body">
+					{% if bonusForm.code %}
+					<div class="bonus__box">
+						<div class="bonus__label form-person__label">
+							<label for="bonus-code" class="label label_form">Промо код</label>
+						</div>
+						<div class="bonus__field form-person__field">
+							<input type="text" class="input" id="bonus-code" placeholder="Введите промо код">
+							<div class="bonus__icon" hidden>{{mixins.icon('check')}}</div>
+							<div class="bonus__sales" hidden>
+								<p>Скидка 15% на аксессуары</p>
+							</div>
+						</div>
+					</div>
+					{% elif bonusForm.certificate %}
+					<div class="bonus__box">
+						<div class="bonus__label form-person__label">
+							<label for="bonus-certificate" class="label label_form">Подарочный сертификат</label>
+						</div>
+						<div class="bonus__field form-person__field">
+							<input type="text" class="input" id="bonus-certificate" placeholder="Введите номер подарочного сертификата">
+							<div class="bonus__icon" hidden>{{mixins.icon('check')}}</div>
+							<div class="bonus__sales" hidden>
+								<p>Скидка 15% на аксессуары</p>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+				</div>
+				<div class="step-btns">
+					<button class="btn btn_gray step-btns__prev"><span>Вернуться</span></button>
+					<button class="btn btn_blue step-btns__next"><span>Продолжить</span></button>
+				</div>
+			</form>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end basket tab5 -->

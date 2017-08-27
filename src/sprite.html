@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Iconfont Preview</title>
+  <style type="text/css" media="all">
+
+    h1 {
+      text-align: center;
+    }
+
+    .icons-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      text-align: center;
+    }
+
+    .icon-box {
+      display: inline-block;
+      vertical-align: middle;
+      min-width: 200px;
+      min-height: 200px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .icon-container {
+      min-height: 170px;
+      text-align: center;
+      font-size: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #CCC;
+      border-radius: 5px;
+      box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    input:not([type=range]) {
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 12px;
+      border-radius: 5px;
+      height: 30px;
+      padding: 0;
+      text-align: center;
+      border: 1px solid #CCC;
+      box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+      -webkit-appearance: none;
+    }
+
+    input[type=range] {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .icon-class-name {
+      width: 70%;
+    }
+
+    .icon-unicode {
+      width: 30%;
+    }
+
+    .icon-arr-back {
+      width: 1.15em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-bank {
+      width: 1.13em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-basket {
+      width: 0.76em;
+      height: 1em;
+      /*fill: initial;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-check {
+      width: 1.42em;
+      height: 1em;
+      /*fill: #FFF;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-click {
+      width: 0.74em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-close {
+      width: 1em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-comment-full {
+      width: 1.09em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-comment {
+      width: 1.09em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-datepicker {
+      width: 0.98em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-delete {
+      width: 0.95em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-delivery-empty {
+      width: 1.4em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-delivery {
+      width: 1.66em;
+      height: 1em;
+      /*fill: #FFF;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-design {
+      width: 1em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-dislike-full {
+      width: 1.1em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-down {
+      width: 1.71em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-edit {
+      width: 1em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-facebook {
+      width: 0.53em;
+      height: 1em;
+      /*fill: #000;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-fb {
+      width: 0.44em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-google {
+      width: 1.61em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-heart-full {
+      width: 1.1em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-heart {
+      width: 1.1em;
+      height: 1em;
+      /*fill: initial;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-insta {
+      width: 1em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-kitchen {
+      width: 1em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-left {
+      width: 0.58em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-like-empty {
+      width: 1.09em;
+      height: 1em;
+      /*fill: #FFF;*/
+      /*stroke: #D9DBE1;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-like-full {
+      width: 1.09em;
+      height: 1em;
+      /*fill: initial;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-like {
+      width: 0.89em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-login {
+      width: 1em;
+      height: 1em;
+      /*fill: initial;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-medal {
+      width: 0.81em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-next {
+      width: 1.59em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-od {
+      width: 0.58em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-pen {
+      width: 0.51em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-phone {
+      width: 1em;
+      height: 1em;
+      /*fill: initial;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-prev {
+      width: 1.59em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-reload {
+      width: 0.75em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-right {
+      width: 0.58em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-sale {
+      width: 1em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-search {
+      width: 1em;
+      height: 1em;
+      /*fill: initial;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-settings {
+      width: 1em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-star {
+      width: 1.05em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-tools {
+      width: 1.09em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-tw {
+      width: 1.21em;
+      height: 1em;
+      /*fill: #FFF;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-up {
+      width: 1.71em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-user {
+      width: 0.84em;
+      height: 1em;
+      /*fill: initial;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-view {
+      width: 1.6em;
+      height: 1em;
+      /*fill: #D9DBE1;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-vk {
+      width: 1.65em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    .icon-youtube {
+      width: 1.42em;
+      height: 1em;
+      /*fill: #427BE7;*/
+      /*stroke: initial;*/
+      fill: initial;
+      stroke: black;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Icons: <span id="count"></span></h1>
+
+  <label style="display: block; width: 300px; margin: 20px auto;">
+    Icon size <output for="size" id="size-value">100</output>
+    <input type="range" id="size" value="100" min="6" max="1000">
+  </label>
+
+  <ul class="icons-list">
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-arr-back" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-arr-back">
+          <use xlink:href="/img/sprite.svg#icon-arr-back"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-bank" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-bank">
+          <use xlink:href="/img/sprite.svg#icon-bank"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-basket" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-basket">
+          <use xlink:href="/img/sprite.svg#icon-basket"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-check" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-check">
+          <use xlink:href="/img/sprite.svg#icon-check"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-click" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-click">
+          <use xlink:href="/img/sprite.svg#icon-click"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-close" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-close">
+          <use xlink:href="/img/sprite.svg#icon-close"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-comment-full" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-comment-full">
+          <use xlink:href="/img/sprite.svg#icon-comment-full"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-comment" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-comment">
+          <use xlink:href="/img/sprite.svg#icon-comment"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-datepicker" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-datepicker">
+          <use xlink:href="/img/sprite.svg#icon-datepicker"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-delete" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-delete">
+          <use xlink:href="/img/sprite.svg#icon-delete"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-delivery-empty" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-delivery-empty">
+          <use xlink:href="/img/sprite.svg#icon-delivery-empty"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-delivery" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-delivery">
+          <use xlink:href="/img/sprite.svg#icon-delivery"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-design" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-design">
+          <use xlink:href="/img/sprite.svg#icon-design"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-dislike-full" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-dislike-full">
+          <use xlink:href="/img/sprite.svg#icon-dislike-full"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-down" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-down">
+          <use xlink:href="/img/sprite.svg#icon-down"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-edit" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-edit">
+          <use xlink:href="/img/sprite.svg#icon-edit"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-facebook" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-facebook">
+          <use xlink:href="/img/sprite.svg#icon-facebook"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-fb" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-fb">
+          <use xlink:href="/img/sprite.svg#icon-fb"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-google" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-google">
+          <use xlink:href="/img/sprite.svg#icon-google"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-heart-full" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-heart-full">
+          <use xlink:href="/img/sprite.svg#icon-heart-full"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-heart" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-heart">
+          <use xlink:href="/img/sprite.svg#icon-heart"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-insta" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-insta">
+          <use xlink:href="/img/sprite.svg#icon-insta"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-kitchen" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-kitchen">
+          <use xlink:href="/img/sprite.svg#icon-kitchen"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-left" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-left">
+          <use xlink:href="/img/sprite.svg#icon-left"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-like-empty" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-like-empty">
+          <use xlink:href="/img/sprite.svg#icon-like-empty"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-like-full" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-like-full">
+          <use xlink:href="/img/sprite.svg#icon-like-full"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-like" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-like">
+          <use xlink:href="/img/sprite.svg#icon-like"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-login" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-login">
+          <use xlink:href="/img/sprite.svg#icon-login"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-medal" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-medal">
+          <use xlink:href="/img/sprite.svg#icon-medal"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-next" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-next">
+          <use xlink:href="/img/sprite.svg#icon-next"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-od" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-od">
+          <use xlink:href="/img/sprite.svg#icon-od"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-pen" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-pen">
+          <use xlink:href="/img/sprite.svg#icon-pen"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-phone" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-phone">
+          <use xlink:href="/img/sprite.svg#icon-phone"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-prev" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-prev">
+          <use xlink:href="/img/sprite.svg#icon-prev"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-reload" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-reload">
+          <use xlink:href="/img/sprite.svg#icon-reload"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-right" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-right">
+          <use xlink:href="/img/sprite.svg#icon-right"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-sale" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-sale">
+          <use xlink:href="/img/sprite.svg#icon-sale"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-search" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-search">
+          <use xlink:href="/img/sprite.svg#icon-search"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-settings" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-settings">
+          <use xlink:href="/img/sprite.svg#icon-settings"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-star" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-star">
+          <use xlink:href="/img/sprite.svg#icon-star"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-tools" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-tools">
+          <use xlink:href="/img/sprite.svg#icon-tools"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-tw" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-tw">
+          <use xlink:href="/img/sprite.svg#icon-tw"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-up" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-up">
+          <use xlink:href="/img/sprite.svg#icon-up"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-user" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-user">
+          <use xlink:href="/img/sprite.svg#icon-user"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-view" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-view">
+          <use xlink:href="/img/sprite.svg#icon-view"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-vk" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-vk">
+          <use xlink:href="/img/sprite.svg#icon-vk"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-youtube" readonly>
+      <div class="icon-container">
+        <svg class="icon icon-youtube">
+          <use xlink:href="/img/sprite.svg#icon-youtube"></use>
+        </svg>
+      </div>
+    </li>
+    
+  </ul>
+
+  <script>
+    var change = document.getElementById('size');
+    var changeVal = document.getElementById('size-value');
+    var count = document.getElementById('count');
+    var autoselect = document.getElementsByClassName('autoselect');
+    var icons = document.getElementsByClassName('icon');
+    Array.prototype.forEach.call(autoselect, function(el) {
+      el.onclick = function() {
+        this.focus();
+        this.select();
+      };
+    });
+    change.oninput = function() {
+      var val = this.value;
+      changeVal.value = val;
+      Array.prototype.forEach.call(icons, function(el) {
+        el.style.fontSize = val + 'px';
+      });
+    }
+    count.innerHTML = icons.length;
+  </script>
+</body>
+</html>

@@ -1,0 +1,942 @@
+.main-title
+	padding: 60px 0 90px
+	color: #fff
+
+	+as
+	font-size: 72px
+	text-align: center
+	line-height: (60/72)
+	+r1
+		padding: 26px 0 50px
+
+		font-size: 54px
+		line-height: (45/54)
+	+r2
+		padding: 42px 0 79px
+
+		font-size: 36px
+		line-height: (30/36)
+	span
+		display: block
+		&:before, &:after
+			content: ""
+
+			display: inline-block
+			vertical-align: middle
+			border-radius: 2px
+			margin: 2px 18px 0
+			width: 80px
+			height: 2px
+
+			background: #fff
+			+r1
+				width: 56px
+
+.landing
+	background: whitesmoke
+	overflow: hidden
+	&__inner
+		position: relative
+		padding: 0 20px
+		margin: 0 auto
+		max-width: 1060px
+		+clr
+		+r1
+			padding: 0 24px
+			max-width: 768px
+		+r2
+			padding: 0 16px
+			max-width: 320px
+	&-title
+		color: $blue
+
+		+as
+		font-size: 42px
+		line-height: (40/42)
+		+r1
+			font-size: 32px
+			line-height: 1
+		&:after
+			content: ""
+			display: block
+			border-radius: 1px
+			margin: 16px 0 0
+			width: 20px
+			height: 2px
+
+			background-color: $blue
+			+r1
+				margin-top: 7px
+				width: 16px
+	&-text
+		p, ul
+			color: $gray
+
+			+hr
+			font-size: 14px
+			line-height: 20px
+			+r1
+				font-size: 13px
+				line-height: 16px
+		p
+			padding: 9px 0 10px
+			+r1
+				padding: 8px 0
+		li
+			position: relative
+			padding: 0 0 9px 10px
+			+r1
+				padding-bottom: 16px
+			&:before
+				content: ""
+				position: absolute
+				top: 7px
+				left: 0
+
+				border-radius: 50%
+				width: 5px
+				height: 5px
+
+				background: $blue
+				+r1
+					top: 4px
+
+.landing-about
+	+clr
+	padding: 65px 0 106px
+	+r1
+		padding: 50px 0 76px
+	+r2
+		padding: 32px 0 88px
+	.landing-title
+		margin-bottom: 29px
+		+r1
+			margin-bottom: 23px
+	&__info
+		position: relative
+		z-index: 5
+		float: left
+		padding: 0 80px
+		width: 48%
+		+r1
+			padding: 0 63px
+			width: 52%
+		+r2
+			float: none
+			padding: 0 16px
+			width: 100%
+		.landing-text
+			max-width: 290px
+			+r1
+				max-width: 225px
+	&__images
+		position: relative
+		float: right
+		padding: 0 50px 0 80px
+		margin-top: 15px
+		width: 52%
+		+clr
+		+r1
+			padding: 0 0 0 45px
+			width: 48%
+		+r2
+			padding: 0 24px 0 64px
+			width: 100%
+		&:before
+			content: ""
+			position: absolute
+			top: 40px
+			left: 0
+
+			border-radius: 2px
+			width: 210px
+			height: 130px
+
+			background-color: #eee
+			+r1
+				top: 30px
+				left: -15px
+				width: 158px
+				height: 98px
+			+r2
+				top: 20px
+				left: 33px
+				border-radius: 1px
+				width: 105px
+				height: 65px
+				background-color: #eee
+	&__img
+		position: relative
+		z-index: 2
+
+		border-radius: 2px
+
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		box-shadow: 0 6px 12px rgba(62, 76, 102, 0.2)
+		+r1
+			box-shadow: 0 5px 9px rgba(62, 76, 102, 0.2)
+		+r2
+			border-radius: 1px
+			box-shadow: 0 3px 6px rgba(62, 76, 102, 0.2)
+	&__figure
+		position: relative
+		width: 100%
+		z-index: 2
+		&:before
+			content: ""
+			position: absolute
+			z-index: 1
+			top: 20px
+			left: 30px
+			right: 30px
+			bottom: 0
+
+			border-radius: 2px
+
+			box-shadow: 0 12px 24px rgba(62, 76, 102, 0.2)
+			+r1
+				top: 15px
+				left: 22px
+				right: 23px
+				box-shadow: 0 9px 18px rgba(62, 76, 102, 0.2)
+			+r2
+				top: 10px
+				left: 15px
+				right: 15px
+				border-radius: 1px
+				box-shadow: 0 6px 12px rgba(62, 76, 102, 0.2)
+		&_md
+			float: right
+			max-width: 340px
+			+r1
+				max-width: 255px
+			+r2
+				max-width: 170px
+			.landing-about__img
+				padding-bottom: 62%
+		&_sm
+			float: left
+			margin-top: -90px
+			max-width: 160px
+			+r1
+				margin-top: -68px
+				max-width: 120px
+			+r2
+				margin-top: -45px
+				max-width: 80px
+			.landing-about__img
+				padding-bottom: 131%
+			&:before
+				+r1
+					top: 17px
+					left: 15px
+					right: 15px
+				+r2
+					left: 10px
+					right: 10px
+		&_lg
+			max-width: 500px
+			.landing-about__img
+				padding-bottom: 62%
+	&__body
+		clear: both
+		+clr
+	&__picture
+		position: relative
+		float: left
+		padding: 0 0 30px
+		width: 48%
+		+r1
+			padding: 0 0 22px
+			width: 52%
+		+r2
+			padding: 0 40px 15px 0
+			width: 100%
+			float: none
+		.landing-about__figure
+			margin: 80px 0 0
+			+r1
+				margin: 62px 0 0
+			+r2
+				margin: 0
+		&:before
+			content: ""
+			position: absolute
+			z-index: 1
+			right: -80px
+			bottom: 0
+
+			border-radius: 2px
+			width: 130px
+			height: 90px
+
+			background-color: #eee
+			+r1
+				right: -60px
+				width: 98px
+				height: 68px
+				box-shadow: 0 2px 8px rgba(62, 76, 102, 0.1)
+			+r2
+				right: 0
+				border-radius: 1px
+				width: 65px
+				height: 45px
+				box-shadow: none
+	&__number
+		position: absolute
+		top: -130px
+		left: -196px
+
+		color: white
+
+		+as
+		font-size: 340px
+		line-height: 1
+		+r1
+			top: -95px
+			left: -147px
+
+			font-size: 255px
+		+r2
+			top: -63px
+			left: auto
+			right: -22px
+
+			font-size: 170px
+	&__content
+		position: relative
+		float: right
+		width: 52%
+		+r1
+			width: 48%
+		+r2
+			padding: 32px 0 0
+			width: 100%
+			float: none
+	&__subheading
+		position: relative
+		z-index: 5
+		padding: 65px 20px 55px
+		margin: -40px 0 0 -50px
+		border: 4px solid $blue
+		border-radius: 2px
+		max-width: 410px
+		+r1
+			padding: 43px 20px 46px
+			margin: -28px 0 0 -35px
+			border-width: 3px
+			max-width: 308px
+		+r2
+			margin: 0
+			max-width: 100%
+		&-in
+			max-width: 270px
+			margin: 0 auto
+
+			color: $dark
+
+			+as
+			font-size: 28px
+			text-align: center
+			line-height: (30/28)
+			letter-spacing: 0.24px
+			+r1
+				font-size: 24px
+				line-height: 1
+				letter-spacing: 0.2px
+			&:after
+				content: ""
+				display: block
+				margin: 19px auto 1px
+				border-radius: 1px
+				width: 20px
+				height: 2px
+
+				background-color: $blue
+				+r1
+					margin: 13px auto 0
+					width: 16px
+	&__text
+		position: relative
+		z-index: 2
+		float: right
+		padding: 50px 55px 20px 0
+		max-width: 300px
+		+r1
+			padding: 35px 55px 14px 0
+			max-width: 280px
+		+r2
+			float: none
+			padding: 24px 16px
+			max-width: 257px
+
+.landing-offers
+	background: #fff
+	&__title
+		float: right
+		padding: 0 20px
+		margin: -70px 0 0
+		width: 52%
+		+r1
+			padding: 0 24px
+			margin: -56px 0 0
+			width: 48%
+		+r2
+			padding: 0 16px
+			width: 100%
+	&__body
+		+clr
+		+r2
+			clear: both
+	&__figure
+		float: left
+		width: 48%
+		font-size: 0
+		+r1
+			width: 52%
+		+r2
+			float: none
+			padding: 32px 16px 24px
+			width: 100%
+	&__img
+		margin-left: -67px
+		max-width: 510px
+		+r1
+			margin-left: -24px
+			max-width: 370px
+		+r2
+			margin: 0
+		img
+			width: 100%
+	&__text
+		position: relative
+		float: right
+		padding: 59px 20px 0
+		width: 52%
+		+clr
+		+r1
+			padding: 39px 24px 0
+			width: 48%
+		+r2
+			float: none
+			padding: 0 16px
+			width: 100%
+		&:before
+			content: ""
+			position: absolute
+			z-index: 5
+			top: 68px
+			bottom: -70px
+			right: 39%
+
+			border-radius: 2px
+			width: 4px
+
+			background: $blue
+			+r1
+				top: 46px
+				right: 24%
+				bottom: -49px
+				width: 3px
+			+r2
+				top: 6px
+				bottom: -40px
+				right: 33px
+		p
+			max-width: 240px
+			+r1
+				max-width: 220px
+	&__number
+		position: relative
+		float: right
+		margin: -50px 0 -110px
+
+		color: whitesmoke
+
+		+as
+		font-size: 340px
+		line-height: 1
+		+r1
+			margin: -40px -80px -83px 0
+			font-size: 255px
+		+r2
+			font-size: 170px
+			margin: 20px -15px -50px 0
+
+.landing-start
+	position: relative
+	padding: 66px 0 0
+	+r1
+		padding: 48px 0 0
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+
+		height: 500px
+
+		background-repeat: no-repeat
+		background-position: center top
+		+r1
+			height: 375px
+	.landing-text
+		p, ul
+			color: #d9dbe1
+	&__title
+		color: white
+
+		+as
+		font-size: 28px
+		line-height: (30/28)
+		+r1
+			font-size: 24px
+			line-height: 1
+		&:after
+			content: ""
+			display: block
+			margin: 14px 0 0
+			border-radius: 1px
+			width: 20px
+			height: 2px
+
+			background: #fff
+			+r1
+				margin: 8px 0 0
+				width: 16px
+	&__text
+		padding: 29px 0 15px
+		max-width: 290px
+		+r1
+			padding: 16px 0 0
+			margin: 0 0 -25px
+	&__info
+		padding: 0 97px
+		min-height: 266px
+		+r1
+			padding: 0 64px
+			min-height: 1px
+		+r2
+			padding: 0 16px 55px
+	&__figure
+		margin: 0 -23px 0 -17px
+		font-size: 0
+		+r1
+			margin: 0
+	&__img
+		+r1
+			max-width: 406px
+			margin: 0 auto -15px
+		+r2
+			padding: 0 5px 0 12px
+			margin: 0 auto
+		img
+			width: 100%
+	&__left
+		position: relative
+		z-index: 2
+		float: left
+		width: 48%
+	&__right
+		float: right
+		padding: 55px 0 0
+		width: 52%
+		+r1
+			padding: 0
+	&__left, &__right
+		+r1
+			width: 100%
+
+.landing-form
+	position: relative
+	max-width: 430px
+	+r1
+		margin: 0 auto
+	&:before
+		content: ""
+		position: absolute
+		top: 20px
+		left: 30px
+		right: 30px
+		bottom: 0
+
+		border-radius: 2px
+		box-shadow: 0 12px 24px rgba(62, 76, 102, 0.2)
+		+r2
+			left: 24px
+			right: 24px
+	&__inner
+		position: relative
+		padding: 25px 45px 60px
+		border-radius: 2px
+
+		background: #fff
+		box-shadow: 0 6px 12px rgba(62, 76, 102, 0.2)
+		+r2
+			padding: 17px 16px 24px
+	&__field
+		padding: 0 15px 10px
+		.input, .textarea
+			border-radius: 3px
+		.textarea
+			height: 100px
+	&__title
+		margin-bottom: 25px
+
+		color: #102140
+
+		+as
+		font-size: 28px
+		text-align: center
+		line-height: (30/28)
+		letter-spacing: 0.24px
+		+r2
+			margin: 0 auto 21px
+			max-width: 180px
+
+			font-size: 24px
+			line-height: 1
+	&__btn
+		padding: 10px 15px 0
+	.btn
+		width: 100%
+
+.landing-get
+	padding: 50px 0 0
+	margin-bottom: -80px
+	+r1
+		padding: 56px 0 0
+		margin-bottom: -60px
+	+r2
+		padding: 32px 0 0
+		margin: 0
+	&__image
+		position: relative
+		z-index: 5
+		float: left
+		padding: 0 30px
+		width: 48%
+		+r1
+			padding: 0
+			width: 45%
+		+r2
+			float: none
+			margin: 0 0 32px
+			width: 100%
+	&__figure
+		position: relative
+		float: right
+		width: 100%
+		max-width: 330px
+		+r1
+			max-width: 248px
+		+r2
+			float: none
+			margin: 0 auto
+			max-width: 165px
+		&:before
+			content: ""
+			position: absolute
+			top: 20px
+			left: 30px
+			right: 30px
+			bottom: 0
+			border-radius: 2px
+			box-shadow: 0 12px 24px rgba(62, 76, 102, 0.2)
+			+r1
+				top: 15px
+				left: 22px
+				right: 23px
+				box-shadow: 0 9px 18px rgba(62, 76, 102, 0.2)
+			+r2
+				top: 10px
+				left: 15px
+				right: 15px
+				border-radius: 1px
+				box-shadow: 0 6px 12px rgba(62, 76, 102, 0.2)
+	&__img
+		position: relative
+		padding-bottom: 127%
+		border-radius: 2px
+
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		box-shadow: 0 6px 12px rgba(62, 76, 102, 0.2)
+		+r1
+			box-shadow: 0 5px 9px rgba(62, 76, 102, 0.2)
+		+r2
+			border-radius: 1px
+			box-shadow: 0 3px 6px rgba(62, 76, 102, 0.2)
+	&__info
+		position: relative
+		float: right
+		width: 52%
+		+r1
+			width: 55%
+		+r2
+			width: 100%
+			float: none
+	&__title
+		margin: 5px 20px 59px
+		+r1
+			margin: 4px 37px 44px
+		+r2
+			margin: 0 16px 34px
+	&__box
+		position: relative
+		z-index: 1
+		padding: 52px 90px 251px
+		margin-left: -70px
+		border-radius: 2px
+		max-width: 510px
+		background: #eee
+		+r1
+			padding: 37px 68px 145px
+			margin-left: -31px
+			max-width: 383px
+		+r2
+			padding: 65px 40px 133px 32px
+			margin: 0 -16px
+			max-width: 320px
+		&:before
+			content: ""
+			position: absolute
+			bottom: 80px
+			right: 150px
+
+			border-radius: 2px
+			width: 120px
+			height: 120px
+
+			background: whitesmoke
+			box-shadow: 0 3px 10px rgba(62, 76, 102, 0.1)
+			+r1
+				bottom: 60px
+				right: 113px
+				width: 90px
+				height: 90px
+				box-shadow: 0 2px 8px rgba(62, 76, 102, 0.1)
+			+r2
+				right: 54px
+	&__number
+		float: left
+		margin: -60px 0
+		width: 48%
+
+		color: #fff
+
+		+as
+		font-size: 340px
+		line-height: 1
+		+r1
+			margin: -40px 0 -15px -24px
+			width: 45%
+
+			font-size: 255px
+		+r2
+			position: absolute
+			z-index: 2
+			bottom: -50px
+			left: 16px
+			margin: 0
+			font-size: 170px
+
+.landing-work
+	position: relative
+	background-color: white
+	+r2
+		z-index: 10
+	&__title
+		float: left
+		margin: -144px 0 0
+		width: 100%
+		height: 0
+		+r1
+			margin: -109px 0 0
+		+r2
+			margin: -40px 0 0
+			height: auto
+	&__subheading
+		position: relative
+		z-index: 5
+		padding: 60px 20px 50px
+		margin: 0 auto
+		border: 4px solid $blue
+		border-radius: 2px
+		max-width: 430px
+		+r1
+			padding: 40px 20px 40px
+			border-width: 3px
+			max-width: 323px
+		+r2
+			max-width: 100%
+		&-in
+			max-width: 270px
+			margin: 0 auto
+
+			color: $dark
+
+			+as
+			font-size: 28px
+			text-align: center
+			line-height: (30/28)
+			letter-spacing: 0.24px
+			+r1
+				font-size: 24px
+				line-height: 1
+				letter-spacing: 0.2px
+			&:after
+				content: ""
+				display: block
+				margin: 19px auto 1px
+				border-radius: 1px
+				width: 20px
+				height: 2px
+
+				background-color: $blue
+				+r1
+					margin: 13px auto 0
+					width: 16px
+	&__info
+		float: left
+		width: 48%
+		padding: 110px 60px 60px
+		+clr
+		+r1
+			padding: 65px 20px 50px 60px
+		+r2
+			float: none
+			padding: 30px 24px 55px 16px
+			width: 100%
+			clear: both
+		.landing-text
+			float: right
+			width: 100%
+			max-width: 330px
+			+r1
+				float: none
+				max-width: 250px
+	&__figure
+		float: right
+		padding: 0 0 0 100px
+		margin-top: -80px
+		width: 52%
+		+r2
+			float: none
+			padding: 0
+			margin: 0 -16px
+			width: auto
+	&__img
+		height: 500px
+		margin-right: -200px
+
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		+r1
+			height: 375px
+		+r2
+			height: 250px
+			margin: 0
+
+.landing-step
+	position: relative
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+
+		height: 500px
+
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		+r1
+			height: 375px
+	&__inner
+		height: 500px
+		+r1
+			height: 375px
+	&__right
+		position: relative
+		float: right
+
+		width: 52%
+		min-height: 500px
+		+clr
+		+r1
+			width: 100%
+			min-height: 375px
+	&__img
+		position: absolute
+		z-index: 10
+		bottom: 0
+		right: -70px
+		width: 660px
+		font-size: 0
+		+r1
+			width: 480px
+		+r2
+			right: -35px
+			width: 330px
+		img
+			width: 100%
+	&__left
+		float: left
+		padding: 0 0 0 50px
+		margin-top: -80px
+		width: 48%
+		+r1
+			padding: 80px 0
+			margin: 0
+			width: 100%
+		+r2
+			padding: 32px 0
+	&__info
+		position: relative
+		z-index: 15
+		padding: 85px 0 130px 100px
+		max-width: 340px
+		+r1
+			float: right
+			padding: 48px 55px 85px  0
+			max-width: 280px
+		+r2
+			float: none
+			padding: 48px 16px 85px
+			max-width: 255px
+	&__title
+		margin: 0 0 29px
+
+		color: $blue
+
+		+as
+		font-size: 28px
+		line-height: (30/28)
+		+r1
+			margin: 0 0 16px
+			font-size: 24px
+			line-height: 1
+		&:after
+			content: ""
+
+			display: block
+			margin: 14px 0 0
+			border-radius: 1px
+			width: 20px
+			height: 2px
+			background: $blue
+			+r1
+				margin: 8px 0 0
+				width: 16px
+
+.landing-subs
+	padding: 0 20px
+	+r1
+		padding: 0 24px
+	+r2
+		padding: 0 16px

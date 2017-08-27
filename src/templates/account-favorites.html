@@ -1,0 +1,84 @@
+---
+title: Account/favorites
+headerMod: header_small
+breadcrumbs: [
+	'Главная',
+	'Профиль',
+	'Избранное'
+]
+activeBC: 2
+accNav: [
+	{
+		text: 'Мои данные'
+	},
+	{
+		text: 'Мои заказы'
+	},
+	{
+		text: 'Избранное',
+		active: true
+	}
+]
+profile: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+<div class="page">
+	<div class="page__inner">
+		{% include "partials/_breadcrumbs.html" %}
+		<div class="page__container account">
+			<div class="account__title title">Профиль</div>
+			<div class="account__sidebar">
+				<div class="acc-nav">
+					<ul class="acc-nav__list">
+						{% for accLink in accNav %}
+						{% if accLink.active %}
+						<li class="acc-nav__item"><a href="#" class="acc-nav__link is-active">{{ accLink.text }}</a></li>
+						{% else %}
+						<li class="acc-nav__item"><a href="#" class="acc-nav__link">{{ accLink.text }}</a></li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+				</div>
+				{% set filter = [
+					'Стулья',
+					'Диваны',
+					'Шкафы',
+					'Тумбочки',
+					'Зеркала'
+				] %}
+				<div class="filter">
+					<div class="filter__title js-list-btn is-active">КАТЕГОРИИ <i class="filter__plus"></i></div>
+					<ul class="filter__radios js-list" style="display: block;">
+						{% for item in filter %}
+						<li>
+							<label class="checkbox">
+								<input type="checkbox" checked>
+								<span>{{item}}</span>
+							</label>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="account__content">
+				<div class="account__items">
+					{% for item in [1,2,3,4,5,6] %}
+					<div class="account__col account__col_sm">
+						{{mixins.item({
+							adaptive: true
+						})}}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

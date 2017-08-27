@@ -1,0 +1,49 @@
+<!-- begin items  -->
+<div class="items">
+	<div class="items__inner js-items">
+		<div class="js-items-block">
+		</div>
+		<div class="items__slider js-items-slider">
+			<div class="items__col js-items-slide items__col_sm">
+				<a href="#" class="banner banner_item">
+					<div class="banner__inner" style="background-image: url(img/banner.jpg);">
+						<div class="banner__title">Товары дня</div>
+						<div class="banner__text">
+							<p class="js-cut-text">Каждый день мы предоставляем вам самый актуальный товар</p>
+						</div>
+						<div class="link-more">
+							<span>Больше</span>
+							<div class="link-more__visible">
+								{{mixins.icon('next')}}
+							</div>
+							<div class="link-more__hidden">
+								{{mixins.icon('next')}}
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="items__col js-items-slide items__col_sm">
+				{{ mixins.item({
+					favorite: 'is-favorite'
+				}) }}
+			</div>
+			<div class="items__col js-items-slide items__col_sm">
+				{{ mixins.item() }}
+			</div>
+			<div class="items__col js-items-slide items__col_sm">
+				{{ mixins.item() }}
+			</div>
+			<div class="items__col js-items-slide items__col_sm">
+				{{ mixins.item() }}
+			</div>
+			<div class="items__col js-items-hidden items__col_lg" data-after="4">
+				{{mixins.bigItem()}}
+			</div>
+			<div class="items__col js-items-slide items__col_sm">
+				{{ mixins.item() }}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end items -->

@@ -1,0 +1,78 @@
+//pagination
+.pagination
+	// width: 290px
+	width: 310px
+	.btn-arrow
+		&_prev
+			float: left
+		&_next
+			float: right
+	&__list
+		overflow: hidden
+		text-align: center
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 0 1px
+		a, span
+			width: 30px
+			height: 30px
+			line-height: 26px
+			text-align: center
+			display: block
+			font-size: 13px
+			letter-spacing: 0.15px
+			+hr
+			color: $gray
+			+r2
+				font-size: 11px
+				letter-spacing: 0.13px
+		a
+			border: 2px solid transparent
+			border-radius: 2px
+			transition: color 0.25s ease-out, border-color 0.25s ease-out
+			.no-touch &
+				&:hover
+					color: $blue
+			&.is-active
+				color: $blue
+				border-color: $blue
+
+.btn-arrow
+	font-size: 0
+	width: 39px
+	height: 30px
+	display: inline-block
+	vertical-align: top
+	position: relative
+	.no-touch &
+		&:hover
+			.btn-arrow
+				&__hidden
+					width: 20px
+	svg
+		font-size: 12px
+	&_prev
+		.btn-arrow
+			&__visible, &__hidden
+				left: 10px
+	&_next
+		.btn-arrow
+			&__visible, &__hidden
+				right: 10px
+	&__visible, &__hidden
+		position: absolute
+		top: 9px
+		+clr
+	&__visible
+		svg
+			fill: #969da9
+	&__hidden
+		width: 0
+		overflow: hidden
+		transition: width 0.3s linear
+		.icon-next
+			fill: $blue
+	.icon-next
+		float: right

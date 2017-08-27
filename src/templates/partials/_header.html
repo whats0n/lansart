@@ -1,0 +1,947 @@
+{% set navLinks = [
+	{ text: 'Для <br />кухни' },
+	{ text: 'Для <br />спальни' },
+	{ text: 'Для <br />гостиной' },
+	{ text: 'Для <br />детской' },
+	{ text: 'Для <br />прихожей' },
+	{ text: 'Для домашнего <br />кабинета' },
+	{ text: 'Для <br />дачи' },
+	{ text: 'Для <br />офиса' },
+	{ text: 'Для <br />гостиницы' },
+	{ text: 'Для бара <br />и ресторана' },
+	{ text: 'Элитная <br />мебель' },
+	{ text: 'Креативные <br />идеи' }
+] %}
+
+<!-- begin header  -->
+<header class="header {{headerMod}}">
+	<div class="top-line">
+		<div class="top-line__inner">
+			<div class="top-line__left sm-popup-open">
+				<a href="#" class="top-line__link js-city" data-toggle="modal" data-target="#change-city">Москва и МО</a>
+				<div class="sm-city sm-popup_top sm-popup">
+					<div class="sm-popup__inner">
+						<div class="sm-city__text">Ваш город - Москва?</div>
+						<div class="sm-city__btns">
+							<button class="btn btn_blue sm-city__submit"><span>Да</span></button>
+							<button class="btn btn_gray sm-city__cancel"><span>Выбрать другой</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% if profile %}
+			<div class="top-line__login">
+				<a href="#" class="top-line__link js-popup-open" data-popup="profile-list">
+					{{mixins.icon('user')}}
+					<span>Профиль</span>
+				</a>
+				<div class="sm-popup sm-popup_top sm-profile js-popup" data-id="profile-list">
+					<div class="sm-popup__inner">
+						<ul class=" sm-profile__nav">
+							<li><a href="#" class=" sm-profile__link">Мои данные</a></li>
+							<li><a href="#" class=" sm-profile__link">Мои заказы</a></li>
+							<li><a href="#" class=" sm-profile__link">Избранное</a></li>
+						</ul>
+						<div class="sm-popup__exit">
+							<a href="#" class=" sm-profile__link">Выйти</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% else %}
+			<div class="top-line__login">
+				<a href="#" class="top-line__link" data-toggle="modal" data-target="#login">
+					{{mixins.icon('user')}}
+					<span>Авторизация</span>
+				</a>
+				{% if headerSettings %}
+					<a href="#" class="top-line__link">
+						{{mixins.icon('settings')}}
+						<span>Панель</span>
+					</a>
+				{% endif %}
+				{% if headerLogout %}
+					<a href="#" class="top-line__link">
+						{{mixins.icon('login')}}
+						<span>Выйти</span>
+					</a>
+				{% endif %}
+			</div>
+			{% endif %}
+			<ul class="top-line__nav">
+				<li><a href="#" class="top-line__link">Доставка</a></li>
+				<li><a href="#" class="top-line__link">Оплата</a></li>
+				<li><a href="#" class="top-line__link">Сборка</a></li>
+				<li><a href="#" class="top-line__link">Контакты</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="header__inner">
+		<div class="header__schedule">
+			<a href="tel:+74999900091" class="header__phone">+7 (499) 99-000-91</a>
+			<div class="header__text">10:00-20:00 без выходных</div>
+		</div>
+		<div class="header__callback">
+			<a href="#" class="header__callback-btn js-popup-open" data-popup="callback">
+				<div class="header__icon">
+					{{mixins.icon('phone')}}
+				</div>
+				<span>Перезвоните мне</span>
+			</a>
+			<div class="callback sm-popup js-popup" data-id="callback">
+				<form action="/" class="callback__form">
+					<div class="callback__field">
+						<input type="text" class="input" placeholder="Ваш телефон">
+					</div>
+					<div class="callback__field">
+						<button class="btn btn_blue" type="submit"><span>Перезвоните мне</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<ul class="header__actions">
+			<li class="header__heart">
+				<a href="#" class="header__icon">
+					{{mixins.icon('heart')}}
+				</a>
+			</li>
+			<li class="header__search">
+				<div class="header-search js-search">
+					<button class="header__icon header__icon_search js-search-open">
+						<i class="header__close"></i>
+						{{mixins.icon('search')}}
+					</button>
+					<div class="sm-search js-autocomplete-parent">
+						<input type="text" class="sm-search__input js-autocomplete" placeholder="Поиск">
+						<a href="#" class="easy-autocomplete-link js-autocomplete-link">Все {{mixins.icon('next')}}</a>
+					</div>
+				</div>
+			</li>
+			<li class="header__basket sm-popup-open">
+				{% if basketPopup %}
+				<a href="#" class="header__icon" data-toggle="modal" data-target="#basket">
+					{{mixins.icon('basket')}}
+					<span>2</span>
+				</a>
+				{% else %}
+				<a href="#" class="header__icon">
+					{{mixins.icon('basket')}}
+					<span>2</span>
+				</a>
+				{% endif %}
+				<div class="sm-popup sm-popup_top sm-basket">
+					<div class="sm-popup__inner">
+						<div class="sm-popup__title">Корзина</div>
+						<ul class="sm-basket__list">
+							<li>
+								<div class="sm-basket__label">Товара</div>
+								<div class="sm-basket__text">2</div>
+							</li>
+							<li>
+								<div class="sm-basket__label">На сумму</div>
+								<div class="sm-basket__text">47 983 Р</div>
+							</li>
+						</ul>
+						<div class="sm-basket__btn">
+							<a href="#" class="btn btn_blue"><span>Перейти в корзину</span></a>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="header__logo">
+			<a href="#" class="logo">
+				<div class="logo__title">Lansart</div>
+				<div class="header__text">Онлайн-гипермаркет мебели</div>
+			</a>
+		</div>
+	</div>
+	<nav class="nav js-menu">
+		<ul class="nav__list">
+			{% for link in navLinks %}
+				<li class="nav__item js-menu-link">
+					{% if navLinks[activeLink] == link %}
+					<a href="#" class="nav__link is-active">{{ link.text | safe }}</a>
+					{% else %}
+					<a href="#" class="nav__link">{{ link.text | safe }}</a>
+					{% endif %}
+					<div class="menu js-menu-item">
+						<div class="menu__inner">
+							<div class="menu__box">
+								<div class="menu__list">
+									<a href="#" class="menu__title">КУХНИ</a>
+									<ul>
+										<li><a href="#">Кухни классика</a></li>
+										<li><a href="#">Кухни модерн</a></li>
+										<li><a href="#">Готовые решения</a></li>
+									</ul>
+								</div>
+								<div class="menu__list">
+									<a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+									<ul>
+										<li><a href="#">Кухонные столы</a></li>
+										<li><a href="#">Кухонные стулья</a></li>
+										<li><a href="#">Барные стулья</a></li>
+										<li><a href="#">Кухонные уголки</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="menu__box">
+								<div class="menu__list">
+									<a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+									<ul>
+										<li><a href="#">Вазы и цветы</a></li>
+										<li><a href="#">Кашпо и горшки</a></li>
+										<li><a href="#">Коробки и корзины</a></li>
+										<li><a href="#">Декор интерьера</a></li>
+										<li><a href="#">Сундуки</a></li>
+										<li><a href="#">Зеркала</a></li>
+										<li><a href="#">Картины и фоторамки</a></li>
+										<li><a href="#">Часы</a></li>
+										<li><a href="#">Ароматы для дома</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="menu__box">
+								<div class="menu__list">
+									<a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+									<ul>
+										<li><a href="#">Люстры и потолочные светильники</a></li>
+										<li><a href="#">Бра</a></li>
+										<li><a href="#">Споты</a></li>
+										<li><a href="#">Торшеры</a></li>
+										<li><a href="#">Настольные лампы</a></li>
+									</ul>
+								</div>
+								<div class="menu__list">
+									<a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+									<ul>
+										<li><a href="#">Баки для мусора</a></li>
+										<li><a href="#">Корзины для белья</a></li>
+										<li><a href="#">Товары для уборки</a></li>
+										<li><a href="#">Товары для хранения</a></li>
+										<li><a href="#">Бытовая химия</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="menu__box">
+								<a href="#" class="banner">
+									<div class="banner__inner" style="background-image: url(img/banner.jpg);">
+										<div class="banner__title">Промо баннер</div>
+										<div class="banner__text">
+											<p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br />
+											Только баннер</p>
+										</div>
+										<div class="link-more">
+											<span>Больше</span>
+											<div class="link-more__visible">
+												{{mixins.icon('next')}}
+											</div>
+											<div class="link-more__hidden">
+												{{mixins.icon('next')}}
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+	{% if sliderBG %}
+	<div class="js-slider bg-slider">
+		<div class="bg-slider__slide" style="background-image: url(img/header.jpg);"></div>
+		<div class="bg-slider__slide" style="background-image: url(https://placecage.com/1900/500);"></div>
+		<div class="bg-slider__slide" style="background-image: url(img/header.jpg);"></div>
+		<div class="bg-slider__slide" style="background-image: url(https://placecage.com/1900/500);"></div>
+	</div>
+	{% endif %}
+</header>
+<!-- end header -->
+
+<!-- begin mobile-header  -->
+<div class="mob-header js-mob-header js-fixed">
+	<div class="mob-header__inner">
+		<button class="btn-nav js-nav-btn"><span></span></button>
+		<a href="#" class="mob-logo">Lansart</a>
+		<a href="tel:+74999900091" class="mob-header__phone">+7 (499) 99-000-91</a>
+		<ul class="mob-header__actions">
+			<li class="top-search js-search">
+				<button class="top-search__btn mob-header__link js-search-open">
+					<i class="top-search__close"></i>
+					{{mixins.icon('search')}}
+				</button>
+				<div class="top-search__box js-autocomplete-parent">
+					<div class="top-search__field">
+						<input type="text" class="top-search__input js-autocomplete" placeholder="Поиск">
+						<a href="#" class="easy-autocomplete-link js-autocomplete-link">Все {{mixins.icon('next')}}</a>
+					</div>
+				</div>
+			</li>
+			<li><a href="#" class="mob-header__link">{{mixins.icon('heart')}}</a></li>
+			<li><a href="#" class="mob-header__link">{{mixins.icon('basket')}}</a></li>
+			<li><a href="#" class="mob-header__link" data-toggle="modal" data-target="#login">{{mixins.icon('user')}}</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end mobile-header -->
+
+<!-- begin mobile-nav  -->
+<div class="mob-nav js-nav">
+	<div class="mob-nav__inner js-scrollbar js-nav-inner">
+		<div class="mob-nav__head">
+			<button class="mob-nav__close js-nav-close">
+				{{mixins.icon('left')}}
+			</button>
+			<a href="#" class="mob-logo">Lansart</a>
+		</div>
+		<div class="mob-search">
+			<button class="mob-search__btn">
+				{{mixins.icon('search')}}
+			</button>
+			<input type="text" class="input input_small" placeholder="Поиск">
+		</div>
+		<div class="mob-nav__city js-open-city">
+			<div>ГОРОД: <span>Москва</span></div>
+			{{mixins.icon('right')}}
+		</div>
+		<div class="mob-item">
+			<div class="mob-item__head js-list-btn">
+				<span>ДЛЯ КУХНИ</span>
+				<i class="mob-item__plus"></i>
+			</div>
+			<ul class="mob-item__body js-list">
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Кухни <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Обеденные группы <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Декор для кухни <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Освещение <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Хозтовары <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="mob-item">
+			<div class="mob-item__head js-list-btn">
+				<span>ДЛЯ ДЕТСКОЙ</span>
+				<i class="mob-item__plus"></i>
+			</div>
+			<ul class="mob-item__body js-list">
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Кухни <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Обеденные группы <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Декор для кухни <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Освещение <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Хозтовары <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="mob-item">
+			<div class="mob-item__head js-list-btn">
+				<span>ДЛЯ ПРИХОЖЕЙ</span>
+				<i class="mob-item__plus"></i>
+			</div>
+			<ul class="mob-item__body js-list">
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Кухни <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Обеденные группы <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Декор для кухни <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Освещение <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Хозтовары <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="mob-item">
+			<div class="mob-item__head js-list-btn">
+				<span>ДЛЯ ДОМАШНЕГО КАБИНЕТА</span>
+				<i class="mob-item__plus"></i>
+			</div>
+			<ul class="mob-item__body js-list">
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Кухни <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Обеденные группы <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Декор для кухни <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Освещение <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Хозтовары <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="mob-item">
+			<div class="mob-item__head js-list-btn">
+				<span>ДЛЯ ДАЧИ</span>
+				<i class="mob-item__plus"></i>
+			</div>
+			<ul class="mob-item__body js-list">
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Кухни <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Обеденные группы <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Декор для кухни <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Освещение <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title js-list-btn">Хозтовары <i class="mob-item__plus"></i></a>
+					<ul class="mob-item__list js-list">
+						<li>
+							<a href="#">
+								<small>12</small>
+								<span>Кухни классика</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>53</small>
+								<span>Кухни модерн</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small>42</small>
+								<span>Готовые решения</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="mob-item">
+			<div class="mob-item__head js-list-btn">
+				<span>О КОМПАНИИ</span>
+				<i class="mob-item__plus"></i>
+			</div>
+			<ul class="mob-item__body js-list">
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title">Доставка</a>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title">Оплата</a>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title">Сборка</a>
+				</li>
+				<li class="mob-item__section">
+					<a href="#" class="mob-item__title">Контакты</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- end mobile-nav -->

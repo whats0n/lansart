@@ -1,0 +1,104 @@
+.courier
+	&__body
+		min-height: 380px
+		border-bottom: 1px solid #d9dbe1
+		padding: 20px 0
+		+r2
+			padding: 16px 0 24px
+			min-height: 1px
+	&__box
+		+clr
+		padding: 0 20px
+		+r2
+			padding: 0
+	&__label
+		width: 40%
+		float: left
+		padding: 6px 30px 4px
+		+r2
+			width: 100%
+			float: none
+			padding: 0 0 8px
+	&__field
+		width: 60%
+		float: left
+		position: relative
+		+r2
+			width: 100%
+			float: none
+		p
+			padding-top: 16px
+		.radio, .checkbox
+			span
+				padding-left: 10px
+				+r2
+					padding-left: 0
+			strong
+				color: $gray
+		.icon-check
+			position: absolute
+			top: 16px
+			right: 20px
+			font-size: 10px
+			fill: $blue
+			+r1
+				top: 11px
+				right: 16px
+		.btn
+			position: absolute
+			top: 0
+			right: 0
+			min-width: 110px
+			+r2
+				position: relative
+				margin-bottom: 16px
+	&__select
+		position: relative
+		padding: 0 130px 20px 0
+		+r1
+			padding: 4px 130px 16px 0
+		+r2
+			padding: 0 0 16px
+	&__radio
+		padding-bottom: 10px
+		+r2
+			padding-bottom: 8px
+		li
+			+clr
+			border-top: 1px solid #d9dbe1
+			+r3
+				padding-top: 8px
+			&:first-child
+				border-top: none
+		.radio
+			float: left
+			+r3
+				float: none
+	&__price
+		float: right
+		font-size: 13px
+		line-height: 30px
+		letter-spacing: 0.19px
+		color: $dark
+		+r3
+			float: none
+		a
+			color: $blue
+			+hover
+				text-decoration: underline
+	&__checkbox
+		padding-bottom: 20px
+		+r2
+			padding-bottom: 16px
+		.checkbox
+			span
+				color: $dark
+	&__textarea
+		.textarea
+			height: 90px
+	&__address
+		padding: 0 130px 20px 0
+		+r1
+			padding: 0 130px 12px 0
+		+r2
+			padding: 0 0 20px

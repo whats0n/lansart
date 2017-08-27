@@ -1,0 +1,195 @@
+{% set news = [
+	{
+		img: 'img/b-item.png',
+		category: 'Дизайн',
+		title: 'Прикроватные тумбы от дизайнера и прочее штучки для вашего дома',
+		likes: '12',
+		comments: '7'
+	},
+	{
+		right: true,
+		img: 'img/b-item.png',
+		category: 'Дизайн',
+		title: 'Мойка и смеситель из новых неведомых материалов',
+		likes: '12',
+		comments: '7'
+	},
+	{
+		img: 'img/b-item.png',
+		category: 'Дизайн',
+		title: 'Прикроватные тумбы от дизайнера и прочее штучки для вашего дома',
+		likes: '12',
+		comments: '7'
+	}
+] %}
+
+
+<!-- begin news  -->
+<div class="n-items">
+	<div class="n-items__row">
+		<div class="n-items__news">
+			<div class="news">
+				<div class="news__top">
+					<div class="news__title title-h1">Новости</div>
+					<a href="#" class="link-more link-more_big">
+						<span>Больше</span>
+						<div class="link-more__visible">
+							{{mixins.icon('next')}}
+						</div>
+						<div class="link-more__hidden">
+							{{mixins.icon('next')}}
+						</div>
+					</a>
+				</div>
+				<div class="news__arrows">
+					<div class="news__arrows-in">
+						<button class="news__prev btn-prev js-news-prev">
+							<span class="btn-prev__visible">
+								{{mixins.icon('prev')}}
+							</span>
+							<span class="btn-prev__hidden">
+								{{mixins.icon('prev')}}
+							</span>
+						</button>
+						<button class="news__next btn-next js-news-next">
+							<span class="btn-next__visible">
+								{{mixins.icon('next')}}
+							</span>
+							<span class="btn-next__hidden">
+								{{mixins.icon('next')}}
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="news__slider">
+
+					{% set newsItems = [
+						{
+							img: 'b-item.png',
+							date: '12 Сен 2016',
+							title: 'Прикроватные тумбы по себестоимости в подарок каждому'
+						},
+						{
+							img: 'b-item.png',
+							date: '12 Сен 2016',
+							title: 'Прикроватные тумбы по себестоимости в подарок каждому'
+						},
+						{
+							img: 'b-item.png',
+							date: '12 Сен 2016',
+							title: 'Прикроватные тумбы по себестоимости в подарок каждому'
+						},
+						{
+							img: 'b-item.png',
+							date: '12 Сен 2016',
+							title: 'Прикроватные тумбы по себестоимости в подарок каждому'
+						},
+						{
+							img: 'b-item.png',
+							date: '12 Сен 2016',
+							title: 'Прикроватные тумбы по себестоимости в подарок каждому'
+						},
+						{
+							img: 'b-item.png',
+							date: '12 Сен 2016',
+							title: 'Прикроватные тумбы по себестоимости в подарок каждому'
+						},
+						{
+							img: 'b-item.png',
+							date: '12 Сен 2016',
+							title: 'Прикроватные тумбы по себестоимости в подарок каждому'
+						},
+						{
+							img: 'b-item.png',
+							date: '12 Сен 2016',
+							title: 'Прикроватные тумбы по себестоимости в подарок каждому'
+						}
+					] %}
+
+					<div class="news__slider-in js-news-slider">
+						{% for newsItem in newsItems %}
+						<div class="news-item">
+							<div class="news-item__img" style="background-image: url(img/{{newsItem.img}});"></div>
+							<div class="news-item__info">
+								<div class="news-item__date">{{newsItem.date}}</div>
+								<div class="title-h3"><a href="#">{{newsItem.title}}</a></div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="n-items__blog">
+			<div class="blog">
+				<div class="blog__top">
+					<div class="blog__title title-h1">Блог</div>
+					<a href="#" class="link-more link-more_big">
+						<span>Больше</span>
+						<div class="link-more__visible">
+							{{mixins.icon('next')}}
+						</div>
+						<div class="link-more__hidden">
+							{{mixins.icon('next')}}
+						</div>
+					</a>
+				</div>
+				<div class="blog__slider">
+					<div class="blog__slider-in js-blog-slider">
+						{% for newsItem in news %}
+						{% if newsItem.right %}
+						<div class="n-item n-item_right">
+						{% else %}
+						<div class="n-item">
+						{% endif %}
+							<div class="n-item__img" style="background-image: url({{newsItem.img}});"></div>
+							<div class="n-item__info">
+								<div class="n-item__info-in">
+									<div class="n-item__top">
+										<a href="#" class="n-item__category">{{newsItem.category}}</a>
+									</div>
+									<div class="title-h3 js-cut-text"><a href="#">{{newsItem.title}}</a></div>
+									<ul class="n-item__bottom">
+										<li>
+											{{mixins.buttonViews({
+												text: 84
+											})}}
+										</li>
+										<li>
+											{{mixins.buttonLikes({
+												text: newsItem.likes
+											})}}
+										</li>
+										<li>
+											{{mixins.buttonComments({
+												text: newsItem.comments
+											})}}
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						{% endfor%}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="n-items__subscribe">
+			<div class="subscribe">
+				<div class="title-h1">Подписка</div>
+				<p>Подпишитесь! Скидки, акции и выгодные предложения!</p>
+				<div class="subscribe__title">Подписка на рассылку</div>
+				<form action="/" class="subscribe-form">
+					<div class="subscribe-form__field">
+						<input type="email" class="input input_full" placeholder="Ваш email">
+						<div class="subscribe-form__btn">
+							<button class="btn btn_blue"><span>Подписаться</span></button>
+							<button class="btn-sm"><span>{{mixins.icon('next')}}</span></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end news -->

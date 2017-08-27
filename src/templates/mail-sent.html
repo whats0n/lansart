@@ -1,0 +1,35 @@
+---
+title: Письмо отправлено
+headerMod: header_small
+breadcrumbs: [
+	'Начало',
+	'Восстановление пароля',
+	'Письмо отправлено'
+]
+activeBC: 2
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% set headerLogout = true %}
+{% set headerSettings = true %}
+{% include "partials/_header.html" %}
+
+<div class="page">
+	<div class="page__inner">
+		{% include 'partials/_breadcrumbs.html' %}
+		<div class="page-basket">
+			<div class="page-basket__top">
+				<div class="page-basket__title title">Письмо отправлено</div>
+				<div class="page-basket__description">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci laborum dolorum itaque.</p>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

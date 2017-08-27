@@ -1,0 +1,83 @@
+{% set paymentForms = [
+	{
+		formId: 'form-payment1',
+		label: 'Наличными курьеру',
+		cash: true,
+		checked: true
+	},
+	{
+		formId: 'form-payment2',
+		label: 'Банковский перевод',
+		transfer: true
+	},
+	{
+		formId: 'form-person3',
+		label: 'Оплата через <br />Яндекс кошелек, WM',
+		webMoney: true
+	}
+] %}
+
+<!-- begin basket tab4  -->
+<div class="tabs__content js-tab-content" data-tab="tab4">
+	<div class="form-basket js-form-container">
+		<ul class="form-basket__radios">
+			{% for paymentForm in paymentForms %}
+			<li>
+				<label class="radio radio_big">
+					{% if paymentForm.checked %}
+					<input type="radio" name="payment" checked value="{{paymentForm.formId}}" class="js-form-open">
+					{% else %}
+					<input type="radio" name="payment" value="{{paymentForm.formId}}" class="js-form-open">
+					{% endif %}
+					<span>{{paymentForm.label | safe}}</span>
+				</label>
+			</li>
+			{% endfor %}
+		</ul>
+		<div class="form-basket__container">
+			{% for paymentForm in paymentForms %}
+			<form action="/" class="payment form-basket__tab js-form-tab" data-id="{{paymentForm.formId}}">
+				<div class="payment__body">
+					{% if paymentForm.cash %}
+					<div class="payment__box">
+						<div class="payment__text">
+							<p>Принимаем к оплате: наличные и карты</p>
+							<p>Если необходима сдача с определенной суммы</p>
+						</div>
+						<div class="payment__field">
+							<div class="pay-field">
+								<label for="basket-input-cash" class="pay-field__label">Укажите в поле</label>
+								<div class="pay-field__symbol">Р</div>
+								<div class="pay-field__input">
+									<input type="text" id="basket-input-cash" class="input">
+								</div>
+							</div>
+						</div>
+						<div class="payment__text">
+							<p>Расплатиться наличными можно непосредственно с курьером, когда он доставит заказ.</p>
+						</div>
+					</div>
+					{% elif paymentForm.transfer %}
+					<div class="payment__box">
+						<div class="payment__text">
+							<p>При заказе на сайте к оплате принимаются только карты VISA и MasterCard, платеж осуществляется через платежный шлюз «Банк». Внимание! Для получения заказа в пункте самовывоза потребуется сообщить секретный код, который поступит в SMS на номер телефона, указанный при оформлении заказа . Для повторного получения секретного кода необходимо обратиться по номеру +7 (499) 99-000-91.</p>
+						</div>
+					</div>
+					{% elif paymentForm.webMoney %}
+					<div class="payment__box">
+						<div class="payment__text">
+							<p>Заказ в интернет-магазине можно оплатить в платежной системе «Яндекс.Деньги». Пополнение счета и оплата заказов происходят в реальном времени на сайте платежной системы сразу после подтверждения оформления заказа. При получении заказа необходимо предоставить код, присланный в SMS после оплаты. Внимание! Для некоторых пользователей сервисов «Яндекса» могут действовать ограничения максимальной суммы оплаты.</p>
+						</div>
+					</div>
+					{% endif %}
+				</div>
+				<div class="step-btns">
+					<button class="btn btn_gray step-btns__prev"><span>Вернуться</span></button>
+					<button class="btn btn_blue step-btns__next"><span>Продолжить</span></button>
+				</div>
+			</form>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end basket tab4 -->

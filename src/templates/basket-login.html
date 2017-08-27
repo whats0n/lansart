@@ -1,0 +1,93 @@
+---
+title: Basket Login
+headerMod: header_small
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+<div class="page">
+	<div class="page__inner">
+		<div class="page-basket">
+			<div class="page-basket__top">
+				<div class="page-basket__title title">Войти</div>
+				<div class="page-basket__description">
+					<p>Чтобы продолжить офорлмение заказа вам необходимо авторизироваться</p>
+				</div>
+			</div>
+			<div class="page-login">
+				<div class="page-login__container">
+					<div class="page-login__row">
+						<div class="page-login__col">
+							<div class="page-login__inner">
+								<div class="page-login__title title-h2 title-h2_blue">Вход</div>
+								<form action="/" class="m-form m-form_fixed">
+									<div class="field">
+										<input type="email" class="input" placeholder="Почта">
+									</div>
+									<div class="field">
+										<input type="password" class="input" placeholder="Пароль">
+									</div>
+									<div class="m-form__forgot">
+										<a href="#" class="link-next modal__link">Забыли пароль? {{mixins.icon('right')}}</a>
+									</div>
+									<div class="field m-form__submit">
+										<button class="btn btn_blue"><span>Войти</span></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="page-login__col">
+							<div class="page-login__inner">
+								<div class="page-login__title title-h2 title-h2_blue">Регистрация</div>
+								<form action="/" class="m-form m-form_fixed">
+									<div class="field">
+										<input type="email" class="input" placeholder="Почта">
+									</div>
+									<div class="field">
+										<input type="password" class="input" placeholder="Пароль">
+									</div>
+									<div class="field">
+										<input type="password" class="input" placeholder="Повторите пароль">
+									</div>
+									<div class="field m-form__submit">
+										<button class="btn btn_blue" data-target="register-button"><span>Регистрация</span></button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-login__box">
+					<div class="page-login__label">или войдите через</div>
+					<div class="social-btns">
+						<a href="#" class="btn-soc btn-soc_vk">
+							<div>
+								{{mixins.icon('vk')}}
+								<span>VKontakte</span>
+							</div>
+						</a>
+						<a href="#" class="btn-soc btn-soc_fb">
+							<div>
+								{{mixins.icon('fb')}}
+								<span>Facebook</span>
+							</div>
+						</a>
+					</div>
+					<div class="page-login__agreement">
+						<label class="checkbox page-login__checkbox">
+							<input type="checkbox" checked data-disable="register-button">
+							<span></span>
+						</label>
+						<p>Регистрируясь на сайте, вы даете согласие на хранение и обработку ваших персональных данных, а также соглашаетесь с <a href="#">правилами</a> нашей компании.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

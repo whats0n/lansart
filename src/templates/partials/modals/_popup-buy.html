@@ -1,0 +1,79 @@
+<!-- Modal Buy -->
+<div id="fast-buy" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-dialog_order modal-dialog_left">
+		<div class="modal__in">
+			<button type="button" class="modal__close" data-dismiss="modal">
+				{{mixins.icon('close')}}
+			</button>
+			<form action="/" class="order">
+				<div class="order__head">
+					<div class="order__title title">Заказ в один клик</div>
+					<p>Оставьте свои контактные данные.</p>
+					<p>Наши менеджеры свяжутся с вами для уточнения деталей заказа.</p>
+				</div>
+				<div class="order__body">
+					<div class="order__field">
+						<div class="order__label">
+							<div class="label label_form">Регион</div>
+						</div>
+						<div class="order__input">
+							<select class="js-select">
+								<option value="Москва">Москва</option>
+								<option value="Киев">Киев</option>
+								<option value="Москва">Москва</option>
+								<option value="Киев">Киев</option>
+								<option value="Москва">Москва</option>
+								<option value="Киев">Киев</option>
+								<option value="Москва">Москва</option>
+								<option value="Киев">Киев</option>
+								<option value="Москва">Москва</option>
+								<option value="Киев">Киев</option>
+							</select>
+						</div>
+					</div>
+					<div class="order__field">
+						<div class="order__label">
+							<label for="order-name" class="label label_form">Имя</label>
+						</div>
+						<div class="order__input">
+							<input type="text" class="input" id="order-name">
+						</div>
+					</div>
+					<div class="order__field">
+						<div class="order__label">
+							<label for="order-surname" class="label label_form">Фамилия</label>
+						</div>
+						<div class="order__input">
+							<input type="text" class="input" id="order-surname">
+						</div>
+					</div>
+					<div class="order__field">
+						<div class="order__label">
+							<label for="order-phone" class="label label_form">Телефон</label>
+						</div>
+						<div class="order__input">
+							<div class="field-phone">
+								<div class="field-phone__code">+7</div>
+								<div class="field-phone__number">
+									<input type="text" class="input" id="order-phone">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="order__field">
+						<div class="order__label">
+							<label for="order-email" class="label label_form">Email</label>
+						</div>
+						<div class="order__input">
+							<input type="text" class="input" id="order-email">
+						</div>
+					</div>
+					<div class="order__btn">
+						<button class="btn btn_blue"><span>Оформить заказ</span></button>
+					</div>
+					<div class="order__text">Нажитаем кнопки «Оформить заказ» я даю свое согласие на обработку персональных данных в соответствии с указанным здесь условиями.</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<div class="add-functions js-popup" data-id="add-functions">
+	{% set items = [
+		{
+			target: '#favorite',
+			icon: 'heart',
+			text: 'Добавить в избранное'
+		},
+		{
+			target: '#fast-buy',
+			icon: 'basket',
+			text: 'Быстрый заказ'
+		},
+		{
+			target: '#discount',
+			icon: 'sale',
+			text: 'Сообщить о скидке'
+		}
+	] %}
+	<ul>
+		{% for item in items %}
+		<li>
+			<a href="#" data-toggle="modal" data-target="{{item.target}}">
+				<div class="add-functions__icon">
+					<span>
+						{{mixins.icon(item.icon)}}
+					</span>
+				</div>
+				<div class="add-functions__name">{{item.text}}</div>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>

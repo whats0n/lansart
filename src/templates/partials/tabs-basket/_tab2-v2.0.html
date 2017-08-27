@@ -1,0 +1,285 @@
+<!-- begin delivery 2.0 -->
+<div class="tabs__content js-tab-content" data-tab="tab2">
+	<div class="new-addresses">
+		{% for item in range(0,3) %}
+			<div class="new-address">
+				<div class="new-address__info">
+					<p>
+						Г-н 13 <br>
+						3 <br>
+						moscow <br>
+						142400 <br>
+						Russian Federation
+					</p>
+				</div>
+				<div class="new-address__controls">
+					<button class="btn-action btn-action_edit js-tooltip" title="Редактировать">
+						<span>
+							{{mixins.icon('edit')}}
+						</span>
+					</button>
+					<button class="btn-action btn-action_delete js-tooltip" title="Удалить">
+						<span>
+							{{mixins.icon('delete')}}
+						</span>
+					</button>
+					<button class="btn btn_blue"><span>Выбрать этот адрес</span></button>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="new-data">
+		<h3 class="title-h3 title-h3_blue">Или новый адрес?</h3>
+		<form action="/" class="data">
+			{% set form = [
+				{
+					tagLabel: true,
+					for: 'person-name',
+					label: 'Контактные данные',
+					input: true,
+					id: 'person-name',
+					placeholder: 'Имя'
+				},
+				{
+					tagLabel: true,
+					for: 'person-surname',
+					input: true,
+					id: 'person-surname',
+					placeholder: 'Фамилия',
+					pull: 'data__field_pull-right'
+				},
+				{
+					tagLabel: true,
+					for: 'person-phone',
+					input: true,
+					id: 'person-phone',
+					placeholder: 'Телефонный номер',
+					pull: 'data__field_pull-right',
+					attrs: 'data-mask="8 (999) 999-99-99"'
+				},
+				{
+					tagLabel: true,
+					for: 'person-city',
+					label: 'Адрес доставки <sup>*</sup>',
+					fields: [
+						{
+							item: true
+						},
+						{
+							item: true
+						},
+						{
+							item: true
+						}
+					],
+					inputs: [
+						{
+							id: "person-city"
+						},
+						{
+							id: "person-street"
+						}
+					]
+				},
+				{
+					tagLabel: true,
+					for: 'person-comment',
+					textarea: true,
+					id: 'person-comment',
+					placeholder: 'Инструкции',
+					label: 'Комментарий к заказу'
+				}
+			] %}
+
+			{% set form2 = [
+				{
+					tagLabel: true,
+					for: 'person-company-name',
+					label: 'Наименование организации с формой собственности',
+					input: true,
+					id: 'person-company-name',
+					placeholder: "ОАО «Название организации»",
+					error: 'is-error',
+					errorMessage: true
+				},
+				{
+					tagLabel: true,
+					for: 'person-inn',
+					label: 'ИНН <sup>*</sup>',
+					input: true,
+					id: 'person-inn',
+					placeholder: "9864121520120"
+				},
+				{
+					tagLabel: true,
+					for: 'person-kpp',
+					label: 'КПП <sup>*</sup>',
+					input: true,
+					id: 'person-kpp',
+					placeholder: "09715124105"
+				},
+				{
+					tagLabel: true,
+					for: 'person-bank-name',
+					label: 'Наименование банка',
+					input: true,
+					id: 'person-bank-name',
+					placeholder: "Сбербанк"
+				},
+				{
+					tagLabel: true,
+					for: 'person-bik',
+					label: 'БИК <sup>*</sup>',
+					input: true,
+					id: 'person-bik',
+					placeholder: "9768712412"
+				},
+				{
+					tagLabel: true,
+					for: 'person-cor-acc',
+					label: 'Корреспондентский счёт',
+					input: true,
+					id: 'person-cor-acc',
+					placeholder: "951243151"
+				},
+				{
+					tagLabel: true,
+					for: 'person-per-acc',
+					label: 'Лицевой счет <sup>*</sup>',
+					input: true,
+					id: 'person-per-acc',
+					placeholder: "951243151"
+				},
+				{
+					tagLabel: true,
+					for: 'person-legal-address',
+					label: 'Юридический адрес',
+					input: true,
+					id: 'person-legal-address',
+					placeholder: "Адрес организации"
+				},
+				{
+					tagLabel: true,
+					for: 'person-fact-address',
+					label: 'Фактический адрес',
+					input: true,
+					id: 'person-fact-address',
+					placeholder: "Адрес организации"
+				}
+			] %}
+			<div class="data__body">
+				{% for field in form %}
+					<div class="data__box">
+						{% if field.label %}
+							<div class="data__label">
+								{% if field.tagLabel %}
+								<label for="{{field.for}}" class="label label_form">{{field.label | safe}}</label>
+								{% else %}
+								<div class="label label_form">{{field.label}}</div>
+								{% endif %}
+							</div>
+						{% endif %}
+						<div class="data__field {{field.pull}}">
+							{% if field.input %}
+							<input type="text" class="input {{field.error}}" id="{{field.id}}" placeholder="{{field.placeholder}}" {{field.attrs | safe}}>
+							{% elif field.phone %}
+							<div class="field-phone">
+								<div class="field-phone__code">+7</div>
+								<div class="field-phone__number">
+									<input type="text" class="input" id="{{field.id}}">
+								</div>
+							</div>
+							{% elif field.fields %}
+							<div class="address-fields">
+								<div class="address-fields__lg">
+									<input type="text" class="input" placeholder="Город" id="{{field.for}}">
+								</div>
+								<div class="address-fields__lg">
+									<input type="text" class="input" placeholder="Улица">
+								</div>
+								<div class="address-fields__group">
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Дом">
+									</div>
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Корп">
+									</div>
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Квартира">
+									</div>
+								</div>
+							</div>
+							{% elif field.textarea %}
+							<textarea class="textarea" id="{{field.id}}" placeholder="{{field.placeholder}}"></textarea>
+							{% endif %}
+						</div>
+					</div>
+				{% endfor %}
+				<div class="data__required">
+					<div class="form-required"><sup>*</sup> - поле обязательное для заполнения</div>
+				</div>
+				<div class="data__checkbox">
+					<label class="checkbox">
+						<input type="checkbox" data-showonchange="container">
+						<span>Если вы юрлицо заполните данные...</span>
+					</label>
+				</div>
+				<div style="display: none;" class="data__container" data-container="container">
+					{% for field in form2 %}
+					<div class="data__box">
+						<div class="data__label">
+							{% if field.tagLabel %}
+							<label for="{{field.for}}" class="label label_form">{{field.label | safe}}</label>
+							{% else %}
+							<div class="label label_form">{{field.label}}</div>
+							{% endif %}
+						</div>
+						<div class="data__field data__field">
+							{% if field.input %}
+							<input type="text" class="input {{field.error}}" id="{{field.id}}" placeholder="{{field.placeholder}}">
+							{% elif field.phone %}
+							<div class="field-phone">
+								<div class="field-phone__code">+7</div>
+								<div class="field-phone__number">
+									<input type="text" class="input" id="{{field.id}}">
+								</div>
+							</div>
+							{% elif field.fields %}
+							<div class="address-fields">
+								<div class="address-fields__lg">
+									<input type="text" class="input" placeholder="Город" id="{{field.for}}">
+								</div>
+								<div class="address-fields__lg">
+									<input type="text" class="input" placeholder="Улица">
+								</div>
+								<div class="address-fields__group">
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Дом">
+									</div>
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Корп">
+									</div>
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Квартира">
+									</div>
+								</div>
+							</div>
+							{% endif %}
+							{% if field.errorMessage %}
+							<div class="error-message" hidden>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, architecto!</p>
+							</div>
+							{% endif %}
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="step-btns">
+				<button class="btn btn_gray step-btns__prev"><span>Вернуться к корзине</span></button>
+				<button class="btn btn_blue step-btns__next"><span>Продолжить</span></button>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- end delivery 2.0 -->

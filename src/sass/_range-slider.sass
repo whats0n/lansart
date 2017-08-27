@@ -1,0 +1,55 @@
+//range slider
+.slider
+	&.slider-horizontal
+		height: 14px
+		margin: 0 7px
+		width: auto
+		display: block
+		.slider-track
+			height: 2px
+			margin-top: -1px
+			background-color: #d9dbe1
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				bottom: 0
+				left: -7px
+				right: -7px
+				background-color: #d9dbe1
+				border-radius: 1px
+		.slider-handle
+			margin-left: -7px
+	.slider-selection
+		background: $blue
+	.slider-handle
+		width: 14px
+		height: 14px
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border-radius: 50%
+		&:before
+			margin: -3px
+			background: #fff
+			opacity: 0.7
+		&:after
+			background-color: #427be7
+			box-shadow: 0 2px 4px rgba(65, 123, 231, 0.3)
+
+.range
+	&__row
+		margin: 0 -15px
+		+clr
+		padding: 23px 0 0
+	&__field
+		padding: 0 15px
+		float: left
+		width: 50%
+	.input
+		border-width: 1px
+		text-align: center

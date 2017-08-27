@@ -1,0 +1,35 @@
+.alertinner
+	.btn
+		margin: 16px 13px 0 0
+
+.alert
+	.close
+		position: relative
+		width: 11px
+		height: 11px
+		opacity: 1
+		font-size: 0
+		+hover
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 11px 11px
+			transition: opacity 0.25s ease-out
+		&:before
+			z-index: 1
+			background-image: url(../img/close-default.svg)
+		&:after
+			z-index: 2
+			opacity: 0
+			background-image: url(../img/close-active.svg)

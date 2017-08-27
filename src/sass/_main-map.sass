@@ -1,0 +1,213 @@
+//main map
+.main-map
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	padding: 47px 0 0
+	+r1
+		padding: 16px 0 0
+	&__inner
+		@extend %inner
+	&__info
+		padding: 0 20px
+		float: left
+		width: 51%
+		+r1
+			padding: 0 24px
+			width: 50%
+		+r2
+			width: 100%
+			float: none
+			padding: 0 16px
+			max-width: 320px
+			margin: 0 auto
+		.white-logo
+			margin-bottom: 33px
+			+r1
+				margin-bottom: 16px
+			+r2
+				margin-bottom: 8px
+		p
+			color: white
+			font-size: 16px
+			line-height: 1.25
+			+r1
+				font-size: 13px
+				line-height: 1.23
+				max-width: 340px
+			+r2
+				max-width: 100%
+	&__right
+		float: right
+		clear: left
+		width: 49%
+		// padding: 0 0 0 20px
+		margin-bottom: -220px
+		+r1
+			width: 50%
+			padding: 0 24px
+			clear: none
+			margin: 0
+		+r2
+			width: 100%
+			float: none
+			padding: 0
+	&__left
+		float: left
+		width: 51%
+		padding: 30px 20px
+		+r1
+			width: 50%
+			padding: 24px 24px 14px
+			clear: left
+		+r2
+			width: 100%
+			float: none
+			padding: 14px 16px 38px
+			max-width: 320px
+			margin: 0 auto
+		.btn
+			margin: 10px 0
+			+r1
+				margin: 0 0 14px
+			+r2
+				display: none
+	.sm-pages
+		float: right
+		width: 100%
+		max-width: 310px
+		+r1
+			float: none
+			max-width: 320px
+	&__btn
+		display: none
+		padding: 16px 0 0
+		+r2
+			display: block
+
+.sm-map
+	position: relative
+	z-index: 2
+	+r1
+		padding: 8px 0 24px
+	+r2
+		padding: 24px 0 0
+	.sm-info
+		border-radius: 2px 2px 0 0
+		height: 120px
+	&__body
+		height: 220px
+		position: relative
+		overflow: hidden
+		border-radius: 0 0 2px 2px
+		+gpu
+		+r1
+			height: 240px
+		+r2
+			height: 216px
+			max-width: 320px
+			margin: 0 auto
+	&__img, &__body iframe
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		width: 100%
+		height: 100%
+	&__img
+		cursor: pointer
+	&__map
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+	&__header
+		position: relative
+		overflow: hidden
+		+r1
+			display: none
+	&__marker, &__phone
+		position: absolute
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		opacity: 0.15
+	&__marker
+		top: -20px
+		left: 120px
+		width: 90px
+		height: 109px
+		background-image: url(../img/sm-map-marker.svg)
+	&__phone
+		bottom: -8px
+		right: 30px
+		width: 87px
+		height: 87px
+		background-image: url(../img/sm-map-phone.svg)
+
+.sm-info
+	font-size: 0
+	background: $dark
+	padding: 30px 0
+	li
+		width: 50%
+		display: inline-block
+		vertical-align: top
+		padding: 10px 20px
+		font-size: 14px
+		line-height: 1.43
+		letter-spacing: 0.2px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			bottom: 10px
+			left: 0
+			width: 2px
+			background: $blue
+			border-radius: 1px
+	a, li
+		color: #fff
+	a
+		display: block
+		color: #d9dbe1
+		transition: color 0.25s ease
+		+hover
+			color: #fff
+
+.sm-pages
+	font-size: 0
+	li
+		width: 50%
+		display: inline-block
+		vertical-align: top
+		padding: 10px 20px
+		font-size: 14px
+		line-height: 20px
+		letter-spacing: 0.2px
+		position: relative
+		+r1
+			font-size: 13px
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			bottom: 10px
+			left: 0
+			width: 2px
+			background: #fff
+			border-radius: 1px
+	li
+		color: #fff
+	a
+		display: block
+		color: #d9dbe1
+		transition: color 0.25s ease
+		+hover
+			color: #fff
+	&__title
+		+as
+		font-size: 18px
+		+r1
+			font-size: 16px

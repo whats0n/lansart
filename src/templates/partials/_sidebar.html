@@ -1,0 +1,608 @@
+<!-- begin sidebar  -->
+<aside class="sidebar sidebar_filters js-filters">
+	<div class="filters">
+		<form action="/">
+			<div class="filter">
+				<div class="filter__title js-list-btn">КАТЕГОРИИ <i class="filter__plus"></i></div>
+				<ul class="filter__block js-list">
+
+					{% set categories = [
+						{
+							head: 'Столы',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						},
+						{
+							head: 'Стулья',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						},
+						{
+							head: 'Табуретки',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						},
+						{
+							head: 'Кровати',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						},
+						{
+							head: 'Диваны',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						},
+						{
+							head: 'Кресла',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						},
+						{
+							head: 'Пуфики',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						},
+						{
+							head: 'Шкафы',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						},
+						{
+							head: 'Тумбочки',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						},
+						{
+							head: 'Полки',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						},
+						{
+							head: 'Зеркала',
+							list: [
+								{
+									num: '12',
+									text: 'Деревянные столы'
+								},
+								{
+									num: '53',
+									text: 'Стеклянные столы'
+								},
+								{
+									num: '42',
+									text: 'Столы с плиткой'
+								},
+								{
+									num: '73',
+									text: 'Журнальные и ТВ столики'
+								},
+								{
+									num: '16',
+									text: 'Столы трансформеры'
+								},
+								{
+									num: '32',
+									text: 'Круглые столы'
+								},
+								{
+									num: '76',
+									text: 'Письменные столы'
+								},
+								{
+									num: '72',
+									text: 'Столешницы'
+								},
+								{
+									num: '35',
+									text: 'Подстолья'
+								},
+								{
+									num: '20',
+									text: 'Металлические столы'
+								}
+							]
+						}
+					] %}
+
+					{% for itemCat in categories %}
+					    <li class="filter__block-in">
+					    	<div class="filter__head js-list-btn">{{itemCat.head}} <i class="filter__plus"></i></div>
+					    	<ul class="filter__list js-list">
+					    		{% for itemSubCat in itemCat.list %}
+					    		    <li><a href="#"><small>{{itemSubCat.num}}</small><span>{{itemSubCat.text}}</span></a></li>
+					    		{% endfor %}
+					    	</ul>
+					    </li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="filter">
+				<div class="filter__title js-list-btn">ЦЕНА <i class="filter__plus"></i></div>
+				<div class="filter__block js-list">
+					<div class="filter__range">
+						<div class="range js-range">
+							<div class="js-range-input" data-min="0" data-max="100000"></div>
+							<div class="range__row">
+								<div class="range__field">
+									<input type="text" class="input input_small js-range-from" value="27134">
+								</div>
+								<div class="range__field">
+									<input type="text" class="input input_small js-range-to" value="99276">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filter">
+				<div class="filter__title js-list-btn">МАТЕРИАЛ <i class="filter__plus"></i></div>
+				{% set materials = [
+					'Дерево',
+					'Металл',
+					'Стекло',
+					'Плитка',
+					'Пластик',
+					'Кожа/кожзам'
+				] %}
+				<ul class="filter__radios js-list">
+					{% for material in materials %}
+					<li>
+						<label class="checkbox">
+							<input type="checkbox">
+							<span>{{material}}</span>
+						</label>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="filter">
+				<div class="filter__title js-list-btn">ДЛИНА <i class="filter__plus"></i></div>
+				<ul class="filter__radios js-list">
+					{% for material in materials %}
+					<li>
+						<label class="checkbox">
+							<input type="checkbox">
+							<span>{{material}}</span>
+						</label>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="filter">
+				<div class="filter__title js-list-btn">ШИРИНА <i class="filter__plus"></i></div>
+				<ul class="filter__radios js-list">
+					{% for material in materials %}
+					<li>
+						<label class="checkbox">
+							<input type="checkbox">
+							<span>{{material}}</span>
+						</label>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="filter">
+				<div class="filter__title js-list-btn">НАЛИЧИЕ <i class="filter__plus"></i></div>
+				<ul class="filter__radios js-list">
+					{% for material in materials %}
+					<li>
+						<label class="checkbox">
+							<input type="checkbox">
+							<span>{{material}}</span>
+						</label>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="filters__btns">
+				<button class="btn btn_blue" type="submit">
+					<span>Применить</span>
+				</button>
+				<button class="btn btn_gray" type="reset">
+					<span>Сбросить параметры</span>
+				</button>
+			</div>
+		</form>
+	</div>
+</aside>
+<!-- end sidebar -->

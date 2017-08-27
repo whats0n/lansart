@@ -1,0 +1,179 @@
+{% set comments = [
+	{
+		img: 'https://placecage.com/50/50',
+		name: 'Таня',
+		date: '7 июля',
+		city: 'Москва',
+		rating: '80',
+		like: '12',
+		dislike: '02',
+		title: 'Советую эту модель всем, кто еще не определился с выбором!',
+		activeLike: true,
+		text: [
+			{
+				heading: 'Достоинста:',
+				list: [
+					{
+						text: 'отличные материалы'
+					},
+					{
+						text: 'качество сборки'
+					},
+					{
+						text: 'гарантия производителя'
+					}
+				]
+			},
+			{
+				heading: 'Недостатки:',
+				list: [
+					{
+						text: 'цвет на фото не соответсвует действительности'
+					},
+					{
+						text: 'на ножках подклатки тонкие'
+					}
+				]
+			},
+			{
+				heading: 'Комментарий:',
+				paragraph: 'Пользуюсь панелью уже больше полугода. За время пользования этой панелью я выявила как плюсы так и минусы. Очень хочется отметить автоматику закипания - эта функция экономит энергию, после максимально быстрого закипания конфорка переходит в режим который вы предварительно выставили. Отсутствие бортиков по краям является несомненным плюсом, так как позволяет поставить посуду любого размера. А если что-то разольётся то плита автоматически выключится. Чёрный цвет панели делает невидимыми разводы, в отличие от панели металик. Одним словом очень советую её тем кто ещё не определился.'
+			}
+		]
+	},
+	{
+		img: 'https://placecage.com/50/50',
+		name: 'Екатерина',
+		date: '6 июля',
+		city: 'Саратов',
+		rating: '20',
+		like: '07',
+		dislike: '18',
+		title: 'Ужасная модель',
+		activeDislike: true,
+		text: [
+			{
+				heading: 'Достоинста:',
+				list: [
+					{
+						text: 'не обнаружены'
+					}
+				]
+			},
+			{
+				heading: 'Недостатки:',
+				list: [
+					{
+						text: 'качество сборки'
+					},
+					{
+						text: 'ножки скрипят'
+					},
+					{
+						text: 'кожзам полопался'
+					}
+				]
+			},
+			{
+				heading: 'Комментарий:',
+				paragraph: 'Приобрели панель в ноябре 2015г. Сразу после установки "качественная" техника показала себя: 1. Во время готовки панель самостоятельно может просто выключиться. 2. Во время готовки панель самостоятельно может выключиться и на табло загореться ошибка Е9. (сбросить можно только при отключении от электричества). 3. В режиме простоя самостоятельно включается, заманчиво попикивая и напоминая о себе и через 1 секунду выключается. Сегодня 03-03-2016г. ошибку Е9 сбросить не могу, нужно вести в сервис.'
+			}
+		]
+	}
+] %}
+
+
+<!-- begin comments  -->
+<div class="comments">
+	<div class="comments__top">
+		<div class="comments__heading">
+			<div class="comments__title">Все отзывы</div>
+			<div class="comments__amount">28</div>
+		</div>
+		<div class="product-filter">
+			<div class="product-filter__label">Сортировать:</div>
+			<div class="product-filter__select js-dropdown">
+				<div class="product-filter__select-in">
+					{{mixins.icon('down')}}
+					<div class="product-filter__text js-dropdown-text">по дате</div>
+				</div>
+				<ul class="product-filter__list js-dropdown-list">
+					<li class="is-active">по дате</li>
+					<li>не по дате</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="comments__box">
+		{% for comment in comments %}
+		<div class="comment">
+			<div class="comment__top">
+				<div class="comment__img" style="background-image: url({{comment.img}});"></div>
+				<div class="comment__likes">
+					{% if comment.activeLike %}
+					<button class="btn-like is-active">
+						{{mixins.icon('like-full')}}
+						<img src="img/like-empty.svg" alt="" class="ic-like-empty">
+						<span class="btn-like__text">{{comment.like}}</span>
+					</button>
+					{% else %}
+					<button class="btn-like">
+						{{mixins.icon('like-full')}}
+						<img src="img/like-empty.svg" alt="" class="ic-like-empty">
+						<span class="btn-like__text">{{comment.like}}</span>
+					</button>
+					{% endif %}
+
+					{% if comment.activeDislike %}
+					<button class="btn-dislike is-active">
+						{{mixins.icon('dislike-full')}}
+						<img src="img/dislike-empty.svg" alt="" class="ic-dislike-empty">
+						<span class="btn-dislike__text">{{comment.dislike}}</span>
+					</button>
+					{% else %}
+					<button class="btn-dislike">
+						{{mixins.icon('dislike-full')}}
+						<img src="img/dislike-empty.svg" alt="" class="ic-dislike-empty">
+						<span class="btn-dislike__text">{{comment.dislike}}</span>
+					</button>
+					{% endif %}
+				</div>
+				<ul class="comment__info">
+					<li class="comment__name">{{comment.name}}</li>
+					<li class="comment__date">{{comment.date}}, {{comment.city}}</li>
+					<li class="comment__rating">
+						<div class="stars">
+							<div class="stars__in" style="width: {{comment.rating}}%;"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="comment__text">
+				{% if comment.title %}
+					<div class="comment__title">{{comment.title}}</div>
+				{% endif %}
+
+				{% for commentText in comment.text %}
+					<div class="comment__heading">{{commentText.heading}}</div>
+
+					{% if commentText.list %}
+
+						<ul class="comment__list">
+						{% for commentItem in commentText.list %}
+							<li>{{commentItem.text}}</li>
+						{% endfor %}
+						</ul>
+
+					{% endif %}
+
+					{% if commentText.paragraph %}
+						<p>{{commentText.paragraph | safe}}</p>
+					{% endif %}
+
+				{% endfor %}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+<!-- end comments -->

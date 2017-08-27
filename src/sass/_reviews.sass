@@ -1,0 +1,315 @@
+//reviews
+.reviews
+	padding: 20px 20px 58px
+	+r1
+		padding: 20px 0 58px
+	&__title
+		font-size: 28px
+		color: $dark
+		line-height: 35px
+		+as
+		letter-spacing: 0.24px
+		margin-bottom: 16px
+	&__row
+		+clr
+		font-size: 0
+		padding-bottom: 11px
+	&__col
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		&_first
+			+r1
+				width: 60%
+		&_second
+			+r1
+				width: 40%
+	&__col
+		+r2
+			width: 100%
+			display: block
+	.rating
+		margin-bottom: 12px
+	&__msg
+		padding: 34px 20px 20px
+		+r2
+			padding: 20px 0 20px
+		.btn
+			width: 200px
+	&__label
+		font-size: 13px
+		line-height: 20px
+		+hr
+		color: $gray
+		margin-bottom: 5px
+	&__name
+		+as
+		font-size: 16px
+		color: $dark
+		line-height: 20px
+		letter-spacing: 0.2px
+		margin-bottom: 30px
+	.page__pagination
+		margin: 0 -10px
+
+
+//evaluations
+.evaluations
+	width: 100%
+	// max-width: 345px
+	&__item
+		+clr
+	&__label
+		width: 70px
+		float: left
+		font-size: 16px
+		+as
+		letter-spacing: 0.23px
+		line-height: 25px
+		color: $dark
+	&__amount
+		min-width: 25px
+		padding-left: 10px
+		float: left
+		color: $gray
+		font-size: 13px
+		line-height: 25px
+		+hr
+	&__bar
+		width: 250px
+		float: left
+		height: 10px
+		margin: 8px 0 0
+		position: relative
+		+r2
+			width: 150px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border: 2px solid #d9dbe1
+			border-radius: 2px
+		&-in
+			height: 100%
+			background-color: $blue
+			border-radius: 2px
+			box-shadow: 0 2px 4px rgba(65, 123, 231, 0.3)
+			position: relative
+			z-index: 1
+
+//comments
+.comments
+	padding-bottom: 19px
+	&__top
+		+clr
+		border-bottom: 1px solid #d9dbe1
+		+r1
+			padding-bottom: 7px
+	&__heading
+		float: left
+		width: 50%
+		font-size: 0
+		+r2
+			width: 100%
+	&__title
+		font-size: 28px
+		color: $dark
+		line-height: 35px
+		+as
+		letter-spacing: 0.24px
+		margin-bottom: 16px
+		display: inline-block
+		vertical-align: top
+		padding-right: 13px
+		+r1
+			font-size: 24px
+			letter-spacing: 0.4px
+			margin: 0
+			line-height: 40px
+	&__amount
+		display: inline-block
+		vertical-align: top
+		font-size: 16px
+		+hr
+		letter-spacing: 0.23px
+		line-height: 35px
+		color: $gray
+		+r1
+			line-height: 40px
+
+//comment
+.comment
+	padding: 29px 0 20px
+	border-bottom: 1px solid #d9dbe1
+	&__top
+		+clr
+		+r2
+			padding-bottom: 16px
+	&__img
+		float: left
+		width: 50px
+		height: 50px
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		border-radius: 50%
+	&__likes
+		float: right
+		padding: 12px 0 8px
+		.btn-like, .btn-dislike
+			margin-left: 10px
+	&__info
+		overflow: hidden
+		font-size: 0
+		+r2
+			overflow: visible
+			clear: both
+			padding-top: 16px
+		li
+			padding: 10px 0 10px 20px
+			display: inline-block
+			vertical-align: top
+			position: relative
+			+r2
+				padding: 0 0 0 20px
+			&:first-child
+				+r2
+					padding-left: 0
+				&:before
+					display: none
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 7px
+				width: 6px
+				height: 1px
+				background: $gray
+		.stars
+			margin: 6px 0 9px
+		.comment__rating
+			+r2
+				// display: none
+	&__name, &__date
+		line-height: 30px
+		letter-spacing: 0.18px
+	&__name
+		color: $dark
+		+as
+		font-size: 16px
+		+r2
+			font-size: 14px
+	&__date
+		color: $gray
+		+hr
+		font-size: 12px
+	&__text
+		padding: 0 0 0 70px
+		+r2
+			padding: 0
+		li, p
+			font-size: 13px
+			line-height: 20px
+			color: $gray
+		ul, ol, p
+			margin-bottom: 10px
+	&__title
+		 color: $dark
+		 font-size: 18px
+		 +as
+		 letter-spacing: 0.24px
+		 line-height: 20px
+		 margin-bottom: 10px
+	&__list
+		li
+			position: relative
+			padding-left: 10px
+			&:before
+				content: ""
+				position: absolute
+				top: 8px
+				left: 0
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: $blue
+	&__heading
+		+as
+		color: $dark
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 0.23px
+
+
+.btn-like, .btn-dislike
+	display: inline-block
+	vertical-align: top
+	background: none
+	position: relative
+	.no-touch &
+		&:hover, &:active
+			.btn-like, .btn-dislike
+				&__text
+					color: $dark
+			.icon-like-full, .icon-dislike-full
+				opacity: 1
+			.icon-like-empty, .ic-dislike-empty
+				opacity: 0
+	&.is-active
+		.btn-like, .btn-dislike
+			&__text
+				color: $dark
+		.icon-like-full, .icon-dislike-full
+			opacity: 1
+		.icon-like-empty, .ic-dislike-empty
+			opacity: 0
+	&__text
+		font-size: 12px
+		line-height: 30px
+		letter-spacing: 0.18px
+		+hr
+		color: $gray
+		transition: color 0.25s ease-out
+	&__icon
+		width: 22px
+		height: 20px
+		position: relative
+		// &:before, &:after
+		// 	content: ""
+		// 	position: absolute
+		// 	top: 0
+		// 	left: 0
+		// 	right: 0
+		// 	bottom: 0
+		// 	background-size: contain
+		// 	background-repeat: no-repeat
+		// 	background-position: center
+		// 	transition: opacity 0.25s ease-out
+		// &:after
+		// 	opacity: 0
+		// 	margin-bottom: -2px
+	&__text, &__icon
+		display: inline-block
+		vertical-align: top
+	.icon-like-full, .icon-dislike-full
+		filter: drop-shadow(0 2px 4px rgba(65, 123, 231, 0.3))
+		fill: $blue
+		font-size: 20px
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+	.ic-like-empty, .ic-dislike-empty
+		// fill: none
+		// stroke: #d9dbe1
+		height: 20px
+	.ic-like-empty, .icon-like-full, .ic-dislike-empty, .icon-dislike-full
+		transition: opacity 0.25s ease-out
+	.ic-like-empty, .icon-like-full
+		margin-top: 2px
+	.ic-dislike-empty, .icon-dislike-full
+		margin-top: 5px
+	

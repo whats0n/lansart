@@ -1,0 +1,139 @@
+<!-- begin card tab1  -->
+<div class="tabs__content js-tab-content" data-tab="tab1">
+	<div class="c-features">
+		{% set features = [
+			{
+				title: 'Общие',
+				list: [
+					{
+						label: 'Тип',
+						text: 'стул со спинкой'
+					},
+					{
+						label: 'Тип обивочного материала',
+						text: 'ткань'
+					},
+					{
+						label: 'Место использования',
+						text: 'кухня, гостиная'
+					}
+				]
+			},
+			{
+				title: 'Каркас',
+				list: [
+					{
+						label: 'Материал каркаса',
+						text: 'массив бука'
+					},
+					{
+						label: 'Цвет каркаса',
+						text: 'тон дерева 17 (бежевый)'
+					}
+				]
+			},
+			{
+				title: 'Спинка',
+				list: [
+					{
+						label: 'Мягкая спинка',
+						text: 'нет'
+					},
+					{
+						label: 'Цвет спинки',
+						text: 'тон дерева 17'
+					}
+				]
+			},
+			{
+				title: 'Сиденье',
+				list: [
+					{
+						label: 'Материал сиденья',
+						text: 'ткань'
+					},
+					{
+						label: 'Мягкое сиденье',
+						text: 'да'
+					}
+				]
+			},
+			{
+				title: 'Размеры и вес',
+				list: [
+					{
+						label: 'Ширина',
+						text: '42 см'
+					},
+					{
+						label: 'Размеры упаковки',
+						text: '100 х 45 х 41 см'
+					},
+					{
+						label: 'Глубина',
+						text: '43 см'
+					},
+					{
+						label: 'Высота',
+						text: '100 см'
+					},
+					{
+						label: 'Вес упаковки',
+						text: '10 кг'
+					}
+				]
+			},
+			{
+				title: 'Комплектация',
+				list: [
+					{
+						label: 'Количество упаковок',
+						text: '1'
+					}
+				]
+			},
+			{
+				title: 'Гарантия',
+				list: [
+					{
+						label: 'Гарантия',
+						text: '1 год'
+					},
+					{
+						label: 'Страна-производитель',
+						text: 'Россия'
+					}
+				]
+			}
+		] %}
+		<div class="c-features__col c-infos">
+			{% for item in features %}
+			    <div class="c-info js-acc-section">
+			    	<div class="c-info__title js-acc-title">{{item.title}} <i class="c-info__plus"></i></div>
+			    	<ul class="c-info__list js-acc-list">
+			    		{% for li in item.list %}
+		    		    <li class="c-info__item">
+		    		    	<div class="c-info__label">
+		    		    		<span>{{li.label}}</span>
+		    		    	</div>
+		    		    	<div class="c-info__text">{{li.text}}</div>
+		    		    </li>
+			    		{% endfor %}
+			    	</ul>
+			    </div>
+			{% endfor %}
+		</div>
+		<div class="c-features__col">
+			<div class="c-description">
+				<div class="c-description__icon">
+					{{mixins.icon('settings')}}
+				</div>
+				<div class="c-description__text">
+					<p>Технические характеристики товара могут отличаться.</p>
+					<p>Уточняйте информацию при оформлении заказа у оператора контакт-центра или на кассе магазина перед оплатой заказа.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end card tab1 -->

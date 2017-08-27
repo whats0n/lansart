@@ -1,0 +1,296 @@
+.footer
+	background-color: #eee
+	overflow: hidden
+	padding: 40px 20px 0
+	+r1
+		padding: 4px 0 0
+	&__inner
+		@extend %inner
+	&__row
+		border-bottom: 1px solid #d9dbe1
+		padding: 12px 0 25px
+		+clr
+		+r1
+			padding: 12px 0 16px
+	&__bottom
+		padding: 19px 0 18px
+
+		font-size: 0
+		text-align: justify
+		+r1
+			padding: 19px 0 18px
+		+r2
+			text-align: left
+		&:after
+			// +r1
+			display: inline-block
+			width: 100%
+		.footer
+			&__col
+				// +r1
+				float: none
+				display: inline-block
+				vertical-align: middle
+				text-align: left
+				+r2
+					display: block
+					width: 100%
+	&__row, &__bottom
+		+r1
+			padding-left: 24px
+			padding-right: 24px
+		+r2
+			padding-left: 16px
+			padding-right: 16px
+	&__col-4, &__col-2, &__col
+		float: left
+	&__col-4
+		width: 25%
+	&__col-2, &__col
+		width: 50%
+	&__col-4, &__col-2
+		float: left
+		+r1
+			width: auto
+			float: none
+			+clr
+	&__col
+		+r1
+			width: auto
+	&__copy
+		+r1
+			width: 100%
+			float: right
+			max-width: 408px
+		+r2
+			float: none
+			max-width: 100%
+	&__list
+		padding-bottom: 5px
+		+r1
+			border-top: 1px solid #d9dbe1
+			padding: 0
+		&:first-child
+			+r1
+				border: none
+		.title-h3
+			margin-bottom: 15px
+			position: relative
+			&.is-active
+				.footer__plus
+					transform: rotate(45deg) scale(1.2)
+			+r1
+				cursor: pointer
+				padding: 10px 0 11px
+				margin-bottom: 0
+			&:after
+				content: ""
+				display: block
+				width: 20px
+				height: 2px
+				background: $blue
+				border-radius: 1px
+				margin-top: 20px
+				+r1
+					display: none
+		ul
+			+r1
+				display: none
+		a
+			display: block
+			color: $gray
+			font-size: 13px
+			+hr
+			letter-spacing: 0.19px
+			line-height: 30px
+			transition: color 0.25s linear
+			.no-touch &
+				&:hover
+					color: $blue
+	&__plus
+		position: absolute
+		right: 0
+		top: 50%
+		width: 8px
+		height: 8px
+		transition: 0.2s ease
+		display: none
+		margin-top: -4px
+		+r1
+			display: block
+		&:before, &:after
+			content: ""
+			position: absolute
+		&:before
+			border-left: 2px solid $blue
+			top: 0
+			bottom: 0
+			left: 50%
+			margin-left: -1px
+		&:after
+			border-bottom: 2px solid $blue
+			top: 50%
+			left: 0
+			right: 0
+			margin-top: -1px
+	&__contacts, &__social
+		+r1
+			margin: 0 -24px
+			padding-left: 24px
+			padding-right: 24px
+		+r2
+			margin: 0 -16px
+			padding-left: 16px
+			padding-right: 16px
+		.title-h3
+			margin-bottom: 12px
+	&__social
+		+r1
+			padding-top: 3px
+			padding-bottom: 16px
+			border-bottom: 1px solid #d9dbe1
+		+r2
+			padding-top: 0
+		.title-h3
+			+r1
+				float: left
+				margin: 0
+				padding: 11px 0 10px
+			+r2
+				float: none
+				padding: 0 0 8px
+	&__contacts
+		font-size: 0
+		+r1
+			padding-top: 15px
+			padding-bottom: 8px
+		+r2
+			padding-top: 5px
+			padding-bottom: 0
+		li
+			font-size: 14px
+			line-height: 1.4
+			letter-spacing: 0.2px
+			+r2
+				font-size: 11px
+				line-height: 1.45
+		a, li
+			color: $gray
+			display: block
+		a
+			transition: color 0.25s ease-out
+			+hover
+				color: $blue
+		li
+			+r1
+				display: inline-block
+				vertical-align: top
+				padding-right: 5px
+		ul
+			width: 33.33%
+			display: inline-block
+			vertical-align: top
+			+r1
+				width: 60%
+
+		.footer__numbers
+			+r1
+				float: right
+				width: 40%
+			li
+				+r1
+					display: block
+		.title-h3
+			+r1
+				float: left
+				margin: 0
+				padding: 10px 0 9px
+			+r2
+				float: none
+				padding: 7px 0 8px
+	&__info
+		+r1
+			max-width: 408px
+			float: right
+		+r2
+			max-width: 408px
+			float: none
+	&__logo
+		color: $blue
+		font-size: 32px
+		+as
+		letter-spacing: -0.77px
+		line-height: 1
+		display: inline-block
+		vertical-align: top
+		+r1
+			padding: 4px 0
+			letter-spacing: -0.4px
+			font-size: 24px
+	&__text
+		font-size: 12px
+		letter-spacing: 0.17px
+		color: $gray
+		+hr
+		overflow: hidden
+		+r1
+			overflow: visible
+			clear: both
+			font-size: 11px
+			letter-spacing: 0.2px
+			line-height: 1.45
+			padding: 0
+
+.social
+	font-size: 0
+	padding: 5px 0 0
+	+r1
+		padding: 0 24px 0 0
+		float: right
+	+r2
+		float: none
+		padding: 0
+	li
+		display: inline-block
+		vertical-align: top
+		padding-right: 10px
+		+r1
+			padding-right: 24px
+		+r2
+			padding-right: 8px
+	a
+		display: block
+		width: 40px
+		height: 40px
+		border: 2px solid #d9dbe1
+		border-radius: 50%
+		position: relative
+		+vertical
+		transition: background 0.25s ease-out, border-color 0.25s ease-out, box-shadow 0.25s ease-out
+		.no-touch &
+			&:hover, &:active
+				background: $blue
+				border-color: $blue
+				svg
+					fill: #fff
+			&:hover
+				box-shadow: 0 12px 24px rgba(65, 123, 231, 0.4)
+			&:active
+				box-shadow: 0 4px 8px rgba(65, 123, 231, 0.3)
+		svg
+			display: inline-block
+			vertical-align: middle
+			fill: $blue
+			transition: fill 0.25s ease-out
+	.icon-vk
+		font-size: 13px
+	.icon-fb
+		font-size: 18px
+	.icon-od
+		font-size: 21px
+	.icon-google
+		font-size: 16px
+	.icon-youtube
+		font-size: 15px
+	.icon-insta
+		font-size: 22px

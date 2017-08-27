@@ -1,0 +1,111 @@
+.details
+	padding: 10px 20px 20px
+	border-radius: 2px
+	background-color: white
+	&__header
+		padding: 0 200px 9px 0
+		border-bottom: 1px solid #d9dbe1
+		+clr
+		+r2
+			padding: 0 0 9px
+	&__title
+		float: left
+		width: 100%
+		+r2
+			float: none
+		strong
+			padding-right: 5px
+			float: left
+
+			color: $dark
+
+			+hr
+			font-size: 11px
+			line-height: 30px
+			letter-spacing: 0.17px
+		span
+			overflow: hidden
+	&__back
+		float: right
+		margin-right: -200px
+		width: 200px
+		text-align: right
+		margin: 0
+		+r2
+			float: none
+			padding: 8px 0 0
+			width: 100%
+			text-align: left
+		a
+			transition: color 0.25s ease-out
+			+hover
+				color: $blue
+	&__title span, &__back a
+		display: block
+		padding: 4px 0 6px
+
+		color: $gray
+
+		+hr
+		font-size: 13px
+		line-height: 20px
+		letter-spacing: -0.31px
+	&__body
+		padding: 26px 0 0
+	&__field
+		padding-bottom: 30px
+		+clr
+		+r2
+			padding-bottom: 16px
+	&__label
+		float: left
+		width: 35%
+		+r2
+			width: 100%
+			padding-bottom: 8px
+	&__info
+		float: right
+		width: 65%
+		+r2
+			width: 100%
+		p, li
+			+hr
+			font-size: 13px
+			line-height: 20px
+			letter-spacing: 0.2px
+		p, li span
+			color: $gray
+		li
+			strong, a
+				color: $dark
+		a
+			+hover
+				color: $blue
+	&__result
+		color: $blue
+
+		+as
+		font-size: 18px
+		line-height: 20px
+		letter-spacing: 0.21px
+	&__headings
+		border-bottom: 1px solid #d9dbe1
+		font-size: 0
+		+r1
+			display: none
+	&__merch, &__amount, &__price
+		display: inline-block
+		vertical-align: top
+		padding: 0 20px 3px 0
+
+		color: $gray
+
+		font-size: 13px
+		line-height: 20px
+		letter-spacing: -0.31px
+	&__merch
+		width: 60%
+	&__amount
+		width: 16%
+	&__price
+		width: 24%

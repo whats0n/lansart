@@ -1,0 +1,91 @@
+---
+title: Basket
+headerMod: header_small
+tabLinks: [
+	{
+		active: true,
+		href: 'tab1',
+		text: 'ТОВАРЫ'
+	},
+	{
+		href: 'tab2',
+		text: 'ДОСТАВКА'
+	},
+	{
+		href: 'tab3',
+		text: 'ПОДТВЕРЖДЕНИЕ'
+	}
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+{% set descriptionList = [
+	{
+		icon: 'like',
+		title: 'Инструкция по сборке',
+		text: 'Пару слов о приемуществах, доступных услугах или дополнительных фич'
+	},
+	{
+		icon: 'medal',
+		title: 'Заказать дизайн проект',
+		text: 'Пару слов о приемуществах, доступных услугах или дополнительных фич'
+	},
+	{
+		icon: 'delivery-empty',
+		title: 'Купить в кредит',
+		text: 'Пару слов о приемуществах, доступных услугах или дополнительных фич'
+	}
+] %}
+
+<div class="page">
+	<div class="page__inner">
+		<div class="page-basket">
+			<div class="page-basket__content tabs js-tabs">
+				<div class="page-basket__top">
+					<div class="page-basket__title title">Удалить адрес?</div>
+				</div>
+				<div class="page-basket__address">
+					<div class="new-addresses">
+						<div class="new-address">
+							<div class="new-address__info">
+								<p>
+									Г-н 13 <br>
+									3 <br>
+									moscow <br>
+									142400 <br>
+									Russian Federation
+								</p>
+							</div>
+						</div>
+						<div class="new-addresses__footer">
+							<p>Вы действительно хотите удалить этот адрес?</p>
+							<div class="new-addresses__btns">
+								<buttpn class="btn btn_blue new-addresses__submit"><span>Да!</span></buttpn>
+								<span class="new-addresses__slash">или</span>
+								<a href="#" class="link">отмена</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-basket__sidebar">
+				{% for descriptionItem in descriptionList %}
+				<div class="sm-description">
+					<div class="sm-description__icon">
+						{{mixins.icon(descriptionItem.icon)}}
+					</div>
+					<div class="sm-description__title">{{descriptionItem.title}}</div>
+					<p>{{descriptionItem.text}}</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

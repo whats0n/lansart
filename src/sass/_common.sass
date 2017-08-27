@@ -1,0 +1,1131 @@
+//media
+=r1
+	@media only screen and (max-width: "1080px")
+		@content
+=r2
+	@media only screen and (max-width: "767px")
+		@content
+=r3
+	@media only screen and (max-width: "500px")
+		@content
+
+=rt
+	@media only screen and (min-width: "768px") and (max-width: "1080px")
+		@content
+
+//fonts
++font("HelveticaNeue Roman", helveticaneuecyr-roman)
++font("HelveticaNeue Medium", helveticaneuecyr-medium)
++font("ArnoPro Semibold", arno_pro_semibold_caption)
+
+=hr
+	font-family: "HelveticaNeue Roman", Arial, sans-serif
+=hm
+	font-family: "HelveticaNeue Medium", Arial, sans-serif
+=as
+	font-family: "ArnoPro Semibold", Arial, sans-serif
+
+//colors
+$blue: #427be7
+$gray: #727b8a
+$dark: #102140
+
+//small help
+=hover
+	.no-touch &
+		&:hover
+			@content
+
+//main styles
+body
+	background: #FFF
+	font-size: 16px
+	line-height: 1.4
+	+hr
+	min-width: 320px
+	color: $dark
+	&.is-hidden
+		overflow: hidden
+	&.filters-open
+		+r2
+			overflow: hidden
+		.overlay
+			+r2
+				visibility: visible
+				opacity: 0.7
+
+.out
+	overflow: hidden
+
+.overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 1005
+	background-color: #31456b
+	opacity: 0
+	visibility: hidden
+	transition: opacity 0.25s linear, visibility 0.25s linear
+	&.is-active
+		opacity: 0.7
+		visibility: visible
+
+%inner, .inner
+	position: relative
+	max-width: 1060px
+	margin: 0 auto
+	+clr
+
+.title
+	+as
+	color: $blue
+	font-size: 28px
+	letter-spacing: 0.37px
+	line-height: 40px
+	margin-bottom: 10px
+	+r1
+		font-size: 24px
+		line-height: 1.67
+		letter-spacing: 0.4px
+		margin-bottom: 16px
+	&:after
+		content: ""
+		display: block
+		width: 20px
+		height: 2px
+		background-color: #427be7
+		border-radius: 1px
+		margin: 4px 0 0
+
+h1, h2, h3, h4, h5, h6, b, strong, th
+	font-weight: normal
+
+a
+	text-decoration: none
+
+h1, .title-h1, h2, .title-h2, h3, .title-h3, h4, .title-h4
+	+as
+
+h1, .title-h1
+	color: $blue
+	font-size: 48px
+	line-height: 0.83
+	+r1
+		font-size: 40px
+		line-height: 1.2
+	+r2
+		font-size: 32px
+		line-height: 1.25
+
+h2, .title-h2
+	color: $dark
+	font-size: 28px
+	letter-spacing: 0.24px
+	line-height: 1.25
+
+.title-h2_blue
+	color: $blue
+	letter-spacing: 0.37px
+	line-height: 1.43
+
+h3, .title-h3
+	color: $dark
+	font-size: 18px
+	letter-spacing: 0.24px
+	line-height: 1.11
+
+.title-h3_blue
+	color: $blue
+
+h4, .title-h4
+	color: $dark
+	font-size: 16px
+	letter-spacing: 0.23px
+	line-height: 1.25
+
+.title-h4_blue
+	color: $blue
+
+//tech
+.blue, .white
+	padding: 20px
+.blue
+	background: $blue
+.white
+	background: #fff
+
+//btns
+.btn
+	min-width: 140px
+	height: 40px
+	border-radius: 20px
+	+as
+	color: $blue
+	font-size: 16px
+	letter-spacing: -0.41px
+	line-height: 1.25
+	display: inline-block
+	vertical-align: top
+	text-align: center
+	background: none
+	transition: box-shadow 0.25s ease-out, color 0.25s ease-out
+	position: relative
+	.no-touch &
+		&:not(:disabled)
+			&:hover, &:active, &:focus
+				span
+					color: #fff
+					background: $blue
+					border-color: $blue
+					box-shadow: 0 4px 8px rgba(65, 123, 231, 0.2)
+				&:before
+					opacity: 1
+				svg
+					fill: #fff
+			&:hover, &:focus
+				&:before
+					box-shadow: 0 16px 20px rgba(65, 123, 231, 0.3)
+			&:active
+				color: #fff
+				span
+					box-shadow: 0 4px 8px rgba(65, 123, 231, 0.2)
+				&:before
+					box-shadow: 0 4px 8px rgba(65, 123, 231, 0.2)
+	&:before
+		content: ""
+		position: absolute
+		top: 10px
+		left: 10px
+		right: 10px
+		height: 30px
+		border-radius: 20px
+		box-shadow: 0 8px 20px rgba(65, 123, 231, 0.3)
+		transition: 0.25s ease-out
+		opacity: 0
+	span
+		z-index: 1
+		position: relative
+		padding: 8px 16px
+		display: block
+		border-radius: 20px
+		border: 2px solid #d9dbe1
+		transition: 0.25s ease-out
+	svg
+		display: inline-block
+		vertical-align: top
+		fill: $blue
+		transition: fill 0.25s ease-out
+	.icon-basket
+		font-size: 17px
+		margin-left: 7px
+	.icon-datepicker
+		font-size: 16px
+		margin-right: 9px
+	&_white, &_blue
+		color: #fff
+		svg
+			fill: #fff
+	&_white
+		span
+			border-color: #d9dbe1
+			background: none
+	&_blue
+		span
+			box-shadow: 0 4px 8px rgba(65, 123, 231, 0.3)
+			background-color: $blue
+			border-color: $blue
+		&:before
+			opacity: 1
+	&_gray
+		span
+			box-shadow: 0 4px 8px rgba(62, 76, 102, 0.2)
+			background-color: whitesmoke
+			border-color: whitesmoke
+		&:before
+			box-shadow: 0 8px 20px rgba(62, 76, 102, 0.2)
+			opacity: 1
+	&_big
+		max-width: 260px
+		width: 100%
+	&:disabled, &.is-disabled
+		cursor: default
+		span
+			color: #232b3a
+			+as
+			background: #d9dbe1
+			border-color: #d9dbe1
+			box-shadow: none
+		&:before
+			opacity: 0
+
+.btn-gray
+	display: inline-block
+	vertical-align: top
+	border-radius: 20px
+	font-size: 16px
+	line-height: 1.25
+	position: relative
+	text-align: center
+	color: #232b3a
+	+as
+	transition: box-shadow 0.25s ease-out
+	.no-touch &
+		&:hover, &:active
+			span
+				background: $blue
+				color: #fff
+				box-shadow: 0 4px 8px rgba(65, 123, 231, 0.2)
+			&:before
+				opacity: 1
+		&:active
+			span
+				box-shadow: 0 2px 4px rgba(65, 123, 231, 0.6)
+	&:before
+		content: ""
+		position: absolute
+		top: 10px
+		left: 10px
+		right: 10px
+		height: 30px
+		border-radius: 20px
+		box-shadow: 0 12px 24px rgba(65, 123, 231, 0.2)
+		background: rgba(65, 123, 231, 0.2)
+		transition: 0.25s ease-out
+		opacity: 0
+	span
+		z-index: 1
+		background: #d9dbe1
+		position: relative
+		padding: 10px 20px
+		display: block
+		border-radius: 20px
+		transition: 0.25s ease-out
+
+
+//btn up
+.to-top
+	position: fixed
+	bottom: 20px
+	left: 0
+	right: 0
+	padding: 0 50px
+	z-index: 1000
+	.filters-open &
+		z-index: 1100
+	&__inner
+		@extend %inner
+	&_filters
+		+r1
+			padding: 0 116px
+
+//btn filters
+.btn-filters
+	position: absolute
+	bottom: 0
+	right: -100px
+	width: 40px
+	height: 40px
+	cursor: pointer
+	background: none
+	display: none
+	+r1
+		display: block
+	&.is-active
+		.btn-filters
+			&__in
+				background: $blue
+				box-shadow: 0 2px 4px rgba(65, 123, 231, 0.3)
+			&__lines
+				border-color: #fff
+			&__circles
+				&:before, &:after
+					border-color: #fff
+					background: $blue
+		&:before
+			box-shadow: 0 6px 8px rgba(65, 123, 231, 0.3)
+			background: rgba(65, 123, 231, 0.3)
+	&:before
+		content: ""
+		position: absolute
+		top: 9px
+		left: 5px
+		right: 5px
+		box-shadow: 0 12px 24px rgba(62, 76, 102, 0.2)
+		background: rgba(62, 76, 102, 0.2)
+		height: 30px
+	&__in, &:before
+		border-radius: 50%
+	&__in
+		background-color: whitesmoke
+		box-shadow: 0 4px 8px rgba(62, 76, 102, 0.2)
+		position: relative
+		width: 100%
+		height: 100%
+		display: block
+		+vertical
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		width: 20px
+		height: 18px
+		position: relative
+	&__lines
+		position: absolute
+		top: 3px
+		bottom: 3px
+		left: 0
+		right: 0
+		border-top: 2px solid $blue
+		border-bottom: 2px solid $blue
+	&__circles
+		&:before, &:after
+			content: ""
+			position: absolute
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			border: 2px solid $blue
+			background: whitesmoke
+		&:before
+			top: 0
+			left: 2px
+		&:after
+			bottom: 0
+			right: 2px
+
+//btn up
+.btn-up
+	position: absolute
+	bottom: 0
+	right: -40px
+	width: 40px
+	height: 40px
+	background-color: $blue
+	box-shadow: 0 2px 4px rgba(65, 123, 231, 0.3)
+	border-radius: 50%
+	opacity: 0
+	visibility: hidden
+	transition: opacity 0.25s ease-in, visibility 0.25s ease-in, box-shadow 0.25s ease-out
+	.no-touch &
+		&:hover
+			box-shadow: 0 12px 24px rgba(65, 123, 231, 0.3)
+		&:active
+			box-shadow: 0 4px 8px rgba(65, 123, 231, 0.3)
+	&.is-active
+		opacity: 1
+		visibility: visible
+	.icon-up
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-size: 6px
+		fill: #fff
+
+//link more
+.link-more
+	+as
+	font-size: 14px
+	color: #d9dbe1
+	letter-spacing: 0.23px
+	line-height: 1.07
+	position: relative
+	display: block
+	padding-right: 32px
+	transition: color 0.25s ease-out
+	.no-touch &
+		&:hover
+			.link-more
+				&__hidden
+					width: 20px
+	&__visible, &__hidden
+		position: absolute
+		top: 0
+		right: 0
+		+clr
+	&__visible
+		.icon-next
+			fill: $blue
+	&__hidden
+		width: 0
+		overflow: hidden
+		transition: width 0.3s linear
+		.icon-next
+			fill: #969da9
+	.icon-next
+		float: right
+		font-size: 10px
+	&_big
+		font-size: 16px
+		color: $blue
+		line-height: 1.5
+		.no-touch &
+			&:hover
+				color: #969da9
+		.link-more
+			&__visible, &__hidden
+				top: 7px
+	&_light
+		color: #d9dbe1
+		.no-touch &
+			&:hover
+				color: $blue
+	&_gray
+		color: $gray
+		display: inline-block
+		vertical-align: top
+		+hr
+		font-size: 13px
+		line-height: 15px
+		+r2
+			font-size: 11px
+		.no-touch &
+			&:hover
+				color: $blue
+		.link-more
+			&__visible, &__hidden
+				top: 2px
+			&__visible
+				.icon-next
+					fill: $gray
+			&__hidden
+				.icon-next
+					fill: $blue
+	&_dark
+		font-size: 18px
+		letter-spacing: 0.24px
+		color: $dark
+		line-height: 20px
+		span
+			display: block
+		.link-more
+			&__visible, &__hidden
+				top: 50%
+				margin-top: -5px
+			&__visible
+				.icon-next
+					fill: $gray
+			&__hidden
+				.icon-next
+					fill: $blue
+
+.btn-next, .btn-prev
+	position: relative
+	font-size: 0
+	background: none
+	display: inline-block
+	vertical-align: top
+	min-width: 40px
+	height: 10px
+	.no-touch &
+		&:hover
+			.btn-prev, .btn-next
+				&__hidden
+					width: 20px
+	&__visible, &__hidden
+		position: absolute
+		top: 0
+		+clr
+	&__visible
+		svg
+			fill: #969da9
+	&__hidden
+		width: 0
+		overflow: hidden
+		transition: width 0.3s linear
+		svg
+			fill: $blue
+	svg
+		font-size: 10px
+
+.btn-next
+	&__visible, &__hidden
+		right: 50%
+		margin-right: -8px
+	svg
+		float: right
+.btn-prev
+	&__visible, &__hidden
+		left: 50%
+		margin-left: -8px
+	svg
+		float: left
+
+//fields
+.label
+	&_form
+		&:after
+			margin-top: 8px
+			+r2
+				margin-top: 0
+	&:after
+		content: ""
+		display: block
+		width: 20px
+		height: 2px
+		background: $blue
+		border-radius: 1px
+
+.form-required,
+.label
+	+hr
+	color: $gray
+	font-size: 13px
+	letter-spacing: 0.19px
+	line-height: 20px
+	display: block
+	sup
+		position: relative
+		top: -1px
+		color: #d0021b
+		font-size: 16px
+		line-height: 13px
+
+.input, .textarea
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	padding: 11px 20px 9px
+	border: 2px solid #d9dbe1
+	border-radius: 2px
+	color: $dark
+	font-size: 13px
+	letter-spacing: 0.2px
+	line-height: 1.3
+	+hr
+	background: none
+	transition: border-color 0.25s ease-out
+	box-shadow: none
+	&_small
+		padding: 7px 14px 5px
+	+r1
+		padding: 7px 14px 5px
+	&::placeholder
+		opacity: 1
+		color: $gray
+		transition: color 0.25s ease-out
+	&:focus
+		border-color: $blue
+		&::placeholder
+			// color: $dark
+	&_full
+		border-color: whitesmoke
+		background: whitesmoke
+		+r1
+			padding: 11px 20px 9px
+	&_big
+		+r1
+			padding: 11px 20px 9px
+	&.is-error
+		border-color: #d0021b
+		// color: #d0021b
+		// &::placeholder
+			// color: #d0021b
+
+.textarea
+	height: 80px
+	resize: none
+
+input
+	&::-ms-clear
+		display: none
+
+.field-phone
+	display: block
+	+clr
+	&__code
+		float: left
+		font-size: 13px
+		color: $gray
+		line-height: 1.3
+		letter-spacing: 0.2px
+		+hr
+		padding: 12px 12px 12px
+		+r1
+			padding: 9px 12px 7px
+	&__number
+		overflow: hidden
+
+
+//radio
+.radio, .checkbox
+	position: relative
+	display: inline-block
+	vertical-align: top
+	padding-left: 20px
+	min-height: 20px
+	user-select: none
+	cursor: pointer
+	.no-touch &
+		&:hover
+			span
+				color: $blue
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			color: $dark
+	span
+		display: block
+		+hr
+		font-size: 13px
+		line-height: 2.31
+		letter-spacing: 0.2px
+		color: $gray
+		transition: color 0.25s ease-out
+		&:before, &:after
+			content: ""
+			position: absolute
+			transition: 0.25s ease
+		a
+			color: $blue
+			text-decoration: underline
+			.no-touch &
+				&:hover
+					text-decoration: none
+	&_big
+		input
+			&:checked + span
+				color: $blue
+		span
+			padding-left: 10px
+			line-height: 20px
+			font-size: 16px
+			letter-spacing: 0.18px
+			+as
+
+.radio
+	input
+		&:checked + span
+			&:before
+				box-shadow: 0 2px 4px 0 rgba(65, 123, 231, 0.3)
+				background: $blue
+			&:after
+				opacity: 1
+				transform: scale(1)
+	span
+		&:before, &:after
+			border-radius: 50%
+			top: 50%
+		&:before
+			// top: 8px
+			margin-top: -7px
+			left: 0
+			background: #d9dbe1
+			width: 12px
+			height: 12px
+		&:after
+			// top: 12px
+			margin-top: -3px
+			left: 4px
+			width: 4px
+			height: 4px
+			background: #fff
+			opacity: 0
+			transform: scale(0)
+	&_big
+		span
+			&:before
+				// top: 3px
+			&:after
+				// top: 7px
+
+.checkbox
+	input
+		&:checked + span
+			&:after
+				opacity: 1
+	span
+		&:before, &:after
+			top: 50%
+			margin-top: -8px
+		&:before
+			// top: 7px
+			left: 0
+			width: 14px
+			height: 14px
+			border: 2px solid #d9dbe1
+			border-radius: 2px
+		&:after
+			// top: 7px
+			left: 3px
+			width: 13px
+			height: 10px
+			background: url(../img/check.svg) no-repeat center center
+			background-size: contain
+			opacity: 0
+
+//add item
+.add-item
+	position: relative
+	display: inline-block
+	vertical-align: top
+	text-align: center
+	cursor: pointer
+	user-select: none
+	background: none
+	&.is-active
+		.icon-check
+			display: inline-block
+		.icon-basket
+			display: none
+	.no-touch &
+		&:hover, &:active
+			span
+				box-shadow: 0 4px 8px rgba(65, 123, 231, 0.2)
+			&:before
+				top: 10px
+		&:hover
+			&:before
+				box-shadow: 0 12px 24px rgba(65, 123, 231, 0.4)
+		&:active
+			&:before
+				top: 9px
+				// box-shadow: 0 2px 4px rgba(65, 123, 231, 0.6)
+				box-shadow: 0 4px 8px rgba(65, 123, 231, 0.3)
+	&:before
+		content: ""
+		position: absolute
+		top: 5px
+		left: 5px
+		right: 5px
+		height: 30px
+		border-radius: 50%
+		box-shadow: 0 12px 24px rgba(65, 123, 231, 0.3)
+		background: rgba(65, 123, 231, 0.3)
+		transition: 0.25s ease-out
+	// input
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 0
+	// 	opacity: 0
+	// 	visibility: hidden
+	// 	&:checked + span
+	// 		.icon-check
+	// 			display: inline-block
+	// 		.icon-basket
+	// 			display: none
+	span
+		display: block
+		width: 40px
+		height: 40px
+		line-height: 1
+		background-color: #427be7
+		box-shadow: 0 2px 4px rgba(65, 123, 231, 0.3)
+		border-radius: 50%
+		position: relative
+		z-index: 1
+		+vertical
+		transition: 0.25s ease-out
+	svg
+		fill: #fff
+		display: inline-block
+		vertical-align: middle
+		&.icon-basket
+			font-size: 18px
+			margin-top: -2px
+		&.icon-check
+			font-size: 12px
+			display: none
+
+//inner logo
+.white-logo
+	color: white
+	font-size: 48px
+	line-height: 40px
+	+as
+	display: inline-block
+	vertical-align: top
+	+r1
+		font-size: 32px
+	+r2
+		font-size: 24px
+		line-height: 32px
+
+//link next
+.link-next
+	+hr
+	color: #727b8a
+	font-size: 13px
+	letter-spacing: -0.31px
+	line-height: 20px
+	position: relative
+	padding-right: 16px
+	display: inline-block
+	vertical-align: top
+	+r1
+		letter-spacing: -0.3px
+		line-height: 2.46
+	svg
+		font-size: 10px
+		fill: #969da9
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -5px
+
+//btn social
+.btn-soc
+	display: inline-block
+	vertical-align: top
+	width: 120px
+	color: #fff
+	+hr
+	position: relative
+	&_vk
+		.no-touch &
+			&:hover, &:active
+				&:before
+					box-shadow: 0 4px 12px rgba(76, 117, 163, 0.3)
+				div
+					box-shadow: 0 2px 4px rgba(76, 117, 163, 0.3)
+			&:active
+				&:before
+					box-shadow: 0 2px 4px rgba(76, 117, 163, 0.3)
+		div
+			background-color: #4c75a3
+			box-shadow: 0 4px 8px rgba(76, 117, 163, 0.3)
+		&:before
+			background-color: #4c75a3
+			box-shadow: 0 12px 24px rgba(76, 117, 163, 0.3)
+	&_fb
+		.no-touch &
+			&:hover, &:active
+				&:before
+					box-shadow: 0 4px 12px rgba(57, 88, 155, 0.3)
+				div
+					box-shadow: 0 2px 4px rgba(57, 88, 155, 0.3)
+			&:active
+				&:before
+					box-shadow: 0 2px 4px rgba(57, 88, 155, 0.3)
+		div
+			background-color: #3a589b
+			box-shadow: 0 4px 8px rgba(57, 88, 155, 0.3)
+		&:before
+			background-color: #3a589b
+			box-shadow: 0 12px 24px rgba(57, 88, 155, 0.3)
+	&:before
+		content: ""
+		position: absolute
+		top: 10px
+		left: 8px
+		right: 8px
+		height: 30px
+		border-radius: 20px
+	div, &:before
+		transition: 0.25s ease-out
+	div
+		// height: 40px
+		border-radius: 20px
+		padding: 13px 10px 12px 42px
+		position: relative
+		text-align: left
+	svg
+		fill: #fff
+		position: absolute
+	.icon-vk
+		font-size: 12px
+		margin-right: 13px
+		top: 14px
+		left: 11px
+	.icon-fb
+		font-size: 16px
+		margin-right: 18px
+		top: 11px
+		left: 17px
+	span
+		font-size: 13px
+		line-height: 15px
+		display: block
+		position: relative
+		z-index: 1
+
+//btn sm
+.btn-sm
+	display: inline-block
+	vertical-align: top
+	background: none
+	border-radius: 50%
+	width: 40px
+	height: 40px
+	font-size: 0
+	position: relative
+	.no-touch &
+		&:hover
+			&:before
+				top: 15px
+		&:active
+			&:before
+				box-shadow: 0 2px 4px rgba(65, 123, 231, 0.6)
+				top: 9px
+	&:before
+		content: ""
+		position: absolute
+		top: 9px
+		left: 5px
+		right: 5px
+		height: 30px
+		box-shadow: 0 6px 8px rgba(65, 123, 231, 0.3)
+		background: rgba(65, 123, 231, 0.3)
+		border-radius: 50%
+		transition: 0.25s ease-out
+	span
+		display: block
+		width: 100%
+		height: 100%
+		background-color: #427be7
+		border-radius: 20px
+		box-shadow: 0 2px 4px rgba(65, 123, 231, 0.3)
+		+vertical
+		position: relative
+		z-index: 1
+	svg
+		fill: #fff
+		font-size: 10px
+		display: inline-block
+		vertical-align: middle
+
+.btn-feedback
+	display: inline-block
+	vertical-align: top
+	// font-size: 12px
+	font-size: 13px
+	line-height: 20px
+	letter-spacing: 0.18px
+	color: $gray
+	padding-left: 20px
+	position: relative
+	background: none
+	transition: color 0.25s ease-out
+	.no-touch &
+		&:hover
+			color: $dark
+			svg
+				fill: $blue
+	svg
+		content: ""
+		position: absolute
+		top: 3px
+		left: 0
+		font-size: 13px
+		fill: #d9dbe1
+		transition: fill 0.25s ease-in-out
+
+//address fields
+.address-fields
+	&__lg
+		padding-bottom: 20px
+		+r1
+			padding-bottom: 16px
+	&__group
+		margin: 0 -10px
+		font-size: 0
+	&__sm
+		display: inline-block
+		vertical-align: top
+		width: 33.33%
+		padding: 0 10px
+		.input
+			padding-left: 5px
+			padding-right: 5px
+			text-align: center
+
+.btn-action
+	position: relative
+	display: inline-block
+	vertical-align: top
+	border-radius: 50%
+	width: 40px
+	height: 40px
+	background: none
+	font-size: 0
+	transition: background 0.25s ease-in-out
+	.no-touch &
+		&:hover, &:active
+			span
+				box-shadow: 0 2px 4px rgba(65, 123, 231, 0.3)
+				background: $blue
+				border-color: $blue
+			svg
+				fill: #fff
+			&:before
+				opacity: 1
+		&:active
+			&:before
+				top: 10px
+				box-shadow: 0 2px 4px rgba(65, 123, 231, 0.6)
+	.icon 
+		display: inline-block
+		vertical-align: middle
+		fill: $blue
+		transition: fill 0.25s ease-out
+	.icon-delete
+		font-size: 19px
+	.icon-edit
+		font-size: 20px
+	&:before
+		content: ""
+		position: absolute
+		top: 10px
+		left: 5px
+		right: 5px
+		height: 30px
+		box-shadow: 0 6px 8px rgba(65, 123, 231, 0.3)
+		background: rgba(65, 123, 231, 0.3)
+		opacity: 0
+		border-radius: 50%
+		transition: opacity 0.25s ease-out, box-shadow 0.25s ease-out
+	span
+		transition: 0.25s ease-out
+		border: 2px solid #d9dbe1
+		height: 100%
+		width: 100%
+		display: block
+		+vertical
+		border-radius: 50%
+		z-index: 2
+		position: relative
+
+.new-agreement
+	max-width: 600px
+	margin: 0 auto 15px
+	color: $gray
+	+hr
+	font-size: 14px
+	text-align: left
+	p 
+		overflow: hidden
+	a
+		color: $blue
+		+hover
+			text-decoration: underline
+	&__checkbox
+		float: left
+		margin-right: 5px
+
+.error-message
+	padding-top: 8px
+	p
+		color: #d0021b
+		font-size: 14px
+		line-height: 1.2
+
+[hidden]
+	display: none
+
+.reset-password
+	padding: 0 24px
+	margin: 0 auto
+	max-width: 360px
+	+r2
+		padding: 0 
+		max-width: 300px
+	.btn
+		width: 100%
+		+r2
+			font-size: 14px

@@ -1,0 +1,31 @@
+.spinner
+	position: relative
+	&__plus, &__minus
+		position: absolute
+		right: 0
+		padding-left: 9px
+		width: 40px
+		height: 50%
+		background: none
+		+vertical
+		text-align: left
+		+hover
+			svg
+				fill: $blue
+		svg
+			display: inline-block
+			width: 12px
+			fill: #969da9
+			transition: fill 0.25s ease
+	&__plus
+		top: 0
+		svg
+			vertical-align: top
+			margin-top: 8px
+	&__minus
+		bottom: 0
+		svg
+			vertical-align: bottom
+			margin-bottom: 8px
+	input
+		padding-right: 40px

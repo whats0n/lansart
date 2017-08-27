@@ -1,0 +1,223 @@
+//basket
+.basket
+	&__top
+		font-size: 0
+		border-bottom: 1px solid #d9dbe1
+		text-align: right
+		padding: 0 5px
+		+r2
+			display: none
+		&-in
+			padding: 0 20px
+	&__bottom
+		padding: 13px 0 13px
+		font-size: 0
+		border-top: 1px solid #d9dbe1
+	&__col
+		display: inline-block
+		vertical-align: top
+		color: $gray
+		font-size: 13px
+		line-height: 20px
+		letter-spacing: 0.31px
+		+hr
+		text-align: left
+		padding: 0 15px 3px
+		+r2
+			padding: 0 15px 3px 0
+	p
+		font-size: 13px
+		line-height: 16px
+		letter-spacing: -0.31px
+		+hr
+		color: $gray
+		a
+			color: $blue
+			.no-touch &
+				&:hover
+					text-decoration: underline
+	&__price
+		width: 29%
+		+r2
+			width: auto
+		strong
+			display: block
+			color: #427be7
+			font-size: 18px
+			letter-spacing: 0.21px
+			line-height: 20px
+			+as
+	&__quantity
+		width: 17%
+	&__prod
+		width: 54%
+		padding-left: 0
+	&__result
+		width: 71%
+		text-align: right
+		+r2
+			width: auto
+	&__items
+		padding: 0 5px
+		&-in
+			padding: 0 20px
+			+r2
+				padding: 0 16px
+	&__btns
+		padding: 13px 10px 20px
+		text-align: center
+		.btn
+			margin: 0 10px 20px
+
+.basket-item
+	position: relative
+	font-size: 0
+	border-bottom: 1px solid #d9dbe1
+	&:last-child
+		border-bottom: none
+	+r3
+		padding-bottom: 10px
+	&:after
+		content: ""
+		clear: both
+		display: block
+	&__info, &__field, &__price
+		display: inline-block
+		vertical-align: middle
+		padding: 20px 15px
+		+r3
+			padding: 20px 0 5px
+	&__info
+		width: 54%
+		position: relative
+		+clr
+		+r2
+			width: 100%
+			display: block
+			padding-right: 30px
+		p
+			+r1
+				line-height: 20px
+	&__field
+		width: 17%
+		+r2
+			width: 50%
+			max-width: 120px
+		+r3
+			width: 100%
+			max-width: 90px
+	&__price
+		width: 29%
+		// padding-right: 30px
+		padding-right: 70px
+		+r2
+			width: 50%
+		+r3
+			width: 100%
+		strong
+			display: block
+			color: #427be7
+			font-size: 18px
+			letter-spacing: 0.21px
+			line-height: 20px
+			+as
+		p
+			color: #727b8a
+			font-size: 13px
+			letter-spacing: -0.31px
+			line-height: 20px
+	&__img
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		width: 80px
+		height: 70px
+		background-color: #eee
+		border-radius: 2px 2px 0 0
+		float: left
+		margin: 0 20px 0 0
+	&__text
+		overflow: hidden
+		padding:
+		line-height: 16px
+		+r3
+			overflow: visible
+			clear: both
+			padding: 20px 0 0
+	&__title
+		color: $dark
+		font-size: 18px
+		line-height: 20px
+		letter-spacing: 0.21px
+		+as
+		margin-bottom: 5px
+	&__category
+		+hr
+		color: $gray
+		font-size: 13px
+		letter-spacing: -0.31px
+		line-height: 1
+	&__reload, &__close
+		position: absolute
+		top: 50%
+
+		margin-top: -12px
+		border-radius: 50%
+		width: 24px
+		height: 24px
+
+		background: none
+
+		font-size: 0
+		+r2
+			top: 16px
+			margin-top: 0
+		.no-touch &
+			&:hover, &:active
+				span
+					box-shadow: 0 2px 4px rgba(65, 123, 231, 0.3)
+					background: $blue
+					border-color: $blue
+				svg
+					fill: #fff
+				&:before
+					opacity: 1
+			&:active
+				&:before
+					top: 10px
+					box-shadow: 0 2px 4px rgba(65, 123, 231, 0.6)
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: 5px
+			right: 5px
+			height: 14px
+			box-shadow: 0 6px 8px rgba(65, 123, 231, 0.3)
+			background: rgba(65, 123, 231, 0.3)
+			opacity: 0
+			border-radius: 50%
+			transition: opacity 0.25s ease-out
+		span
+			transition: 0.25s ease-out
+			border: 2px solid #d9dbe1
+			height: 100%
+			width: 100%
+			display: block
+			+vertical
+			border-radius: 50%
+			z-index: 2
+			position: relative
+		svg
+			display: inline-block
+			vertical-align: middle
+			fill: $blue
+			transition: fill 0.25s ease-out
+	&__close
+		right: 0
+		svg
+			font-size: 8px
+	&__reload
+		right: 40px
+		svg
+			font-size: 16px

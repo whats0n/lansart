@@ -1,0 +1,33 @@
+<!-- Modal card-gallery -->
+<div id="card-gallery" class="modal fade js-card-gallery" tabindex="-1">
+	<div class="modal-dialog modal-dialog_gallery modal-dialog_center">
+		<div class="modal__in card-gallery">
+			<button type="button" class="card-gallery__close" data-dismiss="modal">
+				{{mixins.icon('close')}}
+			</button>
+			<div class="card-gallery__in">
+				<div class="card-gallery__btns">
+					<button class="btn-prev js-gallery-prev">
+						<span class="btn-prev__visible">
+							{{mixins.icon('prev')}}
+						</span>
+						<span class="btn-prev__hidden">
+							{{mixins.icon('prev')}}
+						</span>
+					</button>
+					<button class="btn-next js-gallery-next">
+						<span class="btn-next__visible">
+							{{mixins.icon('next')}}
+						</span>
+						<span class="btn-next__hidden">
+							{{mixins.icon('next')}}
+						</span>
+					</button>
+				</div>
+				<div class="card-gallery__slider js-gallery-modal-slider">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

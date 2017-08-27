@@ -1,0 +1,206 @@
+---
+title: Account
+headerMod: header_small
+breadcrumbs: [
+	'Главная',
+	'Профиль',
+	'Мои данные'
+]
+activeBC: 2
+accNav: [
+	{
+		text: 'Мои данные',
+		active: true
+	},
+	{
+		text: 'Мои заказы'
+	},
+	{
+		text: 'Избранное'
+	}
+]
+profile: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+{% set accForm = [
+	{
+		tagLabel: true,
+		for: 'account-name',
+		label: 'Имя',
+		input: true,
+		id: 'account-name'
+	},
+	{
+		tagLabel: true,
+		for: 'account-surname',
+		label: 'Фамилия',
+		input: true,
+		id: 'account-surname'
+	},
+	{
+		label: 'Пол',
+		radio: [
+			{
+				text: 'Женский',
+				name: 'gender'
+			},
+			{
+				text: 'Мужской',
+				name: 'gender'
+			}
+		]
+	},
+	{
+		tagLabel: true,
+		for: 'account-phone',
+		label: 'Телефон',
+		phone: true,
+		id: 'account-phone'
+	},
+	{
+		tagLabel: true,
+		for: 'account-email',
+		label: 'Email',
+		input: true,
+		id: 'account-email'
+	},
+	{
+		tagLabel: true,
+		for: 'account-city',
+		label: 'Адрес',
+		fields: [
+			{
+				item: true,
+				placeholder: "Дом"
+			},
+			{
+				item: true,
+				placeholder: "Корп"
+			},
+			{
+				item: true,
+				placeholder: "Квартира"
+			}
+		],
+		inputs: [
+			{
+				id: "account-city",
+				placeholder: "Город"
+			},
+			{
+				id: "account-street",
+				placeholder: "Улица"
+			}
+		]
+	}
+] %}
+
+<div class="page">
+	<div class="page__inner">
+		{% include "partials/_breadcrumbs.html" %}
+		<div class="page__container account">
+			<div class="account__title title">Профиль</div>
+			<div class="account__sidebar">
+				<div class="acc-nav">
+					<ul class="acc-nav__list">
+						{% for accLink in accNav %}
+						{% if accLink.active %}
+						<li class="acc-nav__item"><a href="#" class="acc-nav__link is-active">{{ accLink.text }}</a></li>
+						{% else %}
+						<li class="acc-nav__item"><a href="#" class="acc-nav__link">{{ accLink.text }}</a></li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="account__content">
+				<form action="/" class="acc-form">
+					<div class="acc-form__title">ВВОД ЛИЧНЫХ ДАННЫХ</div>
+					<div class="acc-form__section">
+						<div class="acc-form__row">
+							<div class="acc-form__left">
+								<label class="radio radio_big">
+									<input type="radio" name="type">
+									<span>Юридическое лицо</span>
+								</label>
+							</div>
+							<div class="acc-form__right">
+								<p>Если вы являетесь предпринимателем и еще что-нибудь</p>
+							</div>
+						</div>
+					</div>
+					<div class="acc-form__section">
+						<div class="acc-form__row">
+							<div class="acc-form__left">
+								<label class="radio radio_big">
+									<input type="radio" name="type" checked>
+									<span>Физическое лицо</span>
+								</label>
+							</div>
+						</div>
+						{% for accItem in accForm %}
+						<div class="acc-form__box">
+							<div class="acc-form__label">
+								{% if accItem.tagLabel %}
+								<label for="{{accItem.for}}" class="label label_form">{{accItem.label}}</label>
+								{% else %}
+								<div class="label label_form">{{accItem.label}}</div>
+								{% endif %}
+							</div>
+							<div class="acc-form__field">
+								{% if accItem.input %}
+								<input type="text" class="input" id="{{accItem.id}}" placeholder="{{accItem.label}}">
+								{% elif accItem.radio %}
+								<ul class="acc-form__list">
+									{% for accRadio in accItem.radio %}
+									<li>
+										<label class="radio">
+											<input type="radio" name="{{accRadio.name}}">
+											<span>{{accRadio.text}}</span>
+										</label>
+									</li>
+									{% endfor %}
+								</ul>
+								{% elif accItem.phone %}
+								<div class="field-phone">
+									<div class="field-phone__code">+7</div>
+									<div class="field-phone__number">
+										<input type="text" class="input" id="{{accItem.id}}">
+									</div>
+								</div>
+								{% elif accItem.fields %}
+								<div class="address-fields">
+									{% for accInput in accItem.inputs %}
+									<div class="address-fields__lg">
+										<input type="text" class="input" id="{{accInput.id}}" placeholder="{{accInput.placeholder}}">
+									</div>
+									{% endfor %}
+									<div class="address-fields__group">
+										{% for accField in accItem.fields %}
+										<div class="address-fields__sm">
+											<input type="text" class="input" placeholder="{{accField.placeholder}}">
+										</div>
+										{% endfor %}
+									</div>
+								</div>
+								{% endif %}
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+					<div class="acc-form__btn">
+						<button class="btn btn_blue"><span>Сохранить</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

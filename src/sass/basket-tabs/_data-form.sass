@@ -1,0 +1,45 @@
+.data
+	&__body
+		padding: 20px 0
+		border-bottom: 1px solid #d9dbe1
+		min-height: 380px
+		+r2
+			padding: 16px 0 24px
+			min-height: 1px
+	&__label
+		width: 40%
+		float: left
+		padding: 6px 30px 4px
+		+r1
+			padding: 1px 30px
+		+r2
+			width: 100%
+			float: none
+			padding: 0 0 8px
+		.label
+			max-width: 175px
+			+r2
+				max-width: 100%
+	&__box
+		+clr
+		padding: 0 20px
+		+r2
+			padding: 0
+		&:last-child
+			.form-person__field
+				padding-bottom: 0
+	&__field
+		max-width: 310px
+		padding-bottom: 20px
+		width: 60%
+		float: left
+		&_pull-right
+			margin-left: 40%
+			+r2
+				margin-left: 0
+		+r2
+			width: 100%
+			float: none
+			padding-bottom: 16px
+	&__container
+		padding: 20px 0 0

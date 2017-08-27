@@ -1,0 +1,96 @@
+<!-- begin basket tab1  -->
+<div class="tabs__content js-tab-content" data-tab="tab1">
+	<div class="basket">
+		<div class="basket__top">
+			<div class="basket__top-in">
+				<div class="basket__col basket__prod"><p>Всего в вашей корзине 3 товара. <a href="#">Оформить заказ</a></p></div>
+				<div class="basket__col basket__quantity">Количество</div>
+				<div class="basket__col basket__price">Цена</div>
+			</div>
+		</div>
+		<div class="basket__items">
+			{% set basketItems = [
+				{
+					img: 'item.png',
+					category: 'Барный стул',
+					title: 'Стул Space Chair',
+					text: 'Товар упакован по 2 шт., и будет доставлен кратно упаковке',
+					select: [
+						'1',
+						'2',
+						'3',
+						'4'
+					],
+					summary: '84 960 Р',
+					priceInfo: '21 240 руб. x 4 шт.'
+				},
+				{
+					img: 'item.png',
+					category: 'Барный стул',
+					title: 'Стул Space Chair',
+					text: 'Товар упакован по 2 шт., и будет доставлен кратно упаковке',
+					select: [
+						'1',
+						'2',
+						'3',
+						'4'
+					],
+					summary: '84 960 Р'
+				},
+				{
+					img: 'item.png',
+					category: 'Барный стул',
+					title: 'Стул Space Chair',
+					text: 'Товар упакован по 2 шт., и будет доставлен кратно упаковке',
+					select: [
+						'1',
+						'2',
+						'3',
+						'4'
+					],
+					summary: '84 960 Р',
+					priceInfo: '21 240 руб. x 4 шт.'
+				}
+			] %}
+			<div class="basket__items-in">
+				{% for item in basketItems %}
+				<div class="basket-item">
+					<div class="basket-item__info">
+						<div class="basket-item__img" style="background-image: url(img/{{item.img}});"></div>
+						<div class="basket-item__text">
+							<div class="basket-item__category">{{item.category}}</div>
+							<div class="basket-item__title">{{item.title}}</div>
+							<p>{{item.text}}</p>
+						</div>
+					</div>
+					<div class="basket-item__field">
+						<input type="text" class="input js-spinner" data-min="0" data-max="10">
+					</div>
+					<div class="basket-item__price">
+						<strong>{{item.summary}}</strong>
+						{% if item.priceInfo %}
+						<p>{{item.priceInfo}}</p>
+						{% endif %}
+						<button class="basket-item__reload js-tooltip" title="Подсказка №1">
+							<span>{{mixins.icon('reload')}}</span>
+						</button>
+						<button class="basket-item__close js-tooltip" title="Подсказка №2">
+							<span>{{mixins.icon('close')}}</span>
+						</button>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="basket__bottom">
+			<div class="basket__top-in">
+				<div class="basket__col basket__result">Стоимость товаров:</div>
+				<div class="basket__col basket__price"><strong>177 471 Р</strong></div>
+			</div>
+		</div>
+		<div class="basket__btns">
+			<a href="#" class="btn btn_blue btn_big"><span>Оформить заказ</span></a>
+		</div>
+	</div>
+</div>
+<!-- end basket tab1 -->

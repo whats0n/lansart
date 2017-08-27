@@ -1,0 +1,665 @@
+//blog
+.blog
+	+clr
+	padding: 0 0 40px
+	+r1
+		padding: 0 0 24px
+	+r2
+		padding: 0 0 40px
+	&__sidebar, &__content
+		padding: 0 10px
+		+r1
+			padding: 0 12px
+		+r2
+			padding: 0 8px
+	&__sidebar
+		width: 25%
+		float: left
+		+r1
+			width: 33%
+		+r2
+			display: none
+		.datepicker
+			margin-bottom: 20px
+			+r1
+				margin-bottom: 16px
+	&__content
+		width: 75%
+		float: right
+		+r1
+			width: 67%
+		+r2
+			width: 100%
+			float: none
+	.page__pagination
+		+r2
+			padding: 0
+	&__head
+		margin: 0 20px 24px
+		+clr
+		&_desktop
+			+r1
+				display: none
+			.title
+				margin: 0
+		&-title
+			+r1
+				display: none
+	&__more
+		clear: both
+		padding: 7px 0 0
+
+//small search
+.side-search
+	position: relative
+	margin-bottom: 30px
+	+r1
+		margin-bottom: 16px
+	&__btn
+		position: absolute
+		top: 50%
+		right: 20px
+		margin-top: -8px
+		background: none
+		font-size: 0
+		svg
+			font-size: 15px
+			fill: #969da9
+
+//popular
+.sm-popular
+	padding: 0 20px 10px
+	clear: both
+	+r1
+		padding: 0 7px
+	&__heading
+		font-size: 18px
+		line-height: 1.4
+		letter-spacing: 0.24px
+		color: $blue
+		+as
+		margin-bottom: 24px
+		+r1
+			display: none
+		&:after
+			content: ""
+			display: block
+			width: 20px
+			height: 2px
+			background: $blue
+			border-radius: 1px
+			margin-top: 7px
+
+.pop-item
+	margin-bottom: 27px
+	+r1
+		margin-bottom: 40px
+	&__img
+		height: 120px
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+		margin-bottom: 17px
+		border-radius: 2px
+		+r1
+			margin-bottom: 16px
+	.title-h3
+		+r1
+			font-size: 16px
+			line-height: 1
+		a
+			display: block
+			color: $dark
+			transition: color 0.25s ease-out
+			.no-touch &
+				&:hover
+					color: $blue
+	&__date
+		color: $gray
+		font-size: 12px
+		line-height: 18px
+		letter-spacing: 0.18px
+		padding-left: 30px
+		position: relative
+		margin-bottom: 8px
+		display: block
+		+r1
+			font-size: 11px
+			line-height: 16px
+			letter-spacing: 0.15px
+		&:before
+			content: ""
+			position: absolute
+			top: 7px
+			left: 0
+			width: 20px
+			height: 2px
+			background: $blue
+			border-radius: 1px
+			+r1
+				top: 6px
+
+//blog preview
+.blog-preview
+	padding: 30px 20px 0 0
+	+r1
+		padding: 0
+	&__img
+		width: 100%
+		height: 0
+		padding-bottom: 39%
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		border-radius: 2px
+	&__info
+		padding: 30px 40px 30px
+		+r1
+			padding: 16px 0 32px
+	&__category, &__title
+		transition: color 0.25s ease-out
+		.no-touch &
+			&:hover
+				color: $blue
+	&__title
+		font-size: 18px
+		letter-spacing: 0.24px
+		+as
+		color: $dark
+		display: block
+		line-height: 20px
+		margin-bottom: 10px
+		+r1
+			margin-bottom: 16px
+			font-size: 16px
+			letter-spacing: 0.24px
+			line-height: 1
+	p
+		font-size: 13px
+		color: $gray
+		line-height: 20px
+		+hr
+		height: 100px
+		+r1
+			line-height: 16px
+			height: 80px
+	&__footer
+		margin-top: 14px
+		border-top: 1px solid #d9dbe1
+		padding: 20px 0 0
+		+clr
+		+r1
+			margin-top: 16px
+			padding: 15px 0 0
+		.btn
+			float: right
+			+r1
+				display: none
+	&__btns
+		font-size: 0
+		padding: 10px 0
+		float: left
+		+r1
+			padding: 2px 0
+		a
+			margin-right: 18px
+
+.post
+	padding: 30px 20px 0 0
+	+r1
+		padding: 0
+	&__picture
+		font-size: 0
+		margin-bottom: 30px
+		+r1
+			margin-bottom: 16px
+		img
+			width: 100%
+			border-radius: 2px
+	&__meta
+		padding: 0 40px
+		+r1
+			padding: 0
+	.tags
+		padding: 0
+
+.blog-preview, .post
+	&__meta
+		+clr
+	&__date
+		float: right
+		font-size: 12px
+		letter-spacing: 0.18px
+		+r1
+			line-height: 24px
+			font-size: 11px
+	&__category, &__date
+		color: $gray
+		line-height: 20px
+		margin-bottom: 10px
+		+r1
+			margin-bottom: 16px
+	&__category
+		position: relative
+		float: left
+		font-size: 14px
+		letter-spacing: 0.22px
+		margin-left: -40px
+		padding-left: 40px
+		+r1
+			margin-left: 0
+			padding-left: 16px
+			line-height: 24px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 2px
+			height: 20px
+			background: $blue
+			border-radius: 1px
+			+r1
+				top: 2px
+
+.article
+	+hr
+	padding-bottom: 30px
+	+r1
+		padding-bottom: 24px
+	div
+		margin: 0 -5px
+		font-size: 0
+		figure
+			width: 50%
+			display: inline-block
+			padding: 0 5px 10px
+			+r1
+				padding: 0 4px 8px
+	figure
+		padding-bottom: 30px
+		+r1
+			padding-bottom: 24px
+		img
+			width: 100%
+			border-radius: 2px
+	p
+		font-size: 13px
+		color: $gray
+		line-height: 20px
+		margin-bottom: 30px
+		+r1
+			margin-bottom: 24px
+	h1
+		margin-bottom: 15px
+		color: $dark
+		font-size: 28px
+		letter-spacing: 0.24px
+		line-height: 1.25
+		+r1
+			margin-bottom: 8px
+		+r2
+			font-size: 22px
+
+	h2, h3, h4, h5, h6
+		margin-bottom: 10px
+		+r1
+			margin-bottom: 8px
+	h1, h2, h3, h4, h5, h6, p, ul, ol
+		padding: 0 40px
+		+r1
+			padding: 0
+
+//share
+.share
+	margin-top: 30px
+	padding: 19px 0 20px
+	border-top: 1px solid #d9dbe1
+	border-bottom: 1px solid #d9dbe1
+	+clr
+	&__title
+		float: left
+		+r1
+			float: none
+			padding-bottom: 8px
+		&-text
+			padding: 0 0 0 20px
+			position: relative
+			font-size: 18px
+			color: $blue
+			+as
+			letter-spacing: 0.24px
+			line-height: 40px
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 0
+				margin-top: -10px
+				width: 2px
+				height: 20px
+				background: $blue
+				border-radius: 1px
+
+	&__title-text, &__amount
+		display: inline-block
+		vertical-align: top
+	&__amount
+		width: 20px
+		height: 20px
+		position: relative
+		margin: 10px
+		&:before
+			content: ""
+			position: absolute
+			top: 5px
+			left: 3px
+			right: 2px
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			background-color: rgba(62, 76, 102, 0.3)
+			box-shadow: 0 6px 8px rgba(62, 76, 102, 0.3)
+		span
+			position: relative
+			display: block
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			background: whitesmoke
+			box-shadow: 0 2px 4px rgba(62, 76, 102, 0.2)
+			font-size: 16px
+			color: $blue
+			line-height: 20px
+			letter-spacing: -0.45px
+			+as
+			text-align: center
+	&__list
+		float: right
+		font-size: 0
+		+r1
+			float: none
+		li
+			display: inline-block
+			vertical-align: top
+			padding-left: 20px
+			+r1
+				padding: 0 16px 0 0
+			+r3
+				padding: 0 8px 0 0
+	.share__btn
+		+r3
+			display: block
+			padding-bottom: 16px
+	&__social
+		display: block
+		width: 40px
+		height: 40px
+		position: relative
+		&:before, span
+			border-radius: 50%
+			transition: 0.25s ease-out
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: 5px
+			right: 5px
+			bottom: 0
+		span
+			height: 100%
+			width: 100%
+			display: block
+			+vertical
+			position: relative
+			z-index: 1
+		svg
+			display: inline-block
+			vertical-align: middle
+			fill: #fff
+			&.icon-vk
+				font-size: 12px
+			&.icon-fb
+				font-size: 16px
+			&.icon-od
+				font-size: 20px
+			&.icon-tw
+				font-size: 11px
+	&__vk
+		.no-touch &
+			&:hover, &:active
+				span
+					box-shadow: 0 2px 4px rgba(76, 117, 163, 0.3)
+			&:hover
+				&:before
+					box-shadow: 0 4px 12px rgba(76, 117, 163, 0.3)
+			&:active
+				&:before
+					box-shadow: 0 2px 4px rgba(76, 117, 163, 0.3)
+		&:before
+			background-color: #4c75a3
+			box-shadow: 0 12px 24px rgba(76, 117, 163, 0.3)
+		span
+			background-color: #4c75a3
+			box-shadow: 0 4px 8px rgba(76, 117, 163, 0.3)
+	&__fb
+		.no-touch &
+			&:hover, &:active
+				span
+					box-shadow: 0 2px 4px rgba(57, 88, 155, 0.3)
+			&:hover
+				&:before
+					box-shadow: 0 4px 12px rgba(57, 88, 155, 0.3)
+			&:active
+				&:before
+					box-shadow: 0 2px 4px rgba(57, 88, 155, 0.3)
+		&:before
+			background-color: #3a589b
+			box-shadow: 0 12px 24px rgba(57, 88, 155, 0.3)
+		span
+			background-color: #3a589b
+			box-shadow: 0 4px 8px rgba(57, 88, 155, 0.3)
+	&__od
+		.no-touch &
+			&:hover, &:active
+				span
+					box-shadow: 0 2px 4px rgba(245, 130, 32, 0.3)
+			&:hover
+				&:before
+					box-shadow: 0 4px 12px rgba(245, 130, 32, 0.3)
+			&:active
+				&:before
+					box-shadow: 0 2px 4px rgba(245, 130, 32, 0.3)
+		&:before
+			background-color: #f58220
+			box-shadow: 0 12px 24px rgba(245, 130, 32, 0.3)
+		span
+			background-color: #f58220
+			box-shadow: 0 4px 8px rgba(245, 130, 32, 0.3)
+	&__tw
+		.no-touch &
+			&:hover, &:active
+				span
+					box-shadow: 0 2px 4px rgba(0, 170, 240, 0.3)
+			&:hover
+				&:before
+					box-shadow: 0 4px 12px rgba(0, 170, 240, 0.3)
+			&:active
+				&:before
+					box-shadow: 0 2px 4px rgba(0, 170, 240, 0.3)
+		&:before
+			background-color: #00abf0
+			box-shadow: 0 12px 24px rgba(0, 170, 240, 0.3)
+		span
+			background-color: #00abf0
+			box-shadow: 0 4px 8px rgba(0, 170, 240, 0.3)
+
+//post comment
+.post-msg
+	padding: 30px 0 0
+	+r2
+		padding: 24px 0 0
+	.post-comment
+		+hr
+		padding: 19px 0 0
+		border-top: 1px solid #d9dbe1
+		+r2
+			padding: 19px 0 0
+.post-comment
+	+hr
+	padding: 30px 0 0
+	+r2
+		padding: 24px 0 0
+	&__title
+		+as
+		color:  $blue
+		font-size: 18px
+		letter-spacing: 0.24px
+		line-height: 40px
+		margin-bottom: 20px
+		padding-left: 20px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			bottom: 10px
+			left: 0
+			width: 2px
+			border-radius: 1px
+			background: $blue
+	&__top
+		+clr
+		+r2
+			padding-bottom: 16px
+	&__img
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		float: left
+		margin-right: 20px
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+	&__date
+		float: right
+		font-size: 12px
+		padding: 10px 0 10px 20px
+		color: $gray
+	&__name
+		overflow: hidden
+		font-size: 16px
+		padding: 10px 0
+		color: $dark
+		+as
+	&__date, &__name
+		line-height: 30px
+		letter-spacing: 0.18px
+	&__body
+		padding: 0 0 0 70px
+		+r2
+			padding: 0
+		.post-comment
+			padding-left: 8px
+	&__text
+		padding-bottom: 20px
+		p
+			font-size: 13px
+			line-height: 20px
+			color: $gray
+	&__meta
+		font-size: 0
+		.btn-feedback, .btn-likes
+			margin-right: 24px
+	&__field
+		padding-bottom: 20px
+		.textarea
+			height: 130px
+	&__btn
+		text-align: right
+		font-size: 0
+		padding-bottom: 20px
+		.btn
+			width: 160px
+
+
+.post-anonym
+	position: relative
+	padding: 0 220px 20px 70px
+	min-height: 50px
+	font-size: 0
+	+r1
+		padding-right: 0
+	+r3
+		padding-left: 0
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+
+		border-radius: 50%
+		width: 50px
+		height: 50px
+
+		background: #d9dbe1
+		+vertical
+		+r3
+			position: relative
+			top: auto
+			left: auto
+		svg
+			display: inline-block
+			vertical-align: middle
+			fill: $gray
+			font-size: 19px
+	&__name, &__email
+		display: inline-block
+		vertical-align: top
+		padding: 5px 20px 5px 0
+		+r1
+			padding: 10px 20px 0 0
+		+r3
+			display: block
+			padding: 10px 0
+	&__name
+		width: 42%
+		+r2
+			width: 50%
+		+r3
+			width: 100%
+	&__email
+		width: 58%
+		+r1
+			padding-right: 0
+		+r2
+			width: 50%
+		+r3
+			width: 100%
+	&__btn
+		position: absolute
+		top: 5px
+		right: 0
+		+r1
+			position: relative
+			top: auto
+			left: auto
+			padding: 16px 0 0
+		.btn
+			width: 160px
+			text-align: center
+	&__label
+		display: inline-block
+		vertical-align: middle
+		padding: 5px 20px 5px 0
+		width: 60px
+
+		color: $gray
+		font-size: 13px
+		text-align: center
+		line-height: 30px
+		letter-spacing: 0.2px
+		+r1
+			display: block
+			padding: 0 0 16px
+			line-height: 20px
+			text-align: left

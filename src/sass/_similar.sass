@@ -1,0 +1,75 @@
+//similar
+.similar
+	background-color: #d9dbe1
+	&__title
+		line-height: 1
+		margin: -25px 0 0
+		width: 100%
+		float: left
+		padding: 0 20px
+		+as
+		color: $blue
+		font-size: 48px
+		line-height: 0.83
+		+r1
+			font-size: 32px
+			line-height: 1.25
+			margin: -23px 0 0
+			padding: 0
+	&__arrows
+		max-width: 1020px
+		margin: 0 auto
+		position: relative
+		z-index: 22
+		+r1
+			display: none
+		&-in
+			position: absolute
+			bottom: 100%
+			margin-bottom: -5px
+			right: -10px
+			width: 100px
+			text-align: right
+			font-size: 0
+
+.unit
+	&__top
+		position: relative
+		+clr
+	&__slider
+		margin: 0 -10px
+		font-size: 0
+		+r1
+			margin: 0 -24px
+		+r2
+			margin: 0 -16px
+	&__col
+		padding: 35px 10px 50px
+		width: 25%
+		display: inline-block
+		vertical-align: top
+		+r1
+			width: 240px
+			padding: 24px 8px 32px
+		+r2
+			width: 272px
+	&__title
+		font-size: 28px
+		color: $dark
+		line-height: 35px
+		+as
+		letter-spacing: 0.24px
+		float: left
+		padding: 0 20px
+		margin-bottom: -11px
+		+r1
+			padding: 0
+			margin: 0
+	&__arrows
+		float: right
+		width: 110px
+		text-align: right
+		padding: 15px 10px 0
+		margin-bottom: -11px
+		+r1
+			display: none

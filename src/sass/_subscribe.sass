@@ -1,0 +1,137 @@
+//subscribe
+.subscribe
+	background: url(../img/subscribe.png) no-repeat center center $dark
+	background-size: cover
+	border-radius: 2px
+	padding: 22px 20px 20px
+	+r1
+		border-radius: 0
+		padding: 0 14px 0 24px
+	+r2
+		padding: 16px
+	.title-h1
+		color: #fff
+		margin-bottom: 16px
+		+r1
+			display: none
+		&:after
+			content: ""
+			margin: 17px 0 0
+			display: block
+			width: 20px
+			height: 2px
+			border-radius: 1px
+			background: #d9dbe1
+	p
+		letter-spacing: 0.2px
+		font-size: 14px
+		line-height: 18px
+		color: #d9dbe1
+		margin-bottom: 16px
+		+r1
+			display: none
+	&__title
+		float: left
+		font-size: 24px
+		color: #fff
+		+as
+		line-height: 40px
+		padding: 24px 0
+		display: none
+		+r1
+			display: block
+		+r2
+			float: none
+			padding: 0 0 8px
+			font-size: 16px
+			line-height: 1.5
+
+.subscribe-form
+	position: relative
+	margin: 0 -10px
+	+r1
+		padding: 14px 0 14px 19px
+		overflow: hidden
+		margin: 0
+	+r2
+		padding: 0
+		overflow: visible
+	&__field, &__btn
+		padding: 10px
+		+r2
+			padding: 0
+	&__btn
+		width: 160px
+		position: absolute
+		top: 0
+		right: 0
+		+r2
+			width: 40px
+		.btn
+			width: 100%
+			+r2
+				display: none
+		.btn-sm
+			display: none
+			+r2
+				display: inline-block
+	&__field
+		padding-right: 170px
+		position: relative
+		+r2
+			padding-right: 56px
+
+//subs
+.subs
+	background: url(../img/subs.jpg) no-repeat center center
+	background-size: cover
+	margin: 0 -20px
+	padding: 0 20px
+	+r1
+		margin: 0 -24px
+		padding: 0 24px
+	+r2
+		margin: 0 -16px
+		padding: 6px 16px
+	.subscribe-form
+		padding: 10px 0
+		overflow: hidden
+	&__text
+		float: left
+		padding: 20px 30px 20px 0
+		+r2
+			float: none
+			padding: 10px 0 0
+	&__title, &__label
+		display: inline-block
+		vertical-align: top
+		line-height: 40px
+	&__title
+		font-size: 18px
+		color: #fff
+		+as
+		padding: 0 20px
+		position: relative
+		+r1
+			padding: 0
+		+r2
+			font-size: 16px
+			line-height: 24px
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: 0
+			bottom: 10px
+			width: 2px
+			background: #d9dbe1
+			border-radius: 1px
+			+r1
+				display: none
+	&__label
+		font-size: 14px
+		color: #d9dbe1
+		+hr
+		letter-spacing: 0.2px
+		+r1
+			display: none

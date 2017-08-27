@@ -1,0 +1,364 @@
+.bg-slider
+	height: 100%
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background-color: #31456b
+	&__slide
+		height: 500px
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: cover
+		+r1
+			height: 315px
+		+r2
+			height: 240px
+
+.main-slider
+	background-color: whitesmoke
+	+clr
+	position: relative
+	&__container
+		margin: -240px 0 0
+		float: left
+		width: 100%
+		+r1
+			margin: -225px 0 0
+		+r2
+			margin: -165px 0 0
+	&__inner
+		max-width: 1060px
+		margin: 0 auto
+		height: 520px
+		position: relative
+		+r1
+			max-width: 768px
+			height: 400px
+		+r2
+			height: auto
+	&__dots
+		position: absolute
+		top: 35px
+		left: 0
+		z-index: 3
+		width: 135px
+		+r1
+			visibility: hidden
+			opacity: 0
+	&__number
+		text-align: right
+		+as
+		color: $blue
+		font-size: 22px
+		letter-spacing: -0.62px
+		line-height: 1
+		position: absolute
+		top: 0
+		right: 0
+		width: 35px
+		transition: top 0.25s ease-out
+	.slick-dots
+		width: 100px
+		font-size: 0
+		position: relative
+		li
+			position: relative
+		.slick-active
+			button
+				&:after
+					width: 100px
+				.no-touch &
+					&:hover
+						&:after
+							width: 100px
+		.slick-active
+			button
+				span
+					opacity: 1
+					animation: showCircle 0.2s ease-out
+		button
+			width: 100%
+			background: none
+			position: relative
+			height: 15px
+			font-size: 0
+			.no-touch &
+				&:hover
+					&:after
+						width: 20px
+			&:before, &:after
+				content: ""
+				position: absolute
+				top: 6px
+				right: 0
+				height: 2px
+				border-radius: 1px
+			&:before
+				width: 20px
+				background: #d9dbe1
+			&:after
+				width: 0
+				background: #588ae9
+				transition: width 0.25s ease-out
+			span
+				opacity: 0
+				position: absolute
+				top: 50%
+				right: 6px
+				margin: -12px 0 0 0
+				width: 20px
+				height: 20px
+				border: 1px solid $blue
+				border-radius: 50%
+				transform: scale(0)
+
+
+
+@keyframes showCircle
+	0%
+		transform: scale(0)
+		opacity: 0.6
+	20%
+		opacity: 0.6
+	100%
+		opacity: 0
+		transform: scale(15)
+
+
+.slide
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	padding: 20px 40px 60px 0
+	+clr
+	transition: opacity 0.3s ease-out, visibility 0.3s ease-out
+	+r1
+		position: relative
+		opacity: 1
+		visibility: visible
+		padding: 20px 24px 26px
+	+r2
+		padding: 0 16px 48px
+	&.is-animation, &.is-active
+		opacity: 1
+		visibility: visible
+	&.is-active
+		position: relative
+		.slide
+			&__img
+				.no-touch &
+					&:hover
+						img
+							transform: scale(1.1)
+				img
+					opacity: 1
+			&__number
+				span
+					transition: opacity 0.25s ease-out
+					opacity: 1
+					transform: translateY(0)
+
+	&.is-animation
+		.slide
+			&__img
+				.no-touch &
+					&:hover
+						img
+							transform: translateX(0) scale(1.1)
+				img
+					animation: showImg 0.35s ease-out forwards
+					+r1
+						animation: none
+			&__title
+				animation: showTitle 0.35s ease-out forwards
+				+r1
+					animation: none
+	&__img, &__info
+		float: left
+	&__img
+		width: 64%
+		margin-right: -17%
+		// text-align: right
+		text-align: left
+		// padding-right: 80px
+		position: relative
+		z-index: 1
+		display: block
+		+r1
+			width: 60%
+			padding-right: 15px
+			margin-right: -20%
+		+r2
+			width: 100%
+			// padding: 0 30px 0 0
+			padding: 0
+			margin: 0 auto
+			max-width: 288px
+			float: none
+			text-align: right
+		img
+			position: relative
+			display: inline-block
+			vertical-align: top
+			z-index: 1
+			transition: transform 0.3s ease-out
+			max-width: 100%
+			max-height: 533px
+			backface-visibility: hidden
+			top: -30px
+			+r1
+				// max-width: 358px
+				// max-height: 352px
+				max-width: 488px
+				max-height: 402px
+				top: 0
+			+r2
+				// max-height: 185px
+				// max-width: 190px
+				max-width: 256px
+				max-height: 200px
+	&__info
+		width: 53%
+		position: relative
+		padding: 100px 0 0
+		+r1
+			padding: 106px 0 0
+			width: 60%
+		+r2
+			margin: -30px auto 0
+			float: none
+			padding: 0
+			width: 100%
+			max-width: 288px
+	&__number
+		position: absolute
+		top: 0
+		left: 0
+		+as
+		color: whitesmoke
+		font-size: 340px
+		line-height: 0.93
+		padding-left: 60px
+		+r1
+			font-size: 224px
+			line-height: 1
+			top: 35px
+			padding: 0
+		+r2
+			font-size: 143px
+			top: 10px
+		span
+			transition: transform 0.3s ease-out, opacity 0.25s ease-out
+			transform: translateY(-250px)
+			opacity: 0
+			display: inline-block
+			vertical-align: top
+			+r1
+				opacity: 1
+				transform: translateY(0)
+	&__title
+		+as
+		color: whitesmoke
+		font-size: 48px
+		line-height: 1
+		max-width: 415px
+		padding-right: 30px
+		float: right
+		text-align: left
+		margin-bottom: 64px
+		z-index: 2
+		position: relative
+		+r1
+			font-size: 32px
+			max-width: 290px
+			margin-bottom: 56px
+		+r2
+			display: none
+	.info-block
+		clear: right
+		z-index: 2
+	&__mobile-title
+		display: none
+		max-width: 288px
+		font-size: 24px
+		line-height: 1
+		+as
+		color: whitesmoke
+		margin: 0 auto
+		text-align: center
+		+r2
+			display: block
+
+@keyframes showImg
+	0%
+		transform: translateX(-1000px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+@keyframes showTitle
+	0%
+		transform: translateX(1000px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+
+.info-block
+	position: relative
+	+r2
+		text-align: center
+	&:before
+		content: ""
+		position: absolute
+		left: 20px
+		right: 20px
+		top: 10px
+		bottom: 0
+		border-radius: 2px
+		box-shadow: 0 12px 24px rgba(62, 76, 102, 0.2)
+	&__inner
+		position: relative
+		z-index: 1
+		background-color: #f8f8f9
+		border-radius: 2px
+		box-shadow: 0 6px 12px rgba(62, 76, 102, 0.2)
+		padding: 30px 40px
+		+r1
+			padding: 28px 24px 28px 24px
+		+r2
+			padding: 16px
+	&__text
+		font-size: 16px
+		line-height: 1.25
+		color: $dark
+		padding-right: 170px
+		+r1
+			font-size: 13px
+			line-height: 1.23
+		+r2
+			padding: 0 0 16px
+			max-width: 215px
+			margin: 0 auto
+		strong
+			color: $blue
+			+hm
+			display: inline-block
+	.btn
+		position: absolute
+		right: 40px
+		top: 50%
+		margin-top: -20px
+		+r1
+			right: 16px
+		+r2
+			position: relative
+			top: auto
+			right: auto
+			margin: 0

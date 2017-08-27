@@ -1,0 +1,52 @@
+---
+title: Tech page
+headerMod: header_small
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+<div class="tech">
+	<div class="blue">
+		<button class="btn btn_white"><span>Кнопка</span></button>
+	</div>
+	<div class="white">
+        <button class="btn" data-toggle="modal" data-target="#myModal"><span>LOGIN</span></button>
+		<button class="btn"><span>Кнопка</span></button>
+		<button class="btn btn_blue"><span>Кнопка</span></button>
+		<button class="btn btn_gray"><span>Кнопка</span></button>
+		<button class="btn-gray"><span>Кнопка</span></button>
+	</div>
+	<div class="white">
+		<div class="label">Label</div>
+		<input type="text" class="input" placeholder="Placeholder">
+
+		<div class="field-phone">
+			<div class="field-phone__code">+7</div>
+			<div class="field-phone__number">
+				<input type="text" class="input" placeholder="Placeholder">
+			</div>
+		</div>
+	</div>
+	<div class="white">
+		<label class="radio">
+			<input type="radio">
+			<span>Radio</span>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox">
+			<span>Checkbox</span>
+		</label>
+	</div>
+	<!-- begin to-top  -->
+	<div class="to-top">
+		<div class="to-top__inner">
+			<button class="btn-up js-btn-up">
+				{{mixins.icon('up')}}
+			</button>
+		</div>
+	</div>
+	<!-- end to-top -->
+</div>
+{% include "partials/_footer.html" %}
+{% endblock %}

@@ -1,0 +1,326 @@
+//news
+.n-items
+	background-color: whitesmoke
+	padding-bottom: 40px
+	+r1
+		padding: 0
+	&__row
+		@extend %inner
+	&__blog
+		float: left
+		width: 51%
+		padding: 20px 20px 0
+		+r1
+			width: 100%
+			float: none
+			padding: 0 0 0 24px
+		+r2
+			padding: 0
+	&__news
+		float: right
+		width: 49%
+		// padding: 220px 0 0 20px
+		padding: 220px 0 0 0
+		+r1
+			width: 100%
+			float: none
+			padding: 0 0 0 24px
+			background: #fff
+		+r2
+			padding: 0
+	&__subscribe
+		float: right
+		width: 49%
+		// padding: 0 0 20px 20px
+		padding: 0 0 20px
+		+r1
+			width: 100%
+			float: none
+			padding: 0
+
+.n-item
+	+clr
+	padding: 20px 0
+	font-size: 0
+	position: relative
+	background-color: whitesmoke
+	+r1
+		width: 280px
+		padding: 0 12px 48px
+	+r2
+		padding: 0 8px 24px
+		width: 272px
+	&_right
+		.n-item
+			&__img
+				float: right
+				margin-right: 0
+				margin-left: -7.6%
+			&__info
+				float: left
+	&__img
+		float: left
+		width: 48%
+		height: 0
+		padding-bottom: 41%
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		mix-blend-mode: multiply
+		margin-right: -7.6%
+		border-radius: 2px
+		+r1
+			float: none
+			width: 100%
+			padding-bottom: 0
+			height: 215px
+			margin: 0
+	&__info
+		width: 59.6%
+		position: relative
+		float: right
+		margin-top: 30px
+		+r1
+			float: none
+			margin: -95px 16px 0
+			width: auto
+		+hover
+			&:before
+				opacity: 1
+			.n-item
+				&__info
+					&-in
+						box-shadow: 0 6px 12px rgba(62, 76, 102, 0.2)
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: 20px
+			right: 20px
+			bottom: 0
+			border-radius: 2px
+			box-shadow: 0 12px 24px rgba(62, 76, 102, 0.2)
+			background: rgba(62, 76, 102, 0.2)
+			filter: blur(5px)
+			opacity: 0
+			transition: opacity 0.25s ease-out
+			+r1
+				top: 8px
+				left: 16px
+				right: 16px
+				opacity: 1
+		&-in
+			background-color: #fff
+			border-radius: 2px
+			padding: 16px 40px 16px 40px
+			position: relative
+			transition: box-shadow 0.25s ease-out
+			+r1
+				padding: 16px
+				box-shadow: 0 6px 12px rgba(62, 76, 102, 0.2)
+	&__top
+		+clr
+	&__category
+		margin: 0 0 9px -40px
+		padding: 1px 0 1px 40px
+		position: relative
+		color: $gray
+		font-size: 14px
+		letter-spacing: 0.22px
+		line-height: 18px
+		transition: color 0.25s ease-out
+		float: left
+		+r1
+			font-size: 11px
+			line-height: 16px
+			padding: 0 0 0 16px
+			margin: 0 0 8px -16px
+		.no-touch &
+			&:hover
+				color: $blue
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			background-color: $blue
+			border-radius: 1px
+			width: 2px
+			+r1
+				top: -2px
+				bottom: -2px
+	&__date
+		color: $gray
+		padding: 1px 0
+		letter-spacing: 0.18px
+		line-height: 18px
+		font-size: 12px
+		float: right
+		+r1
+			font-size: 11px
+			line-height: 16px
+			letter-spacing: 0.22px
+	.title-h3
+		height: 60px
+		overflow: hidden
+		margin-bottom: 11px
+		+r1
+			font-size: 16px
+			line-height: 1
+			margin-bottom: 16px
+			height: 48px
+		a
+			display: block
+			color: $dark
+			transition: color 0.25s ease-out
+			.no-touch &
+				&:hover
+					color: $blue
+	&__bottom
+		li
+			display: inline-block
+			vertical-align: top
+			padding-right: 18px
+
+.news
+	position: relative
+	z-index: 2
+	&__top
+		+clr
+		margin: -25px 0 47px
+		padding: 0 20px
+		float: left
+		width: 100%
+		+r1
+			margin: 0 0 16px
+			padding: 24px 24px 0 0
+		+r2
+			margin: -20px 0 8px
+			padding: 0 16px
+		.link-more
+			float: right
+			margin: 12px 0 0
+			display: none
+			+r1
+				display: block
+			+r2
+				margin: 8px 0
+	&__title
+		line-height: 1
+		float: left
+	&__arrows
+		position: relative
+		+r1
+			display: none
+		&-in
+			position: absolute
+			right: 0
+			bottom: 50%
+			margin-bottom: -5px
+			font-size: 0
+			text-align: right
+			z-index: 11
+	&__slider
+		clear: both
+		overflow: hidden
+		&-in
+			margin: 0 -10px
+			+clr
+			+r1
+				margin: 0 -11px
+				padding-bottom: 20px
+			+r2
+				margin: 0 -19px
+				padding-bottom: 0
+
+.news-item
+	width: 274px
+	padding: 0 10px 27px
+	float: left
+	+r1
+		width: 232px
+		padding: 0 11px 28px
+	+r2
+		padding: 0 19px 24px
+		width: 248px
+	&__info
+		padding: 0 20px
+	&__img
+		height: 120px
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+		margin-bottom: 17px
+		border-radius: 2px
+		+r1
+			margin-bottom: 16px
+	.title-h3
+		+r1
+			font-size: 16px
+			line-height: 1
+		a
+			display: block
+			color: $dark
+			transition: color 0.25s ease-out
+			.no-touch &
+				&:hover
+					color: $blue
+	&__date
+		color: $gray
+		font-size: 12px
+		line-height: 18px
+		letter-spacing: 0.18px
+		padding-left: 30px
+		position: relative
+		margin-bottom: 8px
+		display: block
+		+r1
+			font-size: 11px
+			line-height: 16px
+			letter-spacing: 0.15px
+		&:before
+			content: ""
+			position: absolute
+			top: 7px
+			left: 0
+			width: 20px
+			height: 2px
+			background: $blue
+			border-radius: 1px
+			+r1
+				top: 6px
+
+//blog
+.blog
+	position: relative
+	z-index: 3
+	&__top
+		display: none
+		+clr
+		float: left
+		width: 100%
+		+r1
+			display: block
+			margin: -24px 0 16px
+			padding: 0 24px 0 0
+		+r2
+			margin: -20px 0 8px
+			padding: 0 16px
+		.link-more
+			float: right
+			margin: 12px 0 0
+			+r2
+				margin: 8px 0
+	&__title
+		line-height: 1
+		float: left
+	&__slider
+		clear: both
+		+r1
+			overflow: hidden
+		&-in
+			+r1
+				margin: 0 -12px
+			+r2
+				margin: 0 -8px

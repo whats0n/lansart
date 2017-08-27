@@ -1,0 +1,267 @@
+---
+title: Blog post
+headerMod: header_small
+breadcrumbs: [
+	'Блог',
+	'Дизайн',
+	'Коллекция City Dwelling от Laura Ashley'
+]
+activeBC: 2
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+
+{% set filtersBlock = [
+	{
+		title: 'Все',
+		active: true,
+		filterList: [
+			{
+				amount: '73',
+				title: 'Подкатегории 1'
+			},
+			{
+				amount: '16',
+				title: 'Подкатегории 2',
+				active: true
+			},
+			{
+				amount: '32',
+				title: 'Подкатегории 3'
+			}
+		]
+	},
+	{
+		title: 'Дизайн',
+		filterList: [
+			{
+				amount: '73',
+				title: 'Подкатегории 1'
+			},
+			{
+				amount: '16',
+				title: 'Подкатегории 2'
+			},
+			{
+				amount: '32',
+				title: 'Подкатегории 3'
+			}
+		]
+	},
+	{
+		title: 'Производство',
+		filterList: [
+			{
+				amount: '73',
+				title: 'Подкатегории 1'
+			},
+			{
+				amount: '16',
+				title: 'Подкатегории 2'
+			},
+			{
+				amount: '32',
+				title: 'Подкатегории 3'
+			}
+		]
+	},
+	{
+		title: 'Категория 1',
+		filterList: [
+			{
+				amount: '73',
+				title: 'Подкатегории 1'
+			},
+			{
+				amount: '16',
+				title: 'Подкатегории 2'
+			},
+			{
+				amount: '32',
+				title: 'Подкатегории 3'
+			}
+		]
+	},
+	{
+		title: 'Категория 2',
+		filterList: [
+			{
+				amount: '73',
+				title: 'Подкатегории 1'
+			},
+			{
+				amount: '16',
+				title: 'Подкатегории 2'
+			},
+			{
+				amount: '32',
+				title: 'Подкатегории 3'
+			}
+		]
+	}
+] %}
+
+{% set popular = [
+	{
+		img: 'img/b-item.png',
+		date: '05 Nov 2016',
+		title: 'Прикроватные тумбы по себестоимости в подарок каждому'
+	},
+	{
+		img: 'img/b-item.png',
+		date: '11 Oct 2016',
+		title: 'Мойка и смеситель из новых неведомых материалов'
+	}
+] %}
+
+<div class="page">
+	<div class="page__inner">
+		{% include "partials/_breadcrumbs.html" %}
+		<div class="page__container blog">
+			<div class="blog__sidebar">
+				<div class="blog__head">
+					<div class="blog__head-title title">Блог</div>
+					<div class="blog__more">
+						<a href="#" class="link-more link-more_dark">
+							<span>Все материалы</span>
+							<div class="link-more__visible">
+								{{mixins.icon('next')}}
+							</div>
+							<div class="link-more__hidden">
+								{{mixins.icon('next')}}
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="filter filter_adaptive">
+					<div class="filter__title js-list-btn is-active">КАТЕГОРИИ <i class="filter__plus"></i></div>
+					<ul class="filter__block js-list" style="display: block;">
+						{% for filterList in filtersBlock %}
+						<li class="filter__block-in">
+							{% if filterList.active %}
+							<div class="filter__head js-list-btn is-active">{{filterList.title}} <i class="filter__plus"></i></div>
+							<ul class="filter__list js-list" style="display: block;">
+							{% else %}
+							<div class="filter__head js-list-btn">{{filterList.title}} <i class="filter__plus"></i></div>
+							<ul class="filter__list js-list">
+							{% endif %}
+								{% for filterItem in filterList.filterList %}
+								<li>
+									{% if filterItem.active %}
+									<a href="#" class="is-active"><small>{{filterItem.amount}}</small><span>{{filterItem.title}}</span></a>
+									{% else %}
+									<a href="#"><small>{{filterItem.amount}}</small><span>{{filterItem.title}}</span></a>
+									{% endif %}
+								</li>
+								{% endfor %}
+							</ul>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+
+				<div class="sm-popular">
+					<div class="sm-popular__heading">Популярное</div>
+					{% for item in popular %}
+					<div class="pop-item">
+						<div class="pop-item__img" style="background-image: url({{item.img}});"></div>
+						<div class="pop-item__date">{{item.date}}</div>
+						<div class="title-h3"><a href="#">{{item.title}}</a></div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="blog__content">
+				<div class="post">
+					<div class="post__picture">
+						<img src="img/post0.jpg" alt="">
+					</div>
+					<div class="post__meta">
+						<div class="post__category">Дизайн</div>
+						<div class="post__date">05 Nov 2016</div>
+					</div>
+					<article class="article">
+						<h1>Коллекция City Dwelling от Laura Ashley H1</h1>
+						<p>В нашем современном, быстро развивающемся мире мы так хотим идти в ногу со временем и быть в курсе всех самых важных и интересных событий в нашей жизни. Мода приходит и уходит, но вкус стиля, чувство высокой моды остается на века… Если вы успешны, знаете цену времени и не представляете себе жизнь без мегаполиса, то новый интерьер City Dwelling от Laura Ashley для вас. Этот стиль был создан для людей, которые ценят изысканность и минимализм. Его главной особенностью является простота, чистые линии и большое воздушное пространство. Весь стиль выражен всего в нескольких тонах — белый, серый, черный, бежевый – короли цветовой гаммы.</p>
+						<div>
+							<figure>
+								<img src="img/post1.jpg" alt="">
+							</figure>
+							<figure>
+								<img src="img/post2.jpg" alt="">
+							</figure>
+						</div>
+						<figure>
+							<img src="img/post3.jpg" alt="">
+						</figure>
+						<p>Отсутствие перенасыщенности разными оттенками в интерьере дает ощущение спокойствия и уверенности, помогает расслабиться после трудового дня и привести мысли в порядок. Для создания неповторимости этого стиля в помощь пришли такие линии мебели как Lynden и new Wroughton, Henshaw, а так же декоративные элементы в виде оригинальных ламп, изысканных люстр, настенных часов, великолепных торшеров, невероятных пуфиков и тематических картин, которые добавят уюта и завершенности стилю City Dwelling. Продуманность цветовой гаммы и каждого элемента подарит ощущения стиля и комфорта в каждой минуте, которую вы проведете в любимом доме…</p>
+						<figure>
+							<img src="img/post4.jpg" alt="">
+						</figure>
+						<h3>Заголовок</h3>
+						<p>Отсутствие перенасыщенности разными оттенками в интерьере дает ощущение спокойствия и уверенности, помогает расслабиться после трудового дня и привести мысли в порядок. Для создания неповторимости этого стиля в помощь пришли такие линии мебели как Lynden и new Wroughton, Henshaw, а так же декоративные элементы в виде оригинальных ламп, изысканных люстр, настенных часов, великолепных торшеров, невероятных пуфиков и тематических картин, которые добавят уюта и завершенности стилю City Dwelling. Продуманность цветовой гаммы и каждого элемента подарит ощущения стиля и комфорта в каждой минуте, которую вы проведете в любимом доме…</p>
+						<div>
+							<figure>
+								<img src="img/post5.jpg" alt="">
+							</figure>
+							<figure>
+								<img src="img/post6.jpg" alt="">
+							</figure>
+						</div>
+					</article>
+					{% include "partials/_tags.html" %}
+					<div class="share">
+						<div class="share__title">
+							<div class="share__title-text">Комментарии</div>
+							<div class="share__amount">
+								<span>3</span>
+							</div>
+						</div>
+						<ul class="share__list">
+							<li class="share__btn">
+								<button class="btn btn_blue"><span>Нравится</span></button>
+							</li>
+							<li>
+								<a href="#" class="share__social share__vk">
+									<span>
+										{{mixins.icon('vk')}}
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="share__social share__fb">
+									<span>
+										{{mixins.icon('fb')}}
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="share__social share__od">
+									<span>
+										{{mixins.icon('od')}}
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="share__social share__tw">
+									<span>
+										{{mixins.icon('tw')}}
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					{% include "partials/_comments-post.html" %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

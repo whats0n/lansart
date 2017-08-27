@@ -1,0 +1,136 @@
+.methods
+	padding: 0 20px 80px
+	+r1
+		padding: 0 0 80px
+	&__line
+		margin: 0
+		border: none
+		border-bottom: 1px solid #d9dbe1
+	&__heading
+		padding-bottom: 22px
+		+r1
+			display: none
+	&__section
+		padding: 0 0 20px
+	&__head
+		position: relative
+		padding: 20px 30px 19px 0
+		cursor: pointer
+		+r1
+			padding: 7px 30px 8px 0
+		&.is-active
+			.methods__plus
+				transform: rotate(45deg) scale(1.2)
+	&__title
+		padding: 20px 0 24px
+		border-bottom: 1px solid #d9dbe1
+
+		color: $dark
+
+		+as
+		font-size: 28px
+		line-height: 35px
+		letter-spacing: 0.24px
+	&__plus
+		position: absolute
+		top: 25px
+		right: 15px
+
+		width: 8px
+		height: 8px
+
+		transition: transform 0.2s ease
+		+r1
+			top: 16px
+		&:before, &:after
+			content: ""
+			position: absolute
+		&:before
+			top: 0
+			bottom: 0
+			left: 50%
+
+			margin-left: -1px
+			border-left: 2px solid $blue
+		&:after
+			top: 50%
+			left: 0
+			right: 0
+			margin-top: -1px
+			border-bottom: 2px solid $blue
+	&__item
+		border-bottom: 1px solid #d9dbe1
+	&__subtitle
+		color: $dark
+
+		+as
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 0.21px
+		+r1
+			line-height: 24px
+		+r2
+			padding: 4px 0
+			line-height: 16px
+	&__block
+		display: none
+		// padding: 10px 0 9px
+		padding: 10px 240px 9px 0
+		+clr
+		+r2
+			padding: 10px 0 9px
+	&__info
+		float: left
+		// width: 70%
+		width: 100%
+		padding-right: 60px
+		+r1
+			padding-right: 32px
+		+r2
+			padding-right: 0
+	&__sidebar
+		float: right
+		// padding-left: 60px
+		// width: 30%
+		width: 240px
+		margin-right: -240px
+		+r1
+			padding: 0
+		+r2
+			margin: 0
+		ul
+			padding: 20px 0 0
+			+r1
+				padding: 8px 0 0
+		li
+			position: relative
+			padding: 0 0 20px 10px
+			+r1
+				padding: 0 0 16px 10px
+			&:before
+				content: ""
+				position: absolute
+				top: 7px
+				left: 0
+
+				border-radius: 50%
+				width: 4px
+				height: 4px
+
+				background: $blue
+	&__info, &__sidebar
+		+r2
+			width: auto
+			float: none
+	p, li
+		color: $gray
+
+		+hr
+		font-size: 13px
+		line-height: 20px
+		+r1
+			line-height: 16px
+	&__text
+		padding-bottom: 20px
+		+r1
+			padding: 0 0 16px

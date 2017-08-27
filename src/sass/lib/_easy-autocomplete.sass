@@ -1,0 +1,185 @@
+.easy-autocomplete
+	position: relative
+	a
+		display: block
+	&.eac-blue-light
+		ul
+			border-color: #66afe9
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6)
+			li, .eac-category
+				border-color: #66afe9
+			li.selected, .eac-category.selected
+				background-color: #ecf5fc
+	&.eac-green-light
+		ul
+			border-color: #41DB00
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(146, 237, 107, 0.6)
+			li, .eac-category
+				border-color: #41DB00
+			li.selected, .eac-category.selected
+				background-color: #9eff75
+	&.eac-red-light
+		ul
+			border-color: #ff5b5b
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 90, 90, 0.6)
+			li, .eac-category
+				border-color: #ff5b5b
+			li.selected, .eac-category.selected
+				background-color: #ff8e8e
+	&.eac-yellow-light
+		ul
+			border-color: #ffdb00
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 231, 84, 0.6)
+			li, .eac-category
+				border-color: #ffdb00
+			li.selected, .eac-category.selected
+				background-color: #ffe233
+	&.eac-dark-light
+		ul
+			border-color: #333
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(55, 55, 55, 0.6)
+			li, .eac-category
+				border-color: #333
+			li.selected, .eac-category.selected
+				background-color: #4d4d4d
+				color: #fff
+	&.eac-dark
+		color: #fff
+		ul
+			border-color: #333
+			li, .eac-category
+				background-color: #404040
+				border-color: #333
+			li.selected, .eac-category.selected
+				background-color: #737373
+				color: #f6f6f6
+	&.eac-dark-glass
+		color: #fff
+		ul
+			border-color: rgba(0, 0, 0, 0.8)
+			li, .eac-category
+				background-color: rgba(0, 0, 0, 0.8)
+				border-color: rgba(0, 0, 0, 0.8)
+			li.selected, .eac-category.selected
+				background-color: rgba(64, 64, 64, 0.8)
+				color: #f6f6f6
+			li:last-child, .eac-category:last-child
+				border-radius: 0 0 4px 4px
+	&.eac-blue
+		color: #fff
+		ul
+			border-color: #5A91CB
+			li, .eac-category
+				background-color: #6d9ed1
+				border-color: #5A91CB
+			li.selected, .eac-category.selected
+				background-color: #94b8dd
+				color: #f6f6f6
+	&.eac-yellow
+		color: #333
+		ul
+			border-color: #333
+			li, .eac-category
+				background-color: #ffdb7e
+				border-color: #333
+			li.selected, .eac-category.selected
+				background-color: #ffe9b1
+				color: #333
+	&.eac-purple
+		color: #333
+		ul
+			border-color: #333
+			li, .eac-category
+				background-color: #d6d1e7
+				border-color: #333
+			li.selected, .eac-category.selected
+				background-color: #ebe8f3
+				color: #333
+	&-link
+		+hr
+		font-size: 13px
+		line-height: 30px
+		display: block
+		color: $gray
+		position: absolute
+		bottom: 10px
+		left: 20px
+		right: 20px
+		opacity: 0
+		svg
+			font-size: 10px
+			fill: #969da9
+			position: absolute
+			top: 50%
+			right: 0
+			margin-top: -5px
+
+
+.easy-autocomplete-container
+	left: -2px
+	right: -2px
+	position: absolute
+	top: 100%
+	z-index: 2
+	margin-top: 12px
+	background-color: whitesmoke
+	border-radius: 2px
+	box-shadow: 0 6px 12px rgba(62, 76, 102, 0.2)
+	padding: 0 20px 50px
+	display: none
+	.easy-autocomplete-link
+		opacity: 1
+	ul
+		display: none
+		// display: block !important
+		position: relative
+		padding: 20px 0 10px
+		border-bottom: 1px solid #d9dbe1
+		li, .eac-category
+			background: none
+			display: block
+			font-size: 13px
+			font-weight: normal
+			padding: 5px 0
+			line-height: 20px
+			color: $gray
+		li
+			&:last-child
+				border-radius: 0 0 2px 2px
+				border-width: 0 1px 1px
+			&.selected
+				cursor: pointer
+				div
+					font-weight: normal
+			div
+				display: block
+				font-weight: normal
+				word-break: break-all
+			b
+				font-weight: normal
+				color: $dark
+				background-color: #e7e8eb
+				padding: 3px 0 2px
+		.eac-category
+			font-color: #aaa
+			font-style: italic
+
+.eac-description .eac-item span
+	color: #aaa
+	font-style: italic
+	font-size: 0.9em
+
+.eac-icon-left .eac-item img
+	margin-right: 4px
+	max-height: 30px
+
+.eac-icon-right .eac-item
+	margin-top: 8px
+	min-height: 24px
+	position: relative
+	img
+		margin-left: 4px
+		max-height: 30px
+		position: absolute
+		right: -4px
+		top: -8px

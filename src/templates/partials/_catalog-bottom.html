@@ -1,0 +1,42 @@
+<!-- begin page__pagination  -->
+<div class="page__pagination">
+	<div class="pagination">
+		<a href="#" class="btn-arrow_prev btn-arrow">
+			<div class="btn-arrow__visible">
+				{{mixins.icon('prev')}}
+			</div>
+			<div class="btn-arrow__hidden">
+				{{mixins.icon('prev')}}
+			</div>
+		</a>
+		<a href="#" class="btn-arrow_next btn-arrow">
+			<div class="btn-arrow__visible">
+				{{mixins.icon('next')}}
+			</div>
+			<div class="btn-arrow__hidden">
+				{{mixins.icon('next')}}
+			</div>
+		</a>
+		<ul class="pagination__list">
+			<li><a href="#">1</a></li>
+			<li><a href="#" class="is-active">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><span>...</span></li>
+			<li><a href="#">12</a></li>
+		</ul>
+	</div>
+	{% if paginationSelect %}
+	<div class="page__show">
+		<div class="page__label">Показать:</div>
+		<div class="select-small">
+			<select class="js-select">
+				<option value="160">160</option>
+				<option value="150">150</option>
+				<option value="140">140</option>
+			</select>
+		</div>
+	</div>
+	{% endif %}
+</div>
+<!-- end page__pagination -->

@@ -1,0 +1,277 @@
+.ui-helper-hidden
+	display: none
+
+.ui-helper-hidden-accessible
+	border: 0
+	clip: rect(0 0 0 0)
+	height: 1px
+	margin: -1px
+	overflow: hidden
+	padding: 0
+	position: absolute
+	width: 1px
+
+.ui-helper-reset
+	margin: 0
+	padding: 0
+	border: 0
+	outline: 0
+	line-height: 1.3
+	text-decoration: none
+	font-size: 100%
+	list-style: none
+
+.ui-helper-clearfix
+	&:before
+		content: ""
+		display: table
+		border-collapse: collapse
+	&:after
+		content: ""
+		display: table
+		border-collapse: collapse
+		clear: both
+
+.ui-helper-zfix
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	position: absolute
+	opacity: 0
+	filter: Alpha(Opacity = 0)
+
+.ui-front
+	z-index: 100
+
+
+.ui-state-disabled
+	cursor: default !important
+	pointer-events: none
+
+
+.ui-icon
+	display: inline-block
+	vertical-align: middle
+	margin-top: -.25em
+	position: relative
+	text-indent: -99999px
+	overflow: hidden
+	background-repeat: no-repeat
+
+.ui-widget-icon-block
+	left: 50%
+	margin-left: -8px
+	display: block
+
+.ui-widget-overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.ui-datepicker
+	width: 100%
+	padding: 15px 20px
+	background-color: white
+	border-radius: 2px
+	display: none
+	.ui-datepicker-header
+		position: relative
+		padding: 0 0 14px
+		border-bottom: 1px solid #d9dbe1
+		margin-bottom: 5px
+	.ui-datepicker-prev, .ui-datepicker-next
+		position: absolute
+		top: 0
+		width: 20px
+		height: 20px
+		background-size: 17px 10px
+		background-repeat: no-repeat
+		background-position: center
+		cursor: pointer
+		.no-touch &
+			&:hover
+				span
+					width: 100%
+	.ui-datepicker-prev
+		left: 0
+		background-image: url(../img/prev-gray.svg)
+	.ui-datepicker-next
+		right: 0
+		background-image: url(../img/next-gray.svg)
+	.ui-datepicker-prev span, .ui-datepicker-next span
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 0
+		margin: 0
+		transition: width 0.25s linear
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			width: 20px
+			height: 100%
+			background-repeat: no-repeat
+			background-size: 17px 10px
+			background-position: center
+	.ui-datepicker-prev span
+		left: 0
+		right: auto
+		&:before
+			left: 0
+			background-image: url(../img/prev.svg)
+	.ui-datepicker-next span
+		right: 0
+		left: auto
+		&:before
+			right: 0
+			background-image: url(../img/next.svg)
+	.ui-datepicker-title
+		margin: 0 30px
+		line-height: 20px
+		text-align: center
+		font-size: 16px
+		+as
+		letter-spacing: 0.18px
+		color: $dark
+		select
+			font-size: 1em
+			margin: 1px 0
+	.ui-datepicker-year, .ui-datepicker-month
+		display: inline-block
+		vertical-align: top
+	select
+		&.ui-datepicker-month, &.ui-datepicker-year
+			width: 45%
+	table
+		width: 100%
+		border-collapse: collapse
+		margin: 0
+		text-align: center
+		table-layout: fixed
+	th, td
+		font-size: 12px
+		line-height: 20px
+		+hr
+		span, a
+			display: block
+			padding: 0
+			text-decoration: none
+			padding: 5px 0
+			width: 30px
+			position: relative
+			margin: 0 auto
+	th
+		padding: 0
+		border: 0
+		color: $gray
+	td
+		border: 0
+		padding: 0
+		span, a
+			color: $dark
+	.ui-datepicker-today
+		span, a
+			color: $blue
+			&:before, &:after
+				content: ""
+				position: absolute
+				border-radius: 50%
+			&:before
+				top: 5px
+				left: 50%
+				margin-left: -1px
+				width: 2px
+				height: 2px
+				background: $blue
+			&:after
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				border: 2px solid $blue
+	.ui-datepicker-buttonpane
+		background-image: none
+		margin: .7em 0 0 0
+		padding: 0 .2em
+		border-left: 0
+		border-right: 0
+		border-bottom: 0
+		button
+			float: right
+			margin: .5em .2em .4em
+			cursor: pointer
+			padding: .2em .6em .3em .6em
+			width: auto
+			overflow: visible
+			&.ui-datepicker-current
+				float: left
+	&.ui-datepicker-multi
+		width: auto
+
+
+.ui-datepicker-multi .ui-datepicker-group
+	float: left
+	table
+		width: 95%
+		margin: 0 auto .4em
+
+.ui-datepicker-multi-2 .ui-datepicker-group
+	width: 50%
+
+.ui-datepicker-multi-3 .ui-datepicker-group
+	width: 33.3%
+
+.ui-datepicker-multi-4 .ui-datepicker-group
+	width: 25%
+
+.ui-datepicker-multi
+	.ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-group-middle .ui-datepicker-header
+		border-left-width: 0
+	.ui-datepicker-buttonpane
+		clear: left
+
+.ui-datepicker-row-break
+	clear: both
+	width: 100%
+	font-size: 0
+
+
+.ui-datepicker-rtl
+	direction: rtl
+	.ui-datepicker-prev
+		right: 2px
+		left: auto
+	.ui-datepicker-next
+		left: 2px
+		right: auto
+	.ui-datepicker-prev:hover
+		right: 1px
+		left: auto
+	.ui-datepicker-next:hover
+		left: 1px
+		right: auto
+	.ui-datepicker-buttonpane
+		clear: right
+		button
+			float: left
+			&.ui-datepicker-current
+				float: right
+	.ui-datepicker-group
+		float: right
+	.ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-group-middle .ui-datepicker-header
+		border-right-width: 0
+		border-left-width: 1px
+
+
+.ui-datepicker .ui-icon
+	display: block
+	text-indent: -99999px
+	overflow: hidden
+	background-repeat: no-repeat
+	left: .5em
+	top: .3em

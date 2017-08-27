@@ -1,0 +1,99 @@
+.discount
+	padding: 40px 60px
+	text-align: center
+	+r1
+		padding: 40px 24px
+	+r2
+		padding: 40px 16px
+	.is-finished &
+		filter: blur(5px)
+	&__icon
+		width: 60px
+		height: 60px
+
+		margin: 0 auto 14px
+
+		border: 2px solid rgba(#d9dbe1, 0.6)
+		border-radius: 50%
+
+		+vertical
+		svg
+			display: inline-block
+			vertical-align: middle
+
+			fill: $blue
+
+			font-size: 23px
+	&__title
+		margin: 0 0 16px
+
+		color: $dark
+
+		+as
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 0.23px
+	p
+		margin: 0 0 20px
+
+		color: $gray
+
+		+hr
+		font-size: 13px
+		line-height: 20px
+		letter-spacing: -0.31px
+	&__field
+		padding: 0 0 20px
+
+.discount-thx
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 3
+
+	border-radius: 2px
+
+	background-color: rgba(245, 245, 245, 0.5)
+
+	+vertical
+
+	visibility: hidden
+	opacity: 0
+
+	transition: opacity 0.25s ease-out, visibility 0.25s ease-out
+	.is-finished &
+		visibility: visible
+		opacity: 1
+	&__inner
+		display: inline-block
+		vertical-align: middle
+
+		width: 100%
+	&__icon
+		width: 40px
+		height: 40px
+
+		margin: 0 auto 14px
+
+		border-radius: 50%
+
+		background-color: $blue
+		box-shadow: 0 4px 8px rgba(65, 123, 231, 0.3)
+
+		+vertical
+		svg
+			display: inline-block
+			vertical-align: middle
+
+			fill: #fff
+
+			font-size: 12px
+	&__title
+		color: $dark
+
+		+as
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 0.23px

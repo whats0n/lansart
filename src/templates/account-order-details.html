@@ -1,0 +1,220 @@
+---
+title: Account/orders details
+headerMod: header_small
+breadcrumbs: [
+	'Главная',
+	'Профиль',
+	'Мои заказы',
+	'20130806-062134'
+]
+activeBC: 3
+accNav: [
+	{
+		text: 'Мои данные'
+	},
+	{
+		text: 'Мои заказы',
+		active: true
+	},
+	{
+		text: 'Избранное'
+	}
+]
+profile: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+<div class="page">
+	<div class="page__inner">
+		{% include "partials/_breadcrumbs.html" %}
+		<div class="page__container account">
+			<div class="account__title title">Профиль</div>
+			<div class="account__sidebar">
+				<div class="acc-nav">
+					<ul class="acc-nav__list">
+						{% for accLink in accNav %}
+						{% if accLink.active %}
+						<li class="acc-nav__item"><a href="#" class="acc-nav__link is-active">{{ accLink.text }}</a></li>
+						{% else %}
+						<li class="acc-nav__item"><a href="#" class="acc-nav__link">{{ accLink.text }}</a></li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="account__content">
+				<div class="details">
+					<div class="details__header">
+						<div class="details__title">
+							<strong>ЗАКАЗ</strong>
+							<span>20130806-062134 от 15.12.2013</span>
+						</div>
+						<div class="details__back">
+							<a href="#">Назад к истории заказов</a>
+						</div>
+					</div>
+					{% set details = [
+						{
+							label: 'Статус',
+							paragraph: 'Передан в службу доставки '
+						},
+						{
+							label: 'Доставка',
+							paragraph: 'Доставка курьером',
+							list: [
+								{
+									label: 'Адрес:',
+									value: 'ул. Севанская д 10 кв 58'
+								},
+								{
+									label: 'Дата:',
+									value: 'Четверг, 09 июня 2016'
+								},
+								{
+									label: 'Время:',
+									value: 'В любое время (10:00-21:00)'
+								},
+								{
+									label: 'Стоимость:',
+									value: 'Бесплатно'
+								},
+								{
+									label: 'Доп. услуши:',
+									value: 'Сборка'
+								}
+							]
+						},
+						{
+							label: 'Персональные данные',
+							list: [
+								{
+									label: 'Имя:',
+									value: 'Олег Топталов'
+								},
+								{
+									label: 'Телефон:',
+									value: '+7 (123) 456-78-90'
+								},
+								{
+									label: 'Email:',
+									value: '<a href="mailto:toptalov@mail.com">toptalov@mail.com</a>'
+								},
+								{
+									label: 'Адрес:',
+									value: 'ул. Севанская д 10 кв 58'
+								}
+							]
+						},
+						{
+							label: 'Оплата',
+							list: [
+								{
+									label: 'Способ оплаты:',
+									value: 'Наличными курьеру'
+								}
+							]
+						},
+						{
+							label: 'Итоговая стоимость',
+							price: '177 471 Р'
+						}
+					] %}
+					<div class="details__body">
+						{% for item in details %}
+						<div class="details__field">
+							<div class="details__label">
+								<div class="label label_form">{{item.label}}</div>
+							</div>
+							<div class="details__info">
+								{% if item.paragraph %}
+								<p>{{item.paragraph}}</p>
+								{% endif %}
+
+								{% if item.list %}
+								<ul>
+									{% for li in item.list %}
+									<li>
+										<span>{{li.label}}</span>
+										<strong>{{li.value | safe}}</strong>
+									</li>
+									{% endfor %}
+								</ul>
+								{% endif %}
+
+								{% if item.price %}
+								<div class="details__result">{{item.price}}</div>
+								{% endif %}
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+					<div class="details__footer">
+						{% set goods = [
+							{
+								img: 'card-slide.jpg',
+								category: 'Барный стул',
+								title: 'Стул Space Chair',
+								description: 'Товар упакован по 2 шт., и будет доставлен кратно упаковке',
+								amount: '4',
+								result: '84 960 Р',
+								price: '21 240 руб. x 4 шт.'
+							},
+							{
+								img: 'item.png',
+								category: 'Кухни модерн',
+								title: 'Кухонный гарнитур Amarone',
+								description: 'Стандартная комплектация В наличии 16 штуки',
+								amount: '1',
+								result: '62 931 Р'
+							},
+							{
+								img: 'box.jpg',
+								category: 'Посуда',
+								title: 'Набор столовых приборов Stanton',
+								description: 'В наличии 3 штуки',
+								amount: '2',
+								result: '29 580 Р',
+								price: '14 790 руб. x 2 шт.'
+							}
+						] %}
+						<div class="details__headings">
+							<div class="details__merch">Товары</div>
+							<div class="details__amount">Количество</div>
+							<div class="details__price">Цена</div>
+						</div>
+						<div class="details__items">
+							{% for merch in goods %}
+							<div class="merch">
+								<div class="merch__info">
+									<div class="merch__img">
+										<div class="merch__img-in" style="background-image: url(img/{{merch.img}});"></div>
+									</div>
+									<div class="merch__text">
+										<div class="merch__category">{{merch.category}}</div>
+										<div class="merch__title">{{merch.title}}</div>
+										<div class="merch__description">{{merch.description}}</div>
+									</div>
+								</div>
+								<div class="merch__amount">{{merch.amount}}</div>
+								<div class="merch__price">
+									<strong>{{merch.result}}</strong>
+									{% if merch.price %}
+									<span>{{merch.price}}</span>
+									{% endif %}
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

@@ -1,0 +1,168 @@
+//sidebar
+.sidebar
+	float: left
+	width: 25%
+	&_filters
+		.filters-open &
+			+r1
+				width: 33.33%
+				transform: translateX(0)
+			+r2
+				width: 256px
+				transform: translateX(0)
+		+r1
+			// width: 0
+			width: 33.33%
+			overflow: hidden
+			transform: translateX(-105%)
+			// transition: width 0.25s linear
+			transition: transform 0.25s linear
+			position: absolute
+			top: 20px
+			left: 0
+		+r2
+			position: fixed
+			top: 0
+			left: 0
+			bottom: 0
+			z-index: 1050
+			width: 256px
+			transform: translateX(-100%)
+			transition: transform 0.4s ease
+			background: whitesmoke
+
+
+//filters
+.filters
+	padding: 0 10px
+	+r1
+		min-width: 224px
+	+r2
+		padding: 16px
+	&__btns
+		padding: 20px 0 0
+		.btn
+			width: 100%
+			margin-bottom: 20px
+.filter
+	background-color: white
+	border-radius: 2px
+	padding: 10px 20px
+	margin-bottom: 20px
+	&_adaptive
+		+r1
+			padding: 8px 16px
+		.filter
+			&__title
+				+r1
+					line-height: 32px
+			&__block, &__list
+				+r1
+					padding: 8px 0
+			&__head, &__list a
+				+r1
+					line-height: 31px
+	&__head, &__title
+		position: relative
+		cursor: pointer
+		&.is-active
+			.filter__plus
+				transform: rotate(45deg) scale(1.2)
+	&__block, &__list, &__radios
+		display: none
+		&_visible
+			display: block
+	&__block
+		padding-top: 9px
+		border-top: 1px solid #d9dbe1
+		+hr
+		&-in
+			border-bottom: 1px solid #d9dbe1
+			&:last-child
+				border: none
+	&__title
+		font-size: 11px
+		color: $dark
+		line-height: 30px
+		letter-spacing: 0.17px
+		+hm
+	&__head
+		line-height: 2.31
+	&__head, &__list a
+		font-size: 13px
+		color: $gray
+		letter-spacing: 0.2px
+	&__list
+		padding: 8px 0 12px
+		border-top: 1px solid #d9dbe1
+		a
+			line-height: 1.92
+			display: block
+			padding: 1px 0 0 10px
+			position: relative
+			transition: color 0.25s ease-out
+			.no-touch &
+				&:hover
+					color: $blue
+					&:before
+						// opacity: 1
+			&.is-active
+				color: $blue
+				&:before
+					opacity: 1
+			&:before
+				content: ""
+				position: absolute
+				top: 12px
+				left: -10px
+				width: 10px
+				height: 2px
+				background: $blue
+				border-radius: 50%
+				opacity: 0
+				transition: 0.25s ease-out
+		&_visible
+			padding: 0 0 10px
+			li
+				border-top: 1px solid #d9dbe1
+				&:first-child
+					border-top: none
+			a
+				padding: 0
+				line-height: 30px
+				&:before
+					display: none
+		small
+			float: right
+			font-size: 100%
+		span
+			overflow: hidden
+	&__plus
+		position: absolute
+		right: 0
+		top: 50%
+		width: 8px
+		height: 8px
+		transition: 0.2s ease
+		margin-top: -4px
+		&:before, &:after
+			content: ""
+			position: absolute
+		&:before
+			border-left: 2px solid $blue
+			top: 0
+			bottom: 0
+			left: 50%
+			margin-left: -1px
+		&:after
+			border-bottom: 2px solid $blue
+			top: 50%
+			left: 0
+			right: 0
+			margin-top: -1px
+	&__range
+		padding: 13px 0 10px
+	&__radios
+		border-top: 1px solid #d9dbe1
+		+hr
+		padding: 4px 0 5px

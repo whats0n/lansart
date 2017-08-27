@@ -1,0 +1,196 @@
+.page
+	background-color: whitesmoke
+	+clr
+	padding: 40px 20px 0
+	+r1
+		padding: 64px 24px 0
+	+r2
+		padding: 64px 16px 0
+	&__section
+		padding: 0 20px
+		margin: 0 -20px
+		+r1
+			padding: 0 24px
+			margin: 0 -24px
+		+r2
+			padding: 0 16px
+			margin: 0 -16px
+	&__inner
+		@extend %inner
+	&__container
+		margin: 0 -10px
+		+clr
+		padding: 24px 0 37px
+		position: relative
+		+r1
+			margin: 0 -12px
+			padding: 24px 0
+		+r2
+			margin: 0 -8px
+			padding: 16px 0 24px
+		&_catalog
+			padding: 14px 0 0px
+			+r1
+				padding: 12px 0 0px
+			+r2
+				padding: 4px 0 0px
+	&__content
+		float: left
+		width: 75%
+		.filters-open &
+			+r1
+				width: 66.64%
+			+r2
+				width: 100%
+		+r1
+			width: 100%
+			transition: width 0.25s linear
+			float: right
+	&__items
+		+clr
+		font-size: 0
+	&__col
+		padding: 0 10px 20px
+		display: inline-block
+		vertical-align: top
+		+r1
+			padding: 0 12px 24px
+		+r2
+			padding: 0 8px 16px
+		&_sm
+			width: 33.33%
+			.filters-open &
+				+r1
+					width: 50%
+			+r2
+				width: 50%
+		&_md
+			width: 66.66%
+			.filters-open &
+				+r1
+					width: 100%
+			+r1
+				display: none
+		&_banner
+			+r1
+				display: none
+	&__pagination
+		padding: 10px 0 20px
+		+clr
+		+r1
+			padding: 0 2px 8px
+		+r2
+			margin: 0 -2px
+			padding: 16px 0
+		.pagination
+			float: left
+			+r2
+				float: none
+				margin: 0 auto
+	&__show
+		float: right
+		width: 100%
+		max-width: 300px
+		text-align: right
+		font-size: 0
+		padding: 0 10px
+		+r2
+			display: none
+	&__label
+		color: $gray
+		font-size: 13px
+		letter-spacing: 0.2px
+		line-height: 30px
+		+hr
+		display: inline-block
+		vertical-align: top
+		padding-right: 10px
+	&__more
+		padding: 15px 0 0
+		text-align: right
+		+r1
+			padding: 16px 0 0
+	&__desc
+		padding: 0 10px
+		p
+			font-size: 13px
+			color: $gray
+			line-height: 20px
+			+hr
+			+r2
+				font-size: 11px
+				line-height: 16px
+				color: #262626
+
+.free-delivery
+	background: $blue
+	border-radius: 2px
+	box-shadow: 0 2px 4px rgba(65, 123, 231, 0.3)
+	white-space: nowrap
+	padding: 4px 8px 2px 9px
+	display: inline-block
+	vertical-align: top
+	span, svg
+		display: inline-block
+		vertical-align: top
+	span
+		font-size: 11px
+		line-height: 14px
+		color: #fff
+		+as
+	svg
+		fill: #fff
+		font-size: 11px
+		margin-right: 5px
+	&_big
+		padding: 8px 15px 6px
+		box-shadow: 0 5px 10px rgba(65, 123, 231, 0.3)
+		+r2
+			padding: 6px 8px 4px 9px
+			box-shadow: 0 4px 8px rgba(65, 123, 231, 0.3)
+		svg
+			font-size: 14px
+			margin-right: 9px
+			+r2
+				font-size: 11px
+				margin-right: 5px
+		span
+			font-size: 15px
+			line-height: 16px
+			+r2
+				font-size: 12px
+				line-height: 14px
+
+//tags
+.tags
+	font-size: 0
+	padding: 23px 10px 20px
+	+r1
+		padding: 16px 8px 24px
+	&__more
+		text-align: right
+		padding: 15px 0 0
+		+r1
+			padding: 16px 0 0
+
+.tag, .tags__end
+	font-size: 13px
+	line-height: 15px
+	color: $gray
+	+hr
+	// display: inline-block
+	// vertical-align: top
+	+r1
+		color: #262626
+	+r2
+		font-size: 11px
+		line-height: 16px
+
+.tag
+	text-decoration: underline
+	margin-right: 10px
+	transition: color 0.25s ease-out
+	.no-touch &
+		&:hover
+			// color: #262626
+			color: $blue

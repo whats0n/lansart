@@ -1,0 +1,86 @@
+---
+title: Basket
+headerMod: header_small
+tabLinks: [
+	{
+		active: true,
+		href: 'tab1',
+		text: 'ТОВАРЫ'
+	},
+	{
+		href: 'tab2',
+		text: 'ДОСТАВКА'
+	},
+	{
+		href: 'tab3',
+		text: 'ПОДТВЕРЖДЕНИЕ'
+	}
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+{% set descriptionList = [
+	{
+		icon: 'like',
+		title: 'Инструкция по сборке',
+		text: 'Пару слов о приемуществах, доступных услугах или дополнительных фич'
+	},
+	{
+		icon: 'medal',
+		title: 'Заказать дизайн проект',
+		text: 'Пару слов о приемуществах, доступных услугах или дополнительных фич'
+	},
+	{
+		icon: 'delivery-empty',
+		title: 'Купить в кредит',
+		text: 'Пару слов о приемуществах, доступных услугах или дополнительных фич'
+	}
+] %}
+
+<div class="page">
+	<div class="page__inner">
+		<div class="page-basket">
+			<div class="page-basket__content tabs js-tabs">
+				<div class="page-basket__top">
+					<div class="page-basket__title title">Корзина</div>
+					<div class="page-basket__tabs tabs__top">
+						<ul class="tabs__list tabs__list_center">
+							{% for tabLink in tabLinks %}
+							<li class="tabs__item js-tab-link" data-href="{{ tabLink.href }}">{{ tabLink.text }}</li>
+							{% endfor %}
+						</ul>
+						{{mixins.icon('down')}}
+						<select class="tabs__select js-tab-select">
+							{% for tabLink in tabLinks %}
+							<option value="{{ tabLink.href }}">{{ tabLink.text }}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="tabs__container">
+					{% include "partials/tabs-basket/_tab1-v3.0.html" %}
+					{% include "partials/tabs-basket/_tab2-v2.0.html" %}
+					{% include "partials/tabs-basket/_tab3-v3.0.html" %}
+				</div>
+			</div>
+			<div class="page-basket__sidebar">
+				{% for descriptionItem in descriptionList %}
+				<div class="sm-description">
+					<div class="sm-description__icon">
+						{{mixins.icon(descriptionItem.icon)}}
+					</div>
+					<div class="sm-description__title">{{descriptionItem.title}}</div>
+					<p>{{descriptionItem.text}}</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

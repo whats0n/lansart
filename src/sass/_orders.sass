@@ -1,0 +1,94 @@
+.orders
+	padding: 10px 20px 30px
+	border-radius: 2px
+	background: #fff
+	&__title
+		padding: 0 0 9px
+
+		color: $dark
+
+		+hm
+		font-size: 11px
+		line-height: 30px
+		letter-spacing: 0.17px
+		text-transform: uppercase
+	&__head, &__list
+		font-size: 0
+	&__head
+		padding: 26px 0 3px
+		+r1
+			display: none
+	&__item
+		position: relative
+
+		display: block
+		border-top: 1px solid #d9dbe1
+		+r1
+			padding: 10px 0
+		+hover
+			.orders__number
+				color: $blue
+		.icon
+			position: absolute
+			top: 50%
+			right: 8px
+			margin-top: -4px
+
+			display: none
+
+			fill: $blue
+
+			font-size: 12px
+			+r1
+				display: block
+	&__subtitle, &__col
+		display: inline-block
+		vertical-align: top
+
+		color: $gray
+
+		+hr
+		font-size: 13px
+		line-height: 20px
+		letter-spacing: 0.19px
+		+r2
+			font-size: 11px
+			line-height: 16px
+	&__number
+		width: 27%
+		transition: color 0.25s ease-out
+	&__date
+		width: 12%
+	&__addressee
+		width: 18%
+	&__price
+		width: 17%
+	&__status
+		width: 26%
+	&__col
+		padding: 10px 0
+		+clr
+		+r1
+			display: block
+			padding: 2px 30px 2px 150px
+			width: auto
+
+			color: $dark
+		+r2
+			padding: 0 30px 0 150px
+		+r3
+			padding: 0 30px 0 100px
+		&:before
+			content: attr(data-title)
+
+			display: none
+			float: left
+			margin: 0 0 0 -150px
+			width: 150px
+
+			color: $gray
+			+r1
+				display: block
+			+r3
+				margin: 0 0 0 -100px
+				width: 100px

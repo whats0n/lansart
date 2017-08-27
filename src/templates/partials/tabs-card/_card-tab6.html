@@ -1,0 +1,146 @@
+<!-- begin card tab6  -->
+<div class="tabs__content js-tab-content" data-tab="tab6">
+	<div class="tabs__unit unit js-unit">
+		<div class="unit__top">
+			<div class="unit__title">С этим покупают</div>
+			<div class="unit__arrows">
+				<div class="unit__arrows-in">
+					<button class="unit__prev btn-prev js-unit-prev">
+						<span class="btn-prev__visible">
+							{{mixins.icon('prev')}}
+						</span>
+						<span class="btn-prev__hidden">
+							{{mixins.icon('prev')}}
+						</span>
+					</button>
+					<button class="unit__next btn-next js-unit-next">
+						<span class="btn-next__visible">
+							{{mixins.icon('next')}}
+						</span>
+						<span class="btn-next__hidden">
+							{{mixins.icon('next')}}
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		{% set items = [
+			{
+				img: 'item.png',
+				category: 'Кухонный гарнитур',
+				title: 'Кухонный гарнитур Amarone',
+				colors: true,
+				price: '240 758 Р',
+				list: [
+					{
+						icon: 'heart',
+						name: 'Добавить в избранное'
+					},
+					{
+						icon: 'basket',
+						name: 'Быстрый заказ'
+					},
+					{
+						icon: 'sale',
+						name: 'Сообщить о скидке'
+					}
+				]
+			},
+			{
+				img: 'item.png',
+				category: 'Кухонный гарнитур',
+				title: 'Кухонный гарнитур Amarone',
+				colors: true,
+				price: '240 758 Р',
+				list: [
+					{
+						icon: 'heart',
+						name: 'Добавить в избранное'
+					},
+					{
+						icon: 'basket',
+						name: 'Быстрый заказ'
+					},
+					{
+						icon: 'sale',
+						name: 'Сообщить о скидке'
+					}
+				]
+			},
+			{
+				img: 'item.png',
+				category: 'Кухонный гарнитур',
+				title: 'Кухонный гарнитур Amarone',
+				colors: true,
+				price: '240 758 Р',
+				list: [
+					{
+						icon: 'heart',
+						name: 'Добавить в избранное'
+					},
+					{
+						icon: 'basket',
+						name: 'Быстрый заказ'
+					},
+					{
+						icon: 'sale',
+						name: 'Сообщить о скидке'
+					}
+				]
+			},
+			{
+				img: 'item.png',
+				category: 'Кухонный гарнитур',
+				title: 'Кухонный гарнитур Amarone',
+				colors: true,
+				price: '240 758 Р',
+				list: [
+					{
+						icon: 'heart',
+						name: 'Добавить в избранное'
+					},
+					{
+						icon: 'basket',
+						name: 'Быстрый заказ'
+					},
+					{
+						icon: 'sale',
+						name: 'Сообщить о скидке'
+					}
+				]
+			},
+			{
+				img: 'item.png',
+				category: 'Кухонный гарнитур',
+				title: 'Кухонный гарнитур Amarone',
+				colors: true,
+				price: '240 758 Р',
+				list: [
+					{
+						icon: 'heart',
+						name: 'Добавить в избранное'
+					},
+					{
+						icon: 'basket',
+						name: 'Быстрый заказ'
+					},
+					{
+						icon: 'sale',
+						name: 'Сообщить о скидке'
+					}
+				]
+			}
+		] %}
+		<div class="unit__slider js-unit-slider">
+			{% for item in items %}
+			<div class="unit__col">
+				{{mixins.item({
+					tablet: true,
+					priceSmall: false
+				})}}
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end card tab6 -->

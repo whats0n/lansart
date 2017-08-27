@@ -1,0 +1,219 @@
+{% set forms = [
+	{
+		id: 'form-person1',
+		fields: [
+			{
+				tagLabel: true,
+				for: 'person-name',
+				label: 'Имя',
+				input: true,
+				id: 'person-name',
+				placeholder: 'Имя'
+			},
+			{
+				tagLabel: true,
+				for: 'person-surname',
+				label: 'Фамилия',
+				input: true,
+				id: 'person-surname',
+				placeholder: 'Фамилия'
+			},
+			{
+				tagLabel: true,
+				for: 'person-phone',
+				label: 'Телефон',
+				phone: true,
+				id: 'person-phone'
+			},
+			{
+				tagLabel: true,
+				for: 'person-email',
+				label: 'Email',
+				input: true,
+				id: 'person-email',
+				placeholder: 'Email'
+			},
+			{
+				tagLabel: true,
+				for: 'person-city',
+				label: 'Адрес',
+				fields: [
+					{
+						item: true
+					},
+					{
+						item: true
+					},
+					{
+						item: true
+					}
+				],
+				inputs: [
+					{
+						id: "person-city"
+					},
+					{
+						id: "person-street"
+					}
+				]
+			}
+		]
+	},
+	{
+		id: 'form-person2',
+		fields: [
+			{
+				tagLabel: true,
+				for: 'person-company-name',
+				label: 'Наименование организации с формой собственности',
+				input: true,
+				id: 'person-company-name',
+				placeholder: "ОАО «Название организации»",
+				error: 'is-error'
+			},
+			{
+				tagLabel: true,
+				for: 'person-inn',
+				label: 'ИНН <sup>*</sup>',
+				input: true,
+				id: 'person-inn',
+				placeholder: "9864121520120"
+			},
+			{
+				tagLabel: true,
+				for: 'person-kpp',
+				label: 'КПП <sup>*</sup>',
+				input: true,
+				id: 'person-kpp',
+				placeholder: "09715124105"
+			},
+			{
+				tagLabel: true,
+				for: 'person-bank-name',
+				label: 'Наименование банка',
+				input: true,
+				id: 'person-bank-name',
+				placeholder: "Сбербанк"
+			},
+			{
+				tagLabel: true,
+				for: 'person-bik',
+				label: 'БИК <sup>*</sup>',
+				input: true,
+				id: 'person-bik',
+				placeholder: "9768712412"
+			},
+			{
+				tagLabel: true,
+				for: 'person-cor-acc',
+				label: 'Корреспондентский счёт',
+				input: true,
+				id: 'person-cor-acc',
+				placeholder: "951243151"
+			},
+			{
+				tagLabel: true,
+				for: 'person-per-acc',
+				label: 'Лицевой счет <sup>*</sup>',
+				input: true,
+				id: 'person-per-acc',
+				placeholder: "951243151"
+			},
+			{
+				tagLabel: true,
+				for: 'person-legal-address',
+				label: 'Юридический адрес',
+				input: true,
+				id: 'person-legal-address',
+				placeholder: "Адрес организации"
+			},
+			{
+				tagLabel: true,
+				for: 'person-fact-address',
+				label: 'Фактический адрес',
+				input: true,
+				id: 'person-fact-address',
+				placeholder: "Адрес организации"
+			}
+		]
+	}
+] %}
+
+<!-- begin basket tab3  -->
+<div class="tabs__content js-tab-content" data-tab="tab3">
+	<div class="form-basket js-form-container">
+		<div class="form-basket__head">
+			<div class="form-basket__left">
+				<label class="radio radio_big">
+					<input type="radio" name="person-data" checked value="{{forms[0].id}}" class="js-form-open">
+					<span>Физическое лицо</span>
+				</label>
+			</div>
+			<div class="form-basket__right">
+				<label class="radio radio_big">
+					<input type="radio" name="person-data" value="{{forms[1].id}}" class="js-form-open">
+					<span>Юридическое лицо</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-basket__container">
+			{% for form in forms %}
+			<form action="/" class="data form-basket__tab js-form-tab" data-id="{{form.id}}">
+				<div class="data__body">
+					{% for field in form.fields %}
+					<div class="data__box">
+						<div class="data__label">
+							{% if field.tagLabel %}
+							<label for="{{field.for}}" class="label label_form">{{field.label | safe}}</label>
+							{% else %}
+							<div class="label label_form">{{field.label}}</div>
+							{% endif %}
+						</div>
+						<div class="data__field data__field">
+							{% if field.input %}
+							<input type="text" class="input {{field.error}}" id="{{field.id}}" placeholder="{{field.placeholder}}">
+							{% elif field.phone %}
+							<div class="field-phone">
+								<div class="field-phone__code">+7</div>
+								<div class="field-phone__number">
+									<input type="text" class="input" id="{{field.id}}">
+								</div>
+							</div>
+							{% elif field.fields %}
+							<div class="address-fields">
+								<div class="address-fields__lg">
+									<input type="text" class="input" placeholder="Город" id="{{field.for}}">
+								</div>
+								<div class="address-fields__lg">
+									<input type="text" class="input" placeholder="Улица">
+								</div>
+								<div class="address-fields__group">
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Дом">
+									</div>
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Корп">
+									</div>
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Квартира">
+									</div>
+								</div>
+							</div>
+							{% endif %}
+						</div>
+					</div>
+					{% endfor %}
+					<div class="form-basket__required">
+						<div class="form-required"><sup>*</sup> - поле обязательное для заполнения</div>
+					</div>
+				</div>
+				<div class="step-btns">
+					<button class="btn btn_gray step-btns__prev"><span>Вернуться</span></button>
+					<button class="btn btn_blue step-btns__next"><span>Продолжить</span></button>
+				</div>
+			</form>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end basket tab3 -->

@@ -1,0 +1,254 @@
+{% set deliveryForms = [
+	{
+		id: 'delivery-form1',
+		label: 'Доставка курьером',
+		checked: true,
+		courier: true,
+		left: true,
+		fields: [
+			{
+				label: 'Адрес',
+				address: true,
+				select: [
+					{
+						value: '1',
+						text: 'ул. Севанская д 10 кв 58'
+					},
+					{
+						value: '2',
+						text: 'ул. Севанская д 10 кв 57'
+					},
+					{
+						value: '3',
+						text: 'ул. Севанская д 10 кв 56'
+					}
+				],
+				btn: 'Изменить'
+			},
+			{
+				label: 'Дата',
+				select: [
+					{
+						value: '1',
+						text: 'Четверг, 09 июня 2016'
+					},
+					{
+						value: '2',
+						text: 'Четверг, 09 июня 2015'
+					},
+					{
+						value: '3',
+						text: 'Четверг, 09 июня 2014'
+					}
+				],
+				btnDate: 'Дата'
+			},
+			{
+				label: 'Время',
+				radios: [
+					{
+						name: 'time',
+						text: 'В любое время (10:00-21:00)',
+						price: '<a href="#">Бесплатно</a>'
+					},
+					{
+						name: 'time',
+						text: 'В первой половине (10:00-12:00)',
+						price: '750 P'
+					},
+					{
+						name: 'time',
+						text: 'После обеда (12:00-16:00)',
+						price: '750 P'
+					},
+					{
+						name: 'time',
+						text: 'Вечером (16:00-21:00)',
+						price: '750 P'
+					}
+				]
+			},
+			{
+				label: 'Дополнительные услуги',
+				checkboxes: [
+					{
+						text: 'Подъем на этаж <strong>(1 этаж 100 руб.)</strong>'
+					},
+					{
+						text: 'Сборка <a href="#">Стоимость</a>'
+					}
+				]
+			},
+			{
+				label: 'Комментарий к заказу',
+				textarea: 'Введите текст'
+			}
+		]
+	},
+	{
+		formId: 'delivery-form2',
+		label: 'Забрать в магазине',
+		store: true,
+		right: true,
+		fields: [
+			{
+				label: 'Адрес',
+				info: [
+					'г. Москва,',
+					'1-й Магистральный пр., д. 8, стр. 2'
+				]
+			},
+			{
+				label: 'Часы работы',
+				info: [
+					'Ежедневно с 10:00 до 20:00'
+				]
+			},
+			{
+				label: 'Доступно в магазине',
+				info: [
+					'с 09.06.2016'
+				]
+			}
+		]
+	}
+] %}
+
+<!-- begin basket tab2  -->
+<div class="tabs__content js-tab-content" data-tab="tab2">
+	<div class="form-basket js-form-container">
+
+		<div class="form-basket__head">
+			{% for form in deliveryForms %}
+				{% if form.left %}
+			<div class="form-basket__left">
+				{% elif form.right %}
+			<div class="form-basket__right">
+				{% endif %}
+				<label class="radio radio_big">
+					{% if form.checked %}
+					<input type="radio" name="delivery" checked value="{{form.id}}" class="js-form-open">
+					{% else %}
+					<input type="radio" name="delivery" value="{{form.id}}" class="js-form-open">
+					{% endif %}
+					<span>{{form.label}}</span>
+				</label>
+			</div>
+			{% endfor %}
+		</div>
+
+		<div class="form-basket__container">
+			{% for form in deliveryForms %}
+				{% if form.courier %}
+			<form action="/" class="courier form-basket__tab js-form-tab" data-id="{{form.id}}">
+				<div class="courier__body">
+					{% for field in form.fields %}
+					<div class="courier__box">
+						<div class="courier__label">
+							<div class="label label_form">{{field.label}}</div>
+						</div>
+						<div class="courier__field">
+							{% if field.select %}
+							<div class="courier__select">
+								<select class="js-select">
+									{% for option in field.select %}
+									<option value="{{option.value}}">{{option.text}}</option>
+									{% endfor %}
+								</select>
+							</div>
+							{% elif field.radios %}
+							<ul class="courier__radio">
+								{% for radio in field.radios %}
+								<li>
+									<label class="radio">
+										<input type="radio" name="{{radio.name}}">
+										<span>{{radio.text}}</span>
+									</label>
+									{% if radio.price %}
+									<div class="courier__price">
+										{{radio.price | safe}}
+									</div>
+									{% endif %}
+								</li>
+								{% endfor %}
+							</ul>
+							{% elif field.checkboxes %}
+							<ul class="courier__checkbox">
+								{% for checkbox in field.checkboxes %}
+								<li>
+									<label class="checkbox">
+										<input type="checkbox">
+										<span>{{checkbox.text | safe}}</span>
+									</label>
+								</li>
+								{% endfor %}
+							</ul>
+							{% else %}
+							<div class="courier__textarea">
+								<textarea class="textarea" placeholder="{{field.textarea}}"></textarea>
+							</div>
+							{% endif %}
+							{% if field.address %}
+							<div class="courier__address address-fields">
+								<div class="address-fields__lg">
+									<input type="text" class="input" placeholder="Город">
+								</div>
+								<div class="address-fields__lg">
+									<input type="text" class="input" placeholder="Улица">
+								</div>
+								<div class="address-fields__group">
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Дом">
+									</div>
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Корп">
+									</div>
+									<div class="address-fields__sm">
+										<input type="text" class="input" placeholder="Квартира">
+									</div>
+								</div>
+							</div>
+							{% endif %}
+							{% if field.btn %}
+							<button class="btn btn_gray"><span>{{field.btn}}</span></button>
+							{% elif field.btnDate %}
+							<button class="btn btn_gray"><span>{{mixins.icon('datepicker')}} {{field.btnDate}}</span></button>
+							{% endif %}
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="step-btns">
+					<button class="btn btn_gray step-btns__prev"><span>Вернуться</span></button>
+					<button class="btn btn_blue step-btns__next"><span>Продолжить</span></button>
+				</div>
+			</form>
+				{% elif form %}
+			<form action="/" class="store form-basket__tab js-form-tab" data-id="{{form.id}}">
+				<div class="store__body">
+
+					{% for field in form.fields %}
+					<div class="store__box">
+						<div class="store__label">
+							<div class="label label_form">{{field.label}}</div>
+						</div>
+						<div class="store__info">
+							{% for item in field.info %}
+							<p>{{item}}</p>
+							{% endfor %}
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+				<div class="step-btns">
+					<button class="btn btn_gray step-btns__prev"><span>Вернуться</span></button>
+					<button class="btn btn_blue step-btns__next"><span>Продолжить</span></button>
+				</div>
+			</form>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end basket tab2 -->

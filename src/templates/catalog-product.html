@@ -1,0 +1,162 @@
+---
+title: Catalog Product
+headerMod: header_small
+activeLink: 3
+breadcrumbs: [
+	'Главная',
+	'Для детской',
+	'Столы',
+	'Столы трансформеры'
+]
+activeBC: 3
+filters: true
+paginationSelect: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+<div class="page">
+	<div class="page__inner">
+		{% include "partials/_breadcrumbs.html" %}
+		<div class="product-top">
+			<h1 class="product-title">Столы трансформеры</h1>
+			<div class="product-filter">
+				<div class="product-filter__label">Сортировать:</div>
+				<div class="product-filter__select js-dropdown">
+					<div class="product-filter__select-in">
+						{{mixins.icon('down')}}
+						<div class="product-filter__text js-dropdown-text">по возрастанию цены</div>
+					</div>
+					<ul class="product-filter__list js-dropdown-list">
+						<li class="is-active">по возрастанию цены</li>
+						<li>по убыванию цены</li>
+						<li>по популярности</li>
+						<li>по рейтингу</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="page__container">
+			{% include "partials/_sidebar.html" %}
+			<div class="page__content">
+				<div class="page__items">
+					<div class="page__col page__col_sm">
+						{{mixins.item({
+							adaptive: true,
+							delivery: true
+						})}}
+					</div>
+					<div class="page__col page__col_sm">
+						{{mixins.item({
+							adaptive: true
+						})}}
+					</div>
+					<div class="page__col page__col_sm">
+						{{mixins.item({
+							adaptive: true
+						})}}
+					</div>
+					<div class="page__col page__col_sm">
+						{{mixins.item({
+							adaptive: true
+						})}}
+					</div>
+					<div class="page__col page__col_md">
+						{{mixins.bigItem()}}
+					</div>
+					<div class="page__col page__col_sm">
+						{{mixins.item({
+							adaptive: true,
+							delivery: true
+						})}}
+					</div>
+					<div class="page__col page__col_sm">
+						{{mixins.item({
+							adaptive: true
+						})}}
+					</div>
+					<div class="page__col page__col_sm">
+						{{mixins.item({
+							adaptive: true
+						})}}
+					</div>
+					<div class="page__col page__col_sm page__col_banner">
+						<a href="#" class="banner banner_item">
+							<div class="banner__inner" style="background-image: url(img/banner.jpg);">
+								<div class="banner__title">Промо блок</div>
+								<div class="banner__text">
+									<p class="js-cut-text">Можно разместить любой необходимый рекламный баннер</p>
+								</div>
+								<div class="link-more">
+									<span>Больше</span>
+									<div class="link-more__visible">
+										{{mixins.icon('next')}}
+									</div>
+									<div class="link-more__hidden">
+										{{mixins.icon('next')}}
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="page__col page__col_sm">
+						{{mixins.item({
+							adaptive: true,
+							delivery: true
+						})}}
+					</div>
+					<div class="page__col page__col_sm">
+						{{mixins.item({
+							adaptive: true
+						})}}
+					</div>
+				</div>
+				{% include "partials/_catalog-bottom.html" %}
+				{% include "partials/_tags.html" %}
+				<div class="page__desc">
+					<div class="text">
+						<p>Кухонный стол – неотъемлемый предмет мебели на любой кухне. За ним ежедневно собирается семья за обедом и ужином, устраиваются переговоры. Правильно подобранная кухонная мебель также способна дополнить и внести «изюминку» в интерьер помещения. Современный рынок предлагает большой ассортимент столов, изготовленных из различных материалов, однако, наиболее практичным из них считается дерево. Купить деревянный стол для кухни от производителя вы можете в интернет-магазине Лансарт. Мы предлагаем мебель на любой вкус. В каталоге вы найдете столы любой формы и цвета. В продаже имеются как бюджетные, так и элитные модели.</p>
+						<h2 class="text__title">Преимущества деревянных столов для кухни</h2>
+						<p>Кухонные столы, изготовленные из дерева – качественная и практичная мебель. Ее отличные эксплуатационные свойства обеспечиваются свойствами древесины. Главная особенность материала заключается в возможности его реставрации, что влияет на долговечность изделий из дерева. Деревянный стол для кухни обладает следующими преимуществами:</p>
+						<ul>
+							<li>влагоустойчивостью;</li>
+							<li>прочностью;</li>
+							<li>эстетичным внешним видом;</li>
+							<li>простотой в эксплуатации.</li>
+						</ul>
+						<p>Деревянная столешница без труда очищается от пятен. Она устойчива серьезным механическим повреждениям, например, царапинам от кухонной утвари. Стол из дерева впишется в интерьер любой кухни.</p>
+						<h3 class="text__subtitle">Особенности выбора</h3>
+						<p>Деревянные столы для кухни выпускаются в широком многообразии. Для правильного выбора этой мебели нужно обратить внимание на несколько важных факторов. Главный из них – размер помещения. Для маленькой кухни подойдет стол небольших размеров прямоугольной формы – классический вариант или же трансформер. Кухонная мебель должна вписываться в интерьер помещения, поэтому лучше всего выбирать изделия, исходя из конкретной обстановки.</p>
+						<p>Если стол приобретается не только для сбора гостей и приема пищи, но и для приготовления еды – следует выбрать модели с прочной столешницей. Обычно на их рабочие поверхности наносится защитный слой, благодаря которому мебель даже при интенсивной эксплуатации будет долгое время сохранять свою эстетичность.</p>
+						<h3 class="text__subtitle">Модельный ряд</h3>
+						<p>Производители кухонной мебели выпускают столы в широком ассортименте, благодаря чему каждый покупатель сможет выбрать изделие в соответствии со своими предпочтениями. Это может быть:</p>
+						<ol>
+							<li>Раскладная обеденная группа, предназначенная для использования в небольших помещениях.</li>
+							<li>Прямоугольные модели.</li>
+							<li>Круглые и овальные столы, отличающиеся безопасностью за счет отсутствия острых углов.</li>
+							<li>Раздвижные изделия, предназначенные для просторных кухонь или гостиных.</li>
+						</ol>
+						<p>Интернет-магазин Лансарт предлагает купить деревянный кухонный стол от производителя по выгодным ценам. У нас вы можете приобрести изделия для городской квартиры, загородного дома, а также для заведений общественного питания. Наша мебель впишется в любую обстановку, облагородит помещение, создав в нем уютную атмосферу. Для заказа стола звоните по телефону: <a href="tel:84999900091">8 (499) 99-000-91</a>.</p>
+					</div>
+					<div class="page__more">
+						<a href="#" class="link-more link-more_gray">
+							<span>Читать описание полностью</span>
+							<div class="link-more__visible">
+								{{mixins.icon('next')}}
+							</div>
+							<div class="link-more__hidden">
+								{{mixins.icon('next')}}
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

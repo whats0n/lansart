@@ -1,0 +1,53 @@
+<!-- begin tabs  -->
+<div class="tabs js-tabs">
+	<div class="tabs__top">
+		{% set tabLinks = [
+			{
+				active: true,
+				href: 'tab1',
+				text: 'ХАРАКТЕРИСТИКИ'
+			},
+			{
+				href: 'tab2',
+				text: 'ОПИСАНИЕ'
+			},
+			{
+				href: 'tab4',
+				text: 'ОТЗЫВЫ'
+			},
+			{
+				href: 'tab5',
+				text: 'ДОСТАВКА И ОПЛАТА'
+			},
+			{
+				href: 'tab6',
+				text: 'С ЭТИМ ПОКУПАЮТ'
+			}
+		] %}
+
+		{# {
+				href: 'tab3',
+				text: 'ДОСТУПНЫЕ КОМБИНАЦИИ'
+			} #}
+		<ul class="tabs__list">
+			{% for tabLink in tabLinks %}
+			<li class="tabs__item js-tab-link" data-href="{{ tabLink.href }}">{{ tabLink.text }}</li>
+			{% endfor %}
+		</ul>
+		{{mixins.icon('down')}}
+		<select class="tabs__select js-tab-select">
+			{% for tabLink in tabLinks %}
+			<option value="{{ tabLink.href }}">{{ tabLink.text }}</option>
+			{% endfor %}
+		</select>
+	</div>
+	<div class="tabs__container">
+		{% include "partials/tabs-card/_card-tab1.html" %}
+		{% include "partials/tabs-card/_card-tab2.html" %}
+		{# {% include "partials/tabs-card/_card-tab3.html" %} #}
+		{% include "partials/tabs-card/_card-tab4.html" %}
+		{% include "partials/tabs-card/_card-tab5.html" %}
+		{% include "partials/tabs-card/_card-tab6.html" %}
+	</div>
+</div>
+<!-- end tabs -->

@@ -1,0 +1,45 @@
+<!-- Modal Login -->
+<div id="login" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-dialog_sm modal-dialog_center">
+		<div class="modal__inner">
+			<button type="button" class="modal__close" data-dismiss="modal">
+				{{mixins.icon('close')}}
+			</button>
+			<div class="modal__block">
+				<div class="modal__title">Вход</div>
+				<form action="/" class="m-form">
+					<div class="field">
+						<input type="email" class="input" placeholder="Почта">
+					</div>
+					<div class="field">
+						<input type="password" class="input" placeholder="Пароль">
+					</div>
+					<div class="m-form__forgot">
+						<a href="#" class="link-next modal__link">Забыли пароль? {{mixins.icon('right')}}</a>
+					</div>
+					<div class="field">
+						<button class="btn btn_blue" disabled><span>Войти</span></button>
+					</div>
+					<p class="modal__text">Новый пользователь? <a href="#" class="modal__link">Регистрация</a></p>
+				</form>
+				<div class="modal__label">
+					<span>войти через</span>
+				</div>
+				<div class="social-btns">
+					<a href="#" class="btn-soc btn-soc_vk">
+						<div>
+							{{mixins.icon('vk')}}
+							<span>VKontakte</span>
+						</div>
+					</a>
+					<a href="#" class="btn-soc btn-soc_fb">
+						<div>
+							{{mixins.icon('fb')}}
+							<span>Facebook</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

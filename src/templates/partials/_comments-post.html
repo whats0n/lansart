@@ -1,0 +1,115 @@
+{% set postComments = [
+	{
+		img: 'https://placecage.com/50/50',
+		date: '3 часа',
+		name: 'Парень',
+		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ratione error est, magnam repudiandae aliquam minima odit aliquid eligendi et ducimus iusto quia ipsum, ut esse ipsam delectus iste unde vel eaque id pariatur, dicta mollitia laudantium in! Dicta distinctio fuga quam perspiciatis optio tempora doloremque nobis cupiditate, ipsam aperiam dolore excepturi nisi et porro sapiente ex laudantium asperiores, amet architecto ratione accusamus? Similique, repudiandae ullam cupiditate beatae pariatur mollitia doloribus quo enim expedita id.',
+		likes: '12',
+		answers: [
+			{
+				img: 'https://placecage.com/50/50',
+				date: 'Вчера',
+				name: 'Антонина',
+				text: 'Infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy. The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms.',
+				likes: '12'
+			}
+		]
+	},
+	{
+		img: 'https://placecage.com/50/50',
+		date: '21.06.16',
+		name: 'Серега',
+		text: 'Optimistic assumptions are made by proponents of ideologies such as transhumanism and singularitarianism, which view technological development as generally having beneficial effects for the society and the human condition. In these ideologies, technological development is morally good. Some critics see these ideologies as examples of scientism and techno-utopianism and fear the notion of human enhancement and technological singularity which they support. Some have described Karl Marx as a techno-optimist.',
+		likes: '04'
+	}
+] %}
+
+{% set postForm = {
+	img: 'https://placecage.com/50/50',
+	name: 'Семен'
+} %}
+
+<!-- begin post-comments  -->
+<div class="post-comments">
+	{% for postComment in postComments %}
+	<div class="post-comment">
+		<div class="post-comment__top">
+			<div class="post-comment__img" style="background-image: url({{postComment.img}});"></div>
+			<div class="post-comment__date">{{postComment.date}}</div>
+			<div class="post-comment__name">{{postComment.name}}</div>
+		</div>
+		<div class="post-comment__body">
+			<div class="post-comment__text">
+				<p>{{postComment.text | safe}}</p>
+			</div>
+			<div class="post-comment__meta">
+				<a href="#" class="btn-likes"><span>{{postComment.likes}}</span></a>
+				<button class="btn-feedback">
+					{{mixins.icon('arr-back')}}
+					<span>Ответить</span>
+				</button>
+			</div>
+			{% if postComment.answers %}
+			{% for commentAnswer in postComment.answers %}
+			<div class="post-comment">
+				<div class="post-comment__top">
+					<div class="post-comment__img" style="background-image: url({{commentAnswer.img}});"></div>
+					<div class="post-comment__date">{{commentAnswer.date}}</div>
+					<div class="post-comment__name">{{commentAnswer.name}}</div>
+				</div>
+				<div class="post-comment__body">
+					<div class="post-comment__text">
+						<p>{{commentAnswer.text | safe}}</p>
+					</div>
+					<div class="post-comment__meta">
+						<a href="#" class="btn-likes"><span>{{postComment.likes}}</span></a>
+						<button class="btn-feedback">
+							{{mixins.icon('arr-back')}}
+							<span>Ответить</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+	{% endfor %}
+</div>
+<div class="post-msg">
+	<form action="/" class="post-comment">
+		<div class="post-comment__title">Ваш комментарий</div>
+		<!-- begin anonym  -->
+		<div class="post-anonym">
+			<div class="post-anonym__img">
+				{{mixins.icon('user')}}
+			</div>
+			<div class="post-anonym__name">
+				<input type="text" class="input" placeholder="Имя">
+			</div>
+			<div class="post-anonym__email">
+				<input type="email" class="input" placeholder="Email">
+			</div>
+			<div class="post-anonym__btn">
+				<div class="post-anonym__label">или</div>
+				<button class="btn btn_gray"><span>Авторизируйтесь</span></button>
+			</div>
+		</div>
+		<!-- end anonym -->
+		<!-- begin user  -->
+		<div class="post-comment__top">
+			<div class="post-comment__img" style="background-image: url({{postForm.img}});"></div>
+			<div class="post-comment__name">{{postForm.name}}</div>
+		</div>
+		<!-- end user -->
+		<div class="post-comment__body">
+			<div class="post-comment__field">
+				<textarea class="textarea" placeholder="Введите текст"></textarea>
+			</div>
+			<div class="post-comment__btn">
+				<button class="btn btn_blue"><span>Комментировать</span></button>
+			</div>
+		</div>
+	</form>
+</div>
+<!-- end post-comments -->

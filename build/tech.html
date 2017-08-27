@@ -1,0 +1,2587 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Tech page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+
+  </head>
+
+  <body>
+
+    <!-- BEGIN content -->
+    <div class="out">
+
+      <!-- begin header  -->
+      <header class="header header_small">
+        <div class="top-line">
+          <div class="top-line__inner">
+            <div class="top-line__left sm-popup-open">
+              <a href="#" class="top-line__link js-city" data-toggle="modal" data-target="#change-city">Москва и МО</a>
+              <div class="sm-city sm-popup_top sm-popup">
+                <div class="sm-popup__inner">
+                  <div class="sm-city__text">Ваш город - Москва?</div>
+                  <div class="sm-city__btns">
+                    <button class="btn btn_blue sm-city__submit"><span>Да</span></button>
+                    <button class="btn btn_gray sm-city__cancel"><span>Выбрать другой</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="top-line__login">
+              <a href="#" class="top-line__link" data-toggle="modal" data-target="#login">
+                <svg class="icon icon-user"><use xlink:href="img/sprite.svg#icon-user"></use></svg>
+
+                <span>Авторизация</span>
+              </a>
+            </div>
+            <ul class="top-line__nav">
+              <li><a href="#" class="top-line__link">Доставка</a></li>
+              <li><a href="#" class="top-line__link">Оплата</a></li>
+              <li><a href="#" class="top-line__link">Сборка</a></li>
+              <li><a href="#" class="top-line__link">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__inner">
+          <div class="header__schedule">
+            <a href="tel:+74999900091" class="header__phone">+7 (499) 99-000-91</a>
+            <div class="header__text">10:00-20:00 без выходных</div>
+          </div>
+          <div class="header__callback">
+            <a href="#" class="header__callback-btn js-popup-open" data-popup="callback">
+              <div class="header__icon">
+                <svg class="icon icon-phone"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
+
+              </div>
+              <span>Перезвоните мне</span>
+            </a>
+            <div class="callback sm-popup js-popup" data-id="callback">
+              <form action="/" class="callback__form">
+                <div class="callback__field">
+                  <input type="text" class="input" placeholder="Ваш телефон">
+                </div>
+                <div class="callback__field">
+                  <button class="btn btn_blue" type="submit"><span>Перезвоните мне</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <ul class="header__actions">
+            <li class="header__heart">
+              <a href="#" class="header__icon">
+                <svg class="icon icon-heart"><use xlink:href="img/sprite.svg#icon-heart"></use></svg>
+
+              </a>
+            </li>
+            <li class="header__search">
+              <div class="header-search js-search">
+                <button class="header__icon header__icon_search js-search-open">
+						<i class="header__close"></i>
+						<svg class="icon icon-search"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+
+					</button>
+                <div class="sm-search js-autocomplete-parent">
+                  <input type="text" class="sm-search__input js-autocomplete" placeholder="Поиск">
+                  <a href="#" class="easy-autocomplete-link js-autocomplete-link">Все <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+</a>
+                </div>
+              </div>
+            </li>
+            <li class="header__basket sm-popup-open">
+              <a href="#" class="header__icon">
+                <svg class="icon icon-basket"><use xlink:href="img/sprite.svg#icon-basket"></use></svg>
+
+                <span>2</span>
+              </a>
+              <div class="sm-popup sm-popup_top sm-basket">
+                <div class="sm-popup__inner">
+                  <div class="sm-popup__title">Корзина</div>
+                  <ul class="sm-basket__list">
+                    <li>
+                      <div class="sm-basket__label">Товара</div>
+                      <div class="sm-basket__text">2</div>
+                    </li>
+                    <li>
+                      <div class="sm-basket__label">На сумму</div>
+                      <div class="sm-basket__text">47 983 Р</div>
+                    </li>
+                  </ul>
+                  <div class="sm-basket__btn">
+                    <a href="#" class="btn btn_blue"><span>Перейти в корзину</span></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="header__logo">
+            <a href="#" class="logo">
+              <div class="logo__title">Lansart</div>
+              <div class="header__text">Онлайн-гипермаркет мебели</div>
+            </a>
+          </div>
+        </div>
+        <nav class="nav js-menu">
+          <ul class="nav__list">
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Для <br />кухни</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Для <br />спальни</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Для <br />гостиной</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Для <br />детской</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Для <br />прихожей</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Для домашнего <br />кабинета</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Для <br />дачи</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Для <br />офиса</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Для <br />гостиницы</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Для бара <br />и ресторана</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Элитная <br />мебель</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-menu-link">
+              <a href="#" class="nav__link">Креативные <br />идеи</a>
+              <div class="menu js-menu-item">
+                <div class="menu__inner">
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Кухни классика</a></li>
+                        <li><a href="#">Кухни модерн</a></li>
+                        <li><a href="#">Готовые решения</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОБЕДЕННЫЕ ГРУППЫ</a>
+                      <ul>
+                        <li><a href="#">Кухонные столы</a></li>
+                        <li><a href="#">Кухонные стулья</a></li>
+                        <li><a href="#">Барные стулья</a></li>
+                        <li><a href="#">Кухонные уголки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ДЕКОР ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Вазы и цветы</a></li>
+                        <li><a href="#">Кашпо и горшки</a></li>
+                        <li><a href="#">Коробки и корзины</a></li>
+                        <li><a href="#">Декор интерьера</a></li>
+                        <li><a href="#">Сундуки</a></li>
+                        <li><a href="#">Зеркала</a></li>
+                        <li><a href="#">Картины и фоторамки</a></li>
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Ароматы для дома</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ОСВЕЩЕНИЕ ДЛЯ КУХНИ</a>
+                      <ul>
+                        <li><a href="#">Люстры и потолочные светильники</a></li>
+                        <li><a href="#">Бра</a></li>
+                        <li><a href="#">Споты</a></li>
+                        <li><a href="#">Торшеры</a></li>
+                        <li><a href="#">Настольные лампы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__list">
+                      <a href="#" class="menu__title">ХОЗТОВАРЫ</a>
+                      <ul>
+                        <li><a href="#">Баки для мусора</a></li>
+                        <li><a href="#">Корзины для белья</a></li>
+                        <li><a href="#">Товары для уборки</a></li>
+                        <li><a href="#">Товары для хранения</a></li>
+                        <li><a href="#">Бытовая химия</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="menu__box">
+                    <a href="#" class="banner">
+                      <div class="banner__inner" style="background-image: url(img/banner.jpg);">
+                        <div class="banner__title">Промо баннер</div>
+                        <div class="banner__text">
+                          <p class="js-cut-text">При свободном четвертом столбце используем рекламу,карточка товара не помещается. <br /> Только баннер</p>
+                        </div>
+                        <div class="link-more">
+                          <span>Больше</span>
+                          <div class="link-more__visible">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                          <div class="link-more__hidden">
+                            <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- end header -->
+
+      <!-- begin mobile-header  -->
+      <div class="mob-header js-mob-header js-fixed">
+        <div class="mob-header__inner">
+          <button class="btn-nav js-nav-btn"><span></span></button>
+          <a href="#" class="mob-logo">Lansart</a>
+          <a href="tel:+74999900091" class="mob-header__phone">+7 (499) 99-000-91</a>
+          <ul class="mob-header__actions">
+            <li class="top-search js-search">
+              <button class="top-search__btn mob-header__link js-search-open">
+					<i class="top-search__close"></i>
+					<svg class="icon icon-search"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+
+				</button>
+              <div class="top-search__box js-autocomplete-parent">
+                <div class="top-search__field">
+                  <input type="text" class="top-search__input js-autocomplete" placeholder="Поиск">
+                  <a href="#" class="easy-autocomplete-link js-autocomplete-link">Все <svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="#" class="mob-header__link"><svg class="icon icon-heart"><use xlink:href="img/sprite.svg#icon-heart"></use></svg>
+</a></li>
+            <li><a href="#" class="mob-header__link"><svg class="icon icon-basket"><use xlink:href="img/sprite.svg#icon-basket"></use></svg>
+</a></li>
+            <li><a href="#" class="mob-header__link" data-toggle="modal" data-target="#login"><svg class="icon icon-user"><use xlink:href="img/sprite.svg#icon-user"></use></svg>
+</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- end mobile-header -->
+
+      <!-- begin mobile-nav  -->
+      <div class="mob-nav js-nav">
+        <div class="mob-nav__inner js-scrollbar js-nav-inner">
+          <div class="mob-nav__head">
+            <button class="mob-nav__close js-nav-close">
+				<svg class="icon icon-left"><use xlink:href="img/sprite.svg#icon-left"></use></svg>
+
+			</button>
+            <a href="#" class="mob-logo">Lansart</a>
+          </div>
+          <div class="mob-search">
+            <button class="mob-search__btn">
+				<svg class="icon icon-search"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+
+			</button>
+            <input type="text" class="input input_small" placeholder="Поиск">
+          </div>
+          <div class="mob-nav__city js-open-city">
+            <div>ГОРОД: <span>Москва</span></div>
+            <svg class="icon icon-right"><use xlink:href="img/sprite.svg#icon-right"></use></svg>
+
+          </div>
+          <div class="mob-item">
+            <div class="mob-item__head js-list-btn">
+              <span>ДЛЯ КУХНИ</span>
+              <i class="mob-item__plus"></i>
+            </div>
+            <ul class="mob-item__body js-list">
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Кухни <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Обеденные группы <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Декор для кухни <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Освещение <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Хозтовары <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-item">
+            <div class="mob-item__head js-list-btn">
+              <span>ДЛЯ ДЕТСКОЙ</span>
+              <i class="mob-item__plus"></i>
+            </div>
+            <ul class="mob-item__body js-list">
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Кухни <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Обеденные группы <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Декор для кухни <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Освещение <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Хозтовары <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-item">
+            <div class="mob-item__head js-list-btn">
+              <span>ДЛЯ ПРИХОЖЕЙ</span>
+              <i class="mob-item__plus"></i>
+            </div>
+            <ul class="mob-item__body js-list">
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Кухни <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Обеденные группы <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Декор для кухни <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Освещение <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Хозтовары <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-item">
+            <div class="mob-item__head js-list-btn">
+              <span>ДЛЯ ДОМАШНЕГО КАБИНЕТА</span>
+              <i class="mob-item__plus"></i>
+            </div>
+            <ul class="mob-item__body js-list">
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Кухни <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Обеденные группы <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Декор для кухни <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Освещение <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Хозтовары <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-item">
+            <div class="mob-item__head js-list-btn">
+              <span>ДЛЯ ДАЧИ</span>
+              <i class="mob-item__plus"></i>
+            </div>
+            <ul class="mob-item__body js-list">
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Кухни <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Обеденные группы <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Декор для кухни <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Освещение <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title js-list-btn">Хозтовары <i class="mob-item__plus"></i></a>
+                <ul class="mob-item__list js-list">
+                  <li>
+                    <a href="#">
+                      <small>12</small>
+                      <span>Кухни классика</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>53</small>
+                      <span>Кухни модерн</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <small>42</small>
+                      <span>Готовые решения</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-item">
+            <div class="mob-item__head js-list-btn">
+              <span>О КОМПАНИИ</span>
+              <i class="mob-item__plus"></i>
+            </div>
+            <ul class="mob-item__body js-list">
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title">Доставка</a>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title">Оплата</a>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title">Сборка</a>
+              </li>
+              <li class="mob-item__section">
+                <a href="#" class="mob-item__title">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end mobile-nav -->
+      <div class="tech">
+        <div class="blue">
+          <button class="btn btn_white"><span>Кнопка</span></button>
+        </div>
+        <div class="white">
+          <button class="btn" data-toggle="modal" data-target="#myModal"><span>LOGIN</span></button>
+          <button class="btn"><span>Кнопка</span></button>
+          <button class="btn btn_blue"><span>Кнопка</span></button>
+          <button class="btn btn_gray"><span>Кнопка</span></button>
+          <button class="btn-gray"><span>Кнопка</span></button>
+        </div>
+        <div class="white">
+          <div class="label">Label</div>
+          <input type="text" class="input" placeholder="Placeholder">
+
+          <div class="field-phone">
+            <div class="field-phone__code">+7</div>
+            <div class="field-phone__number">
+              <input type="text" class="input" placeholder="Placeholder">
+            </div>
+          </div>
+        </div>
+        <div class="white">
+          <label class="radio">
+			<input type="radio">
+			<span>Radio</span>
+		</label>
+          <label class="checkbox">
+			<input type="checkbox">
+			<span>Checkbox</span>
+		</label>
+        </div>
+        <!-- begin to-top  -->
+        <div class="to-top">
+          <div class="to-top__inner">
+            <button class="btn-up js-btn-up">
+				<svg class="icon icon-up"><use xlink:href="img/sprite.svg#icon-up"></use></svg>
+
+			</button>
+          </div>
+        </div>
+        <!-- end to-top -->
+      </div>
+      <!-- begin to-top  -->
+      <div class="to-top">
+        <div class="to-top__inner">
+          <button class="btn-filters js-filters-open">
+			<span class="btn-filters__in">
+				<span class="btn-filters__icon">
+					<i class="btn-filters__lines"></i>
+					<i class="btn-filters__circles"></i>
+				</span>
+			</span>
+		</button>
+          <button class="btn-up js-btn-up">
+			<svg class="icon icon-up"><use xlink:href="img/sprite.svg#icon-up"></use></svg>
+
+		</button>
+        </div>
+      </div>
+      <!-- end to-top -->
+      <!-- begin footer  -->
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__row">
+            <div class="footer__col-4 footer__list">
+              <div class="title-h3 js-accordion-title">Полезная информация <i class="footer__plus"></i></div>
+              <ul class="js-accordion-block">
+                <li><a href="#">Как зарегистрироваться</a></li>
+                <li><a href="#">Как сделать заказ</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Самовывоз</a></li>
+                <li><a href="#">Сборка</a></li>
+                <li><a href="#">Обратная связь</a></li>
+                <li><a href="#">Уход за изделиями</a></li>
+              </ul>
+            </div>
+            <div class="footer__col-4 footer__list">
+              <div class="title-h3 js-accordion-title">Для клиентов <i class="footer__plus"></i></div>
+              <ul class="js-accordion-block">
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Пользовательское соглашение</a></li>
+                <li><a href="#">Условия продажи мебели</a></li>
+                <li><a href="#">Гарантии</a></li>
+                <li><a href="#">Обмен и возврат</a></li>
+                <li><a href="#">Подарочные карты</a></li>
+                <li><a href="#">Нашли дешевле? Снизим цену!</a></li>
+                <li><a href="#">Услуги</a></li>
+              </ul>
+            </div>
+            <div class="footer__col-4 footer__list">
+              <div class="title-h3 js-accordion-title">Компания Lansart <i class="footer__plus"></i></div>
+              <ul class="js-accordion-block">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Сотрудничество</a></li>
+                <li><a href="#">Оптовикам</a></li>
+                <li><a href="#">Производителям</a></li>
+                <li><a href="#">Поставщикам</a></li>
+              </ul>
+            </div>
+            <div class="footer__col-4 footer__list">
+              <div class="title-h3 js-accordion-title">Продукция <i class="footer__plus"></i></div>
+              <ul class="js-accordion-block">
+                <li><a href="#">Столы</a></li>
+                <li><a href="#">Стулья</a></li>
+                <li><a href="#">Зеркала</a></li>
+                <li><a href="#">Кровати</a></li>
+                <li><a href="#">Диваны</a></li>
+                <li><a href="#">Кресла</a></li>
+                <li><a href="#">Тумбы</a></li>
+                <li><a href="#">Комоды</a></li>
+                <li><a href="#">Шкафы</a></li>
+                <li><a href="#">Предметы интерьера</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__row">
+            <div class="footer__col-2 footer__social">
+              <div class="title-h3">Мы в соцсетях</div>
+              <ul class="social">
+                <li><a href="#" target="_blank"><svg class="icon icon-vk"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+</a></li>
+                <li><a href="#" target="_blank"><svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+</a></li>
+                <li><a href="#" target="_blank"><svg class="icon icon-od"><use xlink:href="img/sprite.svg#icon-od"></use></svg>
+</a></li>
+                <li><a href="#" target="_blank"><svg class="icon icon-google"><use xlink:href="img/sprite.svg#icon-google"></use></svg>
+</a></li>
+                <li><a href="#" target="_blank"><svg class="icon icon-youtube"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
+</a></li>
+                <li><a href="#" target="_blank"><svg class="icon icon-insta"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
+</a></li>
+              </ul>
+            </div>
+            <div class="footer__col-2 footer__contacts">
+              <div class="title-h3">Контакты</div>
+              <div class="footer__info">
+                <ul>
+                  <li>Москва</li>
+                  <li>Уланский пер., 9</li>
+                </ul>
+                <ul class="footer__numbers">
+                  <li><a href="tel:88003212384">8 800 321-23-84</a></li>
+                  <li><a href="tel:+74999900091">+7 (499) 99-000-91</a></li>
+                </ul>
+                <ul>
+                  <li>10:00-20:00</li>
+                  <li>без выходных</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__row footer__bottom">
+            <div class="footer__col">
+              <a href="#" class="footer__logo">Lansart</a>
+            </div>
+            <div class="footer__col footer__copy">
+              <div class="footer__text">Copyright © Лансарт - онлайн-гипермаркет мебели, 2011-2016.</div>
+              <div class="footer__text">Представленная на сайте информация не является публичной офертой.</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+    <!-- END content -->
+    <!-- begin overlay  -->
+    <div class="overlay js-overlay"></div>
+    <!-- end overlay -->
+
+    <!-- Modal Login -->
+    <div id="login" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog_sm modal-dialog_center">
+        <div class="modal__inner">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="modal__block">
+            <div class="modal__title">Вход</div>
+            <form action="/" class="m-form">
+              <div class="field">
+                <input type="email" class="input" placeholder="Почта">
+              </div>
+              <div class="field">
+                <input type="password" class="input" placeholder="Пароль">
+              </div>
+              <div class="m-form__forgot">
+                <a href="#" class="link-next modal__link">Забыли пароль? <svg class="icon icon-right"><use xlink:href="img/sprite.svg#icon-right"></use></svg>
+</a>
+              </div>
+              <div class="field">
+                <button class="btn btn_blue" disabled><span>Войти</span></button>
+              </div>
+              <p class="modal__text">Новый пользователь? <a href="#" class="modal__link">Регистрация</a></p>
+            </form>
+            <div class="modal__label">
+              <span>войти через</span>
+            </div>
+            <div class="social-btns">
+              <a href="#" class="btn-soc btn-soc_vk">
+                <div>
+                  <svg class="icon icon-vk"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+
+                  <span>VKontakte</span>
+                </div>
+              </a>
+              <a href="#" class="btn-soc btn-soc_fb">
+                <div>
+                  <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+
+                  <span>Facebook</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Subscribe Notification -->
+    <div id="subscribe-notification" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog_notification modal-dialog_center">
+        <div class="modal__in">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="notification">
+            <div class="notification__title">Подписка оформленна</div>
+            <p>Поздравлям, теперь вы будете в курсе всех свежих новостей.</p>
+            <div class="notification__btn">
+              <a href="#" class="btn btn_blue">
+                <span>Вернуться</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Basket -->
+    <div id="basket" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog_md modal-dialog_left">
+        <div class="modal__basket">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="modal__block">
+            <div class="modal__head">
+              <div class="modal__title title">Корзина</div>
+              <p>Всего в вашей корзине 3 товара. <a href="#">Посмотерть</a></p>
+            </div>
+            <div class="basket">
+              <div class="basket__top">
+                <div class="basket__top-in">
+                  <div class="basket__col basket__quantity">Количество</div>
+                  <div class="basket__col basket__price">Цена</div>
+                </div>
+              </div>
+              <div class="basket__items">
+                <div class="basket__items-in">
+                  <div class="basket-item">
+                    <div class="basket-item__info">
+                      <div class="basket-item__img" style="background-image: url(img/item.png);"></div>
+                      <div class="basket-item__text">
+                        <div class="basket-item__category">Барный стул</div>
+                        <div class="basket-item__title">Стул Space Chair</div>
+                        <p>Товар упакован по 2 шт., и будет доставлен кратно упаковке</p>
+                      </div>
+                    </div>
+                    <div class="basket-item__field">
+                      <input type="text" class="input js-spinner" data-min="0" data-max="10">
+                    </div>
+                    <div class="basket-item__price">
+                      <strong>84 960 Р</strong>
+                      <p>21 240 руб. x 4 шт.</p>
+                      <button class="basket-item__reload js-tooltip" title="Подсказка №1">
+										<span><svg class="icon icon-reload"><use xlink:href="img/sprite.svg#icon-reload"></use></svg>
+</span>
+									</button>
+                      <button class="basket-item__close js-tooltip" title="Подсказка №2">
+										<span><svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</span>
+									</button>
+                    </div>
+                  </div>
+                  <div class="basket-item">
+                    <div class="basket-item__info">
+                      <div class="basket-item__img" style="background-image: url(img/item.png);"></div>
+                      <div class="basket-item__text">
+                        <div class="basket-item__category">Барный стул</div>
+                        <div class="basket-item__title">Стул Space Chair</div>
+                        <p>Товар упакован по 2 шт., и будет доставлен кратно упаковке</p>
+                      </div>
+                    </div>
+                    <div class="basket-item__field">
+                      <input type="text" class="input js-spinner" data-min="0" data-max="10">
+                    </div>
+                    <div class="basket-item__price">
+                      <strong>84 960 Р</strong>
+                      <p>21 240 руб. x 4 шт.</p>
+                      <button class="basket-item__reload js-tooltip" title="Подсказка №1">
+										<span><svg class="icon icon-reload"><use xlink:href="img/sprite.svg#icon-reload"></use></svg>
+</span>
+									</button>
+                      <button class="basket-item__close js-tooltip" title="Подсказка №2">
+										<span><svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</span>
+									</button>
+                    </div>
+                  </div>
+                  <div class="basket-item">
+                    <div class="basket-item__info">
+                      <div class="basket-item__img" style="background-image: url(img/item.png);"></div>
+                      <div class="basket-item__text">
+                        <div class="basket-item__category">Барный стул</div>
+                        <div class="basket-item__title">Стул Space Chair</div>
+                        <p>Товар упакован по 2 шт., и будет доставлен кратно упаковке</p>
+                      </div>
+                    </div>
+                    <div class="basket-item__field">
+                      <input type="text" class="input js-spinner" data-min="0" data-max="10">
+                    </div>
+                    <div class="basket-item__price">
+                      <strong>84 960 Р</strong>
+                      <p>21 240 руб. x 4 шт.</p>
+                      <button class="basket-item__reload js-tooltip" title="Подсказка №1">
+										<span><svg class="icon icon-reload"><use xlink:href="img/sprite.svg#icon-reload"></use></svg>
+</span>
+									</button>
+                      <button class="basket-item__close js-tooltip" title="Подсказка №2">
+										<span><svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</span>
+									</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket__bottom">
+                <div class="basket__top-in">
+                  <div class="basket__col basket__result">Стоимость товаров:</div>
+                  <div class="basket__col basket__price"><strong>177 471 Р</strong></div>
+                </div>
+              </div>
+              <div class="basket__btns">
+                <a href="#" class="btn btn_gray btn_big"><span>Продолжить покупки</span></a>
+                <a href="#" class="btn btn_blue btn_big"><span>Оформить заказ</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal change city -->
+    <div id="change-city" class="modal fade js-scrollupdate js-popup-region" tabindex="-1">
+      <div class="modal-dialog modal-dialog_city modal-dialog_left">
+        <div class="modal__in">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="c-city js-region">
+            <div class="c-city__top">
+              <div class="c-city__title">Выберите город</div>
+              <div class="c-city__field">
+                <input type="text" class="input input_big" placeholder="Введите название города">
+              </div>
+            </div>
+            <div class="c-city__section">
+              <div class="c-city__regions">
+                <div class="c-city__regions-in">
+                  <div class="c-city__heading">Регионы</div>
+                  <ul class="c-city__list">
+                    <li class="js-region-open is-active">Все регионы</li>
+                    <li class="js-region-open">Дальневосточный</li>
+                    <li class="js-region-open">Приволжский</li>
+                    <li class="js-region-open">Северо-Западный</li>
+                    <li class="js-region-open">Северо-Кавказский</li>
+                    <li class="js-region-open">Сибирский</li>
+                    <li class="js-region-open">Уральский</li>
+                    <li class="js-region-open">Центральный</li>
+                    <li class="js-region-open">Южный</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="c-city__block">
+                <div class="c-city__block-top">
+                  <button class="c-city__back js-region-back"><svg class="icon icon-left"><use xlink:href="img/sprite.svg#icon-left"></use></svg>
+</button>
+                  <div class="c-city__heading">Города</div>
+                  <div class="c-city__heading c-city__heading_region js-region-name"></div>
+                </div>
+                <div class="c-city__block-in js-scrollbar">
+                  <ul class="c-city__list c-city__columns">
+                    <li>Абакан</li>
+                    <li>Абинск</li>
+                    <li>Альметьевск</li>
+                    <li>Ангарск</li>
+                    <li>Астрахань</li>
+                    <li>Ачинск</li>
+                    <li>Балаково</li>
+                    <li>Балашиха</li>
+                    <li>Белгород</li>
+                    <li>Березники</li>
+                    <li>Балаково</li>
+                    <li>Балашиха</li>
+                    <li>Белгород</li>
+                    <li>Березники</li>
+                    <li>Балаково</li>
+                    <li>Балашиха</li>
+                    <li>Белгород</li>
+                    <li>Березники</li>
+                    <li>Комсомольск-на-Амуре</li>
+                    <li>Королёв</li>
+                    <li>Красногорск</li>
+                    <li>Краснодар</li>
+                    <li>Лениногорск</li>
+                    <li>Ленинск-Кузнецкий</li>
+                    <li>Лобня</li>
+                    <li>Майкоп</li>
+                    <li>Махачкала</li>
+                    <li>Москва</li>
+                    <li>Ростов-на-Дону</li>
+                    <li>Рязань</li>
+                    <li>Салават</li>
+                    <li>Самара</li>
+                    <li>Сарапул</li>
+                    <li>Саратов</li>
+                    <li>Северск</li>
+                    <li>Серпухов</li>
+                    <li>Смоленск</li>
+                    <li>Сочи</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal map -->
+    <div id="map" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog_md modal-dialog_center">
+        <div class="modal__in modal__in-map">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="modal__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6042.489935410792!2d30.521729665727978!3d50.44940642187611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1469694943319"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Buy -->
+    <div id="fast-buy" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog_order modal-dialog_left">
+        <div class="modal__in">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <form action="/" class="order">
+            <div class="order__head">
+              <div class="order__title title">Заказ в один клик</div>
+              <p>Оставьте свои контактные данные.</p>
+              <p>Наши менеджеры свяжутся с вами для уточнения деталей заказа.</p>
+            </div>
+            <div class="order__body">
+              <div class="order__field">
+                <div class="order__label">
+                  <div class="label label_form">Регион</div>
+                </div>
+                <div class="order__input">
+                  <select class="js-select">
+								<option value="Москва">Москва</option>
+								<option value="Киев">Киев</option>
+								<option value="Москва">Москва</option>
+								<option value="Киев">Киев</option>
+								<option value="Москва">Москва</option>
+								<option value="Киев">Киев</option>
+								<option value="Москва">Москва</option>
+								<option value="Киев">Киев</option>
+								<option value="Москва">Москва</option>
+								<option value="Киев">Киев</option>
+							</select>
+                </div>
+              </div>
+              <div class="order__field">
+                <div class="order__label">
+                  <label for="order-name" class="label label_form">Имя</label>
+                </div>
+                <div class="order__input">
+                  <input type="text" class="input" id="order-name">
+                </div>
+              </div>
+              <div class="order__field">
+                <div class="order__label">
+                  <label for="order-surname" class="label label_form">Фамилия</label>
+                </div>
+                <div class="order__input">
+                  <input type="text" class="input" id="order-surname">
+                </div>
+              </div>
+              <div class="order__field">
+                <div class="order__label">
+                  <label for="order-phone" class="label label_form">Телефон</label>
+                </div>
+                <div class="order__input">
+                  <div class="field-phone">
+                    <div class="field-phone__code">+7</div>
+                    <div class="field-phone__number">
+                      <input type="text" class="input" id="order-phone">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order__field">
+                <div class="order__label">
+                  <label for="order-email" class="label label_form">Email</label>
+                </div>
+                <div class="order__input">
+                  <input type="text" class="input" id="order-email">
+                </div>
+              </div>
+              <div class="order__btn">
+                <button class="btn btn_blue"><span>Оформить заказ</span></button>
+              </div>
+              <div class="order__text">Нажитаем кнопки «Оформить заказ» я даю свое согласие на обработку персональных данных в соответствии с указанным здесь условиями.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Modal guarantee -->
+    <div id="guarantee" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog_sm modal-dialog_center">
+        <div class="modal__in">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="step-modal">
+            <div class="step-modal__icon">
+              <svg class="icon icon-like"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+
+            </div>
+            <div class="step-modal__title">Гарантия честной цены</div>
+            <p>Чтобы наши цены были честными, мы каждый день сравниваем их с ценами 12 других продавцов*. Если вы найдете цену ниже, мы дадим вам скидку в размере этой разницы.</p>
+            <div class="step-modal__btn">
+              <a href="#" class="btn btn_blue">
+                <span>Подробнее</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal delivery -->
+    <div id="delivery" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog_sm modal-dialog_center">
+        <div class="modal__in">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="step-modal">
+            <div class="step-modal__icon">
+              <svg class="icon icon-delivery-empty"><use xlink:href="img/sprite.svg#icon-delivery-empty"></use></svg>
+
+            </div>
+            <div class="step-modal__title">Быстрая доставка</div>
+            <p>Чтобы наши цены были честными, мы каждый день сравниваем их с ценами 12 других продавцов*. Если вы найдете цену ниже, мы дадим вам скидку в размере этой разницы.</p>
+            <div class="step-modal__btn">
+              <a href="#" class="btn btn_blue">
+                <span>Подробнее</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal production -->
+    <div id="production" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog_sm modal-dialog_center">
+        <div class="modal__in">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="step-modal">
+            <div class="step-modal__icon">
+              <svg class="icon icon-medal"><use xlink:href="img/sprite.svg#icon-medal"></use></svg>
+
+            </div>
+            <div class="step-modal__title">Гарантия производителя</div>
+            <p>Чтобы наши цены были честными, мы каждый день сравниваем их с ценами 12 других продавцов*. Если вы найдете цену ниже, мы дадим вам скидку в размере этой разницы.</p>
+            <div class="step-modal__btn">
+              <a href="#" class="btn btn_blue">
+                <span>Подробнее</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal credit -->
+    <div id="credit" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog_sm modal-dialog_center">
+        <div class="modal__in">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="step-modal">
+            <div class="step-modal__icon">
+              <svg class="icon icon-bank"><use xlink:href="img/sprite.svg#icon-bank"></use></svg>
+
+            </div>
+            <div class="step-modal__title">Доступно в ближайшее время</div>
+            <p>Чтобы наши цены были честными, мы каждый день сравниваем их с ценами 12 других продавцов*. Если вы найдете цену ниже, мы дадим вам скидку в размере этой разницы.</p>
+            <div class="step-modal__btn">
+              <a href="#" class="btn btn_blue">
+                <span>Подробнее</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal discount -->
+    <div id="discount" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog_sm modal-dialog_center">
+        <div class="modal__in is-finished">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="discount">
+            <div class="discount__icon">
+              <svg class="icon icon-sale"><use xlink:href="img/sprite.svg#icon-sale"></use></svg>
+
+            </div>
+            <div class="discount__title">Сообщить о скидке</div>
+            <p>Укажите свою почту и мы вас обязательно оповестим о появлении скидки на товар</p>
+            <form action="/">
+              <div class="discount__field">
+                <input type="text" class="input" placeholder="Email">
+              </div>
+              <div class="discount__btn">
+                <button class="btn btn_blue" disabled>
+							<span>Подписаться</span>
+						</button>
+              </div>
+            </form>
+          </div>
+          <div class="discount-thx">
+            <div class="discount-thx__inner">
+              <div class="discount-thx__icon">
+                <svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+              </div>
+              <div class="discount-thx__title">Спасибо, подписка оформлена</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal favorite -->
+    <div id="favorite" class="modal fade js-modal-autoclose" tabindex="-1">
+      <div class="modal-dialog modal-dialog_sm modal-dialog_center">
+        <div class="modal__in">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="thx">
+            <div class="thx__inner">
+              <div class="thx__icon">
+                <svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+              </div>
+              <div class="thx__title">Вы добавили данный товар в избранное.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal feedback-thx -->
+    <div id="feedback-thx" class="modal fade js-modal-autoclose" tabindex="-1">
+      <div class="modal-dialog modal-dialog_sm modal-dialog_center">
+        <div class="modal__in">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="thx">
+            <div class="thx__inner">
+              <div class="thx__icon">
+                <svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+              </div>
+              <div class="thx__title">Мы свяжемся с вами через 10-15 минут.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal subscribe-thx -->
+    <div id="subscribe-thx" class="modal fade js-modal-autoclose" tabindex="-1">
+      <div class="modal-dialog modal-dialog_sm modal-dialog_center">
+        <div class="modal__in">
+          <button type="button" class="modal__close" data-dismiss="modal">
+				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+          <div class="thx">
+            <div class="thx__inner">
+              <div class="thx__icon">
+                <svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+              </div>
+              <div class="thx__title">Спасибо, подписка оформлена</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN scripts -->
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+
+  </body>
+
+</html>

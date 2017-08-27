@@ -1,0 +1,344 @@
+---
+title: Catalog
+headerMod: header_small
+activeLink: 0
+breadcrumbs: [
+	'Главная',
+	'Для кухни'
+]
+activeBC: 1
+steps: [
+	{
+		icon: 'bank',
+		title: 'Купить в кредит',
+		text: 'Доступно в ближайшее время',
+		modal: '#credit'
+	},
+	{
+		icon: 'like',
+		title: 'Гарантия честной цены',
+		modal: '#guarantee'
+	},
+	{
+		icon: 'medal',
+		title: 'Гарантия производителя',
+		modal: '#production'
+	},
+	{
+		icon: 'delivery-empty',
+		title: 'Быстрая доставка',
+		modal: '#delivery'
+	}
+]
+---
+
+{#
+steps: [
+	{
+		icon: 'bank',
+		title: 'Купить в кредит'
+	},
+	{
+		icon: 'design',
+		title: 'Заказать дизайн проект'
+	},
+	{
+		icon: 'tools',
+		title: 'Инструкция по сборке'
+	},
+	{
+		icon: 'like',
+		title: 'Гарантия качества'
+	}
+] #}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+<div class="page">
+	<div class="page__inner">
+		{% include "partials/_breadcrumbs.html" %}
+		<div class="page__container page__container_catalog">
+			<div class="catalog">
+				<div class="catalog__row js-catalog-slider">
+					<div class="catalog__col catalog__col_lg">
+						<div class="c-banner">
+							<div class="c-banner__inner" style="background-image: url(img/c-banner.jpg);">
+								<div class="c-banner__info">
+									<div class="c-banner__info-in">
+										<a href="#" class="c-banner__title">Кухни</a>
+										<div class="c-banner__text">
+											<p class="js-cut-text">Кухня это место, где семья проводит значительное количество времени. Здесь готовят еду, общаются с гостями и просто проводят время за разными делами. <br />
+											Создать комфортные условия для приготовления пищи и передать особую атмосферу домашнего уюта помогут готовые кухонные гарнитуры. <br />
+											Сегодня кухонные гарнитуры могут быть выполнены в различном стиле: классика, хай-тек, кантри, модерн и многие другие. Многообразие современных материалов и форм позволят с легкостью подобрать кухню под стиль дома.</p>
+										</div>
+									</div>
+								</div>
+								<div class="c-banner__tags">
+									<ul>
+										<li><a href="#">Кухни классика,</a></li>
+										<li><a href="#">Кухни модерн,</a></li>
+										<li><a href="#">Готовые решения</a></li>
+									</ul>
+								</div>
+								<div class="c-banner__more">
+									<a href="#" class="link-more link-more_big link-more_light">
+										<span>Больше</span>
+										<div class="link-more__visible">
+											{{mixins.icon('next')}}
+										</div>
+										<div class="link-more__hidden">
+											{{mixins.icon('next')}}
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__col catalog__col_sm">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false,
+							favorite: 'is-favorite'
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+				</div>
+				<div class="catalog__row js-catalog-slider">
+					<div class="catalog__col catalog__col_sm">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_md">
+						<div class="c-banner">
+							<div class="c-banner__inner" style="background-image: url(img/c-banner.jpg);">
+								<div class="c-banner__info">
+									<div class="c-banner__info-in">
+										<a href="#" class="c-banner__title">Обеденные группы</a>
+										<div class="c-banner__text">
+											<p class="js-cut-text">Обеденный стол всегда был местом сбора семьи или гостей вместе на завтрак, обед и ужин. Это традиционно центральное место на кухне или в столовой. <br />
+											Чтобы стол и стулья смотрелись как единый ансамбль, лучше всего отдавать предпочтение готовым обеденным группам, в наборы которых уже входят идеально подходящие друг к другу стол и стулья.</p>
+										</div>
+									</div>
+								</div>
+								<div class="c-banner__tags">
+									<ul>
+										<li><a href="#">Кухонные столы,</a></li>
+										<li><a href="#">Кухонные стулья,</a></li>
+										<li><a href="#">Барные стулья,</a></li>
+										<li><a href="#">Кухонные уголки</a></li>
+									</ul>
+								</div>
+								<div class="c-banner__more">
+									<a href="#" class="link-more link-more_big link-more_light">
+										<span>Больше</span>
+										<div class="link-more__visible">
+											{{mixins.icon('next')}}
+										</div>
+										<div class="link-more__hidden">
+											{{mixins.icon('next')}}
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+				</div>
+				<div class="catalog__row js-catalog-slider">
+					<div class="catalog__col catalog__col_lg">
+						<div class="c-banner">
+							<div class="c-banner__inner" style="background-image: url(img/c-banner.jpg);">
+								<div class="c-banner__info">
+									<div class="c-banner__info-in">
+										<a href="#" class="c-banner__title">Декор <br>для кухни</a>
+										<div class="c-banner__text">
+											<p class="js-cut-text">Кухня должна быть не только функциональна, но и эстетически привлекательна. Помещение, которое нравится вам, будет вдохновлять для приготовления новых и новых шедевров. Вот главная причина, по которой стоит купить декор для кухни.</p>
+										</div>
+									</div>
+								</div>
+								<div class="c-banner__tags">
+									<ul>
+										<li><a href="#">Вазы и цветы</a></li>
+										<li><a href="#">Кашпо и горшки,</a></li>
+										<li><a href="#">Коробки и корзины,</a></li>
+										<li><a href="#">Декор интерьера,</a></li>
+										<li><a href="#">Сундуки, Фигурки и статуэтки,</a></li>
+										<li><a href="#">Зеркала,</a></li>
+										<li><a href="#">Картины и фоторамки,</a></li>
+										<li><a href="#">Часы,</a></li>
+										<li><a href="#">Ароматы для дома</a></li>
+									</ul>
+								</div>
+								<div class="c-banner__more">
+									<a href="#" class="link-more link-more_big link-more_light">
+										<span>Больше</span>
+										<div class="link-more__visible">
+											{{mixins.icon('next')}}
+										</div>
+										<div class="link-more__hidden">
+											{{mixins.icon('next')}}
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__col catalog__col_sm">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+				</div>
+				<div class="catalog__row js-catalog-slider">
+					<div class="catalog__col catalog__col_sm">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_md">
+						<div class="c-banner">
+							<div class="c-banner__inner" style="background-image: url(img/c-banner.jpg);">
+								<div class="c-banner__info">
+									<div class="c-banner__info-in">
+										<a href="#" class="c-banner__title">Освещение для кухни</a>
+										<div class="c-banner__text">
+											<p class="js-cut-text">В кухне должно быть хорошее освещение. Невозможно готовить пищу в полутемном пространстве без вреда для зрения. Кроме того, плохое освещение влияет на качество приготовления.</p>
+										</div>
+									</div>
+								</div>
+								<div class="c-banner__tags">
+									<ul>
+										<li><a href="#">Люстры и потолочные светильники,</a></li>
+										<li><a href="#">Бра,</a></li>
+										<li><a href="#">Споты,</a></li>
+										<li><a href="#">Торшеры,</a></li>
+										<li><a href="#">Настольные лампы</a></li>
+									</ul>
+								</div>
+								<div class="c-banner__more">
+									<a href="#" class="link-more link-more_big link-more_light">
+										<span>Больше</span>
+										<div class="link-more__visible">
+											{{mixins.icon('next')}}
+										</div>
+										<div class="link-more__hidden">
+											{{mixins.icon('next')}}
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+					<div class="catalog__col catalog__col_sm desktop-hidden">
+						{{mixins.item({
+							adaptive: true,
+							priceSmall: false
+						})}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/_favorite.html" %}
+	{% include "partials/_steps.html" %}
+	{% include "partials/_description.html" %}
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

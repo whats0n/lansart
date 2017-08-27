@@ -1,0 +1,187 @@
+{% macro icon(i) %}
+<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+{% macro addItem() %}
+{#<label class="add-item js-tooltip" title="Добавить в корзину">
+	<input type="checkbox">
+	<span>
+		{{icon('basket')}}
+		{{icon('check')}}
+	</span>
+</label>#}
+<button class="add-item js-tooltip js-add-item" title="Добавить в корзину">
+	<span>
+		{{icon('basket')}}
+		{{icon('check')}}
+	</span>
+</button>
+{% endmacro %}
+
+{% macro item(config) %}
+{% if config.adaptive %}
+<div class="item item_adaptive js-item">
+{% elif config.tablet %}
+<div class="item item_tablet js-item">
+{% else %}
+<div class="item js-item">
+{% endif %}
+	{#  {{config.favorite}} is-favorite #}
+	{% if config.delivery %}
+	<div class="free-delivery">
+		{{icon('delivery')}}
+		<span>Бесплатно</span>
+	</div>
+	{% endif %}
+	<div class="item__img">
+		{# {{stickerFavorite()}} #}
+		<div class="item__img-in" style="background-image: url(img/item.png);"></div>
+	</div>
+	<div class="item__box">
+		{{addItem()}}
+		<a href="#" class="item__category">Кухонный гарнитур</a>
+		<a href="#" class="item__title">Кухонный гарнитур Amarone</a>
+		<ul class="item__colors">
+			<li><img src="img/colors1.png" alt=""></li>
+			<li><img src="img/colors2.png" alt=""></li>
+			<li><img src="img/colors3.png" alt=""></li>
+		</ul>
+		<div class="item__price">
+			<strong>240 758 Р</strong>
+			{% if config.priceSmall == false %}
+			{% else %}
+			<small>139 847 Р</small>
+			{% endif %}
+		</div>
+	</div>
+	<button class="item__add js-item-add"><span></span></button>
+	<div class="item__cover">
+		<ul>
+			<li>
+				<a href="#" data-toggle="modal" data-target="#favorite">
+					<div class="item__icon">
+						<span>
+							{{icon('heart')}}
+						</span>
+					</div>
+					<div class="item__name">Добавить в избранное</div>
+				</a>
+			</li>
+			<li>
+				<a href="#" data-toggle="modal" data-target="#fast-buy">
+					<div class="item__icon">
+						<span>
+							{{icon('basket')}}
+						</span>
+					</div>
+					<div class="item__name">Быстрый заказ</div>
+				</a>
+			</li>
+			<li>
+				<a href="#" data-toggle="modal" data-target="#discount">
+					<div class="item__icon">
+						<span>
+							{{icon('sale')}}
+						</span>
+					</div>
+					<div class="item__name">Сообщить о скидке</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro bigItem(config) %}
+<div class="b-item js-item">
+	<div class="b-item__bg"><div class="b-item__bg-in" style="background-image: url(img/b-item.png);"></div></div>
+	<div class="b-item__inner">
+		<div class="b-item__img" style="background-image: url(img/b-item.png);"></div>
+		<div class="b-item__info">
+			<div class="b-item__icon">
+				<span>
+					{{icon('kitchen')}}
+				</span>
+			</div>
+			<a href="#" class="b-item__category">Кухонный гарнитур</a>
+			<a href="#" class="b-item__title js-cut-text">Кухонный гарнитур Amarone</a>
+			<p class="js-cut-text">Неповторимый стиль с элитной мебелию от Tomassi Cucine</p>
+			<div class="b-item__price">от 240 758 Р</div>
+			<button class="btn btn_blue"><span>Под заказ {{icon('basket')}}</span></button>
+		</div>
+	</div>
+	<button class="b-item__add js-item-add">
+		<span></span>
+	</button>
+	<div class="b-item__cover">
+		<ul>
+			<li>
+				<a href="#" data-toggle="modal" data-target="#favorite">
+					<div class="item__icon">
+						<span>
+							{{icon('heart')}}
+						</span>
+					</div>
+					<div class="item__name">Добавить в избранное</div>
+				</a>
+			</li>
+			<li>
+				<a href="#" data-toggle="modal" data-target="#fast-buy">
+					<div class="item__icon">
+						<span>
+							{{icon('basket')}}
+						</span>
+					</div>
+					<div class="item__name">Быстрый заказ</div>
+				</a>
+			</li>
+			<li>
+				<a href="#" data-toggle="modal" data-target="#discount">
+					<div class="item__icon">
+						<span>
+							{{icon('sale')}}
+						</span>
+					</div>
+					<div class="item__name">Сообщить о скидке</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro buttonViews(config) %}
+{% if config.big %}
+<a href="#" class="btn-views btn-views_big">
+{% else %}
+<a href="#" class="btn-views">
+{% endif %}
+	<span>{{config.text}}</span>
+</a>
+{% endmacro %}
+
+{% macro buttonLikes(config) %}
+{% if config.big %}
+<a href="#" class="btn-likes btn-likes_big">
+{% else %}
+<a href="#" class="btn-likes">
+{% endif %}
+	<span>{{config.text}}</span>
+</a>
+{% endmacro %}
+
+{% macro buttonComments(config) %}
+{% if config.big %}
+<a href="#" class="btn-comments btn-comments_big">
+{% else %}
+<a href="#" class="btn-comments">
+{% endif %}
+	<span>{{config.text}}</span>
+</a>
+{% endmacro %}
+
+{% macro stickerFavorite() %}
+<div class="sticker-favorite">
+	{{icon('heart-full')}}
+</div>
+{% endmacro %}

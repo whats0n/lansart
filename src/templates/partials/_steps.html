@@ -1,0 +1,29 @@
+<!-- begin steps  -->
+{% if stepsVisible %}
+<div class="steps steps_visible page__section">
+{% else %}
+<div class="steps page__section">
+{% endif %}
+	<div class="inner">
+		<ul class="steps__list">
+			{% for step in steps%}
+			<li>
+				{% if step.modal %}
+				<a href="#" class="step" data-toggle="modal" data-target="{{step.modal}}">
+				{% else %}
+				<a href="#" class="step">
+				{% endif %}
+					<div class="step__icon">
+						{{mixins.icon(step.icon)}}
+					</div>
+					<div class="step__title">{{step.title}}</div>
+					{% if step.text %}
+					<div class="step__text">{{step.text}}</div>
+					{% endif %}
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end steps -->

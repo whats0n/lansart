@@ -1,0 +1,109 @@
+---
+title: Account/orders
+headerMod: header_small
+breadcrumbs: [
+	'Главная',
+	'Профиль',
+	'Мои заказы'
+]
+activeBC: 2
+accNav: [
+	{
+		text: 'Мои данные'
+	},
+	{
+		text: 'Мои заказы',
+		active: true
+	},
+	{
+		text: 'Избранное'
+	}
+]
+profile: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+<div class="page">
+	<div class="page__inner">
+		{% include "partials/_breadcrumbs.html" %}
+		<div class="page__container account">
+			<div class="account__title title">Профиль</div>
+			<div class="account__sidebar">
+				<div class="acc-nav">
+					<ul class="acc-nav__list">
+						{% for accLink in accNav %}
+						{% if accLink.active %}
+						<li class="acc-nav__item"><a href="#" class="acc-nav__link is-active">{{ accLink.text }}</a></li>
+						{% else %}
+						<li class="acc-nav__item"><a href="#" class="acc-nav__link">{{ accLink.text }}</a></li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="account__content">
+				{% set orders = {
+					title: {
+						number: 'Заказ',
+						date: 'Дата',
+						addressee: 'Адресат',
+						price: 'Сумма заказа',
+						status: 'Статус'
+					},
+					list: [
+						{
+							number: 'RU131215-030599',
+							date: '12.01.15',
+							addressee: 'Олег Топталов',
+							price: '37 030 Р',
+							status: 'Передан в службу доставки'
+						},
+						{
+							number: '20130806-062134',
+							date: '08.12.16',
+							addressee: 'Олег Топталов',
+							price: '780 Р',
+							status: 'Передан в службу доставки'
+						},
+						{
+							number: 'RU131215-030599',
+							date: '23.06.16',
+							addressee: 'Олег Топталов',
+							price: '14 520 Р',
+							status: 'Передан в службу доставки'
+						}
+					]
+				} %}
+				<div class="orders">
+					<div class="orders__title">ИСТОРИЯ ЗАКАЗОВ</div>
+					<div class="orders__head">
+						<div class="orders__subtitle orders__number">{{orders.title.number}}</div>
+						<div class="orders__subtitle orders__date">{{orders.title.date}}</div>
+						<div class="orders__subtitle orders__addressee">{{orders.title.addressee}}</div>
+						<div class="orders__subtitle orders__price">{{orders.title.price}}</div>
+						<div class="orders__subtitle orders__status">{{orders.title.status}}</div>
+					</div>
+					<div class="orders__list">
+						{% for order in orders.list %}
+						<a href="#" class="orders__item">
+							<div class="orders__col orders__number" data-title="{{orders.title.number}}">{{order.number | safe}}</div>
+							<div class="orders__col orders__date" data-title="{{orders.title.date}}">{{order.date | safe}}</div>
+							<div class="orders__col orders__addressee" data-title="{{orders.title.addressee}}">{{order.addressee | safe}}</div>
+							<div class="orders__col orders__price" data-title="{{orders.title.price}}">{{order.price | safe}}</div>
+							<div class="orders__col orders__status" data-title="{{orders.title.status}}">{{order.status | safe}}</div>
+							{{mixins.icon('right')}}
+						</a>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

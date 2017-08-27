@@ -1,0 +1,123 @@
+.boxes
+	position: relative
+	padding: 0 0 20px
+	&__inner
+		@extend %inner
+	&__title
+		line-height: 1
+		margin: -25px 0 24px
+		width: 100%
+		float: left
+		padding: 0 20px
+		+r1
+			margin: -23px 0 8px
+		+r2
+			margin: -20px 0 8px
+			padding: 0 16px
+	&__row
+		clear: both
+		+clr
+		margin: 0 -10px
+		font-size: 0
+		+r1
+			// margin: 0 -8px
+			margin: 0
+			padding-left: 16px
+		+r2
+			// margin: 0 -4px
+			padding: 0
+	&__col
+		width: 33.33%
+		padding: 10px 10px 30px
+		display: inline-block
+		vertical-align: top
+		+r1
+			width: 304px
+			padding: 0 8px 30px
+		+r2
+			width: 296px
+			padding: 0 4px 30px
+	&__arrows
+		max-width: 1020px
+		margin: 0 auto
+		position: relative
+		z-index: 22
+		+r1
+			display: none
+		&-in
+			position: absolute
+			bottom: 100%
+			margin-bottom: -5px
+			right: 0
+			width: 100px
+			text-align: right
+			font-size: 0
+
+.box
+	position: relative
+	transition: box-shadow 0.25s ease
+	+hover
+		box-shadow: 0 4px 8px rgba(62, 76, 102, 0.2)
+		&:before
+			opacity: 1
+		.box
+			&__title
+				color: $blue
+	&:before
+		content: ""
+		position: absolute
+		top: 10px
+		left: 20px
+		right: 20px
+		bottom: 0
+		border-radius: 2px
+		box-shadow: 0 12px 24px rgba(62, 76, 102, 0.2)
+		background: rgba(62, 76, 102, 0.2)
+		opacity: 0
+		transform: translate3d(0,0,0)
+		transition: opacity 0.25s ease
+	&__inner
+		display: block
+		background-color: whitesmoke
+		border-radius: 2px
+		position: relative
+		height: 160px
+		padding: 18px 20px 20px 140px
+		overflow: hidden
+		position: relative
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 120px
+		// background-size: contain
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		mix-blend-mode: multiply
+		+gpu
+		border-radius: 2px 0 0 2px
+	&__info
+		height: 100%
+		overflow: hidden
+	&__title, p
+		letter-spacing: 0.2px
+	&__title
+		font-size: 18px
+		color: $dark
+		line-height: 1.11
+		+as
+		transition: color 0.25s ease-out
+		&:after
+			content: ""
+			display: block
+			width: 20px
+			height: 2px
+			border-radius: 1px
+			background: $blue
+			margin: 11px 0 9px
+	p
+		font-size: 14px
+		line-height: 1.43
+		color: $gray

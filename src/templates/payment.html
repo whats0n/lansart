@@ -1,0 +1,117 @@
+---
+title: Payment
+headerMod: header_small
+breadcrumbs: [
+	'Главная',
+	'Оплата'
+]
+activeBC: 1
+profile: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+<div class="page">
+	<div class="page__inner">
+		{% include "partials/_breadcrumbs.html" %}
+		{% set methods = [
+			{
+				title: 'Способы оплаты',
+				items: [
+					{
+						title: 'Наличный расчет',
+						sidebar: {
+							title: 'Возможные способы доставки:',
+							list: [
+								'Доставка курьерской службой',
+								'Срочная доставка',
+								'Самовывоз из офиса интернет-магазина'
+							]
+						},
+						text: [
+							[
+								'Расплатиться наличными можно непосредственно с курьером, когда он доставит заказ, <br>либо в магазине «Lansart».'
+							]
+						]
+					},
+					{
+						title: 'Оплата платежной картой при получении заказа',
+						sidebar: {
+							title: 'Возможные способы доставки:',
+							list: [
+								'Доставка курьерской службой',
+								'Срочная доставка',
+								'Самовывоз из офиса интернет-магазина'
+							]
+						},
+						text: [
+							[
+								'Расплатиться наличными можно непосредственно с курьером, когда он доставит заказ, <br>либо в магазине «Lansart».'
+							]
+						]
+					},
+					{
+						title: 'Безналичный расчет',
+						sidebar: {
+							title: 'Возможные способы доставки:',
+							list: [
+								'Доставка курьерской службой',
+								'Срочная доставка',
+								'Самовывоз из офиса интернет-магазина'
+							]
+						},
+						text: [
+							[
+								'Расплатиться наличными можно непосредственно с курьером, когда он доставит заказ, <br>либо в магазине «Lansart».'
+							]
+						]
+					}
+				]
+			}
+		] %}
+
+		<div class="methods">
+			<div class="methods__heading">
+				<div class="title">Способы оплаты</div>
+			</div>
+			<hr class="methods__line">
+			{% for method in methods %}
+			<div class="methods__section">
+				{% for item in method.items %}
+				<div class="methods__item">
+					<div class="methods__head js-list-btn">
+						<div class="methods__subtitle">{{item.title}}</div>
+						<i class="methods__plus"></i>
+					</div>
+					<div class="methods__block js-list">
+						<div class="methods__info">
+							{% for text in item.text %}
+							<div class="methods__text">
+								{% for paragraph in text %}
+								<p>{{paragraph | safe}}</p>
+								{% endfor %}
+							</div>
+							{% endfor %}
+						</div>
+						<div class="methods__sidebar">
+							<div class="methods__subtitle">{{item.sidebar.title}}</div>
+							<ul class="methods__list">
+								{% for li in item.sidebar.list %}
+								<li>{{li}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

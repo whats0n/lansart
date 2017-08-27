@@ -1,0 +1,57 @@
+.text
+	&__title,
+	&__subtitle
+		margin-bottom: 8px
+		line-height: 1.33
+		+as
+		letter-spacing: 0.3px
+		color: $dark
+		+r2
+			font-size: 16px
+	&__title
+		font-size: 22px
+		+r2
+			font-size: 18px
+	&__subtitle
+		font-size: 18px
+		+r2
+			font-size: 16px
+	p, li
+		+hr
+		font-size: 13px
+		line-height: 1.54
+		color: $gray
+		+r2
+			font-size: 11px
+			line-height: 16px
+			margin-bottom: 17px
+		a
+			color: $blue
+			+hover
+				text-decoration: underline
+	p
+		margin-bottom: 20px
+		text-align: justify
+	ul, ol
+		padding-bottom: 16px
+		li
+			margin: 0 0 4px
+	ul
+		li
+			text-indent: 21px
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				top: 7px
+				left: 0
+				width: 3px
+				height: 3px
+				background: $gray
+				border-radius: 50%
+				+r2
+					top: 5px
+	ol
+		li
+			list-style-type: decimal
+			list-style-position: inside

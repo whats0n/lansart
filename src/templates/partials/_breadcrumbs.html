@@ -1,0 +1,13 @@
+<!-- begin breadcrumbs  -->
+<ul class="breadcrumbs">
+	{% for itemBC in breadcrumbs %}
+	<li>
+		{% if breadcrumbs[activeBC] == itemBC %}
+		<a href="#" class="is-active">{{itemBC}}</a>
+		{% else %}
+		<a href="#">{{itemBC}}</a>
+		{% endif %}
+	</li>
+	{% endfor %}
+</ul>
+<!-- end breadcrumbs -->

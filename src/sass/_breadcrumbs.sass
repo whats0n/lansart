@@ -1,0 +1,59 @@
+//breadcrumbs
+.breadcrumbs
+	font-size: 0
+	padding: 0 20px
+	+r1
+		margin-bottom: 12px
+		padding: 0
+	+r2
+		margin-bottom: 8px
+	li
+		font-size: 13px
+		line-height: 30px
+		letter-spacing: 0.19px
+		+r1
+			font-size: 11px
+			letter-spacing: 0.16px
+			line-height: 16px
+		&:nth-child(n+3)
+			+r1
+				display: none
+		&:nth-child(2)
+			+r1
+				font-size: 0
+			&:before, &:after
+				+r1
+					font-size: 11px
+			&:after
+				+r1
+					content: "..."
+		&:last-child
+			+r1
+				display: inline-block
+				font-size: 11px
+			&:after
+				+r1
+					font-size: 0
+		&:first-child
+			&:before
+				display: none
+		&:before
+			content: "–"
+			display: inline-block
+			vertical-align: top
+			letter-spacing: 0.15px
+			padding: 0 7px
+
+	a, li
+		color: $gray
+		display: inline-block
+		vertical-align: top
+		+r1
+			color: #525760
+	a
+		transition: color 0.25s ease-out
+		.no-touch &
+			&:hover
+				color: $blue
+		&.is-active
+			color: $blue

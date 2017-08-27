@@ -1,0 +1,62 @@
+<!-- begin favorite  -->
+<div class="favorite page__section">
+	<div class="inner">
+		{% set favoriteTags = [
+			'Приготовление пищи,',
+			'Бокалы и стаканы,',
+			'Столовые приборы,',
+			'Столовые сервизы,',
+			'Детская посуда,',
+			'Чай и кофе,',
+			'Сервировка стола,',
+			'Кухонные принадлежности'
+		] %}
+		{% set favItems = [
+			{
+				category: 'Посуда',
+				img: 'item.png'
+			},
+			{
+				category: 'Посуда',
+				img: 'item.png'
+			},
+			{
+				category: 'Посуда',
+				img: 'item.png'
+			},
+			{
+				category: 'Посуда',
+				img: 'item.png'
+			},
+			{
+				category: 'Посуда',
+				img: 'item.png'
+			},
+			{
+				category: 'Посуда',
+				img: 'item.png'
+			}
+		] %}
+		<div class="favorite__row js-favorite-slider">
+			{% for favItem in favItems %}
+			<div class="favorite__col">
+				<div class="f-item">
+					<div href="#" class="f-item__inner">
+						<a href="#" class="f-item__img" style="background-image: url(img/{{favItem.img}});"></a>
+						<div class="f-item__box">
+							<a href="#" class="f-item__category">{{favItem.category}}</a>
+							{{mixins.icon('next')}}
+							<p class="js-cut-text">
+								{% for tag in favoriteTags %}
+								<a href="#">{{tag}} </a>
+								{% endfor %}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end favorite -->

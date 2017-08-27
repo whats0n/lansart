@@ -1,0 +1,182 @@
+<!-- Modal Choose Colors -->
+<div id="choose-colors" class="modal fade js-scrollupdate js-choose-colors" tabindex="-1">
+	<div class="modal-dialog modal-dialog_order modal-dialog_left">
+		<div class="modal__in">
+			<button type="button" class="modal__close" data-dismiss="modal">
+				{{mixins.icon('close')}}
+			</button>
+			<div class="choose-colors">
+				<div class="choose-colors__title">Выбор цвета</div>
+				{% set sections = [
+					{
+						subtitle: 'Каркас',
+						name: 'frame',
+						mainColor: true,
+						items: [
+							{
+								img: 'frame-1.jpg',
+								title: 'Белый',
+								checked: 'checked',
+								background: '#88665a',
+								boxShadow: '0 2px 4px rgba(136, 102, 89, 0.3)',
+								info: 'стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'frame-2.jpg',
+								title: 'Глянцевый белый',
+								background: 'red',
+								boxShadow: '0 2px 4px rgba(136, 102, 89, 0.3)',
+								info: '1стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'frame-3.jpg',
+								title: 'Беленый дуб',
+								background: 'blue',
+								boxShadow: '0 2px 4px rgba(136, 102, 89, 0.3)',
+								info: '2стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'frame-4.jpg',
+								title: 'Грецкий орех',
+								disabled: true,
+								background: 'green',
+								boxShadow: '0 2px 4px rgba(136, 102, 89, 0.3)',
+								info: '3стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'frame-2.jpg',
+								title: 'Глянцевый белый',
+								background: 'red',
+								boxShadow: '0 2px 4px rgba(136, 102, 89, 0.3)',
+								info: '4стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'frame-3.jpg',
+								title: 'Беленый дуб',
+								background: 'blue',
+								boxShadow: '0 2px 4px rgba(136, 102, 89, 0.3)',
+								info: '5стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'frame-4.jpg',
+								title: 'Грецкий орех',
+								disabled: true,
+								background: 'green',
+								boxShadow: '0 2px 4px rgba(136, 102, 89, 0.3)',
+								info: '6стекло опаловое (молочно-голубое) матированное закалённое'
+							}
+						]
+					},
+					{
+						subtitle: 'Столешница',
+						name: 'tabletop',
+						items: [
+							{
+								img: 'tabletop-1.jpg',
+								title: 'Белая',
+								checked: 'checked',
+								info: '7стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-2.jpg',
+								title: 'Мрамор',
+								disabled: true,
+								info: '8стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-3.jpg',
+								title: 'Бамбук',
+								info: '9стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-4.jpg',
+								title: 'Камень',
+								info: '10стекло опаловое (молочно-голубое) матированное закалённое'
+							}
+						]
+					},
+					{
+						subtitle: 'Ножка',
+						name: 'table-leg',
+						items: [
+							{
+								img: 'tabletop-1.jpg',
+								title: 'Белая',
+								checked: 'checked',
+								info: '11стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-2.jpg',
+								title: 'Мрамор',
+								disabled: true,
+								info: '12стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-3.jpg',
+								title: 'Бамбук',
+								info: '13стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-4.jpg',
+								title: 'Камень',
+								info: '14стекло опаловое (молочно-голубое) матированное закалённое'
+							}
+						]
+					}
+				] %}
+				<div class="choose-colors__modal js-choose-colors-modal">
+					<button class="choose-colors__close js-choose-colors-close">{{mixins.icon('close')}}</button>
+					<div class="choose-colors__img js-choose-colors-preview"></div>
+					<div class="choose-colors__modal-in">
+						<div class="choose-colors__heading js-choose-colors-heading">Lorem.</div>
+						<div class="choose-colors__text js-choose-colors-description">Lorem ipsum dolor sit amet.</div>
+					</div>
+				</div>
+				<form action="/" class="choose-colors__form js-choose-colors-form">
+					<div class="choose-colors__body js-scrollbar-y">
+						<div class="choose-colors__body-in">
+							{% for section in sections %}
+							<div class="choose-colors__section js-choose-colors-section">
+								<div class="choose-colors__subtitle">{{section.subtitle}}</div>
+								<div class="choose-colors__items js-scrollbar-x">
+									<div class="choose-colors__items-in">
+										{% for item in section.items %}
+										<div class="choose-colors__item js-choose-colors-item">
+											<label class="choose-color">
+												{% if item.disabled %}
+												<input type="radio" name="{{section.name}}" class="js-choose-colors-input" data-value="{{item.title}}" disabled>
+												{% else %}
+												<input type="radio" name="{{section.name}}" class="js-choose-colors-input" data-value="{{item.title}}" {{item.checked}}>
+												{% endif %}
+												<span class="choose-color__figure">
+													<span class="choose-color__img js-choose-colors-img" style="background-image: url(img/colors/{{item.img}});" data-img="img/colors/{{item.img}}"></span>
+													{%- if item.disabled -%}
+													<span class="choose-color__status">Временно нет</span>
+													{%- endif -%}
+												</span>
+												<span class="choose-color__title">{{item.title}}</span>
+												{% if section.mainColor %}
+												<i class="js-choose-colors-icon" style="background: {{item.background}}; box-shadow: {{item.boxShadow}};"></i>
+												{% endif %}
+											</label>
+											<div class="choose-colors__info js-choose-colors-info">{{item.info}}</div>
+										</div>
+										{% endfor %}
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="choose-colors__footer">
+						<div class="choose-colors__price">
+							<span>Стоимость:</span>
+							<strong>28 090 Р</strong>
+						</div>
+						<button class="btn btn_blue" type="submit"><span>Принять</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

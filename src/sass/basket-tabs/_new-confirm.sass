@@ -1,0 +1,65 @@
+.new-confirm
+	padding: 20px 0
+	min-height: 380px
+	+r2
+		padding: 16px 0 24px
+		min-height: 1px
+	&__box
+		+clr 
+		+r2
+			margin: 0 auto
+			max-width: 250px
+	&__label
+		width: 40%
+		float: left
+		padding: 6px 30px 4px
+		+r1
+			padding: 1px 30px
+		+r2
+			width: 100%
+			float: none
+			padding: 0 0 8px
+		.label
+			max-width: 175px
+			+r2
+				max-width: 100%
+	&__value
+		position: relative
+		max-width: 250px
+		padding: 6px 50px 20px 0
+		width: 60%
+		float: left
+		&_pull-right
+			margin-left: 40%
+			+r2
+				margin-left: 0
+		+r1
+			padding: 1px 50px 20px 0
+		+r2
+			width: 100%
+			float: none
+			padding: 0 50px 16px 0
+	&__list
+		+hr
+		font-size: 13px
+		line-height: 20px
+		span
+			color: $gray
+		em
+			color: $dark
+			font-style: normal
+			font-weight: normal
+	&__edit
+		position: absolute
+		top: -5px
+		right: 0
+	&__total
+		color: $blue
+		+as
+		font-size: 18px
+		line-height: 20px
+	&__footer
+		padding-top: 20px
+		font-size: 0
+		text-align: center
+		

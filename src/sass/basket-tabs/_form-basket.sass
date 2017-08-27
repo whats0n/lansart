@@ -1,0 +1,78 @@
+//form basket
+.form-basket
+	padding: 0 0 40px
+	+r1
+		padding: 0 0 24px
+	+r2
+		padding: 0 0 16px
+	&__tab
+		display: none
+		background: whitesmoke
+		&.is-active
+			display: block
+	&__inner
+		display: none
+		background: whitesmoke
+		&.is-active
+			display: block
+	&__head
+		+clr
+		padding: 20px
+		border-bottom: 1px solid #d9dbe1
+		+r2
+			padding: 16px 0
+	&__left, &__label
+		width: 40%
+		float: left
+		+r2
+			width: 100%
+			float: none
+	&__right, &__field
+		width: 60%
+		float: left
+		+r2
+			width: 100%
+			float: none
+	&__right, &__left
+		padding: 4px 0 5px
+		font-size: 0
+	&__label
+		padding: 6px 30px 4px
+		+r2
+			padding: 0 0 8px
+	&__body
+		padding: 20px 0
+		border-bottom: 1px solid #d9dbe1
+		min-height: 380px
+		+r2
+			padding: 16px 0 24px
+			min-height: 1px
+	&__box
+		+clr
+		padding: 0 20px
+		+r2
+			padding: 0
+	&__radios
+		+clr
+		padding: 10px 20px 10px
+		border-bottom: 1px solid #d9dbe1
+		font-size: 0
+		+r2
+			padding: 16px 0
+		li
+			display: inline-block
+			vertical-align: middle
+			width: 33.33%
+			padding: 4px 0 5px
+			+r2
+				width: 100%
+				display: block
+	p
+		font-size: 13px
+		letter-spacing: 0.19px
+		color: $gray
+		line-height: 20px
+	&__required
+		padding: 0 50px
+		+r2
+			padding: 0

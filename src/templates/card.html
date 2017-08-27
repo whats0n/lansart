@@ -1,0 +1,232 @@
+---
+title: Card
+headerMod: header_card
+activeLink: 0
+breadcrumbs: [
+	'Главная',
+	'Для кухни',
+	'Стулья',
+	'Барные стулья',
+	'Барный стул Walnut Veneer'
+]
+activeBC: 4
+stepsVisible: true
+steps: [
+	{
+		icon: 'bank',
+		title: 'Купить в кредит',
+		text: 'Доступно в ближайшее время',
+		modal: '#credit'
+	},
+	{
+		icon: 'like',
+		title: 'Гарантия честной цены',
+		modal: '#guarantee'
+	},
+	{
+		icon: 'medal',
+		title: 'Гарантия производителя',
+		modal: '#production'
+	},
+	{
+		icon: 'delivery-empty',
+		title: 'Быстрая доставка',
+		modal: '#delivery'
+	}
+]
+paginationSelect: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+<div class="page">
+	<div class="page__inner">
+		<div class="card">
+			<div class="card__title">Барный стул Walnut Veneer</div>
+			<div class="card__inner">
+				{% include "partials/_breadcrumbs.html" %}
+				<div class="card__section">
+					<div class="card__gallery js-gallery">
+						<div class="free-delivery free-delivery_big">
+							{{mixins.icon('delivery')}}
+							<span>Бесплатно</span>
+						</div>
+						{% set gallery = [
+							'img/card-slide.jpg',
+							'https://placecage.com/300/400',
+							'img/card-slide.jpg',
+							'https://placecage.com/300/400'
+						] %}
+						<div class="card__slider js-gallery-slider">
+							{% for slide in gallery %}
+							<div class="card-slide" >
+								<div class="card-slide__img js-gallery-slide" data-id="{{loop.index0}}" data-toggle="modal" data-target="#card-gallery">
+									<img src="{{slide}}" alt="">
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+						<div class="card__previews">
+							<button class="card__prev btn-prev js-gallery-prev">
+								<span class="btn-prev__visible">
+									{{mixins.icon('prev')}}
+								</span>
+								<span class="btn-prev__hidden">
+									{{mixins.icon('prev')}}
+								</span>
+							</button>
+							<button class="card__next btn-next js-gallery-next">
+								<span class="btn-next__visible">
+									{{mixins.icon('next')}}
+								</span>
+								<span class="btn-next__hidden">
+									{{mixins.icon('next')}}
+								</span>
+							</button>
+							{% set previews = [
+								'img/card-slide.jpg',
+								'https://placecage.com/300/400',
+								'img/card-slide.jpg',
+								'https://placecage.com/300/400'
+							] %}
+							<div class="card__previews-in js-gallery-preview">
+								{% for slide in previews %}
+								<div class="card__preview">
+									<div class="card__preview-in">
+										<img src="{{slide}}" alt="">
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					<div class="card__info">
+						<div class="card__top">
+							<div class="card__number">
+								<span>Артикул</span>
+								<strong>87241</strong>
+							</div>
+							<div class="rating">
+								<div class="stars">
+									<div class="stars__in" style="width: 91%;"></div>
+								</div>
+								{{mixins.icon('star')}}
+								<div class="rating__number">4,2</div>
+							</div>
+							<a href="#" class="link-comments js-tab-link-shadow" data-href="tab4">14 отзывов</a>
+						</div>
+						<h1 class="card__heading">Барный стул Walnut Veneer</h1>
+						<div class="card__features features">
+							<ul class="features__list">
+								<li>
+									<span class="features__title">Страна:</span>
+									<a href="#" class="features__text">Германия</a>
+								</li>
+								<li>
+									<span class="features__title">Бренд:</span>
+									<a href="#" class="features__text">Kare-design</a>
+								</li>
+								<li>
+									<span class="features__title">Размер:</span>
+									<strong class="features__text">120(В) - 80(Г) - 100(Ш)</strong>
+								</li>
+							</ul>
+							<a href="#" class="features__link js-tab-link-shadow" data-href="tab1">Все характеристики</a>
+						</div>
+						<div class="prod-settings">
+							<div class="prod-settings__box">
+								<div class="prod-settings__subtitle">Цвет</div>
+								<div class="prod-settings__field">
+									<div class="select-color js-choose-colors-select" data-toggle="modal" data-target="#choose-colors">
+										{{mixins.icon('down')}}
+										<div class="select-color__text">
+											<i style="background: #88665a; box-shadow: 0 2px 4px rgba(136, 102, 89, 0.3);"></i>
+											<span class="js-choose-colors-text"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="prod-settings__box">
+								<div class="prod-settings__subtitle">Количество</div>
+								<div class="prod-settings__field">
+									<input type="text" class="input">
+								</div>
+							</div>
+							<div class="prod-settings__box">
+								<div class="prod-settings__subtitle">Доставка</div>
+								<ul class="prod-settings__list">
+									<li class="prod-settings__row">
+										<div class="prod-settings__label">Ожидаемая дата доставки:</div>
+										<div class="prod-settings__text">27 июня</div>
+									</li>
+									<li class="prod-settings__row">
+										<div class="prod-settings__label">
+											<a href="#" class="prod-settings__link">Стоимость доставки:</a>
+										</div>
+										<div class="prod-settings__text">Бесплатно</div>
+									</li>
+								</ul>
+							</div>
+							<div class="prod-settings__box">
+								<div class="prod-settings__subtitle">Наличие</div>
+								<div class="prod-settings__instock prod-settings__row">
+									<div class="icon-battery">
+										<i class="is-active"></i>
+										<i class="is-active"></i>
+										<i class="is-active"></i>
+										<i class="is-active"></i>
+										<i></i>
+										<i></i>
+									</div>
+									<div class="prod-settings__text">Есть в наличии</div>
+								</div>
+								<div class="prod-settings__text prod-settings__row">
+									<a href="#" class="prod-settings__link">Сообщить о скидке</a>
+								</div>
+							</div>
+						</div>
+						<div class="card__footer">
+							<div class="card__result">
+								<div class="card__price">
+									<strong>16 280 Р</strong>
+									<small>16 280 Р</small>
+								</div>
+							</div>
+							<div class="card__btns">
+								<button class="btn btn_blue" data-toggle="modal" data-target="#basket"><span>В корзину {{mixins.icon('basket')}}</span></button>
+								<button class="btn-plus js-popup-open" data-popup="add-functions">
+									<span></span>
+								</button>
+								<a href="#" class="in-moment" data-toggle="modal" data-target="#fast-buy">
+									{{mixins.icon('click')}}
+									<span>Купить в 1 клик</span>
+								</a>
+								{% include "partials/components/_additional-functions.html" %}
+							</div>
+							<div class="card__text">
+								<p>Цена указана для базовой модели. Окончательная цена зависит от комплектации и материалов изготовления.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/_steps.html" %}
+	<div class="page__inner">
+		{% include "partials/tabs-card/_tabs.html" %}
+	</div>
+	{% include "partials/_similar.html" %}
+	{% include "partials/_subscribe-lg.html" %}
+</div>
+{% include "partials/_footer.html" %}
+
+{% endblock %}
+
+{% block modals %}
+
+{% include "partials/modals/_card-gallery.html" %}
+{% include "partials/modals/_choose-colors.html" %}
+
+{% endblock %}

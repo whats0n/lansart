@@ -1,0 +1,68 @@
+<!-- begin card tab4  -->
+<div class="tabs__content js-tab-content" data-tab="tab4">
+	<!-- begin reviews  -->
+	<div class="reviews">
+		<div class="reviews__title">Отзывы</div>
+		<div class="reviews__row">
+			<div class="reviews__col reviews__col_first">
+				<div class="rating">
+					<div class="stars">
+						<div class="stars__in" style="width: 91%;"></div>
+					</div>
+					{{mixins.icon('star')}}
+					<div class="rating__number">4,2</div>
+				</div>
+				{% set evaluations = [
+					{
+						label: '5 звезд',
+						percent: '68',
+						amount: '(9)'
+					},
+					{
+						label: '4 звезды',
+						percent: '36',
+						amount: '(3)'
+					},
+					{
+						label: '3 звезды',
+						percent: '24',
+						amount: '(2)'
+					},
+					{
+						label: '2 звезды',
+						percent: '12',
+						amount: '(1)'
+					},
+					{
+						label: '1 звезда',
+						percent: '0',
+						amount: '(0)'
+					}
+				] %}
+				<ul class="evaluations">
+					{% for item in evaluations %}
+					<li class="evaluations__item">
+						<div class="evaluations__label">{{item.label}}</div>
+						<div class="evaluations__bar">
+							<div class="evaluations__bar-in" style="width: {{item.percent}}%;"></div>
+						</div>
+						<div class="evaluations__amount">{{item.amount}}</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="reviews__col reviews__col_second">
+				<div class="reviews__msg">
+					<div class="reviews__label">Оставьте свой отзыв о товаре:</div>
+					<div class="reviews__name">Барный стул Walnut Veneer</div>
+					<button class="btn btn_blue js-scrollto" data-to="leave-review"><span>Оставить свой отзыв</span></button>
+				</div>
+			</div>
+		</div>
+		{% include "partials/_comments.html" %}
+		{% include "partials/_catalog-bottom.html" %}
+		{% include "partials/_form-msg.html" %}
+	</div>
+	<!-- end reviews -->
+</div>
+<!-- end card tab4 -->

@@ -1,0 +1,114 @@
+$icon-facebook: (
+  name: 'icon-facebook',
+  x: 0px,
+  y: 0px,
+  offset-x: 0px,
+  offset-y: 0px,
+  width: 10px,
+  height: 19px,
+  total-width: 10px,
+  total-height: 19px,
+  image: '../img/sprite.png'
+);
+$icon-facebook-2x: (
+  name: 'icon-facebook@2x',
+  x: 0px,
+  y: 0px,
+  offset-x: 0px,
+  offset-y: 0px,
+  width: 20px,
+  height: 38px,
+  total-width: 20px,
+  total-height: 38px,
+  image: '../img/sprite@2x.png'
+);
+$spritesheet: (
+  width: 10px,
+  height: 19px,
+  image: '../img/sprite.png',
+  sprites: ($icon-facebook, )
+);
+$retina-spritesheet: (
+  width: 20px,
+  height: 38px,
+  image: '../img/sprite@2x.png',
+  sprites: ($icon-facebook-2x, )
+);
+$icon-facebook-group: (
+  name: 'icon-facebook',
+  normal: $icon-facebook,
+  retina: $icon-facebook-2x
+);
+$retina-groups: ($icon-facebook-group, );
+
+
+@mixin sprite-width($sprite) {
+  width: map-get($sprite, 'width');
+}
+
+@mixin sprite-height($sprite) {
+  height: map-get($sprite, 'height');
+}
+
+@mixin sprite-position($sprite) {
+  background-position: map-get($sprite, 'offset-x') map-get($sprite, 'offset-y');
+}
+
+@mixin sprite-image($sprite) {
+  background-image: url(map-get($sprite, 'image'));
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+@mixin sprites {
+  $sprites: map-get($spritesheet, 'sprites');
+  @each $sprite in $sprites {
+    $sprite-name: map-get($sprite, 'name');
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//  It should be used with a "retina group" variable.
+
+// $icon-home-group: (
+//   name: 'icon-home',
+//   normal: $icon-home,
+//   retina: $icon-home-2x
+// );
+
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+
+@mixin sprite-background-size($sprite) {
+  background-size: map-get($sprite, 'total-width') map-get($sprite, 'total-height');
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: map-get($retina-group, 'normal');
+  $retina-sprite: map-get($retina-group, 'retina');
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+@mixin retina-sprites {
+  @each $retina-group in $retina-groups {
+    $sprite-name: map-get($retina-group, 'name');
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}
