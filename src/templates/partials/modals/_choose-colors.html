@@ -92,6 +92,22 @@
 								img: 'tabletop-4.jpg',
 								title: 'Камень',
 								info: '10стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-2.jpg',
+								title: 'Мрамор',
+								disabled: true,
+								info: '8стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-3.jpg',
+								title: 'Бамбук',
+								info: '9стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-4.jpg',
+								title: 'Камень',
+								info: '10стекло опаловое (молочно-голубое) матированное закалённое'
 							}
 						]
 					},
@@ -104,6 +120,22 @@
 								title: 'Белая',
 								checked: 'checked',
 								info: '11стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-2.jpg',
+								title: 'Мрамор',
+								disabled: true,
+								info: '12стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-3.jpg',
+								title: 'Бамбук',
+								info: '13стекло опаловое (молочно-голубое) матированное закалённое'
+							},
+							{
+								img: 'tabletop-4.jpg',
+								title: 'Камень',
+								info: '14стекло опаловое (молочно-голубое) матированное закалённое'
 							},
 							{
 								img: 'tabletop-2.jpg',
@@ -144,9 +176,19 @@
 										<div class="choose-colors__item js-choose-colors-item">
 											<label class="choose-color">
 												{% if item.disabled %}
-												<input type="radio" name="{{section.name}}" class="js-choose-colors-input" data-value="{{item.title}}" disabled>
+													<input type="radio" 
+														name="{{section.name}}" 
+														class="js-choose-colors-input" 
+														data-value="{{item.title}}" 
+														data-choose-set="set-{{loop.index}}" 
+														disabled>
 												{% else %}
-												<input type="radio" name="{{section.name}}" class="js-choose-colors-input" data-value="{{item.title}}" {{item.checked}}>
+													<input type="radio" 
+														name="{{section.name}}" 
+														class="js-choose-colors-input" 
+														data-value="{{item.title}}" 
+														data-choose-set="set-{{loop.index}}" 
+														{{item.checked}}>
 												{% endif %}
 												<span class="choose-color__figure">
 													<span class="choose-color__img js-choose-colors-img" style="background-image: url(img/colors/{{item.img}});" data-img="img/colors/{{item.img}}"></span>
@@ -156,7 +198,7 @@
 												</span>
 												<span class="choose-color__title">{{item.title}}</span>
 												{% if section.mainColor %}
-												<i class="js-choose-colors-icon" style="background: {{item.background}}; box-shadow: {{item.boxShadow}};"></i>
+													<i class="js-choose-colors-icon" style="background: {{item.background}}; box-shadow: {{item.boxShadow}};"></i>
 												{% endif %}
 											</label>
 											<div class="choose-colors__info js-choose-colors-info">{{item.info}}</div>
