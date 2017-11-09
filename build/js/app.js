@@ -3226,7 +3226,29 @@ $(document).ready(function() {
 	$('[data-mask]').each(function() {
 		var $this = $(this);
 		var placeholder = $this.attr('placeholder');
+		var dataPlaceholder = $this.attr('data-placeholder');
 		var format = $this.data('mask');
-		$this.mask(format, {placeholder: placeholder}); 
+		$this.mask(format); 
+	});
+
+	//form callback
+	$('.js-form-submit').each(function() {
+		var $this = $(this);
+		var $openPopup = $this.data('submit');
+		var $custom = $this.closest('.js-popup');
+		var $bootstrap = $this.closest('.modal');
+		var $link = $('.js-popup-open[data-popup="' + $custom.data('id') + '"]');
+
+		$this.on('submit', function(e) {
+			e.preventDefault();
+			if ($custom.length) {
+				$custom
+					.add($link)
+					.removeClass('is-active');
+			} else if ($bootstrap.length) {
+				$bootstrap.modal('hide');
+			}
+			$($openPopup).modal('show');
+		});
 	});
 });

@@ -62,9 +62,9 @@
               <span>Перезвоните мне</span>
             </a>
             <div class="callback sm-popup js-popup" data-id="callback">
-              <form action="/" class="callback__form">
+              <form action="/" class="callback__form js-form-submit" data-submit="#feedback-thx">
                 <div class="callback__field">
-                  <input type="text" class="input" placeholder="Ваш телефон">
+                  <input type="text" class="input" placeholder="Ваш телефон" data-mask="8 (999) 999-99-99">
                 </div>
                 <div class="callback__field">
                   <button class="btn btn_blue" type="submit"><span>Перезвоните мне</span></button>
@@ -3560,7 +3560,7 @@
 				<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
 
 			</button>
-          <form action="/" class="order">
+          <form action="/" class="order js-form-submit" data-submit="#feedback-thx">
             <div class="order__head">
               <div class="order__title title">Заказ в один клик</div>
               <p>Оставьте свои контактные данные.</p>
@@ -3624,7 +3624,7 @@
                 </div>
               </div>
               <div class="order__btn">
-                <button class="btn btn_blue"><span>Оформить заказ</span></button>
+                <button class="btn btn_blue" type="submit"><span>Оформить заказ</span></button>
               </div>
               <div class="order__text">Нажитаем кнопки «Оформить заказ» я даю свое согласие на обработку персональных данных в соответствии с указанным здесь условиями.</div>
             </div>
