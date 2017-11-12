@@ -1310,6 +1310,7 @@ h4, .title-h4 {
   background: none;
   transition: border-color 0.25s ease-out;
   box-shadow: none;
+  -webkit-appearence: none;
 }
 
 .input_small, .textarea_small {
