@@ -10693,8 +10693,8 @@ a.features__text {
 }
 
 .prod-settings__label {
+  padding-right: 10px;
   color: #727b8a;
-  width: 175px;
 }
 
 .prod-settings__text {
