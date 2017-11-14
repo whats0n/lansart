@@ -2163,6 +2163,7 @@ $(document).ready(function() {
 	modalAutoClose.on('hide.bs.modal', function (e) {
 	    $('.js-fixed').removeAttr('style');
 	    $('body').removeAttr('style');
+	    console.log('close');
 	});
 
 	//regions popup
@@ -3242,6 +3243,10 @@ $(document).ready(function() {
 		var $custom = $this.closest('.js-popup');
 		var $bootstrap = $this.closest('.modal');
 		var $link = $('.js-popup-open[data-popup="' + $custom.data('id') + '"]');
+		var $currentModal = $($openPopup);
+		if ($bootstrap.length) $bootstrap.modal('shown.bs.modal', function() {
+			$currentModal.modal('show');
+		});
 
 		$this.on('submit', function(e) {
 			e.preventDefault();
@@ -3249,10 +3254,10 @@ $(document).ready(function() {
 				$custom
 					.add($link)
 					.removeClass('is-active');
+				$currentModal.modal('show');
 			} else if ($bootstrap.length) {
 				$bootstrap.modal('hide');
 			}
-			$($openPopup).modal('show');
 		});
 	});
 });
