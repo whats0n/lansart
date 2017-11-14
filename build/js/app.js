@@ -2160,11 +2160,6 @@ $(document).ready(function() {
 			that.modal('hide');
 		}, 2000);
 	});
-	modalAutoClose.on('hide.bs.modal', function (e) {
-	    $('.js-fixed').removeAttr('style');
-	    $('body').removeAttr('style');
-	    console.log('close');
-	});
 
 	//regions popup
 	(function() {
@@ -3243,9 +3238,8 @@ $(document).ready(function() {
 		var $custom = $this.closest('.js-popup');
 		var $bootstrap = $this.closest('.modal');
 		var $link = $('.js-popup-open[data-popup="' + $custom.data('id') + '"]');
-		var $currentModal = $($openPopup);
-		if ($bootstrap.length) $bootstrap.modal('shown.bs.modal', function() {
-			$currentModal.modal('show');
+		if ($bootstrap.length) $bootstrap.on('hidden.bs.modal', function () {
+			$($openPopup).modal('show');
 		});
 
 		$this.on('submit', function(e) {
@@ -3254,7 +3248,7 @@ $(document).ready(function() {
 				$custom
 					.add($link)
 					.removeClass('is-active');
-				$currentModal.modal('show');
+				$($openPopup).modal('show');
 			} else if ($bootstrap.length) {
 				$bootstrap.modal('hide');
 			}
