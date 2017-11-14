@@ -42,3 +42,7 @@ modalAutoClose.on('shown.bs.modal', function () {
 		that.modal('hide');
 	}, 2000);
 });
+modalAutoClose.on('hide.bs.modal', function (e) {
+    $('.js-fixed').removeAttr('style');
+    $('body').removeAttr('style');
+});
