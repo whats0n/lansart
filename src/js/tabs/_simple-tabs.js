@@ -43,7 +43,10 @@
 
 		that.shadowLink.click(function() {
 			var currName = $(this).data('href'),
-				position = that.section.offset().top - $('.js-mob-header').outerHeight();
+				scrollto = $(this).data('tab-scrollto');
+				position = scrollto && scrollto.length 
+					? $('[data-tab-scrollto-section="' + scrollto + '"]').offset().top - $('.js-mob-header').outerHeight()
+					: that.section.offset().top - $('.js-mob-header').outerHeight();
 
 			that.tabLink.filter('[data-href="' + currName + '"]').trigger('click');
 			htmlBody.animate({

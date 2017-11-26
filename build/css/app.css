@@ -10728,11 +10728,11 @@ a.features__text {
 .prod-settings__value {
   font-family: "HelveticaNeue Roman", Arial, sans-serif;
   font-size: 13px;
-  line-height: 16px;
+  line-height: 25px;
 }
 
 .prod-settings__value-in {
-  padding: 4px 0;
+  padding: 7px 0 0;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -14966,7 +14966,7 @@ a.features__text {
 
 .modifications {
   position: relative;
-  padding: 30px 20px 0;
+  padding: 20px 20px 0;
 }
 
 .modifications__title {
@@ -15184,6 +15184,7 @@ a.features__text {
 .modification__price {
   display: inline-block;
   vertical-align: top;
+  padding-left: 10px;
   height: 80px;
   line-height: 80px;
   white-space: normal;
