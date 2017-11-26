@@ -15025,6 +15025,7 @@ a.features__text {
 }
 
 .modifications__btns {
+  padding-top: 10px;
   *zoom: 1;
   font-size: 0;
 }
@@ -18813,6 +18814,9 @@ a.features__text {
     width: 100%;
     float: none;
     padding: 0 50px 16px 0;
+  }
+  .modifications__btns-in{
+    float: none;
   }
 }
 
