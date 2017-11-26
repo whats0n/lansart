@@ -1,5 +1,78 @@
 <!-- begin card tab1  -->
 <div class="tabs__content js-tab-content" data-tab="tab1">
+	<div class="modifications js-view-color">
+		<div class="modifications__title">Выбор модификации</div>
+		{% set modifications = {
+			headers: [ 'Столешница', 'Каркас', 'Ножки', 'Подстолье' ],
+			items: [
+				{
+					title: 'Бамбук',
+					img: 'frame-1'
+				},
+				{
+					title: 'Мрамор',
+					img: 'frame-2'
+				},
+				{
+					title: 'Камень',
+					img: 'frame-3'
+				},
+				{
+					title: 'Что-то еще',
+					img: 'frame-4'
+				}
+			]
+		} %}
+		<div class="modifications__items js-scrollbar-x">
+			<div class="modifications__headers">
+				{% for item in modifications.headers %}
+					<div class="modifications__header">{{item | safe}}</div>
+				{% endfor %}
+			</div>
+			<div class="modifications__body">
+				<div class="modifications__list">
+					{% for modification in range(0,3) %}
+						{% set index = loop.index %}
+						<label class="modification">
+							<span class="modification__radio">
+								<input type="radio" name="modification" {% if loop.first %}checked{% endif %}>
+								<i></i>
+							</span>
+							<span class="modification__items">
+								{% for item in modifications.items %}
+									<span class="modification__item js-view-color-item">
+										<span class="modification__img">
+											<span class="modification__img-in js-view-color-img" style="background-image: url(img/colors/{{item.img}}.jpg);" data-img="img/colors/{{item.img}}.jpg"></span>
+										</span>
+										<span class="modification__title js-view-color-title">{{item.title}}</span>
+										<span class="modification__description js-view-color-description">{{index + '.' + loop.index}} стекло опаловое (молочно-голубое) матированное закалённое</span>
+									</span>
+								{% endfor %}
+							</span>
+							<span class="modification__price">
+								<span class="modification__price-in">
+									<span class="modification__price-main">16 280 P</span>
+									{% if loop.first %}
+										<span class="modification__price-old">16 280 P</span>
+									{% endif %}
+								</span>
+							</span>
+						</label>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="modifications-modal  js-view-color-modal">
+			<button class="modifications-modal__close js-view-color-modal-close">
+				{{mixins.icon('close')}}
+			</button>
+			<div class="modifications-modal__img js-view-color-modal-img"></div>
+			<div class="modifications-modal__in">
+				<div class="modifications-modal__title js-view-color-modal-title"></div>
+				<div class="modifications-modal__description js-view-color-modal-description"></div>
+			</div>
+		</div>
+	</div>
 	<div class="c-features">
 		{% set features = [
 			{

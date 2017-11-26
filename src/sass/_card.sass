@@ -432,6 +432,10 @@ a.features__text
 			line-height: 24px
 			letter-spacing: 0.19px
 			margin: 8px 0 0
+		a
+			color: $blue
+			+hover
+				text-decoration: underline
 	&__box
 		width: 50%
 		display: inline-block
@@ -551,10 +555,10 @@ a.features__text
 		padding: 16px 0 0
 		margin: 0 0 39px
 	&__col
-		width: 50%
+		// width: 50%
 		padding: 0 20px
-		display: inline-block
-		vertical-align: top
+		// display: inline-block
+		// vertical-align: top
 		+r2
 			width: 100%
 			padding: 0
@@ -568,15 +572,18 @@ a.features__text
 	+r2
 		border-bottom: 1px solid #d9dbe1
 .c-info
-	font-size: 0
+	display: inline-block
+	vertical-align: top
 	padding-bottom: 15px
-	&:last-child
-		+r2
+	width: 50%
+	font-size: 0
 	+r1
 		padding-bottom: 16px
 	+r2
-		border-top: 1px solid #d9dbe1
+		display: block
 		padding: 0
+		border-top: 1px solid #d9dbe1
+		width: 100%
 	&__title
 		font-size: 16px
 		color: $dark
@@ -674,6 +681,7 @@ a.features__text
 	position: relative
 	min-height: 60px
 	padding: 7px 20px 8px 80px
+	max-width: 500px
 	+r1
 		padding: 0
 	&__icon

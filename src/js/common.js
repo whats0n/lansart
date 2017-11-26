@@ -65,6 +65,7 @@ $(document).ready(function() {
 	//=include forms/_select.js
 
 	//=include forms/_choose-color.js
+	//=include forms/_view-color.js
 	//=include forms/_choose-set.js
 
 	//=include forms/_range-slider.js
