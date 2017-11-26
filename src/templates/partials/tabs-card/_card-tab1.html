@@ -72,6 +72,19 @@
 				<div class="modifications-modal__description js-view-color-modal-description"></div>
 			</div>
 		</div>
+		<div class="modifications__btns">
+			<div class="modifications__btns-in">
+				<button class="btn btn_blue" data-toggle="modal" data-target="#basket"><span>В корзину {{mixins.icon('basket')}}</span></button>
+				<button class="btn-plus js-popup-open" data-popup="add-functions">
+					<span></span>
+				</button>
+				<a href="#" class="in-moment" data-toggle="modal" data-target="#fast-buy">
+					{{mixins.icon('click')}}
+					<span>Купить в 1 клик</span>
+				</a>
+				{% include "partials/components/_additional-functions.html" %}
+			</div>
+		</div>
 	</div>
 	<div class="c-features">
 		<div class="c-features__title">Характеристики товара</div>
