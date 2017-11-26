@@ -10725,6 +10725,28 @@ a.features__text {
   text-decoration: underline;
 }
 
+.prod-settings__value {
+  font-family: "HelveticaNeue Roman", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.prod-settings__value-in {
+  padding: 4px 0;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prod-settings__value a {
+  color: #427be7;
+}
+
+.no-touch .prod-settings__value a:hover {
+  text-decoration: underline;
+}
+
 .icon-battery {
   width: 34px;
   border-radius: 2px;
