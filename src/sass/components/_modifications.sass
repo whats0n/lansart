@@ -3,6 +3,7 @@ $colPadding: 10px
 $colAlign: center
 
 .modifications
+	position: relative
 	padding: 30px 20px 0
 	text-align: center
 	+r1
@@ -182,7 +183,7 @@ $colAlign: center
 .modifications-modal
 	position: absolute
 	z-index: 10
-	top: 0
+	top: 60px
 	left: 0
 
 	visibility: hidden
@@ -194,10 +195,6 @@ $colAlign: center
 	box-shadow: 0 4px 8px rgba(62, 76, 102, 0.2)
 	text-align: left
 	transition: opacity 0.25s ease-out, visibility 0.25s ease-out
-	+r1
-		top: 70px
-		left: 50%
-		margin-left: -115px
 	&.is-open
 		visibility: visible
 		opacity: 1
@@ -248,11 +245,6 @@ $colAlign: center
 		height: 40px
 		font-size: 0
 		background: none
-		+r1
-			top: 11px
-			right: 11px
 		svg
-			fill: $blue
+			fill: #969da9
 			font-size: 10px
-			+r1
-				fill: #969da9

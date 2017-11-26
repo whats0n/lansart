@@ -14933,6 +14933,7 @@ a.features__text {
 }
 
 .modifications {
+  position: relative;
   padding: 30px 20px 0;
   text-align: center;
 }
@@ -15157,7 +15158,7 @@ a.features__text {
 .modifications-modal {
   position: absolute;
   z-index: 10;
-  top: 0;
+  top: 60px;
   left: 0;
   visibility: hidden;
   border-radius: 2px;
@@ -15226,7 +15227,7 @@ a.features__text {
 }
 
 .modifications-modal__close svg {
-  fill: #427be7;
+  fill: #969da9;
   font-size: 10px;
 }
 
@@ -17158,18 +17159,6 @@ a.features__text {
   }
   .modifications{
     padding: 24px 0 0;
-  }
-  .modifications-modal{
-    top: 70px;
-    left: 50%;
-    margin-left: -115px;
-  }
-  .modifications-modal__close{
-    top: 11px;
-    right: 11px;
-  }
-  .modifications-modal__close svg{
-    fill: #969da9;
   }
 }
 
