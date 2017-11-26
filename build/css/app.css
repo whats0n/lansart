@@ -10807,6 +10807,16 @@ a.features__text {
   margin-top: 30px;
 }
 
+.c-features__title {
+  padding: 0 20px 20px;
+  color: #102140;
+  font-family: "ArnoPro Semibold", Arial, sans-serif;
+  font-size: 28px;
+  line-height: 35px;
+  letter-spacing: 0.24px;
+  text-align: left;
+}
+
 .c-info {
   display: inline-block;
   vertical-align: top;
@@ -15145,13 +15155,13 @@ a.features__text {
 .modification__price-main {
   color: #427be7;
   font-family: "ArnoPro Semibold", Arial, sans-serif;
-  font-size: 28px;
+  font-size: 19.6px;
 }
 
 .modification__price-old {
   color: #727b8a;
   font-family: "HelveticaNeue Roman", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 12.6px;
   text-decoration: line-through;
 }
 
@@ -16432,6 +16442,9 @@ a.features__text {
   }
   .c-features .c-description{
     margin-top: 2px;
+  }
+  .c-features__title{
+    padding: 24px 0 24px;
   }
   .c-info{
     padding-bottom: 16px;
