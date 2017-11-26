@@ -35,7 +35,7 @@
 						{% set index = loop.index %}
 						<label class="modification">
 							<span class="modification__radio">
-								<input type="radio" name="modification" {% if loop.first %}checked{% endif %}>
+								<input type="radio" name="modification" {% if loop.first %}checked{% endif %} class="js-view-color-input">
 								<i></i>
 							</span>
 							<span class="modification__items">
@@ -63,7 +63,7 @@
 			</div>
 		</div>
 		<div class="modifications-modal  js-view-color-modal">
-			<button class="modifications-modal__close js-view-color-modal-close">
+			<button class="modifications-modal__close js-view-color-modal-close" type="button">
 				{{mixins.icon('close')}}
 			</button>
 			<div class="modifications-modal__img js-view-color-modal-img"></div>

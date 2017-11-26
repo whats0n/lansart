@@ -2867,13 +2867,15 @@ $(document).ready(function() {
 		var $body = $('body');
 		var $viewColor = $('.js-view-color');
 		var OPEN = 'is-open';
+		var $modals = $('.js-view-color-modal');
 	
 		$body.on('click', function(e) {
-			e.preventDefault();
 			var $target = $(e.target);
-			if ($target.closest('.js-view-color-img').length ||
-				$target.closest('.js-view-color-modal').length) return;
-			$('.js-view-color-modal').removeClass(OPEN);
+			if ($target.closest('.js-view-color-img').length || 
+				$target.closest('.js-view-color-modal').length || 
+				$target.closest('.js-view-color-input').length || 
+				!$modals.hasClass(OPEN)) return;
+			$modals.removeClass(OPEN);
 		});
 	
 		$viewColor.each(function() {
@@ -2897,13 +2899,10 @@ $(document).ready(function() {
 	
 				$viewColorImg.on('click', function(e) {
 					
-					// e.preventDefault();
 					$viewColorModal.addClass(OPEN);
 					$viewColorModalImg.css('background-image', 'url(' + $viewColorImgData + ')');
 					$viewColorModalTitle.html($viewColorTitleData);
 					$viewColorModalDescription.html($viewColorDescriptionData);
-	
-					console.log('a');
 	
 				});
 	
