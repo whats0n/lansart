@@ -10727,8 +10727,8 @@ a.features__text {
 
 .prod-settings__value {
   font-family: "HelveticaNeue Roman", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .prod-settings__value-in {
@@ -15076,8 +15076,9 @@ a.features__text {
 
 .modification {
   position: relative;
-  display: block;
-  padding: 20px 0 20px 20px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px 20px 20px 20px;
   border-top: 1px solid #d9dbe1;
   font-size: 0;
   white-space: nowrap;
