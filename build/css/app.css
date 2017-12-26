@@ -9274,7 +9274,7 @@ button.close {
   display: none;
 }
 
-.filter__block_visible, .filter__list_visible, .filter__radios_visible {
+.filter__block_visible, .filter__block.is-active, .filter__list_visible, .filter__list.is-active, .filter__radios_visible, .filter__radios.is-active {
   display: block;
 }
 
@@ -15074,10 +15074,20 @@ a.features__text {
   margin: 15px 20px 0 0;
 }
 
+.modifications__list {
+  *zoom: 1;
+}
+
+.modifications__list:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
 .modification {
   position: relative;
-  display: inline-block;
-  vertical-align: top;
+  float: left;
+  clear: both;
   padding: 20px 40px 20px 20px;
   border-top: 1px solid #d9dbe1;
   font-size: 0;
