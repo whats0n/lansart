@@ -1,6 +1,18 @@
 <div class="prod-settings__box prod-settings__box_wide">
 	<div class="prod-settings__subtitle">Модификация</div>
-	<div class="sm-modification">
+	<div class="sm-modification js-view-color">
+		<!-- begin modal -->
+			<div class="modifications-modal js-view-color-modal">
+				<button class="modifications-modal__close js-view-color-modal-close" type="button">
+					{{mixins.icon('close')}}
+				</button>
+				<div class="modifications-modal__img js-view-color-modal-img"></div>
+				<div class="modifications-modal__in">
+					<div class="modifications-modal__title js-view-color-modal-title"></div>
+					<div class="modifications-modal__description js-view-color-modal-description"></div>
+				</div>
+			</div>
+		<!-- end modal -->
 		<div class="sm-modification__row sm-modification__row_header">
 			{% for item in range(0,4) %}
 				<div class="sm-modification__col sm-modification__heading">Столешница</div>
@@ -8,10 +20,11 @@
 		</div>
 		<div class="sm-modification__body js-scrollbar">
 			{% for item in range(0,6) %}
+				{% set index = loop.index %}
 				<label class="sm-modification__row sm-modification__row_item">
 					<span class="sm-modification__radio">
 						<span class="radio radio_simple">
-							<input type="radio" name="sm-modification-radio" {% if loop.first %}checked{% endif %}>
+							<input type="radio" name="sm-modification-radio" {% if loop.first %}checked{% endif %} class="js-view-color-input">
 							<span></span>
 						</span>
 					</span>
@@ -33,8 +46,10 @@
 							img: 'frame-4'
 						}
 					] %}
-						<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/{{item.img}}.jpg"></span>
+						<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/{{item.img}}.jpg" data-img="img/colors/{{item.img}}.jpg"></span>
+							<span class="js-view-color-title">{{item.title}}</span>
+							<span class="js-view-color-description">{{index + '.' + loop.index}} стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
 					{% endfor %}
 				</label>

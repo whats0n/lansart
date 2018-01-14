@@ -1980,7 +1980,20 @@
                   <div class="prod-settings">
                     <div class="prod-settings__box prod-settings__box_wide">
                       <div class="prod-settings__subtitle">Модификация</div>
-                      <div class="sm-modification">
+                      <div class="sm-modification js-view-color">
+                        <!-- begin modal -->
+                        <div class="modifications-modal js-view-color-modal">
+                          <button class="modifications-modal__close js-view-color-modal-close" type="button">
+					<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+				</button>
+                          <div class="modifications-modal__img js-view-color-modal-img"></div>
+                          <div class="modifications-modal__in">
+                            <div class="modifications-modal__title js-view-color-modal-title"></div>
+                            <div class="modifications-modal__description js-view-color-modal-description"></div>
+                          </div>
+                        </div>
+                        <!-- end modal -->
                         <div class="sm-modification__row sm-modification__row_header">
                           <div class="sm-modification__col sm-modification__heading">Столешница</div>
                           <div class="sm-modification__col sm-modification__heading">Столешница</div>
@@ -1991,121 +2004,169 @@
                           <label class="sm-modification__row sm-modification__row_item">
 					<span class="sm-modification__radio">
 						<span class="radio radio_simple">
-							<input type="radio" name="sm-modification-radio" checked>
+							<input type="radio" name="sm-modification-radio" checked class="js-view-color-input">
 							<span></span>
 						</span>
 					</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-1.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-1.jpg" data-img="img/colors/frame-1.jpg"></span>
+							<span class="js-view-color-title">Бамбук</span>
+							<span class="js-view-color-description">1.1 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-2.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-2.jpg" data-img="img/colors/frame-2.jpg"></span>
+							<span class="js-view-color-title">Мрамор</span>
+							<span class="js-view-color-description">1.2 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-3.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-3.jpg" data-img="img/colors/frame-3.jpg"></span>
+							<span class="js-view-color-title">Камень</span>
+							<span class="js-view-color-description">1.3 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-4.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-4.jpg" data-img="img/colors/frame-4.jpg"></span>
+							<span class="js-view-color-title">Что-то еще</span>
+							<span class="js-view-color-description">1.4 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
 									</label>
                           <label class="sm-modification__row sm-modification__row_item">
 					<span class="sm-modification__radio">
 						<span class="radio radio_simple">
-							<input type="radio" name="sm-modification-radio" >
+							<input type="radio" name="sm-modification-radio"  class="js-view-color-input">
 							<span></span>
 						</span>
 					</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-1.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-1.jpg" data-img="img/colors/frame-1.jpg"></span>
+							<span class="js-view-color-title">Бамбук</span>
+							<span class="js-view-color-description">2.1 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-2.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-2.jpg" data-img="img/colors/frame-2.jpg"></span>
+							<span class="js-view-color-title">Мрамор</span>
+							<span class="js-view-color-description">2.2 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-3.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-3.jpg" data-img="img/colors/frame-3.jpg"></span>
+							<span class="js-view-color-title">Камень</span>
+							<span class="js-view-color-description">2.3 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-4.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-4.jpg" data-img="img/colors/frame-4.jpg"></span>
+							<span class="js-view-color-title">Что-то еще</span>
+							<span class="js-view-color-description">2.4 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
 									</label>
                           <label class="sm-modification__row sm-modification__row_item">
 					<span class="sm-modification__radio">
 						<span class="radio radio_simple">
-							<input type="radio" name="sm-modification-radio" >
+							<input type="radio" name="sm-modification-radio"  class="js-view-color-input">
 							<span></span>
 						</span>
 					</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-1.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-1.jpg" data-img="img/colors/frame-1.jpg"></span>
+							<span class="js-view-color-title">Бамбук</span>
+							<span class="js-view-color-description">3.1 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-2.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-2.jpg" data-img="img/colors/frame-2.jpg"></span>
+							<span class="js-view-color-title">Мрамор</span>
+							<span class="js-view-color-description">3.2 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-3.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-3.jpg" data-img="img/colors/frame-3.jpg"></span>
+							<span class="js-view-color-title">Камень</span>
+							<span class="js-view-color-description">3.3 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-4.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-4.jpg" data-img="img/colors/frame-4.jpg"></span>
+							<span class="js-view-color-title">Что-то еще</span>
+							<span class="js-view-color-description">3.4 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
 									</label>
                           <label class="sm-modification__row sm-modification__row_item">
 					<span class="sm-modification__radio">
 						<span class="radio radio_simple">
-							<input type="radio" name="sm-modification-radio" >
+							<input type="radio" name="sm-modification-radio"  class="js-view-color-input">
 							<span></span>
 						</span>
 					</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-1.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-1.jpg" data-img="img/colors/frame-1.jpg"></span>
+							<span class="js-view-color-title">Бамбук</span>
+							<span class="js-view-color-description">4.1 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-2.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-2.jpg" data-img="img/colors/frame-2.jpg"></span>
+							<span class="js-view-color-title">Мрамор</span>
+							<span class="js-view-color-description">4.2 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-3.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-3.jpg" data-img="img/colors/frame-3.jpg"></span>
+							<span class="js-view-color-title">Камень</span>
+							<span class="js-view-color-description">4.3 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-4.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-4.jpg" data-img="img/colors/frame-4.jpg"></span>
+							<span class="js-view-color-title">Что-то еще</span>
+							<span class="js-view-color-description">4.4 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
 									</label>
                           <label class="sm-modification__row sm-modification__row_item">
 					<span class="sm-modification__radio">
 						<span class="radio radio_simple">
-							<input type="radio" name="sm-modification-radio" >
+							<input type="radio" name="sm-modification-radio"  class="js-view-color-input">
 							<span></span>
 						</span>
 					</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-1.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-1.jpg" data-img="img/colors/frame-1.jpg"></span>
+							<span class="js-view-color-title">Бамбук</span>
+							<span class="js-view-color-description">5.1 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-2.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-2.jpg" data-img="img/colors/frame-2.jpg"></span>
+							<span class="js-view-color-title">Мрамор</span>
+							<span class="js-view-color-description">5.2 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-3.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-3.jpg" data-img="img/colors/frame-3.jpg"></span>
+							<span class="js-view-color-title">Камень</span>
+							<span class="js-view-color-description">5.3 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-4.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-4.jpg" data-img="img/colors/frame-4.jpg"></span>
+							<span class="js-view-color-title">Что-то еще</span>
+							<span class="js-view-color-description">5.4 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
 									</label>
                           <label class="sm-modification__row sm-modification__row_item">
 					<span class="sm-modification__radio">
 						<span class="radio radio_simple">
-							<input type="radio" name="sm-modification-radio" >
+							<input type="radio" name="sm-modification-radio"  class="js-view-color-input">
 							<span></span>
 						</span>
 					</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-1.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-1.jpg" data-img="img/colors/frame-1.jpg"></span>
+							<span class="js-view-color-title">Бамбук</span>
+							<span class="js-view-color-description">6.1 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-2.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-2.jpg" data-img="img/colors/frame-2.jpg"></span>
+							<span class="js-view-color-title">Мрамор</span>
+							<span class="js-view-color-description">6.2 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-3.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-3.jpg" data-img="img/colors/frame-3.jpg"></span>
+							<span class="js-view-color-title">Камень</span>
+							<span class="js-view-color-description">6.3 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
-											<span class="sm-modification__col">
-							<span class="sm-modification__item" style="background-image: url(img/colors/frame-4.jpg"></span>
+											<span class="sm-modification__col js-view-color-item">
+							<span class="sm-modification__item js-view-color-img" style="background-image: url(img/colors/frame-4.jpg" data-img="img/colors/frame-4.jpg"></span>
+							<span class="js-view-color-title">Что-то еще</span>
+							<span class="js-view-color-description">6.4 стекло опаловое (молочно-голубое) матированное закалённое</span>
 						</span>
 									</label>
                         </div>

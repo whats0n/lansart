@@ -10448,7 +10448,6 @@ button.close {
 
 .card__features {
   padding: 19px 20px;
-  border-bottom: 1px solid #d9dbe1;
 }
 
 .card__features:after {
@@ -10459,9 +10458,7 @@ button.close {
 }
 
 .card__footer {
-  border-top: 1px solid #d9dbe1;
   *zoom: 1;
-  padding: 29px 0 0;
 }
 
 .card__footer:after {
@@ -15312,8 +15309,15 @@ a.features__text {
 }
 
 .sm-modification {
+  position: relative;
   padding: 0 20px 10px 0;
   border-bottom: 1px solid #d9dbe1;
+}
+
+.sm-modification .modifications-modal {
+  top: 50%;
+  left: 0;
+  transform: translate3d(-100%, -50%, 0);
 }
 
 .sm-modification__row {
@@ -15366,6 +15370,7 @@ a.features__text {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  cursor: pointer;
 }
 
 @media (min-width: 768px){
@@ -17299,6 +17304,9 @@ a.features__text {
   }
   .sm-modification{
     padding-top: 8px;
+  }
+  .sm-modification .modifications-modal{
+    transform: translate3d(0, -50%, 0);
   }
 }
 

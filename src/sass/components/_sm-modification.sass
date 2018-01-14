@@ -1,8 +1,15 @@
 .sm-modification
+	position: relative
 	padding: 0 20px 10px 0
 	border-bottom: 1px solid #d9dbe1
 	+r(1080)
 		padding-top: 8px
+	.modifications-modal
+		top: 50%
+		left: 0
+		transform: translate3d(-100%,-50%,0)
+		+r(1080)
+			transform: translate3d(0,-50%,0)
 	&__row
 		position: relative
 		display: block
@@ -39,3 +46,4 @@
 		width: 40px
 		height: 40px
 		+cover
+		cursor: pointer
