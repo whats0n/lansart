@@ -10493,10 +10493,6 @@ button.close {
   letter-spacing: 0.19px;
 }
 
-.card__price {
-  padding-bottom: 26px;
-}
-
 .card__price strong, .card__price small {
   display: inline-block;
   vertical-align: top;
@@ -16503,9 +16499,6 @@ a.features__text {
   .card__text p{
     line-height: 16px;
   }
-  .card__price{
-    padding-bottom: 24px;
-  }
   .card__price strong, .card__price small{
     line-height: 40px;
   }
@@ -18155,7 +18148,6 @@ a.features__text {
   }
   .card__price{
     font-size: 0;
-    padding-bottom: 16px;
   }
   .card__price strong{
     margin-right: 14px;
