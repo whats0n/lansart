@@ -10242,7 +10242,7 @@ button.close {
   z-index: 1;
   background-color: whitesmoke;
   border-radius: 2px;
-  padding: 35px 40px 40px;
+  padding: 35px 40px 25px;
   margin: 0 -40px;
 }
 
@@ -10447,7 +10447,7 @@ button.close {
 }
 
 .card__features {
-  padding: 19px 20px;
+  padding: 19px 20px 0;
 }
 
 .card__features:after {
@@ -10458,6 +10458,7 @@ button.close {
 }
 
 .card__footer {
+  padding-top: 11px;
   *zoom: 1;
 }
 
@@ -10488,6 +10489,11 @@ button.close {
   color: #727b8a;
   line-height: 15px;
   letter-spacing: 0.19px;
+}
+
+.card__price {
+  padding-top: 8px;
+  padding-bottom: 2px;
 }
 
 .card__price strong, .card__price small {
@@ -10821,7 +10827,7 @@ a.features__text {
 
 .c-features {
   font-size: 0;
-  padding: 30px 0 60px;
+  padding: 30px 0 0;
 }
 
 .c-features__col {
@@ -10985,7 +10991,7 @@ a.features__text {
 }
 
 .m-description {
-  padding: 20px 20px 93px;
+  padding: 15px 20px 60px;
 }
 
 .m-description__title {
@@ -15261,7 +15267,6 @@ a.features__text {
 
 .modifications-modal__title {
   position: relative;
-  margin-bottom: 15px;
   color: #102140;
   font-family: "ArnoPro Semibold", Arial, sans-serif;
   font-size: 18px;
@@ -15281,6 +15286,7 @@ a.features__text {
 }
 
 .modifications-modal__description {
+  margin-top: 15px;
   color: #727b8a;
   font-family: "HelveticaNeue Roman", Arial, sans-serif;
   font-size: 13px;
@@ -15317,7 +15323,7 @@ a.features__text {
 .sm-modification .modifications-modal {
   top: 50%;
   left: 0;
-  transform: translate3d(-100%, -50%, 0);
+  transform: translate3d(-105%, -50%, 0);
 }
 
 .sm-modification__row {

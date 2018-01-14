@@ -5,15 +5,11 @@
 			{
 				active: true,
 				href: 'tab1',
-				text: 'ХАРАКТЕРИСТИКИ'
+				text: 'ХАРАКТЕРИСТИКИ И ОПИСАНИЕ'
 			},
 			{
 				href: 'tab4',
 				text: 'ОТЗЫВЫ'
-			},
-			{
-				href: 'tab5',
-				text: 'ДОСТАВКА И ОПЛАТА'
 			},
 			{
 				href: 'tab6',
@@ -28,7 +24,11 @@
 			{
 				href: 'tab3',
 				text: 'ДОСТУПНЫЕ КОМБИНАЦИИ'
-			} #}
+			} 
+			{
+				href: 'tab5',
+				text: 'ДОСТАВКА И ОПЛАТА'
+			}, #}
 		<ul class="tabs__list tabs__list_center">
 			{% for tabLink in tabLinks %}
 			<li class="tabs__item js-tab-link" data-href="{{ tabLink.href }}">{{ tabLink.text }}</li>
@@ -46,7 +46,7 @@
 		{# {% include "partials/tabs-card/_card-tab2.html" %} #}
 		{# {% include "partials/tabs-card/_card-tab3.html" %} #}
 		{% include "partials/tabs-card/_card-tab4.html" %}
-		{% include "partials/tabs-card/_card-tab5.html" %}
+		{# {% include "partials/tabs-card/_card-tab5.html" %} #}
 		{% include "partials/tabs-card/_card-tab6.html" %}
 	</div>
 </div>
