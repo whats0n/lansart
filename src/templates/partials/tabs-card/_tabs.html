@@ -8,10 +8,6 @@
 				text: 'ХАРАКТЕРИСТИКИ'
 			},
 			{
-				href: 'tab2',
-				text: 'ОПИСАНИЕ'
-			},
-			{
 				href: 'tab4',
 				text: 'ОТЗЫВЫ'
 			},
@@ -26,6 +22,10 @@
 		] %}
 
 		{# {
+				href: 'tab2',
+				text: 'ОПИСАНИЕ'
+			},
+			{
 				href: 'tab3',
 				text: 'ДОСТУПНЫЕ КОМБИНАЦИИ'
 			} #}
@@ -43,7 +43,7 @@
 	</div>
 	<div class="tabs__container">
 		{% include "partials/tabs-card/_card-tab1.html" %}
-		{% include "partials/tabs-card/_card-tab2.html" %}
+		{# {% include "partials/tabs-card/_card-tab2.html" %} #}
 		{# {% include "partials/tabs-card/_card-tab3.html" %} #}
 		{% include "partials/tabs-card/_card-tab4.html" %}
 		{% include "partials/tabs-card/_card-tab5.html" %}

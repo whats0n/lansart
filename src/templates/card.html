@@ -135,70 +135,13 @@ paginationSelect: true
 							<a href="#" class="features__link js-tab-link-shadow" data-href="tab1" data-tab-scrollto="tab1-characteristics">Все характеристики</a>
 						</div>
 						<div class="prod-settings">
-							<div class="prod-settings__box">
-								<div class="prod-settings__subtitle">Модификация</div>
-								<div class="prod-settings__field">
-									<div class="prod-settings__value">
-										<div class="prod-settings__value-in">Стул мега крутой/прозрачный/пупырышки</div>
-										<a href="#" class="js-tab-link-shadow" data-href="tab1">Другии модификации</a>
-									</div>
-									{# <div class="select-color js-choose-colors-select" data-toggle="modal" data-target="#choose-colors">
-										{{mixins.icon('down')}}
-										<div class="select-color__text">
-											<i style="background: #88665a; box-shadow: 0 2px 4px rgba(136, 102, 89, 0.3);"></i>
-											<span class="js-choose-colors-text"></span>
-										</div>
-									</div> #}
-								</div>
-							</div>
-							<div class="prod-settings__box">
-								<div class="prod-settings__subtitle">Количество</div>
-								<div class="prod-settings__field">
-									<input type="text" class="input">
-								</div>
-							</div>
-							<div class="prod-settings__box">
-								<div class="prod-settings__subtitle">Доставка</div>
-								<ul class="prod-settings__list">
-									<li class="prod-settings__row">
-										<div class="prod-settings__label">Ожидаемая дата доставки:</div>
-										<div class="prod-settings__text">27 июня</div>
-									</li>
-									<li class="prod-settings__row">
-										<div class="prod-settings__label">Стоимость доставки:</div>
-										<div class="prod-settings__text">490 Р</div>
-									</li>
-									<li class="prod-settings__row">
-										<div class="prod-settings__label">Стоимость доставки:</div>
-										<div class="prod-settings__text"><span>490 Р</span> Бесплатно</div>
-									</li>
-								</ul>
-							</div>
-							<div class="prod-settings__box">
-								<div class="prod-settings__subtitle">Наличие</div>
-								<div class="prod-settings__instock prod-settings__row">
-									<div class="icon-battery">
-										<i class="is-active"></i>
-										<i class="is-active"></i>
-										<i class="is-active"></i>
-										<i class="is-active"></i>
-										<i></i>
-										<i></i>
-									</div>
-									<div class="prod-settings__text">Есть в наличии</div>
-								</div>
-								<div class="prod-settings__text prod-settings__row">
-									<a href="#" class="prod-settings__link">Сообщить о скидке</a>
-								</div>
-							</div>
+							{% include 'partials/card/_sm-modification.html' %}
+							{% include 'partials/card/_sm-delivery.html' %}
+							{% include 'partials/card/_sm-availability.html' %}
+							{% include 'partials/card/_sm-price.html' %}
+							{% include 'partials/card/_sm-quantity.html' %}
 						</div>
 						<div class="card__footer">
-							<div class="card__result">
-								<div class="card__price">
-									<strong>16 280 Р</strong>
-									<small>16 280 Р</small>
-								</div>
-							</div>
 							<div class="card__btns">
 								<button class="btn btn_blue" data-toggle="modal" data-target="#basket"><span>В корзину {{mixins.icon('basket')}}</span></button>
 								<button class="btn-plus js-popup-open" data-popup="add-functions">
@@ -210,9 +153,9 @@ paginationSelect: true
 								</a>
 								{% include "partials/components/_additional-functions.html" %}
 							</div>
-							<div class="card__text">
+							{#<div class="card__text">
 								<p>Цена указана для базовой модели. Окончательная цена зависит от комплектации и материалов изготовления.</p>
-							</div>
+							</div>#}
 						</div>
 					</div>
 				</div>

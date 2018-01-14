@@ -71,7 +71,7 @@ html, body {
 }
 
 html *, html *:before, html *:after, body *, body *:before, body *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .icon-arr-back {
@@ -1448,6 +1448,12 @@ input::-ms-clear {
   font-size: 16px;
   letter-spacing: 0.18px;
   font-family: "ArnoPro Semibold", Arial, sans-serif;
+}
+
+.radio_simple {
+  padding: 0;
+  min-width: 12px;
+  min-height: 12px;
 }
 
 .radio input:checked + span:before {
@@ -10683,6 +10689,10 @@ a.features__text {
   padding: 10px 0 10px 20px;
 }
 
+.prod-settings__box_wide {
+  width: 100%;
+}
+
 .prod-settings__field {
   padding: 5px 20px 0 0;
 }
@@ -15305,6 +15315,63 @@ a.features__text {
   transition: fill 0.25s;
 }
 
+.sm-modification {
+  padding: 0 20px 10px 0;
+  border-bottom: 1px solid #d9dbe1;
+}
+
+.sm-modification__row {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+  max-width: 400px;
+  font-size: 0;
+}
+
+.sm-modification__row_header {
+  padding-bottom: 10px;
+}
+
+.sm-modification__row_item {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.sm-modification__body {
+  position: relative;
+  max-height: 150px;
+}
+
+.sm-modification__heading {
+  font-size: 12px;
+}
+
+.sm-modification__radio {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 0);
+}
+
+.sm-modification__col {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  text-align: center;
+}
+
+.sm-modification__item {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid rgba(16, 33, 64, 0.2);
+  border-radius: 2px;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 @media (min-width: 768px){
   .modal-dialog{
     width: 600px;
@@ -17237,6 +17304,9 @@ a.features__text {
   .modifications{
     padding: 24px 0 0;
   }
+  .sm-modification{
+    padding-top: 8px;
+  }
 }
 
 @media only screen and (max-width: 1023px){
@@ -18851,6 +18921,9 @@ a.features__text {
   }
   .modifications__btns-in{
     float: none;
+  }
+  .sm-modification__heading{
+    font-size: 10px;
   }
 }
 

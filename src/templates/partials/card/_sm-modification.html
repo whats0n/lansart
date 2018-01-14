@@ -1,0 +1,44 @@
+<div class="prod-settings__box prod-settings__box_wide">
+	<div class="prod-settings__subtitle">Модификация</div>
+	<div class="sm-modification">
+		<div class="sm-modification__row sm-modification__row_header">
+			{% for item in range(0,4) %}
+				<div class="sm-modification__col sm-modification__heading">Столешница</div>
+			{% endfor %}
+		</div>
+		<div class="sm-modification__body js-scrollbar">
+			{% for item in range(0,6) %}
+				<label class="sm-modification__row sm-modification__row_item">
+					<span class="sm-modification__radio">
+						<span class="radio radio_simple">
+							<input type="radio" name="sm-modification-radio" {% if loop.first %}checked{% endif %}>
+							<span></span>
+						</span>
+					</span>
+					{% for item in [
+						{
+							title: 'Бамбук',
+							img: 'frame-1'
+						},
+						{
+							title: 'Мрамор',
+							img: 'frame-2'
+						},
+						{
+							title: 'Камень',
+							img: 'frame-3'
+						},
+						{
+							title: 'Что-то еще',
+							img: 'frame-4'
+						}
+					] %}
+						<span class="sm-modification__col">
+							<span class="sm-modification__item" style="background-image: url(img/colors/{{item.img}}.jpg"></span>
+						</span>
+					{% endfor %}
+				</label>
+			{% endfor %}
+		</div>
+	</div>
+</div>
