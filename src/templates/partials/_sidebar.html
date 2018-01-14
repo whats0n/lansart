@@ -3,6 +3,57 @@
 	<div class="filters">
 		<form action="/">
 			<div class="filter">
+				<div class="filter__title is-active">КАТЕГОРИИ</div>
+				<ul class="filter__list is-active">
+					{% for item in [
+						{
+							num: '12',
+							text: 'Деревянные столы'
+						},
+						{
+							num: '53',
+							text: 'Стеклянные столы'
+						},
+						{
+							num: '42',
+							text: 'Столы с плиткой'
+						},
+						{
+							num: '73',
+							text: 'Журнальные и ТВ столики'
+						},
+						{
+							num: '16',
+							text: 'Столы трансформеры'
+						},
+						{
+							num: '32',
+							text: 'Круглые столы'
+						},
+						{
+							num: '76',
+							text: 'Письменные столы'
+						},
+						{
+							num: '72',
+							text: 'Столешницы'
+						},
+						{
+							num: '35',
+							text: 'Подстолья'
+						},
+						{
+							num: '20',
+							text: 'Металлические столы'
+						}
+					] %}
+					    <li>
+					    	<a href="#" {% if loop.first %}class="is-active{% endif %}"><span>{{item.text}}</span></a>
+					    </li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="filter">
 				<div class="filter__title js-list-btn is-active">КАТЕГОРИИ <i class="filter__plus"></i></div>
 				<ul class="filter__block js-list is-active">
 
